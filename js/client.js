@@ -17,7 +17,9 @@ user.signUp(null, {
   }
 });}
 
-  function logMeIn(){
+
+
+document.getElementById("in").onclick=   function logMeIn(){
 		  Parse.FacebookUtils.logIn(null, {
 		  success: function(user) {
 		    if (!user.existed()) {
@@ -31,5 +33,3 @@ user.signUp(null, {
 		  }
 		});
 		}
-
-document.getElementById("in").onclick="logMeIn()";
