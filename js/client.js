@@ -16,4 +16,19 @@ user.signUp(null, {
     // Show the error message somewhere and let the user try again.
     alert("Error: " + error.code + " " + error.message);
   }
-});}
+});
+
+ function logIn() {} {
+		  Parse.FacebookUtils.logIn(null, {
+		  success: function(user) {
+		    if (!user.existed()) {
+		      alert("User signed up and logged in through Facebook!");
+		    } else {
+		      alert("User logged in through Facebook!");
+		    }
+		  },
+		  error: function(user, error) {
+		    alert("User cancelled the Facebook login or did not fully authorize.");
+		  }
+		});
+		}
