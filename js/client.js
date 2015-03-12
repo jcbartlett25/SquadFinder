@@ -1,4 +1,4 @@
-function newUser() {var user = new Parse.User();
+function newUser() {{var user = new Parse.User();
 user.set("username", "therealdsmart");
 user.set("password", "ayylmao123");
 user.set("email", "davidsmart21@gmail.com");
@@ -14,5 +14,4 @@ user.signUp(null, {
     // Show the error message somewhere and let the user try again.
     alert("Error: " + error.code + " " + error.message);
   }
-});
-
+});}
