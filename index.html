@@ -32,7 +32,7 @@
 	    });
 	 
 	    // Run code after the Facebook SDK is loaded.
-	     function logIn(){
+	     function logMeIn(){
 		  Parse.FacebookUtils.logIn(null, {
 		  success: function(user) {
 		    if (!user.existed()) {
@@ -46,7 +46,7 @@
 		  }
 		});
 		}
-		document.getElementById('login').onclick="logIn()";
+		document.getElementById('login').onclick="logMeIn()";
 	  };
 	 
 	  (function(d, s, id){
