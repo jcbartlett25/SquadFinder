@@ -19,7 +19,7 @@ body{
     font-size: 20px;
     text-align: center;
     font-weight: normal;
-    color: #4387fd;
+    color: black;
 }
 .header {
     height:130px;
@@ -74,5 +74,13 @@ body{
 .fb-login-button{
     margin-top: 20px;
     width: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
 }
 
