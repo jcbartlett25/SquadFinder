@@ -71,5 +71,7 @@ body{
     float: left;
 }
 
-
+.fb-login-button{
+    width: 100%;
+}
 
