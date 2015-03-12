@@ -1,4 +1,5 @@
-function newUser() {var user = new Parse.User();
+function newUser() {
+var user = new Parse.User();
 user.set("username", "therealdsmart");
 user.set("password", "ayylmao123");
 user.set("email", "davidsmart21@gmail.com");
@@ -15,3 +16,20 @@ user.signUp(null, {
     alert("Error: " + error.code + " " + error.message);
   }
 });}
+
+  function logMeIn(){
+		  Parse.FacebookUtils.logIn(null, {
+		  success: function(user) {
+		    if (!user.existed()) {
+		      alert("User signed up and logged in through Facebook!");
+		    } else {
+		      alert("User logged in through Facebook!");
+		    }
+		  },
+		  error: function(user, error) {
+		    alert("User cancelled the Facebook login or did not fully authorize.");
+		  }
+		});
+		}
+
+document.getElementById('login').onclick="logMeIn()";
