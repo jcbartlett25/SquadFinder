@@ -1,0 +1,76 @@
+
+<!DOCTYPE html/>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<!--FONTS-->
+	<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+	<script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+
+	<title>Squad Finder</title>
+
+</head>
+
+<body >
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '697679580354991',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+	<div class = "header">
+		<h1 class = "title">squad finder</h1>
+
+	</div>
+
+	<div class = "content">
+		<h1 class = "title-text">Assembling Squads is Key!</h1>
+		<center><img class = "squad-img" src="img/kanye-brits.jpg"></center>
+		<center> <div class = "enter_button">Squad UP</div> </center>
+
+	</div>
+
+	<script type="text/javascript">
+		Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
+
+		var user = new Parse.User();
+		user.set("username", "therealdsmart");
+		user.set("password", "ayylmao123");
+		user.set("email", "davidsmart21@gmail.com");
+		  
+		// other fields can be set just like with Parse.Object
+		user.set("phone", "270 303 4449");
+		  
+		user.signUp(null, {
+		  success: function(user) {
+		    // Hooray! Let them use the app now.
+		  },
+		  error: function(user, error) {
+		    // Show the error message somewhere and let the user try again.
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});
+	</script>
+
+</body>
+
+<footer class = "site-footer"></footer>
+
+
+

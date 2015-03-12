@@ -1,0 +1,60 @@
+body{
+    margin:0px;
+    background:#E6E6E6;
+    margin: 0 0 0 0;
+    text-align: center; 
+    font-family: 'Exo', sans-serif;
+    vertical-align: center;
+
+}
+.title{
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    font-size: 90px;
+}
+.title-text{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    font-weight: normal;
+}
+.header {
+    height:130px;
+    background:#4387fd;
+}
+.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    margin: 0px auto 40px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.squad-img{
+    height: 350px;
+    width: 600px;
+    padding-top: 10px;
+}
+
+.site-footer{
+    position: bottom;
+    height: 30px;
+    width: 100%;
+    background-color: #4387fd;
+    padding-bottom: 1%;
+}
+
+.enter_button{
+    height: 50px;
+    width: 250px;
+    background-color: #4387fd;
+    font-size: 20px;
+    color: white;
+    vertical-align: middle;
+    margin-top: 30px;
+}
+
+
+
