@@ -16,8 +16,9 @@
 </head>
 
 <body >
+	<script type="text/javascript" src="js/client.js"></script>
 	<script>
-	  window.fbAsyncInit = function() {
+	  Parse.FacebookUtils.init({
 	    FB.init({
 	      appId      : '697679580354991',
 	      xfbml      : true,
@@ -45,28 +46,6 @@
 		<center> <div class = "enter_button">Squad UP</div> </center>
 
 	</div>
-
-	<!--<script type="text/javascript">
-		Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
-
-		var user = new Parse.User();
-		user.set("username", "therealdsmart1");
-		user.set("password", "ayylmao123");
-		user.set("email", "davidsmart21@gmail.com");
-		  
-		// other fields can be set just like with Parse.Object
-		user.set("phone", "270 303 4449");
-		  
-		user.signUp(null, {
-		  success: function(user) {
-		    // Hooray! Let them use the app now.
-		  },
-		  error: function(user, error) {
-		    // Show the error message somewhere and let the user try again.
-		    alert("Error: " + error.code + " " + error.message);
-		  }
-		});
-	</script>-->
 	
 
 </body>
