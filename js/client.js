@@ -32,4 +32,4 @@ user.signUp(null, {
 		});
 		}
 
-document.getElementById("id").onclick="logMeIn()";
+document.getElementById("in").onclick="logMeIn()";
