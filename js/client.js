@@ -32,5 +32,3 @@ function logIn() {} {
   }
 });
 }
-
-document.getElementById("login").onclick=function(){myScript};
