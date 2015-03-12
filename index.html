@@ -18,9 +18,14 @@
 <body >
 	<script type="text/javascript" src="js/client.js"></script>
 	<script>
+	//initialize parse
+	  Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
+
 	  Parse.FacebookUtils.init({
 	    FB.init({
 	      appId      : '697679580354991',
+	      status	 : true,
+	      cookie	 : true,
 	      xfbml      : true,
 	      version    : 'v2.2'
 	    });
@@ -43,7 +48,7 @@
 	<div class = "content">
 		<h1 class = "title-text">Assembling Squads is Key!</h1>
 		<center><img class = "squad-img" src="img/kanye-brits.jpg"></center>
-		<center> <div class = "enter_button">Squad UP</div> </center>
+		<center> <div onClick = "logIn()" class = "enter_button">Squad UP</div> </center>
 
 	</div>
 	
