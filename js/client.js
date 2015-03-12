@@ -1,5 +1,3 @@
-Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
-
 function newUser() {var user = new Parse.User();
 user.set("username", "therealdsmart");
 user.set("password", "ayylmao123");
