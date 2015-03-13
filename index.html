@@ -41,7 +41,7 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
+      document.getElementById('').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
   }
@@ -79,7 +79,7 @@
 	</div>
 
 	<div class = "content">
-		<a href="about.html"><h1 class = "title-text">Squad Assembly Coming Soon!</h1></a>
+		<a href="about.html"><h1 id="test" class = "title-text">Squad Assembly Coming Soon!</h1></a>
 		<center><a href="profile.html"><img class = "squad-img" src="img/kanye-brits.jpg"></a></center>
 		<center><div class="fb-login-button" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></center>
 
