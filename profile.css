@@ -23,6 +23,15 @@ body{
     margin-left: 20px;
 }
 
+.profile_title_text{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+    color: black;
+    margin-left: 20px;
+}
+
 .header {
     height:130px;
     background: #4387fd;
