@@ -36,6 +36,7 @@
 	    FB.getLoginStatus()
 	 
 	    // Run code after the Facebook SDK is loaded.
+	    document.getElementById("name").innerHTML = Parse.User.current().getUsername();
 	  };
 	 
 	  (function(d, s, id){
