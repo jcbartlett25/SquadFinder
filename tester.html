@@ -3,7 +3,6 @@
 <body>
   <script type="text/javascript">
     Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
-    function newUser() {
     var user = new Parse.User();
     user.set("username", "josh");
     user.set("password", "ayylmao1234");
@@ -18,7 +17,7 @@
         // Show the error message somewhere and let the user try again.
         alert("Error: " + error.code + " " + error.message);
       }
-    });}
+    });
 
   </script>
 
