@@ -74,9 +74,9 @@
 	<script type="text/javascript">
 	function submitSignup(){
 		var user = new Parse.User();
-		user.set("username", document.getElementById('username')).text;
-		user.set("password", document.getElementById('password')).text;
-		user.set("email", document.getElementById('email')).text;
+		user.set("username", "sf";
+		user.set("password", "hdsj";
+		user.set("email", "hds";
 		 
 		// other fields can be set just like with Parse.Object
 		user.set("phone", "415-392-0202");
@@ -89,7 +89,9 @@
 		    // Show the error message somewhere and let the user try again.
 		    alert("Error: " + error.code + " " + error.message);
 		  }
-		});}
+		});
+	};
+
 
 	</script>
 
@@ -111,10 +113,11 @@
 				<br>
 				Password:<br>
 				<input type="text" id="password">
+				<br>
 				Email:<br>
 				<input type="text" id="email">
 				<br STYLE="margin-bottom:10px">
-				<span ><button>Login</button><button onclick = submitSignup>New User</button></span>
+				<span ><button>Login</button><button onclick = "submitSignup()">New User</button></span>
 			</form>
 		</div></center>
 
