@@ -37,6 +37,24 @@
 	 
 		// Run code after the Facebook SDK is loaded.
 
+	function newUser() {
+		var user = new Parse.User();
+		user.set("username", "josh");
+		user.set("password", "ayylmao1234");
+		user.set("email", "jcballin28@gmail.com");
+		user.set("phone", "270 303 4447");
+		  
+		user.signUp(null, {
+		  success: function(user) {
+		    // Hooray! Let them use the app now.
+		  },
+		  error: function(user, error) {
+		    // Show the error message somewhere and let the user try again.
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});}
+
+
 	};
 	  
 	  //Loads Facebook SDK
@@ -66,26 +84,6 @@
 		}</script>
 
 	<!--This script holds the newUser function to create a new Parse user-->
-	<script type="text/javascript">
-		function newUser() {
-		var user = new Parse.User();
-		user.set("username", "josh");
-		user.set("password", "ayylmao1234");
-		user.set("email", "jcballin28@gmail.com");
-		user.set("phone", "270 303 4447");
-		  
-		user.signUp(null, {
-		  success: function(user) {
-		    // Hooray! Let them use the app now.
-		  },
-		  error: function(user, error) {
-		    // Show the error message somewhere and let the user try again.
-		    alert("Error: " + error.code + " " + error.message);
-		  }
-		});}
-
-
-	</script>
 
 
 
