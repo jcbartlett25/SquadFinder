@@ -57,7 +57,8 @@
 		});}
 
 	function logIn(){
-	  Parse.User.logIn(document.getElementById('username').text), document.getElementById('password').text), {
+
+	  Parse.User.logIn(document.getElementById('username').text, document.getElementById('password').text), {
 	  success: function(user) {
 	    // Do stuff after successful login.
 	    location.href = "Profile.html";
