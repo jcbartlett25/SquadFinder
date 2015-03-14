@@ -12,7 +12,7 @@ body{
     text-align: center;
     vertical-align: center;
     font-size: 90px;
-    
+    margin-bottom: 0;
 }
 .title-text{
     font-family: 'Arial', sans-serif;
@@ -67,7 +67,11 @@ body{
 
 }
 .menu_text{
-    font-size: 10px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    float: left;
+    margin-left: 15px;
 }
 
 .fb-like{
