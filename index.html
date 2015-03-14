@@ -39,10 +39,10 @@
 
 	function newUser() {
 		var user = new Parse.User();
-		user.set("username", "josh");
-		user.set("password", "ayylmao1234");
-		user.set("email", "jcballin28@gmail.com");
-		user.set("phone", "270 303 4447");
+		user.set("username", document.getElementById('username').text);
+		user.set("password", document.getElementById('password').text);
+		user.set("email", document.getElementById('email').text);
+		user.set("phone", document.getElementById('phone').text);
 		  
 		user.signUp(null, {
 		  success: function(user) {
@@ -117,7 +117,7 @@
 				Email:<br>
 				<input type="text" id="email">
 				<br STYLE="margin-bottom:30px">
-				<span ><button>Login</button><button onclick = "newUser()">New User</button></span>
+				<span ><button>Login</button><button onclick = "newUser()" >New User</button></span>
 			</form>
 		</div></center>
 
