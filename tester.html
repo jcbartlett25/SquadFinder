@@ -7,7 +7,7 @@
     function testLogin() {
     var user = new Parse.User();
     user.set("username", document.getElementById("username"));
-    user.set("password", document.getElementById("password"));
+    user.set("password", document.getElementById("password").toString());
     user.set("email", "jcballin28@gmail.com");
     user.set("phone", "270 303 4447");
       
