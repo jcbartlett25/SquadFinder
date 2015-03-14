@@ -56,7 +56,23 @@
 	  }(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<script type="text/javascript"> function newUser() {
+	<script type="text/javascript"> function logMeIn(){
+		  Parse.FacebookUtils.logIn(null, {
+		  success: function(user) {
+		    if (!user.existed()) {
+		      alert("User signed up and logged in through Facebook!");
+		    } else {
+		      alert("User logged in through Facebook!");
+		    }
+		  },
+		  error: function(user, error) {
+		    alert("User cancelled the Facebook login or did not fully authorize.");
+		  }
+		});
+		}</script>
+
+	<script type="text/javascript">
+		function newUser() {
 		var user = new Parse.User();
 		user.set("username", "therealdsmart");
 		user.set("password", "ayylmao123");
@@ -74,28 +90,6 @@
 		    alert("Error: " + error.code + " " + error.message);
 		  }
 		});}
-</script>
-
-	<script type="text/javascript">
-	function submitSignup(){
-		var user = new Parse.User();
-		user.set("username", "sf";
-		user.set("password", "hdsj";
-		user.set("email", "hds";
-		 
-		// other fields can be set just like with Parse.Object
-		user.set("phone", "415-392-0202");
-		 
-		user.signUp(null, {
-		  success: function(user) {
-		    // Hooray! Let them use the app now.
-		  },
-		  error: function(user, error) {
-		    // Show the error message somewhere and let the user try again.
-		    alert("Error: " + error.code + " " + error.message);
-		  }
-		});
-	};
 
 
 	</script>
@@ -122,7 +116,7 @@
 				Email:<br>
 				<input type="text" id="email">
 				<br STYLE="margin-bottom:10px">
-				<span ><button>Login</button><button onclick = "submitSignup()">New User</button></span>
+				<span ><button>Login</button><button onclick = "newUser()">New User</button></span>
 			</form>
 		</div></center>
 
