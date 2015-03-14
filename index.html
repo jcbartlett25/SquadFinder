@@ -36,16 +36,16 @@
 
 	    FB.getLoginStatus()
 	 
-	    // Run code after the Facebook SDK is loaded.
-	      function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('test').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-	  };
+		    // Run code after the Facebook SDK is loaded.
+		function testAPI() {
+	    console.log('Welcome!  Fetching your information.... ');
+	    FB.api('/me', function(response) {
+	      console.log('Successful login for: ' + response.name);
+	      document.getElementById('test').innerHTML =
+	        'Thanks for logging in, ' + response.name + '!';
+	    });
+	  }
+		  };
 	 
 	  (function(d, s, id){
 	    var js, fjs = d.getElementsByTagName(s)[0];
@@ -71,7 +71,27 @@
 		});
 		}</script>
 
-	
+	<script type="text/javascript">
+	function submitSignup(){
+		var user = new Parse.User();
+		user.set("username", document.getElementById('username')).text;
+		user.set("password", document.getElementById('password')).text;
+		user.set("email", document.getElementById('email')).text;
+		 
+		// other fields can be set just like with Parse.Object
+		user.set("phone", "415-392-0202");
+		 
+		user.signUp(null, {
+		  success: function(user) {
+		    // Hooray! Let them use the app now.
+		  },
+		  error: function(user, error) {
+		    // Show the error message somewhere and let the user try again.
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});}
+
+	</script>
 
 	<div class = "header">
 		<a href="index.html"><h1 class = "title">squad finder</h1></a>
@@ -87,12 +107,14 @@
 			<button class="enter_button" onclick="showLogin();"> Log In w/o Facebook</button>
 			<form id="login_form">
 				Username:<br>
-				<input type="text" name="username">
+				<input type="text" id="username">
 				<br>
 				Password:<br>
-				<input type="text" name="password">
-				<br>
-				<button>Login</button>
+				<input type="text" id="password">
+				Email:<br>
+				<input type="text" id="email">
+				<br STYLE="margin-bottom:10px">
+				<span ><button>Login</button><button onclick = submitSignup>New User</button></span>
 			</form>
 		</div></center>
 
