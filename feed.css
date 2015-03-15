@@ -1,0 +1,15 @@
+.feed_title{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+    color: black;
+    margin-left: 20px;
+}
+
+hr{
+    width: 70%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 0px;
+}
