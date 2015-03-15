@@ -1,7 +1,5 @@
 <!DOCTYPE html/>
-<html>
 <head>
-	<link rel="stylesheet" type="text/css" href="profile.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<!--FONTS-->
 	<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
@@ -9,19 +7,19 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
+	<!--Importing external JS files-->
 	<script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
-
-	<title >Squad Finder</title>
-
 	<script type="text/javascript" src="js/client.js"></script>
+
+	<title>Squad Finder</title>
 
 </head>
 
 <body >
-	<div id="fb-root"></div>
+	<div id="fb-root"></div> 
 	<!--Facebook Stuff-->
+
 	<script>
 	  // Initialize Parse
 	  Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
@@ -34,13 +32,12 @@
 	      xfbml      : true,  // initialize Facebook social plugins on the page
 	      version    : 'v2.2' // point to the latest Facebook Graph API version
 	    });
+	 
+	   // Run code after the Facebook SDK is loaded.
 
-	    FB.getLoginStatus()
-	 
-	    // Run code after the Facebook SDK is loaded.
-	    document.getElementById("name").innerHTML = Parse.User.current().getUsername();
 	  };
-	 
+
+	 //Loads Facebook API
 	  (function(d, s, id){
 	    var js, fjs = d.getElementsByTagName(s)[0];
 	    if (d.getElementById(id)) {return;}
@@ -50,8 +47,7 @@
 	  }(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<script type="text/javascript">document.getElementById("name").innerHTML = Parse.User.current().getUsername();</script>
-
+	<!--This script holds the logMeIn function to pop up the FB login box-->
 	<script type="text/javascript"> function logMeIn(){
 		  Parse.FacebookUtils.logIn(null, {
 		  success: function(user) {
@@ -65,35 +61,26 @@
 		    alert("User cancelled the Facebook login or did not fully authorize.");
 		  }
 		});
-		}
-	</script>
+		}</script>
 
 	
-
+	<!--The visual header of the page. The title, menu bar, etc.-->
 	<div class = "header">
 		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="index.html"> Home<a><a class = "menu_text" href="about.html"> About<a></span><a class = "menu_text" href="feed.html"> Feed<a>
+		<span><a class = "menu_text" href="index.html"> Home<a><a class = "menu_text" href="about.html"> About<a><a class = "menu_text" href="Profile.html"> Profile<a></span>
 
 	</div>
 
+	<!--The visual body of the page. Holds all of the main content-->
 	<div class = "content">
-		<h1 class = "profile_title_text">My Profile</h1>
-		<hr>
-		<div class="profile_pic_holder"><img id="profile_pic" src="img/tyler.jpg"></div>
-		<div class="profile_info">
-			<h1 id="name">Name</h1>
-			<h1>Age</h1>
-			<h1>Bio</h1>
-		</div>
-		<br>
-		<h1 class = "profile_title_text">My Squadrons</h1>
-		<hr>
 		<center><div class="fb-login-button" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></center>
 
-
 	</div>
+	
+</body>
 
-	<footer class = "site-footer">
+<!--The visual footer at the bottom of the page-->
+<footer class = "site-footer">
 	<div
   		class="fb-like"
   		data-share="true"
@@ -101,12 +88,3 @@
   		data-show-faces="false">
 	</div>
 </footer>
-	
-
-</body>
-</html>
-
-
-
-
-
