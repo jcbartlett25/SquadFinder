@@ -10,6 +10,7 @@ hr{
     width: 50%;
     margin-left: 20px;
     margin-top: 0px;
+    padding-top: 0;
 }
 
 
@@ -83,6 +84,7 @@ hr{
     font-weight: normal;
     color: black;
     margin-left: 20px;
+    margin-bottom: 5px;
 }
 
 .profile_section{
