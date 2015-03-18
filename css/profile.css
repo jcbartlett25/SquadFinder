@@ -15,7 +15,7 @@ a{
 }
 
 hr{
-    width: 70%;
+    width: 50%;
     float: left;
     margin-left: 20px;
     margin-top: 0px;
@@ -108,10 +108,12 @@ hr{
     height: 168px;
     width: 168px;
     margin-left: 20px;
+    border: solid;
+    overflow: hidden;
+    clear: left;
 }
 
 .profile_pic_holder img{
-    width: 40%;
     float: left;
     height: 168px;
     width: 168px;

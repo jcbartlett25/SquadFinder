@@ -18,7 +18,7 @@
 </head>
 
 <body >
-	<div id="fb-root"></div> 
+	<div id="fb-root"></div>
 	<!--Facebook Stuff-->
 
 	<script>
@@ -33,7 +33,7 @@
 	      xfbml      : true,  // initialize Facebook social plugins on the page
 	      version    : 'v2.2' // point to the latest Facebook Graph API version
 	    });
-	 
+	 	
 	   // Run code after the Facebook SDK is loaded.
 
 	  };
@@ -66,7 +66,7 @@
 
 	<!--Adds a new squad post div-->
 	<script type="text/javascript">
-		function newPost(){var $div = $("#squad_post").addClass("squad_post");
+		function newPost(){var $div = $("#squad_post").html();
 		$(".content").append($div);}
 	</script>
 
@@ -96,10 +96,7 @@
 
 <!--The visual footer at the bottom of the page-->
 <footer class = "site-footer">
-	<div
-  		class="fb-like"
-  		data-share="true"
-  		data-width="450"
-  		data-show-faces="false">
+	<div>
+  		<p></p>
 	</div>
 </footer>
