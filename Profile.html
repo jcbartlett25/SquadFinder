@@ -38,7 +38,7 @@
 	    FB.getLoginStatus()
 	 
 	    // Run code after the Facebook SDK is loaded.
-	    document.getElementById("name").innerHTML = Parse.User.current().getUsername();
+	    document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
 	  };
 	 
 	  (function(d, s, id){
@@ -77,12 +77,19 @@
 	</div>
 
 	<div class = "content">
-			<h1 class = "profile_title_text">My Profile</h1>
-			<hr>
-			<div class="profile_pic_holder"><img id="profile_pic" src="img/tyler.jpg"></div>
-
-			<h1 class = "profile_title_text"> My Squadrons </h1>
-			<hr>
+			<div class="profile_section">
+				<h1 class = "profile_title_text" id="profile_name">My Profile</h1>
+				<hr>
+				<div class="profile_pic_holder"><img id="profile_pic" src="img/tyler.jpg"></div>
+			</div>
+			<div class="profile_section">
+				<h1 class = "profile_title_text"> Current Squads </h1>
+				<hr>
+			</div>
+			<div class="profile_section">
+				<h1 class = "profile_title_text"> My Squadrons </h1>
+				<hr>
+			</div>
 
 	</div>
 

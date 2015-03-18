@@ -9,12 +9,12 @@
 
 hr{
     width: 50%;
-    float: left;
     margin-left: 20px;
     margin-top: 0px;
     margin-right: 30%;
 }
 
+/*SQUAD POST*/
 .squad_post{
     height: 130px;
     margin-left: 20px;
