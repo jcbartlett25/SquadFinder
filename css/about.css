@@ -1,0 +1,33 @@
+hr{
+    width: 70%;
+    float: left;
+    margin-top: 0px;
+    clear: right;
+}
+
+.title{
+	font-family: 'Arial', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: normal;
+    color: black;
+}
+
+.profile_title_text{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+    color: black;
+}
+
+.about_descript li{
+	clear: left;
+	text-align: left;
+	list-style-type: square;
+}
+
+.center_hr{
+	width: 50%;
+	clear: right;
+}

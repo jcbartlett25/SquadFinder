@@ -66,9 +66,9 @@
 
 	<!--Adds a new squad post div-->
 	<script type="text/javascript">
-		function newPost(){var div = $(".squad_post");
-		$(".content").append(div);}
-	</script>	
+		function newPost(){var $div = $("#squad_post").addClass("squad_post");
+		$(".content").append($div);}
+	</script>
 
 	<!--The visual header of the page. The title, menu bar, etc.-->
 	<div class = "header">
@@ -79,21 +79,16 @@
 
 	<!--The visual body of the page. Holds all of the main content-->
 	<div class = "content">
-	<!--Adds a new squad post div-->
-	<script type="text/javascript">
-		function newPost(){var div = $(".squad_post");
-		$(".content").append(div);}
-	</script>	
 		<h1 class = "feed_title">My Squad Feed </h1>
 		<hr>
-		<button onclick="newPost()">Test</button>
 		<!--The Div That Holds Squad Posting Information-->
-		<div class = "squad_post">
-			<h2>The BRIT Awards</h1>
+		<div class = "squad_post" id = "squad_post">
+			<h2>The BRIT Awards</h2>
 			<p>Hey, guys. I need 30 Goons, ASAP</p>
 			<p>Join &nbsp <span> | </span> &nbsp Decline</p>
 			<br>
 		</div>
+		<button onclick="newPost()">Test</button>
 
 	</div>
 	

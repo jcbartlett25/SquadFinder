@@ -4,9 +4,24 @@ body{
     text-align: center; 
     font-family: 'Raleway', sans-serif;
     vertical-align: center;
-    padding-bottom: 42px;
-
 }
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    width: 70%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+
 .title{
     color: white;
     text-align: center;
@@ -85,43 +100,27 @@ body{
     width: 100%;
 }
 
+/*PROFILE*/
+.my_profile{
+    height: 200px;
+}
 .profile_pic_holder{
-    clear: left;
     height: 168px;
     width: 168px;
-    overflow: hidden;
     margin-left: 20px;
-    width: 40%;
-    display: inline-block;
-    float: left;
 }
 
 .profile_pic_holder img{
     width: 40%;
     float: left;
+    height: 168px;
+    width: 168px;
 }
 
 .profile_info{
-    width: 30%;
-    overflow: hidden;
-}
+
+    }
 
 .profile_info h1{
     font-size: 16px;
 }
-
-li{
-    list-style-type: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-hr{
-    width: 70%;
-    float: left;
-    margin-left: 20px;
-    margin-top: 0px;
-}
-
