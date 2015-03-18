@@ -32,3 +32,12 @@ hr{
 	width: 50%;
 	clear: right;
 }
+
+.circle{
+width:200px;
+height:200px;
+border-style:solid;
+border-width:1px;
+border-radius:100px;
+cursor:pointer;
+}
