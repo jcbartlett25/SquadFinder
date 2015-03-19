@@ -64,11 +64,20 @@
 		});
 		}</script>
 
-	<!--Adds a new squad post div-->
+	<!--Creates a New Post-->
 	<script type="text/javascript">
-		function newPost(){var $div = $("#squad_post").html();
-		$(".content").append($div);}
+		function postSquad() {
+				var descript = document.getElementById("new_post_descript").value;
+				var title = document.getElementById("new_post_title").value;
+				$("#squad_descript").html(descript);
+				$("#squad_title").html(title);
+				$post = $(".squad_post").clone();
+				$post.appendTo(".content");
+				//var $div = $("#squad_post").html();
+				//$(".content").append($div);
+			};
 	</script>
+
 
 	<!--The visual header of the page. The title, menu bar, etc.-->
 	<div class = "header">
@@ -79,16 +88,21 @@
 
 	<!--The visual body of the page. Holds all of the main content-->
 	<div class = "content">
+		<form id="new_post_form">
+			<input type="text" id="new_post_title" value="title">
+			<input type="text" id="new_post_descript" value="i need a squad for...">
+			<button id="post_button" onclick="postSquad()">New Post</button>
+		</form>
+		
 		<h1 class = "feed_title">My Squad Feed </h1>
 		<hr>
 		<!--The Div That Holds Squad Posting Information-->
 		<div class = "squad_post" id = "squad_post">
-			<h2>The BRIT Awards</h2>
-			<p>Hey, guys. I need 30 Goons, ASAP</p>
+			<h2 id="squad_title">The BRIT Awards</h2>
+			<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p>
 			<p>Join &nbsp <span> | </span> &nbsp Decline</p>
 			<br>
 		</div>
-		<button onclick="newPost()">Test</button>
 
 	</div>
 	

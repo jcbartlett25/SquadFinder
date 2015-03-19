@@ -5,6 +5,7 @@
     font-weight: normal;
     color: black;
     margin-left: 20px;
+    margin-bottom: 5px;
 }
 
 hr{
@@ -33,4 +34,9 @@ hr{
 .squad_post p{
     text-align: left;
     font-size: 12px;
+}
+
+/*NEW SQUAD POST*/
+.new_post_descript{
+    min-height: 115px;
 }
