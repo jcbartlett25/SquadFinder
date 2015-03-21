@@ -2,6 +2,9 @@ html, body {
   background-image: url("3005.jpg");
   font-family:'Passion One', cursive;
 }
+header {
+  text-align: center;
+}
 .title {
   font-family:'Passion One', cursive;
   font-size: 100px;
