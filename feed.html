@@ -75,7 +75,8 @@
 	<!--The visual header of the page. The title, menu bar, etc.-->
 	<div class = "header">
 		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="index.html"> Home<a><a class = "menu_text" href="about.html"> About<a><a class = "menu_text" href="Profile.html"> Profile<a></span>
+		<span><a class = "menu_text" href="index.html"> Home<a><a class = "menu_text" href="about.html"> About<a><a class = "menu_text" href="Profile.html"> Profile<a><a class = "logout" onclick="logout()"> Logout<a></span>
+	</div></span>
 
 	</div>
 
@@ -116,6 +117,9 @@
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
 				$post.fadeIn();
+
+				document.getElementById("new_post_descript").value = "";
+				document.getElementById("new_post_title").value = "";
 
 				var syncano = SyncanoConnector.getInstance(); 
 				var PROJECT_ID = 6289;

@@ -101,3 +101,9 @@ a{
     color: white;
     text-align: left;
 }
+.logout{
+    float: right;
+    margin-right: 15px;
+    color: white;
+    font-size: 15px;
+}
