@@ -50,42 +50,27 @@
 	  }(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<script type="text/javascript">document.getElementById("name").innerHTML = Parse.User.current().getUsername();</script>
-
-	<script type="text/javascript"> function logMeIn(){
-		  Parse.FacebookUtils.logIn(null, {
-		  success: function(user) {
-		    if (!user.existed()) {
-		      alert("User signed up and logged in through Facebook!");
-		    } else {
-		      alert("User logged in through Facebook!");
-		    }
-		  },
-		  error: function(user, error) {
-		    alert("User cancelled the Facebook login or did not fully authorize.");
-		  }
-		});
-		}
-	</script>
-
 	
-
+	<!-- the visual header and menu -->
 	<div class = "header">
 		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="index.html"> Home<a><a class = "menu_text" href="about.html"> About<a></span><a class = "menu_text" href="feed.html"> Feed<a>
-
+		<span><a class = "menu_text" href="index.html"> Home<a><a class = "menu_text" href="feed.html"> Feed<a><a class = "menu_text" href="about.html"> About<a></span>
 	</div>
 
+	<!-- The main section of the page -->
 	<div class = "content">
+		<!-- The user's info and photo -->
 			<div class="profile_section">
 				<h1 class = "profile_title_text" id="profile_name">My Profile</h1>
 				<hr>
 				<div class="profile_pic_holder"><img id="profile_pic" src="img/tyler.jpg"></div>
 			</div>
+		<!-- The user's current squads -->
 			<div class="profile_section">
 				<h1 class = "profile_title_text"> Current Squads </h1>
 				<hr>
 			</div>
+		<!-- THe user's squadrons -->
 			<div class="profile_section">
 				<h1 class = "profile_title_text"> My Squadrons </h1>
 				<hr>
@@ -93,14 +78,10 @@
 
 	</div>
 
+	<!-- The visual footer -->
 	<footer class = "site-footer">
-	<div
-  		class="fb-like"
-  		data-share="true"
-  		data-width="450"
-  		data-show-faces="false">
-	</div>
-</footer>
+	<p class="copyright">&#169; 3005 Hacks</p>
+	</footer>
 	
 
 </body>

@@ -64,19 +64,7 @@
 		});
 		}</script>
 
-	<!--Creates a New Post-->
-	<script type="text/javascript">
-		function postSquad() {
-				var descript = document.getElementById("new_post_descript").value;
-				var title = document.getElementById("new_post_title").value;
-				$("#squad_descript").html(descript);
-				$("#squad_title").html(title);
-				$post = $(".squad_post").clone();
-				$post.appendTo(".content");
-				//var $div = $("#squad_post").html();
-				//$(".content").append($div);
-			};
-	</script>
+
 
 
 	<!--The visual header of the page. The title, menu bar, etc.-->
@@ -91,13 +79,15 @@
 		<form id="new_post_form">
 			<input type="text" id="new_post_title" value="title">
 			<input type="text" id="new_post_descript" value="i need a squad for...">
-			<button id="post_button" onclick="postSquad()">New Post</button>
 		</form>
-		
+
+		<button id="post_button" onclick="postSquad()">New Post</button>
+
+
 		<h1 class = "feed_title">My Squad Feed </h1>
 		<hr>
 		<!--The Div That Holds Squad Posting Information-->
-		<div class = "squad_post" id = "squad_post">
+		<div class = "squad_post" id="template" style="display:none" >
 			<h2 id="squad_title">The BRIT Awards</h2>
 			<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p>
 			<p>Join &nbsp <span> | </span> &nbsp Decline</p>
@@ -105,12 +95,31 @@
 		</div>
 
 	</div>
+
+
+
+		<!--Creates a New Post-->
+	<script type="text/javascript">
+		function postSquad(){
+				var descript = document.getElementById("new_post_descript").value;
+				var title = document.getElementById("new_post_title").value;
+				$("#squad_descript").html(descript);
+				$("#squad_title").html(title);
+				$post = $("#template").clone();
+				$post.removeAttr('id');
+				$(".content").append($post);
+				$post.fadeIn();
+				//var $div = $("#squad_post").html();
+				//$(".content").append($div);
+			}
+	</script>
+
 	
 </body>
 
 <!--The visual footer at the bottom of the page-->
 <footer class = "site-footer">
 	<div>
-  		<p></p>
+  		<p class="copyright">&#169; 3005 Hacks</p>
 	</div>
 </footer>
