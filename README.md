@@ -26,4 +26,4 @@ This is some background for the site’s code and structure.
 * Scripts (their purposes may not be apparent)
 
 ## CSS Commenting Guidelines
-* group the stylings by sections.
+* Group the stylings by sections.
