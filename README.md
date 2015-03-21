@@ -1,3 +1,4 @@
+# Squadfinder
 This is some background for the site’s code and structure.
 
 ## HTML Files
