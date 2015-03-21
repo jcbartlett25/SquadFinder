@@ -5,6 +5,7 @@ body{
     text-align: center; 
     font-family: 'Raleway', sans-serif;
     vertical-align: center;
+    font-weight: normal;
 
 }
 .title{
@@ -15,7 +16,7 @@ body{
     margin-bottom: 0;
 }
 .title-text{
-    font-family: 'Arial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     text-align: center;
     font-weight: normal;

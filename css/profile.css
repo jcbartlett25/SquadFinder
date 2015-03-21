@@ -22,7 +22,7 @@ hr{
     
 }
 .title-text{
-    font-family: 'Arial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     text-align: left;
     font-weight: normal;
@@ -78,7 +78,7 @@ hr{
 }
 
 .profile_title_text{
-    font-family: 'Arial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     text-align: left;
     font-weight: normal;
@@ -89,4 +89,21 @@ hr{
 
 .profile_section{
     min-height: 200px;
+}
+
+.squad_ticker{
+    height: 20px;
+    background-color: #CCCCCC;
+    color: black;
+}
+
+.content {
+    width:960px;
+    height: auto;
+    min-height: 550px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    margin: 0px auto 40px auto;
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
