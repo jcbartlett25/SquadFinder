@@ -78,7 +78,7 @@
 	<div class = "content">
 		<form id="new_post_form">
 			<input type="text" id="new_post_title" value="title" onclick="clearText()">
-			<input type="text" id="new_post_descript" value="i need a squad for...">
+			<input type="text" id="new_post_descript" value="i need a squad for..." onclick="clearText()">
 		</form>
 
 		<button id="post_button" onclick="postSquad()">New Post</button>
@@ -119,8 +119,14 @@
 	<!-- Removes default text values. -->
 	<script type="text/javascript">
 		function clearText(){
-			document.getElementById("new_post_descript").value = "";
-			document.getElementById("new_post_title").value = "";
+			var descript = document.getElementById("new_post_descript").value;
+			var title = document.getElementById("new_post_title").value;
+			if (descript === "i need a squad for...") {
+				document.getElementById("new_post_descript").value = "";
+				};
+			if (title === "title") {
+				document.getElementById("new_post_title").value = "";
+				};
 		}
 	</script>
 
