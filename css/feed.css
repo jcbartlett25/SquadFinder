@@ -17,8 +17,9 @@ hr{
 
 /*SQUAD POST*/
 .squad_post{
-    height: 130px;
+    max-height: 130px;
     margin-left: 20px;
+    margin-bottom: 0px;
 }
 
 .squad_post h1{

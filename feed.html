@@ -77,23 +77,25 @@
 	<!--The visual body of the page. Holds all of the main content-->
 	<div class = "content">
 		<form id="new_post_form">
-			<input type="text" id="new_post_title" value="title">
+			<input type="text" id="new_post_title" value="title" onclick="clearText()">
 			<input type="text" id="new_post_descript" value="i need a squad for...">
 		</form>
 
 		<button id="post_button" onclick="postSquad()">New Post</button>
 
+		<h1 class = "feed_title">My Squad Feed</h1>
+		<hr class = "post_bar">
 
-		<h1 class = "feed_title">My Squad Feed </h1>
-		<hr>
-		<!--The Div That Holds Squad Posting Information-->
-		<div class = "squad_post" id="template" style="display:none" >
-			<h2 id="squad_title">The BRIT Awards</h2>
-			<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p>
-			<p>Join &nbsp <span> | </span> &nbsp Decline</p>
-			<br>
+		<!-- The Squad Feed -->
+		<div class="feed_div">
+			<!--The Div That Holds Squad Posting Information-->
+			<div class = "squad_post" id="template" style="display:none" >
+				<h2 id="squad_title">The BRIT Awards</h2>
+				<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p>
+				<p>Join &nbsp <span> | </span> &nbsp Decline</p>
+				<br>
+			</div>
 		</div>
-
 	</div>
 
 
@@ -107,14 +109,21 @@
 				$("#squad_title").html(title);
 				$post = $("#template").clone();
 				$post.removeAttr('id');
-				$(".content").append($post);
+				$(".feed_div").prepend($post);
 				$post.fadeIn();
 				//var $div = $("#squad_post").html();
 				//$(".content").append($div);
 			}
 	</script>
 
-	
+	<!-- Removes default text values. -->
+	<script type="text/javascript">
+		function clearText(){
+			document.getElementById("new_post_descript").value = "";
+			document.getElementById("new_post_title").value = "";
+		}
+	</script>
+
 </body>
 
 <!--The visual footer at the bottom of the page-->
