@@ -28,12 +28,7 @@
 	  		error: function(user, error) {
 	    // The login failed. Check error to see why.
 	  	}
-<<<<<<< HEAD
-	});
-	location.reload();
-=======
-	};
->>>>>>> origin/gh-pages
+
 		}
 
 	function logout(){
