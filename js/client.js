@@ -28,7 +28,9 @@
 	    // The login failed. Check error to see why.
 	  	}
 	};
-	location.reload();
+	function(){
+		location.reload();
+	}
 		}
 
 	function logout(){
