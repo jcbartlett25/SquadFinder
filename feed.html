@@ -188,19 +188,18 @@
   
   		syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
    			console.log('Received', data.length, 'objects');
+   			for (i in data) {
+  				$("#squad_descript").html(data[i].text);
+				$("#squad_title").html(data[i].title);
+				$post = $("#template").clone();
+				$post.removeAttr('id');
+				$(".feed_div").prepend($post);
+				$post.fadeIn();
+  			};
    			data.forEach(function (d) {
    			    console.log(d);
     		});
   		});
-
-  		for (i in data) {
-  			$("#squad_descript").html(data[i].text);
-			$("#squad_title").html(data[i].title);
-			$post = $("#template").clone();
-			$post.removeAttr('id');
-			$(".feed_div").prepend($post);
-			$post.fadeIn();
-  		};
 	</script>
 
 </body>
