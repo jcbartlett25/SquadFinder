@@ -19,7 +19,7 @@
 		});}
 
 	function login(){
-	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value), {
+	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
 	  success: function(user) {
 	    // Do stuff after successful login.
 	   		window.open("feed.html", "_self");
@@ -27,7 +27,7 @@
 	  		error: function(user, error) {
 	    // The login failed. Check error to see why.
 	  	}
-	};
+	});
 	location.reload();
 		}
 
