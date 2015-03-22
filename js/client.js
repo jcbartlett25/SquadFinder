@@ -39,7 +39,7 @@
   				//Actually pushes object to database
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
     				console.log('Created new data object with ID = ', data.id);
-  					});
+  					})};
 		    window.open('feed.html', "_self");
 		  },
 		  error: function(user, error) {
