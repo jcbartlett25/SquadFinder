@@ -13,7 +13,7 @@
 		user.signUp(null, {
 		  success: function(user) {
 		    // Hooray! Let them use the app now.
-		    
+		    var syncano = SyncanoConnector.getInstance();
 		    var PROJECT_ID = 6289;
 			var COLLECTION_ID = 18888;
 
@@ -34,7 +34,7 @@
    						squads: [],
    						squadrons: []
    					}
-  				};
+  				});
   				
   				//Actually pushes object to database
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
@@ -46,7 +46,7 @@
 		    // Show the error message somewhere and let the user try again.
 		    alert("Error: " + error.code + " " + error.message);
 		  }
-		});}
+		})}
 
 	  function login(){
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
