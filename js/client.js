@@ -30,7 +30,6 @@
 	    	alert('BRUHHH');
 	  	}
 	};
-		location.reload();
 		}
 
 	function logout(){
