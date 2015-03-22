@@ -34,7 +34,7 @@
    						squads: [],
    						squadrons: []
    					}
-  				});
+  				})
   				
   				//Actually pushes object to database
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
