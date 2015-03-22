@@ -59,6 +59,7 @@ hr{
     width: 168px;
     margin-left: 20px;
     border: solid;
+    border-width: 1px;
     overflow: hidden;
     clear: left;
 }
@@ -84,11 +85,13 @@ hr{
     font-weight: normal;
     color: black;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }
 
 .profile_section{
     min-height: 200px;
+    margin-bottom: 20px;
+
 }
 
 .squad_ticker{

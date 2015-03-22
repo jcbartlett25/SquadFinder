@@ -20,7 +20,7 @@
 
 	function logIn(){
 
-	  Parse.User.logIn(document.getElementById('username').text, document.getElementById('password').text), {
+	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value), {
 	  success: function(user) {
 	    // Do stuff after successful login.
 	    window.open('feed.html', "_self");
