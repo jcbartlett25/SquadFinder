@@ -19,7 +19,6 @@
 		});}
 
 	function login(){
-	  alert('CHILL');
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value), {
 	  success: function(user) {
 	    // Do stuff after successful login.
