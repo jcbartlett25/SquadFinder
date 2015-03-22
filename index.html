@@ -37,14 +37,14 @@
 	    });
 	 
 		// Run code after the Facebook SDK is loaded.
-	var currentUser = Parse.User.current();
-	if (currentUser) {
-      window.open('feed.html', "_self");
-	} else {
-      
-	}
+			var currentUser = Parse.User.current();
+			if (currentUser === isCurrent) {
+		      window.open('feed.html', "_self");
+			} else {
+		      
+			}
 
-	};
+			};
 	  
 	  //Loads Facebook SDK
 	  (function(d, s, id){
@@ -107,7 +107,7 @@
 				<input type="password" id="password">
 				<br>
 			</form>
-			<span ><button onclick = "login()">Sign In</button></span>
+			<span ><button class = "small_button" onclick = "login()">Sign In</button></span>
 			</div>
 
 			<!-- Signup Form -->
@@ -123,7 +123,7 @@
 				<input type="text" id="new_email">
 				<br STYLE="margin-bottom:30px">
 			</form>
-			<span ><button onclick = "newUser()">Join</button></span>
+			<span ><button class="small_button" onclick = "newUser()">Join</button></span>
 			</div>
 			
 		</div></center>
@@ -135,7 +135,7 @@
 
 <!--The visual footer at the bottom of the page-->
 <footer class = "site-footer">
-	<a href="www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
+	<a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
 </footer>
 </html>
 
