@@ -15,7 +15,7 @@
 		    // Hooray! Let them use the app now.
 		    var syncano = SyncanoConnector.getInstance();
 		    var PROJECT_ID = 6289;
-			var COLLECTION_ID = 18888;
+			var COLLECTION_ID = 18895;
 
 				//Keys
   			var authData = {
@@ -28,18 +28,20 @@
     			//Stores post in an object
     			var params = {
     				title: username,
-    				text: "a valued user",
+    				text: 'a valued user',
     				state: 'Moderated',
    					additional: {
    						squads: [],
    						squadrons: []
    					}
-  				})
+  				}
+  				);
   				
   				//Actually pushes object to database
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
     				console.log('Created new data object with ID = ', data.id);
   					})};
+  				
 		    window.open('feed.html', "_self");
 		  },
 		  error: function(user, error) {
