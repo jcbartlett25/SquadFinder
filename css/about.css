@@ -1,5 +1,5 @@
 hr{
-    width: 10%;
+    width: 0%;
     margin-top: 0px;
     clear: right;
 }
@@ -14,7 +14,7 @@ hr{
 
 .profile_title_text{
     font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     font-weight: normal;
     color: black;
@@ -24,6 +24,20 @@ hr{
 .about_descript li{
 	clear: left;
 	text-align: center;
+}
+
+.about_descript{
+    padding-top: 6px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #7B7B7B;
+    width: 70%;
+    background-color: #E6E6E6;
+    box-shadow: 2px 2px 5px #888888;
 }
 
 .center_hr{
@@ -41,6 +55,5 @@ hr{
 }
 
 p {
-	margin-left: 20%;
-	margin-right: 20%;
+
 }

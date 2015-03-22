@@ -85,3 +85,16 @@ hr{
     font-size: 12px;
     text-transform: uppercase;
 }
+#new_post_area{
+    width: 55%;
+    margin-left: 20px;
+    padding: 10 10 10 10;
+    margin-bottom: 10px;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #7B7B7B;
+    width: 50%;
+    background-color: #E6E6E6;
+    box-shadow: 2px 2px 5px #888888;
+}
+}
