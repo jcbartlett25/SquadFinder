@@ -23,12 +23,17 @@
 	  success: function(user) {
 	    // Do stuff after successful login.
 	   		window.open("feed.html", "_self");
+	   		location.reload();
 	  	},
 	  		error: function(user, error) {
 	    // The login failed. Check error to see why.
 	  	}
+<<<<<<< HEAD
 	});
 	location.reload();
+=======
+	};
+>>>>>>> origin/gh-pages
 		}
 
 	function logout(){
