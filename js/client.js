@@ -29,6 +29,14 @@
 	    // The login failed. Check error to see why.
 	    alert('BRUHHH');
 	  }
+	  var currentUser = Parse.User.current();
+	if (currentUser._isCurrentUser) {
+      window.open('feed.html', "_self");
+	} else {
+      
+	}
+
+	};
 	};
 	}
 
