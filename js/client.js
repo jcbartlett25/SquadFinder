@@ -1,3 +1,4 @@
+
 	//signs up a new user
 	function newUser() {
 		var user = new Parse.User();
@@ -30,7 +31,7 @@
 	};
 	}
 
-	function logOut(){
+	function logout(){
 		Parse.User.logOut();
 		window.open('index.html', "_self");
 
