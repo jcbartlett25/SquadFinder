@@ -129,9 +129,11 @@
 				document.getElementById("new_post_title").value = "";
 
 				//var syncano = SyncanoConnector.getInstance(); 
+				//Project = Squad Finder && Collection = posts
 				var PROJECT_ID = 6289;
 				var COLLECTION_ID = 18888;
 
+				//Keys
   				var authData = {
     				api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
     				instance: "sparkling-meadow-922472"
@@ -139,6 +141,7 @@
   
   				//syncano.connect(authData, function (auth) {
     				//console.log("Connected");
+    			//Stores post in an object
     				var params = {
     					title: title,
     					text: descript,
@@ -147,7 +150,8 @@
    							username: username
    						}
    					};
-  
+  				
+  				//Actually pushes object to database
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
     				console.log('Created new data object with ID = ', data.id);
   					});
@@ -191,7 +195,9 @@
    			include_children: false,
    			folders: 'Default'
  		}
-  
+
+
+  		// Populates the feed on login
   		syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
    			console.log('Received', data.length, 'objects');
    			for (i in data) {
