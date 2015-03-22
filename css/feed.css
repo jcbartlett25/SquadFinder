@@ -45,7 +45,6 @@ hr{
     text-align: left;
     font-size: 15px;
     margin-left: 10px;
-
 }
 
 .squad_post p{
@@ -77,4 +76,10 @@ hr{
 /*NEW SQUAD POST*/
 .new_post_descript{
     min-height: 115px;
+}
+
+#post_username{
+    text-align: right;
+    float: right;
+    margin-right: 10px; 
 }

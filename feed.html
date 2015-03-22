@@ -92,7 +92,6 @@
 		<button id="post_button" onclick="postSquad()">New Post</button>
 		</div>
 
-		
 
 		<h1 class = "feed_title">My Squad Feed <span></span></h1>
 		<hr class = "post_bar">
@@ -101,8 +100,8 @@
 		<div class="feed_div">
 			<!--The Div That Holds Squad Posting Information-->
 			<div class = "squad_post" id="template" style="display:none">
-				<h2 id="squad_title">The BRIT Awards</h2>
-				<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p>
+				<h2><spanid="squad_title"></span>The BRIT Awards<span id="post_username"></span></h2>
+				<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
 				<p>Join &nbsp <span> | </span> &nbsp Decline</p>
 			</div>
 		</div>
@@ -115,8 +114,11 @@
 		function postSquad(){
 				var descript = document.getElementById("new_post_descript").value;
 				var title = document.getElementById("new_post_title").value;
+				var username = Parse.User.getUsername();
+
 				$("#squad_descript").html(descript);
 				$("#squad_title").html(title);
+				$("#post_username").html(username);
 				$post = $("#template").clone();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
@@ -141,7 +143,7 @@
     					title: title,
     					text: descript,
     					state: 'Moderated',
-   						additional: {}
+   						additional: {username: username}
    					};
   
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
@@ -193,6 +195,7 @@
    			for (i in data) {
   				$("#squad_descript").html(data[i].text);
 				$("#squad_title").html(data[i].title);
+				$("#post_username").html(data[i].additional['username']);
 				$post = $("#template").clone();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
