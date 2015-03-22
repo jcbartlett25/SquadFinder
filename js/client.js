@@ -1,7 +1,7 @@
 	//signs up a new user
 	function newUser() {
 		var user = new Parse.User();
-		user.set("username", document.getElementById('new_username').value);
+		user.set("username", document.getElementById("new_username").value);
 		user.set("password", document.getElementById('new_password').value);
 		user.set("email", document.getElementById('new_email').value);
 		//user.set("phone", document.getElementById('phone').text);
