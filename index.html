@@ -65,48 +65,8 @@
 		});
 		}</script>
 
-	<!--This script holds the newUser function to create a new Parse user-->
-	<script type="text/javascript">
-	//signs up a new user
-	function newUser() {
-		var user = new Parse.User();
-		user.set("username", document.getElementById('username').value);
-		user.set("password", document.getElementById('password').value);
-		//user.set("email", document.getElementById('email').text);
-		//user.set("phone", document.getElementById('phone').text);
-		  
-		user.signUp(null, {
-		  success: function(user) {
-		    // Hooray! Let them use the app now.
-		    alert("You have been signed up! Squad UP!");
-		  },
-		  error: function(user, error) {
-		    // Show the error message somewhere and let the user try again.
-		    alert("Error: " + error.code + " " + error.message);
-		  }
-		});}
-	</script>
 
-
-	<!--This script holds the logIn function to log in a parse user-->
-	<script type="text/javascript">
-		function logIn(){
-
-	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value), {
-	  success: function(user) {
-	    // Do stuff after successful login.
-	    window.open("Profile.html");
-	  },
-	  error: function(user, error) {
-	    // The login failed. Check error to see why.
-	  }
-	};
-	}
-	</script>
-
-
-
-	<!--REAL STUFF HERE-->
+	<!--REAL STUFF HERE -->
 
 
 
@@ -123,21 +83,41 @@
 
 		<!--The area of the page for logging in w/o Facebook-->
 		<script type="text/javascript">function showLogin(){$("#login_form").toggle()};</script>
+		<script type="text/javascript">function showSignup(){$("#signup_form").toggle()};</script>
 
 		<center><div id="login_area">
-			<button class="enter_button" onclick="showLogin();"> Login w/o Facebook</button>
-			<form id="login_form">
+			<button class="enter_button" onclick="showLogin();"> Sign In</button>
+			<button class="enter_button" onclick="showSignup();"> Create Account</button>
+
+			<!-- login form -->
+			<div id="login_form">
+			<form >
 				Username:<br>
 				<input type="text" id="username">
 				<br>
 				Password:<br>
-				<input type="text" id="password">
+				<input type="password" id="password">
+				<br>
+			</form>
+			<span ><button onclick = "logIn()">Login</button></span>
+			</div>
+
+			<!-- Signup Form -->
+			<div id="signup_form">
+			<form >
+				Username:<br>
+				<input type="text" id="new_username">
+				<br>
+				Password:<br>
+				<input type="password" id="new_password">
 				<br>
 				Email:<br>
-				<input type="text" id="email">
+				<input type="text" id="new_email">
 				<br STYLE="margin-bottom:30px">
 			</form>
-			<span ><button onclick = "logIn()">Login</button><button onclick = "newUser()" >New User</button></span>
+			<span ><button onclick = "newUser()">New User</button></span>
+			</div>
+			
 		</div></center>
 
 	</div>
