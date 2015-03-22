@@ -195,9 +195,10 @@
   		syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
    			console.log('Received', data.length, 'objects');
    			for (i in data) {
-  				$("#squad_descript").html(data[i].text);
-				$("#squad_title").html(data[i].title);
-				$("#post_username").html(data[i].additional["username"]);
+   				var obj = data[i];
+  				$("#squad_descript").html(obj.text);
+				$("#squad_title").html(obj.title);
+				$("#post_username").html(obj.additional.username);
 				$post = $("#template").clone();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
