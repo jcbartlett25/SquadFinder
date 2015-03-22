@@ -46,7 +46,7 @@ header {
   color: white;
   margin-left: 5%;
   margin-right: 5%;
-  display: inline-block;
+  display: inline;
   font-size: 20px;
 }
 p {
@@ -57,7 +57,7 @@ p {
   margin-right: 5%;
   font-family: 'Arvo', serif;
   display: inline-block;
-  width: 70%;
+  width: 80%;
 }
 .about {
   background-color: black;
@@ -71,6 +71,7 @@ p {
 
 #general_about {
 	text-align: center;
+	font-size: 40px;
 }
 
 img {
@@ -80,6 +81,11 @@ img {
 }
 
 .bios {
-	margin-left: 10%;
+	margin-left: 7%;
 	margin-right: 0%;
+}
+
+a{
+	text-decoration: none;
+	color: white;
 }
