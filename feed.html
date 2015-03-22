@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/client.js"></script>
 
-	<title>Squad Finder</title>
+	<title>Squad Feed</title>
 
     <script src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
     <script src="http://cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
@@ -40,7 +40,7 @@
 	    });
 	 	
 	   // Run code after the Facebook SDK is loaded.
-
+	   document.getElementById("user_profile").innerHTML = Parse.User.current().getUsername();
 	  };
 
 	 //Loads Facebook API
@@ -83,6 +83,7 @@
 
 	<!--The visual body of the page. Holds all of the main content-->
 	<div class = "content">
+		<h1></h1>
 		<form id="new_post_form">
 			<input type="text" id="new_post_title" value="title" onclick="clearText()">
 			<input type="text" id="new_post_descript" value="i need a squad for..." onclick="clearText()">
