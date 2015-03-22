@@ -118,7 +118,6 @@
 
 				$("#squad_descript").html(descript);
 				$("#squad_title").html(title);
-				$("#post_username").html(username);
 				$post = $("#template").clone();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
@@ -143,7 +142,7 @@
     					title: title,
     					text: descript,
     					state: 'Moderated',
-   						additional: {username: username}
+   						additional: {}
    					};
   
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
@@ -195,7 +194,6 @@
    			for (i in data) {
   				$("#squad_descript").html(data[i].text);
 				$("#squad_title").html(data[i].title);
-				$("#post_username").html(data[i].additional['username']);
 				$post = $("#template").clone();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
