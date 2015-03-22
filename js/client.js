@@ -29,13 +29,7 @@
 	  }
 	};
 	}
-
-	function logOut{
-
-	}
-
 	
-
 
 
 
