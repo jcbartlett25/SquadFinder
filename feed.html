@@ -114,10 +114,11 @@
 		function postSquad(){
 				var descript = document.getElementById("new_post_descript").value;
 				var title = document.getElementById("new_post_title").value;
-				var username = Parse.User.getUsername();
+				var username = Parse.User.current().getUsername();
 
 				$("#squad_descript").html(descript);
 				$("#squad_title").html(title);
+				$("#post_username").html(username);
 				$post = $("#template").clone();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
@@ -142,7 +143,9 @@
     					title: title,
     					text: descript,
     					state: 'Moderated',
-   						additional: {}
+   						additional: {
+   							username: username
+   						}
    					};
   
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
