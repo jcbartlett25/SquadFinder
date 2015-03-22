@@ -18,7 +18,7 @@
 		  }
 		});}
 
-	function logIn(){
+	function login(){
 
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value), {
 	  success: function(user) {
