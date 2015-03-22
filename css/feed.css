@@ -24,22 +24,35 @@ hr{
 .squad_post{
     max-height: 130px;
     margin-left: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #7B7B7B;
+    width: 50%;
+    background-color: #E6E6E6;
+    box-shadow: 2px 2px 5px #888888;
 }
 
 .squad_post h1{
     text-align: left;
     font-size: 20px;
+    margin-left: 10px;
+
 }
 
 .squad_post h2{
+    padding-top: 5px;
     text-align: left;
     font-size: 15px;
+    margin-left: 10px;
+
 }
 
 .squad_post p{
     text-align: left;
     font-size: 12px;
+    margin-left: 10px;
+    padding-bottom: 5px;
 }
 
 #post_button{
