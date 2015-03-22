@@ -29,7 +29,6 @@
 	    // The login failed. Check error to see why.
 	    	alert('BRUHHH');
 	  	}
-	  	var currentUser = Parse.User.current();
 		location.reload();
 	};
 	}
