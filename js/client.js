@@ -9,7 +9,7 @@
 		user.signUp(null, {
 		  success: function(user) {
 		    // Hooray! Let them use the app now.
-		    window.open('index.html', "_self");
+		    window.open('feed.html', "_self");
 		  },
 		  error: function(user, error) {
 		    // Show the error message somewhere and let the user try again.
@@ -22,7 +22,7 @@
 	  Parse.User.logIn(document.getElementById('username').text, document.getElementById('password').text), {
 	  success: function(user) {
 	    // Do stuff after successful login.
-	    window.open('index.html', "_self");
+	    window.open('feed.html', "_self");
 	  },
 	  error: function(user, error) {
 	    // The login failed. Check error to see why.
