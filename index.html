@@ -42,13 +42,10 @@
 	 
 		// Run code after the Facebook SDK is loaded.
 			var currentUser = Parse.User.current();
-			if (currentUser === isCurrent) {
+			if (currentUser) {
 		      window.open('feed.html', "_self");
 			} else {
-		      
-			}
-
-			};
+		      }};
 	  
 	  //Loads Facebook SDK
 	  (function(d, s, id){
