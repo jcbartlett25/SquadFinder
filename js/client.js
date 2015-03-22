@@ -29,6 +29,12 @@
 	  }
 	};
 	}
+
+	function logOut(){
+		Parse.User.logOut();
+		window.open('feed.html', "_self");
+
+	}
 	
 
 
