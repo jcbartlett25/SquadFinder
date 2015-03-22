@@ -11,6 +11,14 @@ header {
   color: white;
   padding-top: 100px;
 }
+
+#about_title {
+	font-family:'Passion One', cursive;
+  font-size: 100px;
+  color: white;
+  padding-top: 40px;
+}
+
 .big-button {
   font-family:'Passion One', cursive;
   height: 50px;
