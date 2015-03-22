@@ -22,7 +22,7 @@
 	  Parse.User.logIn(document.getElementById('username').text, document.getElementById('password').text), {
 	  success: function(user) {
 	    // Do stuff after successful login.
-	    location.href = "Profile.html";
+	    window.open('Profile.html', _self);
 	  },
 	  error: function(user, error) {
 	    // The login failed. Check error to see why.
