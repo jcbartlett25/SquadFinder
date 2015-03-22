@@ -22,12 +22,10 @@
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value), {
 	  success: function(user) {
 	    // Do stuff after successful login.
-	    	alert('YEET');
 	   		window.open("feed.html", "_self");
 	  	},
 	  		error: function(user, error) {
 	    // The login failed. Check error to see why.
-	    	alert('BRUHHH');
 	  	}
 	};
 		}
