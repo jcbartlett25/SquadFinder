@@ -1,4 +1,6 @@
-
+src="http://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"
+src="http://cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"
+src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"
 	//signs up a new user
 	function newUser() {
 		var user = new Parse.User();
@@ -13,7 +15,7 @@
 		user.signUp(null, {
 		  success: function(user) {
 		    // Hooray! Let them use the app now.
-		    var syncano = SyncanoConnector.getInstance();
+		    var syncano = SyncanoConnector.getInstance(); 
 		    var PROJECT_ID = 6289;
 			var COLLECTION_ID = 18895;
 
@@ -25,6 +27,11 @@
   
   			syncano.connect(authData, function (auth) {
     			console.log("Connected");
+    			});
+  			syncano.on('syncano:authorized', function(auth){
+    			console.log("authorized");
+  				});
+  			
     			//Stores User in an object
     			var params = {
     				title: username,
@@ -34,12 +41,12 @@
    						squads: [],
    						squadrons: []
    					}
-  				}
+  				};
   				
   				//Actually pushes object to database
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
     				console.log('Created new data object with ID = ', data.id);
-  					})});
+  					});
 
 		    window.open('feed.html', "_self");
 		  },
@@ -50,7 +57,7 @@
 		  }
 		})}
 
-	  function login(){
+	function login(){
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
 	  success: function(user) {
 	    // Do stuff after successful login.
