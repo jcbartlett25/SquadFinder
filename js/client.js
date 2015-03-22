@@ -29,9 +29,9 @@
 	    // The login failed. Check error to see why.
 	    	alert('BRUHHH');
 	  	}
-		location.reload();
 	};
-	}
+		location.reload();
+		}
 
 	function logout(){
 		Parse.User.logOut();
