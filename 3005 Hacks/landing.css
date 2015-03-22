@@ -59,10 +59,14 @@ p {
 }
 .about {
   background-color: black;
-  opacity: .8;
+  opacity: .85;
   padding-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
   margin-bottom: 0%;
+}
+
+.bios {
+	
 }
