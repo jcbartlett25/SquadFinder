@@ -25,7 +25,7 @@
   
   			syncano.connect(authData, function (auth) {
     			console.log("Connected");
-    			//Stores post in an object
+    			//Stores User in an object
     			var params = {
     				title: username,
     				text: 'a valued user',
@@ -35,15 +35,15 @@
    						squadrons: []
    					}
   				}
-  				);
   				
   				//Actually pushes object to database
   				syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
     				console.log('Created new data object with ID = ', data.id);
-  					})};
-  				
+  					})});
+
 		    window.open('feed.html', "_self");
 		  },
+
 		  error: function(user, error) {
 		    // Show the error message somewhere and let the user try again.
 		    alert("Error: " + error.code + " " + error.message);
