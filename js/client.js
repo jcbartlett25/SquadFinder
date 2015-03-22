@@ -32,7 +32,7 @@
 
 	function logOut(){
 		Parse.User.logOut();
-		window.open('feed.html', "_self");
+		window.open('index.html', "_self");
 
 	}
 	
