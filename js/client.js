@@ -22,21 +22,15 @@
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value), {
 	  success: function(user) {
 	    // Do stuff after successful login.
-	    alert('YEET');
-	    window.open("feed.html", "_self");
-	  },
-	  error: function(user, error) {
+	    	alert('YEET');
+	   		window.open("feed.html", "_self");
+	  	},
+	  		error: function(user, error) {
 	    // The login failed. Check error to see why.
-	    alert('BRUHHH');
-	  }
-	  var currentUser = Parse.User.current();
-	if (currentUser._isCurrentUser) {
-      window.open('feed.html', "_self");
-	} else {
-      
-	}
-
-	};
+	    	alert('BRUHHH');
+	  	}
+	  	var currentUser = Parse.User.current();
+		location.reload();
 	};
 	}
 
