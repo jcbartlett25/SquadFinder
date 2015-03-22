@@ -26,9 +26,10 @@
 	  	},
 	  		error: function(user, error) {
 	    // The login failed. Check error to see why.
-	  	})
+	  	}
 
-		}
+		})
+	};
 
 	function logout(){
 		Parse.User.logOut();
