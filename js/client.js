@@ -37,6 +37,9 @@
 
 	}
 	
+	function fb_login(){
+		window.open('feed.html', "_self");
+	}
 
 
 
