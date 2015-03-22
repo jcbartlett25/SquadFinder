@@ -39,3 +39,8 @@ hr{
 	border-radius:100px;
 	cursor:pointer;
 }
+
+p {
+	margin-left: 20%;
+	margin-right: 20%;
+}
