@@ -61,6 +61,7 @@
 	}
 	
 	function fb_login(){
+		logMeIn();
 		window.open('feed.html', "_self");
 	}
 

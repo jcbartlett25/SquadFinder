@@ -59,9 +59,9 @@
 		  Parse.FacebookUtils.logIn(null, {
 		  success: function(user) {
 		    if (!user.existed()) {
-		      alert("User signed up and logged in through Facebook!");
+		      //alert("User signed up and logged in through Facebook!");
 		    } else {
-		      alert("User logged in through Facebook!");
+		      //alert("User logged in through Facebook!");
 		    }
 		  },
 		  error: function(user, error) {
@@ -95,17 +95,16 @@
 
 
 		<h1 class = "feed_title">My Squad Feed <span></span></h1>
-		<hr class = "post_bar">
 
 		<!-- The Squad Feed -->
-		<div class="feed_div">
+		<center><div class="feed_div">
 			<!--The Div That Holds Squad Posting Information-->
 			<div class = "squad_post" id="template" style="display:none">
 				<h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
 				<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
 				<p>Join &nbsp <span> | </span> &nbsp Decline</p>
 			</div>
-		</div>
+		</div></center>
 	</div>
 
 
@@ -115,8 +114,12 @@
 		function postSquad(){
 				var descript = document.getElementById("new_post_descript").value;
 				var title = document.getElementById("new_post_title").value;
-				var username = Parse.User.current().getUsername();
 
+				if (title === "title" || descript === "i need a squad for...") {
+					return;
+				};
+
+				var username = Parse.User.current().getUsername();
 				$("#squad_descript").html(descript);
 				$("#squad_title").html(title);
 				$("#post_username").html(username);

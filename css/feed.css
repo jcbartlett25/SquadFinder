@@ -1,5 +1,5 @@
 hr{
-    width: 50%;
+    width: 45%;
     margin-left: 20px;
     margin-top: 0px;
     margin-right: 30%;
@@ -8,7 +8,7 @@ hr{
 .feed_title{
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
-    text-align: left;
+    text-align: center;
     font-weight: normal;
     color: black;
     margin-left: 20px;
@@ -45,6 +45,10 @@ hr{
     font-size: 12px;
     margin-left: 10px;
     padding-bottom: 5px;
+}
+/*FEED w/i CONTENT*/
+.feed_div{
+    width: 90%;
 }
 /*SQUAD POST BUTTON*/
 #post_button{
