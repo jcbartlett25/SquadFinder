@@ -31,7 +31,7 @@
 		
 	  //logs in a new Parse user	
 	  function login(){
-		})};
+		};
 
 	function login(){
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
