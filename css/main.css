@@ -136,6 +136,7 @@ a{
     width: 70%;
     color: red;
     margin-top: 10px;
+    display: none;
 }
 /*copyright text*/
 .copyright{
