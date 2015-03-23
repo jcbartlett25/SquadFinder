@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*
 	Login, Signup, and Logout Functions
 	These functions deal with user accounts.	
@@ -6,9 +6,6 @@
 
 
 */
-
-=======
->>>>>>> origin/gh-pages
 	//signs up a new user
 	function newUser() {
 		var user = new Parse.User();
@@ -30,16 +27,13 @@
 		    // Show the error message somewhere and let the user try again.
 		    alert("Error: " + error.code + " " + error.message);
 		  }
-<<<<<<< HEAD
 		})}
 		
 	  //logs in a new Parse user	
 	  function login(){
-=======
 		})};
 
 	function login(){
->>>>>>> origin/gh-pages
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
 	  success: function(user) {
 	    // Do stuff after successful login.
