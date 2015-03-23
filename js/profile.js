@@ -20,13 +20,7 @@ function upload_pic(){
 
   	//set user's profile pic to uploaded file
   	;
-  	  	user.set('profile_pic', parseFile).then(function() {
-  // The file has been saved to Parse.
-  alert();
-	}, function(error) {
-  // The file either could not be read, or could not be saved to Parse.
-	});
-
+  	user.set('profile_pic', '.SquadFinder1/img/david.jpg')
 
   	var profilePhoto = user.get("profile_pic");
 	$("#profile_pic")[0].src = profilePhoto.url();
