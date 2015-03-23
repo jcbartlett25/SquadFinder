@@ -19,7 +19,13 @@ function upload_pic(){
   	//$("#profile_pic").attr('src', parseFile)
 
   	//set user's profile pic to uploaded file
-  	user.set('profile_pic', parseFile);
+  	;
+  	  	user.set('profile_pic', parseFile).then(function() {
+  // The file has been saved to Parse.
+  alert();
+	}, function(error) {
+  // The file either could not be read, or could not be saved to Parse.
+	});
 
 
   	var profilePhoto = user.get("profile_pic");
