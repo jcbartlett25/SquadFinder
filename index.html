@@ -91,8 +91,8 @@
 		<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
 
 		<!--The area of the page for logging in w/o Facebook-->
-		<script type="text/javascript">function showLogin(){$("#login_form").toggle(); $("#signup_form").css("display", "none");};</script>
-		<script type="text/javascript">function showSignup(){$("#signup_form").toggle(); $("#login_form").css("display", "none");}; </script>
+		<script type="text/javascript">function showLogin(){$("#login_form").toggle(); $("#signup_form").css("display", "none"); $(".error_login").hide();};</script>
+		<script type="text/javascript">function showSignup(){$("#signup_form").toggle(); $("#login_form").css("display", "none"); $(".error_login").hide();}; </script>
 
 		<center><div id="login_area">
 			<button class="enter_button" onclick="showLogin();"> Sign In</button>
