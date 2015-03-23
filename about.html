@@ -39,7 +39,6 @@
 	   // Run code after the Facebook SDK is loaded.
 	   var currentUser = Parse.User.current();
 			if (currentUser) {
-		      window.open('feed.html', "_self");
 		      document.getElementById("logout").innerHTML = "logout";
 			} else {
 		      }

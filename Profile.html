@@ -43,7 +43,6 @@
 
 	    var currentUser = Parse.User.current();
 			if (currentUser) {
-		      window.open('feed.html', "_self");
 		      document.getElementById("logout").innerHTML = "logout";
 		      document.getElementById('title_user').innerHTML = Parse.User.current().getUsername();
 			} else {
