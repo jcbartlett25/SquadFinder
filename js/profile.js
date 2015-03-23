@@ -22,3 +22,4 @@ function upload_pic(){
 	$("profile_pic")[0].src = profilePhoto.url();
 	
 }
+}
