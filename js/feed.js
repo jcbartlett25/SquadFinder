@@ -1,11 +1,4 @@
 		//POPULATES Feed with Posts
-        $("#squad_descript").html('test');
-        $("#squad_title").html('test');
-        $("#post_username").html('test');
-        $post = $("#template").clone();
-        $post.removeAttr('id');
-        $(".feed_div").prepend($post);
-        $(post).hide();
 
 
     var syncano = SyncanoConnector.getInstance(); 
@@ -39,7 +32,6 @@
 				$("#squad_title").html(obj.title);
 				$("#post_username").html(obj.additional.username);
 				$post = $("#template").clone();
-        $post.show();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
 				$post.fadeIn();
