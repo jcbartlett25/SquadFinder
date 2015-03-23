@@ -8,6 +8,7 @@
 */
 	//signs up a new user
 	function newUser() {
+		$(".error_login").hide();
 		var user = new Parse.User();
 		var username = document.getElementById("new_username").value;
 		var password = document.getElementById('new_password').value;
@@ -36,6 +37,7 @@
 		};
 
 	function login(){
+	  $(".error_login").hide();
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
 	  success: function(user) {
 	    // Do stuff after successful login.
