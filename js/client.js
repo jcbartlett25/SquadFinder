@@ -25,7 +25,8 @@
 
 		  error: function(user, error) {
 		    // Show the error message somewhere and let the user try again.
-		    alert("Error: " + error.code + " " + error.message);
+		    $(".error_login").html(error.message);
+
 		  }
 		})}
 		
@@ -41,6 +42,7 @@
 	  	},
 	  		error: function(user, error) {
 	    // The login failed. Check error to see why.
+	    	$(".error_login").html(error.message);
 	  	}
 
 		})

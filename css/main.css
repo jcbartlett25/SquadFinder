@@ -132,6 +132,11 @@ a{
     display:none;
     margin-top:  10px;
 }
+.error_login{
+    width: 70%;
+    color: red;
+    margin-top: 10px;
+}
 /*copyright text*/
 .copyright{
     color: white;
