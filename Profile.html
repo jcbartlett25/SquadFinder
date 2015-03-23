@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	
 
-	<title >Parse.User.current().getUsername()</title>
+	<title id="title_user" >My Profile</title>
 
 	<script type="text/javascript" src="js/client.js"></script>
 
@@ -40,6 +40,14 @@
 	 
 	    // Run code after the Facebook SDK is loaded.
 	    document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
+
+	    var currentUser = Parse.User.current();
+			if (currentUser) {
+		      window.open('feed.html', "_self");
+		      document.getElementById("logout").innerHTML = "logout";
+		      document.getElementById('title_user').innerHTML = Parse.User.current().getUsername();
+			} else {
+		      }
 	  };
 	 
 	  (function(d, s, id){
@@ -55,7 +63,7 @@
 	<!-- the visual header and menu -->
 	<div class = "header">
 		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="feed.html"> Home<a><a class = "menu_text" href="about.html"> About<a><a class = "logout" onclick="logout()"> Logout<a></span>
+		<span><a class = "menu_text" href="feed.html"> Home<a><a class = "menu_text" href="about.html"> About<a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
 	</div></span>
 
 	</div>

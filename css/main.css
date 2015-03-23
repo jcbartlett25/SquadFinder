@@ -9,14 +9,22 @@ body{
     color: #323131;
     
 }
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+/*Site Title*/
 .title{
     color: white;
     text-align: center;
     vertical-align: center;
     font-size: 90px;
-    margin-bottom: 0;
     font-weight: normal;
 }
+/*Page Title Headings*/
 .title-text{
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -24,10 +32,12 @@ body{
     font-weight: normal;
     color: black;
 }
+/*Visual Header*/
 .header {
     height:130px;
     background: #4387fd;
 }
+/*The Main Chunk*/
 .content {
     width:960px;
     height: auto;
@@ -38,12 +48,13 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.squad-img{
+/*Squad Image of the Month*/
+.squad_img{
     height: 350px;
     width: 600px;
     padding-top: 10px;
 }
-
+/*Visual Footer*/
 .site-footer{
     position: bottom;
     height: 30px;
@@ -51,7 +62,7 @@ body{
     background-color: #4387fd;
     padding-bottom: 1%;
 }
-
+/*The Blueprint for Large Buttons*/
 .enter_button{
     margin-left: 10px;
     margin-right: 20px;
@@ -70,54 +81,8 @@ body{
   cursor: pointer;
   -webkit-box-shadow: inset 0 -2px #3D76DA;
   box-shadow: inset 0 -2px #3D76DA;
-
 }
-.menu_text{
-    font-size: 15px;
-    color: white;
-    text-decoration: none;
-    float: left;
-    margin-left: 15px;
-}
-
-.fb-like{
-    float: left;
-}
-
-.fb-login-button{
-    margin-top: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-#login_form{
-    display: none;
-    margin-top: 10px;
-}
-#signup_form{
-    display:none;
-    margin-top:  10px;
-}
-li{
-    list-style-type: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-.copyright{
-    color: white;
-    text-align: left;
-    margin-left: 10px;
-}
-.logout{
-    float: right;
-    margin-right: 15px;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
-
+/*The Blueprint for Small Buttons*/
 .small_button{
       height: 25px;
       width: 75px;
@@ -135,4 +100,40 @@ a{
       -webkit-box-shadow: inset 0 -2px #3D76DA;
       box-shadow: inset 0 -2px #3D76DA;
 
+}
+/*The text for menu links*/
+.menu_text{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    float: left;
+    margin-left: 15px;
+}
+.logout{
+    margin-right: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    float: right;
+}
+/*Facebook Button*/
+.fb-login-button{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+/*login and signup forms*/
+#login_form{
+    display: none;
+    margin-top: 10px;
+}
+#signup_form{
+    display:none;
+    margin-top:  10px;
+}
+/*copyright text*/
+.copyright{
+    color: white;
+    text-align: left;
+    margin-left: 10px;
 }

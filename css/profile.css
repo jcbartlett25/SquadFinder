@@ -12,15 +12,14 @@ hr{
     margin-top: 0px;
     padding-top: 0;
 }
-
-
+/*Page Title Text*/
 .title{
     color: white;
     text-align: center;
     vertical-align: center;
     font-size: 90px;
-    
 }
+/*Title Heading*/
 .title-text{
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -29,27 +28,23 @@ hr{
     color: black;
     margin-left: 20px;
 }
-
+/*Visual Header of the Page*/
 .header {
     height:130px;
     background: #4387fd;
 }
-
+/*Visual footer of the page*/
 .site-footer{
     height: 30px;
     width: 100%;
     background-color: #4387fd;
     padding-bottom: 1%;
 }
-
-.fb-like{
-}
-
+/*FB Button*/
 .fb-login-button{
     margin-top: 20px;
     width: 100%;
 }
-
 /*PROFILE*/
 .my_profile{
     height: 200px;
@@ -64,21 +59,11 @@ hr{
     clear: left;
     margin-bottom: 0;
 }
-
 .profile_pic_holder img{
     float: left;
     height: 168px;
     width: 168px;
 }
-
-.profile_info{
-
-    }
-
-.profile_info h1{
-    font-size: 16px;
-}
-
 .profile_title_text{
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -88,7 +73,6 @@ hr{
     margin-left: 20px;
     margin-bottom: 12px;
 }
-
 .profile_section{
     margin-left: 20px;
     min-height: 188px;
@@ -103,13 +87,7 @@ hr{
     box-shadow: 2px 2px 5px #888888;
 
 }
-
-.squad_ticker{
-    height: 20px;
-    background-color: #CCCCCC;
-    color: black;
-}
-
+/*MAIN CHUNK*/
 .content {
     width:960px;
     height: auto;

@@ -44,6 +44,7 @@
 			var currentUser = Parse.User.current();
 			if (currentUser) {
 		      window.open('feed.html', "_self");
+		      document.getElementById("logout").innerHTML = "logout";
 			} else {
 		      }};
 	  
@@ -82,12 +83,12 @@
 	<!--The visual header of the page. The title, menu bar, etc.-->
 	<div class = "header">
 		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="about.html">About<a><a class = "menu_text" href="tester.html"> Beta<a><a class = "logout" onclick="logout()"> Logout<a></span>
+		<span><a class = "menu_text" href="about.html">About<a><a class = "menu_text" href="tester.html"> Beta<a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
 	</div>
 
 	<!--The visual body of the page. Holds all of the main content-->
 	<div class = "content">
-		<center><a href="https://youtu.be/_ABk7TmjnVk"><img class = "squad-img" src="img/kanye-brits.jpg"></a></center>
+		<center><a href="https://youtu.be/_ABk7TmjnVk"><img class = "squad_img" src="img/kanye-brits.jpg"></a></center>
 		<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
 
 		<!--The area of the page for logging in w/o Facebook-->

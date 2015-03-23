@@ -1,3 +1,10 @@
+/*
+	Login, Signup, and Logout Functions
+	These functions deal with user accounts.	
+		
+
+
+*/
 
 	//signs up a new user
 	function newUser() {
@@ -49,7 +56,8 @@
 		    alert("Error: " + error.code + " " + error.message);
 		  }
 		})}
-
+		
+	  //logs in a new Parse user	
 	  function login(){
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
 	  success: function(user) {
@@ -63,6 +71,7 @@
 		})
 	};
 
+	//logs out the Parse user
 	function logout(){
 		Parse.User.logOut();
 		window.open('index.html', "_self");

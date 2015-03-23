@@ -3,7 +3,7 @@ hr{
     margin-top: 0px;
     clear: right;
 }
-
+/*Title Text*/
 .title{
 	font-family: 'Raleway', sans-serif;
     font-size: 50px;
@@ -11,7 +11,7 @@ hr{
     font-weight: normal;
     color: black;
 }
-
+/*Heading Title Text*/
 .profile_title_text{
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
@@ -20,12 +20,7 @@ hr{
     color: black;
     margin-bottom: 5px;
 }
-
-.about_descript li{
-	clear: left;
-	text-align: center;
-}
-
+/*About Descriptions*/
 .about_descript{
     padding-top: 6px;
     padding-bottom: 10px;
@@ -39,21 +34,12 @@ hr{
     background-color: #E6E6E6;
     box-shadow: 2px 2px 5px #888888;
 }
-
+.about_descript li{
+    clear: left;
+    text-align: center;
+}
+/*Centered HR*/
 .center_hr{
 	width: 50%;
 	clear: right;
-}
-
-.circle{
-	width:200px;
-	height:200px;
-	border-style:solid;
-	border-width:1px;
-	border-radius:100px;
-	cursor:pointer;
-}
-
-p {
-
 }

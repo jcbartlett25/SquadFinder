@@ -1,16 +1,7 @@
-var profpic = Parse.FacebookUtils.api(
-    "/me/picture",
-    {
-        "redirect": false,
-        "height": 200,
-        "width": 200,
-        "type": "normal"
-    },
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
-      }
-    }
-);
+/*Actions that run on the start of the page
+*
+*
+*
+*/
 
-document.getElementById("profile_pic").innerHTML = profpic;
+if()

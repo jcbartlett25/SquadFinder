@@ -41,6 +41,13 @@
 	 	
 	   // Run code after the Facebook SDK is loaded.
 	   document.getElementById("user_profile").innerHTML = Parse.User.current().getUsername();
+
+	   var currentUser = Parse.User.current();
+			if (currentUser) {
+		      window.open('feed.html', "_self");
+		      document.getElementById("logout").innerHTML = "logout";
+			} else {
+		      }
 	  };
 
 	 //Loads Facebook API
@@ -76,7 +83,7 @@
 	<!--The visual header of the page. The title, menu bar, etc.-->
 	<div class = "header">
 		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="Profile.html"> Profile<a><a class = "menu_text" href="about.html"> About<a><a class = "logout" onclick="logout()"> Logout<a></span>
+		<span><a class = "menu_text" href="Profile.html"> Profile<a><a class = "menu_text" href="about.html"> About<a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
 	</div></span>
 
 	</div>
