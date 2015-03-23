@@ -33,10 +33,8 @@
 		  }
 		})}
 		
-	  //logs in a new Parse user	
-	  function login(){
-		};
-
+	  
+	 //logs in a new Parse user	
 	function login(){
 	  
 	  Parse.User.logIn(document.getElementById('username').value, document.getElementById('password').value, {
@@ -57,8 +55,23 @@
 	function logout(){
 		Parse.User.logOut();
 		window.open('index.html', "_self");
-
 	}
+
+	function logMeIn(){
+		  Parse.FacebookUtils.logIn(null, {
+		  success: function(user) {
+		    if (!user.existed()) {
+		      alert("User signed up and logged in through Facebook!");
+		    } else {
+		      alert("User logged in through Facebook!");
+		    }
+		  },
+		  error: function(user, error) {
+		    alert("User cancelled the Facebook login or did not fully authorize.");
+		  }
+
+		});
+		}
 	
 	function fb_login(){
 		logMeIn();

@@ -1,4 +1,13 @@
 		//POPULATES Feed with Posts
+        $("#squad_descript").html('test');
+        $("#squad_title").html('test');
+        $("#post_username").html('test');
+        $post = $("#template").clone();
+        $post.removeAttr('id');
+        $(".feed_div").prepend($post);
+        $(post).hide();
+
+
     var syncano = SyncanoConnector.getInstance(); 
   		var authData = {
    				api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
@@ -26,7 +35,7 @@
    			console.log('Received', data.length, 'objects');
    			for (i in data) {
    				var obj = data[i];
-  				$("#squad_descript").html(obj.text);
+  			$("#squad_descript").html(obj.text);
 				$("#squad_title").html(obj.title);
 				$("#post_username").html(obj.additional.username);
 				$post = $("#template").clone();
@@ -52,6 +61,7 @@
         };
 
         var username = Parse.User.current().getUsername();
+
         $("#squad_descript").html(descript);
         $("#squad_title").html(title);
         $("#post_username").html(username);
