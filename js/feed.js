@@ -39,6 +39,7 @@
 				$("#squad_title").html(obj.title);
 				$("#post_username").html(obj.additional.username);
 				$post = $("#template").clone();
+        $post.show();
 				$post.removeAttr('id');
 				$(".feed_div").prepend($post);
 				$post.fadeIn();
