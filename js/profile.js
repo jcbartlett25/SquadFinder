@@ -19,7 +19,7 @@ function upload_pic(){
   	user.set('profile_pic', parseFile);
 
   	var profilePhoto = user.get("profile_pic");
-	$("profile_pic")[0].src = profilePhoto.url();
+	$("#profile_pic")[0].src = profilePhoto.url();
 	
 }
 }
