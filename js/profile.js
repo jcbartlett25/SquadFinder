@@ -31,6 +31,6 @@ function upload_pic(){
 function load_pic(){
 	var user = Parse.User.current();
 	var profilePhoto = user.get("profile_pic");
-	alert(profilePhoto);
-	$("#profile_pic")[0].src = profilePhoto.url();
+	var profileURL = profilePhoto.URL();
+	$("#profile_pic").attr('src', profileURL);
 }
