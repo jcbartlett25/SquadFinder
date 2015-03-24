@@ -27,3 +27,9 @@ function upload_pic(){
 	
 }
 }
+
+function load_pic(){
+	var user = Parse.User.current();
+	var profilePhoto = user.get("profile_pic");
+	$("#profile_pic")[0].src = profilePhoto.url();
+}
