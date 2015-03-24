@@ -5,12 +5,7 @@ li {
 a {
   text-decoration: none;
 }
-hr {
-  width: 50%;
-  margin-left: 20px;
-  margin-top: 0px;
-  padding-top: 0;
-}
+\
 /*Page Title Text*/
 .title {
   color: white;
