@@ -1,110 +1,108 @@
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-
-hr{
-    width: 50%;
-    margin-left: 20px;
-    margin-top: 0px;
-    padding-top: 0;
+hr {
+  width: 50%;
+  margin-left: 20px;
+  margin-top: 0px;
+  padding-top: 0;
 }
 /*Page Title Text*/
-.title{
-    color: white;
-    text-align: center;
-    vertical-align: center;
-    font-size: 90px;
+.title {
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  font-size: 90px;
 }
 /*Title Heading*/
-.title-text{
-    font-size: 20px;
-    text-align: left;
-    font-weight: normal;
-    color: black;
-    margin-left: 20px;
+.title-text {
+  font-size: 20px;
+  text-align: left;
+  font-weight: normal;
+  color: black;
+  margin-left: 20px;
 }
 /*Visual Header of the Page*/
 .header {
-    height:130px;
-    background: #4387fd;
+  height:130px;
+  background: #4387fd;
 }
 /*Visual footer of the page*/
-.site-footer{
-    height: 30px;
-    width: 100%;
-    background-color: #4387fd;
-    padding-bottom: 1%;
+.site-footer {
+  height: 30px;
+  width: 100%;
+  background-color: #4387fd;
+  padding-bottom: 1%;
 }
 /*FB Button*/
-.fb-login-button{
-    margin-top: 20px;
-    width: 100%;
+.fb-login-button {
+  margin-top: 20px;
+  width: 100%;
 }
 /*PROFILE*/
-.my_profile{
-    height: 200px;
+.my_profile {
+  height: 200px;
 }
-.profile_pic_holder{
-    height: 168px;
-    width: 168px;
-    margin-left: 20px;
-    border: solid;
-    border-width: 1px;
-    overflow: hidden;
-    clear: left;
-    margin-bottom: 0;
+.profile_pic_holder {
+  height: 168px;
+  width: 168px;
+  margin-left: 20px;
+  border: solid;
+  border-width: 1px;
+  overflow: hidden;
+  clear: left;
+  margin-bottom: 0;
 }
-.profile_pic_holder img{
-    float: left;
-    height: 168px;
-    width: 168px;
-    margin-bottom: 0;
+.profile_pic_holder img {
+  float: left;
+  height: 168px;
+  width: 168px;
+  margin-bottom: 0;
 }
-.profile_title_text{
-    font-size: 20px;
-    text-align: left;
-    font-weight: normal;
-    color: black;
-    margin-left: 20px;
-    margin-bottom: 12px;
+.profile_title_text {
+  font-size: 20px;
+  text-align: left;
+  font-weight: normal;
+  color: black;
+  margin-left: 20px;
+  margin-bottom: 12px;
 }
-.profile_section{
-    margin-left: 20px;
-    min-height: 188px;
-    padding-top: 10px;
-    padding-right: 20px;
-    margin-bottom: 10px;
-    border: solid;
-    border-width: 0.5px;
-    border-color: #7B7B7B;
-    width: 70%;
-    background-color: #E6E6E6;
-    box-shadow: 2px 2px 5px #888888;
-
+.profile_section {
+  margin-left: 20px;
+  min-height: 188px;
+  padding-top: 10px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  border: solid;
+  border-width: 0.5px;
+  border-color: #7B7B7B;
+  width: 70%;
+  background-color: #E6E6E6;
+  box-shadow: 2px 2px 5px #888888;
 }
-#edit_profile{
-    text-align: left;
-    margin-left: 20px;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    font-size: 12px;
-    cursor: pointer;
+#edit_profile {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  cursor: pointer;
 }
-#edit_profile_menu{
-    display: none;
+#edit_profile_menu {
+  display: none;
 }
 /*MAIN CHUNK*/
 .content {
-    width:960px;
-    height: auto;
-    min-height: 550px;
-    background: #F0F0F0;
-    border: 1px solid #CCC;
-    margin: 0px auto 40px auto;
-    padding-top: 0px;
-    padding-bottom: 20px;
+  width:960px;
+  height: auto;
+  min-height: 550px;
+  background: #F0F0F0;
+  border: 1px solid #CCC;
+  margin: 0px auto 40px auto;
+  padding-top: 0px;
+  padding-bottom: 20px;
 }
