@@ -1,3 +1,22 @@
+$(document).ready(function load_pic(){
+  var user = Parse.User.current();
+  var profilePhoto = user.get("profile_pic_url");
+  //var profileURL = profilePhoto.URL();
+  $("#profile_pic").attr('src', profilePhoto);
+  $("#profile_pic").fadeIn();
+}
+);
+
+function toggEditMenu(){
+  $("#edit_profile_menu").toggle();
+}
+
+function changeUsername(){
+  username = document.getElementById("new_username").value;
+  user = Parse.user.current();
+  user.set("username", username);
+}
+
 function upload_pic(){
 	// gets user
 	var user = Parse.User.current();
@@ -28,17 +47,7 @@ function upload_pic(){
 	//$("#profile_pic")[0].src = profilePhoto.url();
 	
 }
-}
 
-$(document).ready(function load_pic(){
-	var user = Parse.User.current();
-	var profilePhoto = user.get("profile_pic_url");
-	//var profileURL = profilePhoto.URL();
-	$("#profile_pic").attr('src', profilePhoto);
-	$("#profile_pic").fadeIn();
-}
-);
 
-function toggEditMenu(){
-	$("#edit_profile_menu").toggle();
-}
+
+
