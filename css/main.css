@@ -1,0 +1,148 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background:#E6E6E6;
+  text-align: center; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  vertical-align: center;
+  color: #323131;
+}
+h1 {
+  margin-top: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+/*Site Title*/
+.title{
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  font-size: 90px;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+/*Page Title Headings*/
+.title-text {
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+  color: black;
+}
+/*Visual Header*/
+.header {
+  height:130px;
+  background: #4387fd;
+}
+/*The Main Chunk*/
+.content {
+  width:960px;
+  height: auto;
+  min-height: 550px;
+  background: #FFFFFF;
+  border: 1px solid #CCC;
+  margin: 0px auto 40px auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/*Squad Image of the Month*/
+.squad_img{
+  height: 350px;
+  width: 600px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+/*Visual Footer*/
+.site-footer{
+  position: bottom;
+  height: 30px;
+  width: 100%;
+  background-color: #4387fd;
+  padding-bottom: 1%;
+}
+/*The Blueprint for Large Buttons*/
+.enter_button{
+  margin-left: 10px;
+  margin-right: 20px;
+  height: 50px;
+  width: 200px;
+  background-color: #4387fd;
+  font-size: 20px;
+  color: white;
+  vertical-align: middle;
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-bottom: 2px solid #3D76DA;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #3D76DA;
+  box-shadow: inset 0 -2px #3D76DA;
+}
+/*The Blueprint for Small Buttons*/
+.small_button{
+  height: 25px;
+  width: 75px;
+  background-color: #4387fd;
+  font-size: 12px;
+  color: white;
+  vertical-align: middle;
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-bottom: 2px solid #3D76DA;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #3D76DA;
+  box-shadow: inset 0 -2px #3D76DA;
+
+}
+/*The text for menu links*/
+.menu_text{
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  float: left;
+  margin-left: 15px;
+}
+.logout{
+  margin-right: 15px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  float: right;
+}
+/*Facebook Button*/
+.fb-login-button{
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+/*login and signup forms*/
+#login_form{
+  display: none;
+  margin-top: 10px;
+}
+#signup_form{
+  display:none;
+  margin-top:  10px;
+}
+.error_login{
+  width: 70%;
+  color: red;
+  margin-top: 10px;
+  display: none;
+}
+/*copyright text*/
+.copyright{
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+}
