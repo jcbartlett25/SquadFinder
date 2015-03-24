@@ -31,6 +31,6 @@ function upload_pic(){
 function load_pic(){
 	var user = Parse.User.current();
 	var profilePhoto = user.get("profile_pic");
-	var profileURL = profilePhoto.URL();
+	//var profileURL = profilePhoto.URL();
 	$("#profile_pic").attr('src', "http://files.parsetfss.com/3be3fd11-410d-4010-99a3-1304e98bdd9a/tfss-9bdc8c5a-e682-4253-9033-d9515e202c5d-Snapchat-20140724052553_opt.jpg");
 }
