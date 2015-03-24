@@ -5,7 +5,6 @@ hr {
 }
 /*Title Text*/
 .title {
-  font-family: 'Clear Sans', sans-serif;
   font-size: 50px;
   text-align: center;
   font-weight: normal;
@@ -13,7 +12,6 @@ hr {
 }
 /*Heading Title Text*/
 .profile_title_text{
-  font-family: 'Clear Sans', sans-serif;
   font-size: 25px;
   text-align: center;
   font-weight: normal;
