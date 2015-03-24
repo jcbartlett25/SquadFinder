@@ -1,11 +1,11 @@
-hr{
+hr {
     width: 45%;
     margin-left: 20px;
     margin-top: 0px;
     margin-right: 30%;
 }
 /*Title Heading*/
-.feed_title{
+.feed_title {
     font-size: 25px;
     text-align: center;
     font-weight: normal;
@@ -15,7 +15,7 @@ hr{
 }
 
 /*SQUAD POSTS*/
-.squad_post{
+.squad_post {
     max-height: 130px;
     margin-left: 20px;
     margin-bottom: 10px;
@@ -26,31 +26,31 @@ hr{
     background-color: #E6E6E6;
     box-shadow: 2px 2px 5px #888888;
 }
-.squad_post h1{
+.squad_post h1 {
     text-align: left;
     font-size: 20px;
     margin-left: 10px;
 
 }
-.squad_post h2{
+.squad_post h2 {
     padding-top: 5px;
     text-align: left;
     font-size: 15px;
     margin-left: 10px;
 }
 
-.squad_post p{
+.squad_post p {
     text-align: left;
     font-size: 12px;
     margin-left: 10px;
     padding-bottom: 5px;
 }
 /*FEED w/i CONTENT*/
-.feed_div{
+.feed_div {
     width: 90%;
 }
 /*SQUAD POST BUTTON*/
-#post_button{
+#post_button {
       height: 25px;
       width: 75px;
       background-color: #4387fd;
@@ -66,10 +66,11 @@ hr{
       cursor: pointer;
       -webkit-box-shadow: inset 0 -2px #3D76DA;
       box-shadow: inset 0 -2px #3D76DA;
+      margin-top: 10px;
 }
 
 /*NEW SQUAD POST*/
-#new_post_area{
+#new_post_area {
     width: 55%;
     margin-left: 20px;
     padding: 10 10 10 10;
@@ -80,8 +81,10 @@ hr{
     width: 50%;
     background-color: #E6E6E6;
     box-shadow: 2px 2px 5px #888888;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
-#post_username{
+#post_username {
     text-align: right;
     float: right;
     margin-right: 10px; 
