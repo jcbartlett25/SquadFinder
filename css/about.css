@@ -1,45 +1,45 @@
-hr{
-    width: 0%;
-    margin-top: 0px;
-    clear: right;
+hr {
+  width: 0%;
+  margin-top: 0px;
+  clear: right;
 }
 /*Title Text*/
-.title{
-	font-family: 'Raleway', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    font-weight: normal;
-    color: black;
+.title {
+  font-family: 'Clear Sans', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  font-weight: normal;
+  color: black;
 }
 /*Heading Title Text*/
 .profile_title_text{
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    text-align: center;
-    font-weight: normal;
-    color: black;
-    margin-bottom: 5px;
+  font-family: 'Clear Sans', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 5px;
 }
 /*About Descriptions*/
 .about_descript{
-    padding-top: 6px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 10px;
-    border: solid;
-    border-width: 0.5px;
-    border-color: #7B7B7B;
-    width: 70%;
-    background-color: #E6E6E6;
-    box-shadow: 2px 2px 5px #888888;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  border: solid;
+  border-width: 0.5px;
+  border-color: #7B7B7B;
+  width: 70%;
+  background-color: #E6E6E6;
+  box-shadow: 2px 2px 5px #888888;
 }
 .about_descript li{
-    clear: left;
-    text-align: center;
+  clear: left;
+  text-align: center;
 }
 /*Centered HR*/
 .center_hr{
-	width: 50%;
-	clear: right;
+  width: 50%;
+  clear: right;
 }
