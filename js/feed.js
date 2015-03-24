@@ -86,8 +86,6 @@ function postSquad(){
     state: 'Moderated',
     additional: {
       username: username,
-      joinButton: null,
-      declineButton: null
     }
   };
           
