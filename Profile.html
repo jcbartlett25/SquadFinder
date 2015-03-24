@@ -1,113 +1,107 @@
 <!DOCTYPE html/>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/profile.css">
-	<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	<!--FONTS-->
-	<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <head>
+    <title id="title_user" >My Profile</title>
 
-	<script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <!--FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-	<title id="title_user" >My Profile</title>
+    <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/client.js"></script>
+  </head>
 
-	<script type="text/javascript" src="js/client.js"></script>
+  <body >
+    <div id="fb-root"></div>
+    <!--Facebook Stuff-->
+    <script>
+      // Initialize Parse
+      Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
+     
+      window.fbAsyncInit = function() {
+        Parse.FacebookUtils.init({ // this line replaces FB.init({
+          appId      : '697679580354991', // Facebook App ID
+          status     : false,  // check Facebook Login status
+          cookie     : true,  // enable cookies to allow Parse to access the session
+          xfbml      : true,  // initialize Facebook social plugins on the page
+          version    : 'v2.2' // point to the latest Facebook Graph API version
+        });
 
-</head>
+        FB.getLoginStatus()
+     
+        // Run code after the Facebook SDK is loaded.
+        document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
 
-<body >
-	<div id="fb-root"></div>
-	<!--Facebook Stuff-->
-	<script>
-	  // Initialize Parse
-	  Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
-	 
-	  window.fbAsyncInit = function() {
-	    Parse.FacebookUtils.init({ // this line replaces FB.init({
-	      appId      : '697679580354991', // Facebook App ID
-	      status     : false,  // check Facebook Login status
-	      cookie     : true,  // enable cookies to allow Parse to access the session
-	      xfbml      : true,  // initialize Facebook social plugins on the page
-	      version    : 'v2.2' // point to the latest Facebook Graph API version
-	    });
+      };
+     
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-	    FB.getLoginStatus()
-	 
-	    // Run code after the Facebook SDK is loaded.
-	    document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
+    
+    <!-- the visual header and menu -->
+    <div class = "header">
+      <a href="index.html"><h1 class = "title">squad finder</h1></a>
+      <a class = "menu_text" href="about.html">About</a><a id="logout" class = "logout" onclick="logout()"> Logout</a></span>
+    </div></span>
 
-	  };
-	 
-	  (function(d, s, id){
-	    var js, fjs = d.getElementsByTagName(s)[0];
-	    if (d.getElementById(id)) {return;}
-	    js = d.createElement(s); js.id = id;
-	    js.src = "//connect.facebook.net/en_US/sdk.js";
-	    fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));
-	</script>
+    </div>
 
-	
-	<!-- the visual header and menu -->
-	<div class = "header">
-		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="feed.html"> Home<a><a class = "menu_text" href="about.html"> About<a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
-	</div></span>
+    <!-- The main section of the page -->
+    <div class = "content">
+      <!-- The user's info and photo -->
+        <h1 class = "profile_title_text" id="profile_name">My Profile</h1>
+        <div class="profile_section">
+          <div class="profile_pic_holder"><img id="profile_pic"></div>
+          <p id="edit_profile" onclick="toggEditMenu()">
+            Edit
+          </p>
+          
+          <!-- edit your profile -->
+          <div id="edit_profile_menu">
 
-	</div>
+            <!-- upload a profile picture -->
+            <form action="demo_form.asp" STYLE = "size: 15px">
+              Change Profile Picture (insert link)
+                <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
+                <input type="url" id="profile_pic_url">
+            </form>
+            <button onclick="upload_pic()">
+              Change
+            </button>
+          </div>
+        </div>
 
-	<!-- The main section of the page -->
-	<div class = "content">
-		<!-- The user's info and photo -->
-			<h1 class = "profile_title_text" id="profile_name">My Profile</h1>
-			<div class="profile_section">
-				<div class="profile_pic_holder"><img id="profile_pic"></div>
-				<p id="edit_profile" onclick="toggEditMenu()">Edit</p>
-						<!-- edit your profile -->
-					<div id="edit_profile_menu">
+      <!-- The user's current squads -->
+      <h1 class = "profile_title_text">Current Squads</h1>
+      <div class="profile_section">
+      </div>
 
-						<!-- upload a profile picture -->
-						<form action="demo_form.asp" STYLE = "size: 15px">
-							Change Profile Picture (insert link)
-		  					<!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
-		  					<input type="url" id="profile_pic_url">
-						</form>
-						<button onclick="upload_pic()"> Change </button>
-					</div>
-			</div>
-
-		<!-- The user's current squads -->
-			<h1 class = "profile_title_text"> Current Squads </h1>
-			<div class="profile_section">
-			</div>
-
-		<!-- THe user's squadrons -->
-			<h1 class = "profile_title_text"> My Squadrons </h1>
-			<div class="profile_section">
-			</div>
-	
-
-
-	</div>
+      <!-- THe user's squadrons -->
+      <h1 class = "profile_title_text">My Squadrons</h1>
+      <div class="profile_section">
+      </div>
+    </div>
 
 
-	<script type="text/javascript" src="js/profile.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
 
-	<!-- The visual footer -->
-	<footer class = "site-footer">
-	<a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
-	</footer>
-
-</body>
+    <!-- The visual footer -->
+    <footer class = "site-footer">
+      <a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
+    </footer>
+  </body>
 </html>
-
-
-
-
-
