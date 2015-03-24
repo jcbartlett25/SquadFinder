@@ -2,6 +2,7 @@ function upload_pic(){
 	// gets user
 	var user = Parse.User.current();
 
+/*
 	//reference uploaded file
 	var fileUploadControl = $("#pic_upload")[0];
 	if (fileUploadControl.files.length > 0) {
@@ -17,7 +18,7 @@ function upload_pic(){
 	});
 
   	//$("#profile_pic").attr('src', parseFile)
-
+*/
   	//set user's profile pic to uploaded file
   	pic_url = document.getElementById("profile_pic_url").value;
   	user.set('profile_pic_url', pic_url);
