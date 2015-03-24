@@ -1,107 +1,115 @@
 <!DOCTYPE html/>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/about.css">
-  <link rel="stylesheet" type="text/css" href="css/fonts.css">
-  
-  <!--FONTS-->
-  <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    
+    <!--FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-  <!--Importing external JS files-->
-  <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/client.js"></script>
+    <!--Importing external JS files-->
+    <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
 
-  <title>About Us</title>
+    <title>About Us</title>
+  </head>
 
-</head>
+  <body >
+    <div id="fb-root"></div> 
+    <!--Facebook Stuff-->
+    <script>
+      // Initialize Parse
+      Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
+     
+      window.fbAsyncInit = function() {
+        Parse.FacebookUtils.init({ // this line replaces FB.init({
+          appId      : '697679580354991', // Facebook App ID
+          status     : false,  // check Facebook Login status
+          cookie     : true,  // enable cookies to allow Parse to access the session
+          xfbml      : true,  // initialize Facebook social plugins on the page
+          version    : 'v2.2' // point to the latest Facebook Graph API version
+        });
+     
+       // Run code after the Facebook SDK is loaded.
 
-<body >
-  <div id="fb-root"></div> 
-  <!--Facebook Stuff-->
-  <script>
-    // Initialize Parse
-    Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
-   
-    window.fbAsyncInit = function() {
-      Parse.FacebookUtils.init({ // this line replaces FB.init({
-        appId      : '697679580354991', // Facebook App ID
-        status     : false,  // check Facebook Login status
-        cookie     : true,  // enable cookies to allow Parse to access the session
-        xfbml      : true,  // initialize Facebook social plugins on the page
-        version    : 'v2.2' // point to the latest Facebook Graph API version
-      });
-   
-     // Run code after the Facebook SDK is loaded.
+      };
 
-    };
+     //Loads Facebook API
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-   //Loads Facebook API
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-
-  <!--This script holds the logMeIn function to pop up the FB login box-->
-  <script type="text/javascript"> function logMeIn(){
-      Parse.FacebookUtils.logIn(null, {
-      success: function(user) {
-        if (!user.existed()) {
-          alert("User signed up and logged in through Facebook!");
-        } else {
-          alert("User logged in through Facebook!");
+    <!--This script holds the logMeIn function to pop up the FB login box-->
+    <script type="text/javascript"> function logMeIn(){
+        Parse.FacebookUtils.logIn(null, {
+        success: function(user) {
+          if (!user.existed()) {
+            alert("User signed up and logged in through Facebook!");
+          } else {
+            alert("User logged in through Facebook!");
+          }
+        },
+        error: function(user, error) {
+          alert("User cancelled the Facebook login or did not fully authorize.");
         }
-      },
-      error: function(user, error) {
-        alert("User cancelled the Facebook login or did not fully authorize.");
-      }
-    });
-    }</script>
+      });
+      }</script>
 
-  
-  <!--The visual header of the page. The title, menu bar, etc.-->
-  <div class = "header">
-    <a href="index.html"><h1 class="title">squad finder</h1></a>
-    <span><a class = "menu_text" href="feed.html">Home</a><a class = "menu_text" href="Profile.html">Profile</a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
-  </div></span>
-  </div>
+    
+    <!--The visual header of the page. The title, menu bar, etc.-->
+    <div class = "header">
+      <a href="index.html"><h1 class="title">squad finder</h1></a>
+      <span><a class = "menu_text" href="feed.html">Home</a><a class = "menu_text" href="Profile.html">Profile</a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
+    </div></span>
+    </div>
 
-  <!--The visual body of the page. Holds all of the main content-->
-  <div class = "content">
-    <!--The description of the website -->
-    <h1 class="profile_title_text">Individual Users</h1>
-    <center><div class="about_descript">
-      <p>Looking for something to do? Your squad feed will provide you with limitless opportunities for excitement, adventure, and festivity. Join a squad and enjoy a new experience with interesting people in your area. Post squad listings so others can join you.</p>
-    </div></center>
+    <!--The visual body of the page. Holds all of the main content-->
+    <div class = "content">
+      <!--The description of the website -->
+      <h3 class="profile_title_text">Individual Users</h3>
+      <center>
+        <div class="about_descript">
+          <p>
+            Looking for something to do? Your squad feed will provide you with limitless opportunities for excitement, adventure, and festivity. Join a squad and enjoy a new experience with interesting people in your area. Post squad listings so others can join you.
+          </p>
+        </div>
+      </center>
 
-    <h1 class="profile_title_text">Squads</h1>
-    <center><div class="about_descript">
-      <p>Find people nearby with the same interests as you. Post a squad listing and become connected with users who want to go to the same concerts, eat at the same restaurants, and see the same movies that you do.You will never need to be without a squad again.</p>
-    </div></center>
+      <h3 class="profile_title_text">Squads</h3>
+      <center>
+        <div class="about_descript">
+          <p>
+            Find people nearby with the same interests as you. Post a squad listing and become connected with users who want to go to the same concerts, eat at the same restaurants, and see the same movies that you do.You will never need to be without a squad again.
+          </p>
+        </div>
+      </center>
 
-    <h1 class="profile_title_text">Squadrons</h1>
-    <center><div class="about_descript">
-      <p>Form squads with your closest friends. Private squad listings let you choose who you invite on your outings. Share exciting squad posts within your squadron and together decide where and when you want to squad up.</p>
-    </div></center>
-  
+      <h3 class="profile_title_text">Squadrons</h3>
+      <center>
+        <div class="about_descript">
+          <p>
+            Form squads with your closest friends. Private squad listings let you choose who you invite on your outings. Share exciting squad posts within your squadron and together decide where and when you want to squad up.
+          </p>
+        </div>
+      </center>
+    </div>
 
-  </div>
-  
-</body>
-
-<!--The visual footer at the bottom of the page-->
-<footer class = "site-footer">
-  <a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
-</footer>
+    <!--The visual footer at the bottom of the page-->
+    <footer class = "site-footer">
+      <a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
+    </footer>
+  </body>
 </html>
 
 

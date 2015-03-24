@@ -1,118 +1,119 @@
-<!DOCTYPE html/>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/feed.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	<!--FONTS-->
-	<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
 
-	<!--Importing external JS files-->
-	<script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/client.js"></script>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/feed.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <!--FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-	<title>Squad Feed</title>
+    <!--Importing external JS files-->
+    <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
+
+    <title>Squad Feed</title>
 
     <script src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
     <script src="http://cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/feed.js"></script>
 
-</head>
+  </head>
 
-<body >
-	<div id="fb-root"></div>
-	<!--Facebook Stuff-->
+  <body >
+    <div id="fb-root"></div>
+    <!--Facebook Stuff-->
 
-	<script>
-	  // Initialize Parse
-	  Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
-	 
-	  window.fbAsyncInit = function() {
-	    Parse.FacebookUtils.init({ // this line replaces FB.init({
-	      appId      : '697679580354991', // Facebook App ID
-	      status     : false,  // check Facebook Login status
-	      cookie     : true,  // enable cookies to allow Parse to access the session
-	      xfbml      : true,  // initialize Facebook social plugins on the page
-	      version    : 'v2.2' // point to the latest Facebook Graph API version
-	    });
-	 	
-	   // Run code after the Facebook SDK is loaded.
-	   document.getElementById("user_profile").innerHTML = Parse.User.current().getUsername();
+    <script>
+      // Initialize Parse
+      Parse.initialize("m6cPbArnJyhg0yoMeAwU5bpClSXWjZnuTOcaChuq", "3z3mull3Uyyqs6bJLfNTt0uU4sZ5H1VEkjD75NBp");
+     
+      window.fbAsyncInit = function() {
+        Parse.FacebookUtils.init({ // this line replaces FB.init({
+          appId      : '697679580354991', // Facebook App ID
+          status     : false,  // check Facebook Login status
+          cookie     : true,  // enable cookies to allow Parse to access the session
+          xfbml      : true,  // initialize Facebook social plugins on the page
+          version    : 'v2.2' // point to the latest Facebook Graph API version
+        });
+      
+       // Run code after the Facebook SDK is loaded.
+       document.getElementById("user_profile").innerHTML = Parse.User.current().getUsername();
 
-	  };
+      };
 
-	 //Loads Facebook API
-	  (function(d, s, id){
-	    var js, fjs = d.getElementsByTagName(s)[0];
-	    if (d.getElementById(id)) {return;}
-	    js = d.createElement(s); js.id = id;
-	    js.src = "//connect.facebook.net/en_US/sdk.js";
-	    fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));
-	</script>
+     //Loads Facebook API
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-	<!--This script holds the logMeIn function to pop up the FB login box-->
-	<script type="text/javascript"> function logMeIn(){
-		  Parse.FacebookUtils.logIn(null, {
-		  success: function(user) {
-		    if (!user.existed()) {
-		      //alert("User signed up and logged in through Facebook!");
-		    } else {
-		      //alert("User logged in through Facebook!");
-		    }
-		  },
-		  error: function(user, error) {
-		    alert("User cancelled the Facebook login or did not fully authorize.");
-		  }
-		});
-		}
-	</script>
-
-
-	<!--The visual header of the page. The title, menu bar, etc.-->
-	<div class = "header">
-		<a href="index.html"><h1 class = "title">squad finder</h1></a>
-		<span><a class = "menu_text" href="Profile.html"> Profile<a><a class = "menu_text" href="about.html"> About<a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
-	</div></span>
-
-	</div>
-
-	<!--The visual body of the page. Holds all of the main content-->
-	<div class = "content">
-
-		<center><div id="new_post_area">
-		<form id="new_post_form">
-			<input type="text" id="new_post_title" value="title" onclick="clearText()">
-			<input type="text" id="new_post_descript" size="40" value="i need a squad for..." onclick="clearText()">
-		</form>
-		<button id="post_button" class="small_button" onclick="postSquad()">New Post</button>
-		</div></center>
+    <!--This script holds the logMeIn function to pop up the FB login box-->
+    <script type="text/javascript"> function logMeIn(){
+        Parse.FacebookUtils.logIn(null, {
+        success: function(user) {
+          if (!user.existed()) {
+            //alert("User signed up and logged in through Facebook!");
+          } else {
+            //alert("User logged in through Facebook!");
+          }
+        },
+        error: function(user, error) {
+          alert("User cancelled the Facebook login or did not fully authorize.");
+        }
+      });
+      }
+    </script>
 
 
-		<h1 class = "feed_title">My Squad Feed <span></span></h1>
+    <!--The visual header of the page. The title, menu bar, etc.-->
+    <div class = "header">
+      <a href="index.html"><h1 class = "title">squad finder</h1></a>
+      <span><a class = "menu_text" href="Profile.html"> Profile<a><a class = "menu_text" href="about.html"> About<a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
+    </div></span>
 
-		<!-- The Squad Feed -->
-		<center><div class="feed_div">
-			<!--The Div That Holds Squad Posting Information-->
-			<div class = "squad_post" id="template" style="display:none">
-				<h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
-				<p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
-				<p>Join &nbsp <span> | </span> &nbsp Decline</p>
-			</div>
-		</div></center>
-	</div>
+    </div>
 
-</body>
+    <!--The visual body of the page. Holds all of the main content-->
+    <div class = "content">
 
-<!--The visual footer at the bottom of the page-->
-<footer class = "site-footer">
-	<div>
-  		<a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
-	</div>
-</footer>
+      <center><div id="new_post_area">
+      <form id="new_post_form">
+        <input type="text" id="new_post_title" value="title" onclick="clearText()">
+        <input type="text" id="new_post_descript" size="40" value="i need a squad for..." onclick="clearText()">
+      </form>
+      <button id="post_button" class="small_button" onclick="postSquad()">New Post</button>
+      </div></center>
+
+
+      <h1 class = "feed_title">My Squad Feed <span></span></h1>
+
+      <!-- The Squad Feed -->
+      <center><div class="feed_div">
+        <!--The Div That Holds Squad Posting Information-->
+        <div class = "squad_post" id="template" style="display:none">
+          <h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
+          <p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
+          <p>Join &nbsp <span> | </span> &nbsp Decline</p>
+        </div>
+      </div></center>
+    </div>
+
+    <!--The visual footer at the bottom of the page-->
+    <footer class = "site-footer">
+      <div>
+          <a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
+      </div>
+    </footer>
+  </body>
 </html>
