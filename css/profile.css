@@ -47,7 +47,7 @@ a {
   height: 168px;
   width: 168px;
   margin-left: 20px;
-  border: solid;
+  border: none;
   border-width: 1px;
   overflow: hidden;
   clear: left;
@@ -58,6 +58,7 @@ a {
   height: 168px;
   width: 168px;
   margin-bottom: 0;
+  border: none;
 }
 .profile_title_text {
   font-size: 20px;
@@ -90,6 +91,8 @@ a {
 }
 #edit_profile_menu {
   display: none;
+  margin-left: 20px;
+  padding-bottom: 5px;
 }
 /*MAIN CHUNK*/
 .content {
