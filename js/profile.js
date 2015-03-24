@@ -19,19 +19,25 @@ function upload_pic(){
   	//$("#profile_pic").attr('src', parseFile)
 
   	//set user's profile pic to uploaded file
-  	;
-  	user.set('profile_pic', '.SquadFinder1/img/david.jpg')
+  	pic_url = document.getElementById("profile_pic_url").value;
+  	user.set('profile_pic_url', pic_url);
 
-  	var profilePhoto = user.get("profile_pic");
-	$("#profile_pic")[0].src = profilePhoto.url();
+
+  	//var profilePhoto = user.get("profile_pic");
+	//$("#profile_pic")[0].src = profilePhoto.url();
 	
 }
 }
 
 $(document).ready(function load_pic(){
 	var user = Parse.User.current();
-	var profilePhoto = user.get("profile_pic");
+	var profilePhoto = user.get("profile_pic_url");
 	//var profileURL = profilePhoto.URL();
-	$("#profile_pic").attr('src', "http://files.parsetfss.com/3be3fd11-410d-4010-99a3-1304e98bdd9a/tfss-9bdc8c5a-e682-4253-9033-d9515e202c5d-Snapchat-20140724052553_opt.jpg");
+	$("#profile_pic").attr('src', profilePhoto);
+	$("#profile_pic").fadeIn();
 }
 );
+
+function toggEditMenu(){
+	$("#edit_profile_menu").toggle();
+}

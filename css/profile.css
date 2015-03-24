@@ -63,6 +63,7 @@ hr{
     float: left;
     height: 168px;
     width: 168px;
+    margin-bottom: 0;
 }
 .profile_title_text{
     font-family: 'Raleway', sans-serif;
@@ -86,6 +87,17 @@ hr{
     background-color: #E6E6E6;
     box-shadow: 2px 2px 5px #888888;
 
+}
+#edit_profile{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+#edit_profile_menu{
+    display: none;
 }
 /*MAIN CHUNK*/
 .content {

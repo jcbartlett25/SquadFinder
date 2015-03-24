@@ -66,23 +66,32 @@
 		<!-- The user's info and photo -->
 			<h1 class = "profile_title_text" id="profile_name">My Profile</h1>
 			<div class="profile_section">
-				<div class="profile_pic_holder"><img id="profile_pic" src="img/tyler.jpg"></div>
+				<div class="profile_pic_holder"><img id="profile_pic"></div>
+				<p id="edit_profile" onclick="toggEditMenu()">Edit</p>
+						<!-- edit your profile -->
+					<div id="edit_profile_menu">
+
+						<!-- upload a profile picture -->
+						<form action="demo_form.asp" STYLE = "size: 15px">
+							Change Profile Picture (insert link)
+		  					<!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
+		  					<input type="url" id="profile_pic_url">
+						</form>
+						<button onclick="upload_pic()"> Change </button>
+					</div>
 			</div>
+
 		<!-- The user's current squads -->
 			<h1 class = "profile_title_text"> Current Squads </h1>
 			<div class="profile_section">
-				
 			</div>
+
 		<!-- THe user's squadrons -->
 			<h1 class = "profile_title_text"> My Squadrons </h1>
 			<div class="profile_section">
 			</div>
+	
 
-		<!-- upload a profile picture -->
-		<form action="demo_form.asp">
-  			<input type="file" name="pic" id="pic_upload" accept="image/*">
-		</form>
-		<button onclick="upload_pic()"></button>
 
 	</div>
 
