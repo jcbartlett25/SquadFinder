@@ -14,7 +14,7 @@ function toggEditMenu(){
 function changeUsername(){
   username = document.getElementById("new_username").value;
   user = Parse.user.current();
-  user.set("username", username);
+  user.setUsername(username);
 }
 
 function upload_pic(){
