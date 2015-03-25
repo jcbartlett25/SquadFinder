@@ -42,6 +42,14 @@ header {
   height:130px;
   background: #4387fd;
 }
+.menu_name {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  padding-left: 30%;
+  padding-right: auto;
+}
 /*The Main Chunk*/
 .content {
   width: 80%;
