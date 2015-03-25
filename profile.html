@@ -40,12 +40,14 @@
      
         document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
 
-        
+
         // Run code after the Facebook SDK is loaded.
         var user = Parse.User.current().getUsername();
+        $("#menu_name").html = Parse.User.current().getUsername();
+
         var currentUser = Parse.User.current();
         if (currentUser) {
-            $("#menu_name").html = currentUser.getUsername();
+            
         } else {
           window.open('index.html', "_self");
             }
@@ -69,7 +71,7 @@
       <a class="menu_text" href="feed.html">Home</a>
       <a class="menu_text" href="squadrons.html">Squadrons</a>
       <a class="menu_text" href="about.html">About</a>
-      <a id="#menu_name" class="menu_name"></a>
+      <a id="menu_name" class="menu_name"></a>
       <a id="logout" class = "logout" onclick="logout()">Logout</a>
     </header>
 
