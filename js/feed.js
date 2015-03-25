@@ -116,6 +116,7 @@ function clearText(){
 function joinSquad(){
   var user = Parse.User.current();
   var user = user.attributes;
-  user.addUnique("squads", "squad");
+  var user = user.squads;
+  user.addUnique("squad");
   user.save();
 }
