@@ -42,8 +42,7 @@
 
 
         // Run code after the Facebook SDK is loaded.
-        var user = Parse.User.current().getUsername();
-        $("#menu_name").html(Parse.User.current().getUsername());
+        $("#menu_name").html(" - " + Parse.User.current().getUsername());
 
         var currentUser = Parse.User.current();
         if (currentUser) {

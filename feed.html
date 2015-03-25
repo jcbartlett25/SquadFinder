@@ -45,10 +45,11 @@
       
        // Run code after the Facebook SDK is loaded.
        document.getElementById("user_profile").innerHTML = Parse.User.current().getUsername();
-
+       $("#menu_name").html(" - " + Parse.User.current().getUsername());
+       
         var currentUser = Parse.User.current();
         if (currentUser) {
-            $("#menu_name").html(currentUser.getUsername());
+            
         } else {
           window.open('index.html', "_self");
             }
