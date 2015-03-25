@@ -85,13 +85,7 @@ function postSquad(){
     text: descript,
     state: 'Moderated',
     additional: {
-      username: username,
-      joinSquad: function(){
-          var user = Parse.User.current();
-          var user = user.attributes;
-          user.addUnique("squads", this.title);
-          user.save();
-        }
+      username: username
     }
   };
           
@@ -119,3 +113,9 @@ function clearText(){
   };
 }
 
+function joinSquad(){
+  var user = Parse.User.current();
+  var user = user.attributes;
+  user.addUnique("squads", this.title);
+  user.save();
+}
