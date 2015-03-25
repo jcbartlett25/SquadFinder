@@ -1,6 +1,8 @@
 # Squadfinder
 Squadfinder is the quickest way to find your squad and have fun.
 
+## Planned Features
+
 ## File Directory
 This is some background for the site’s code and structure.
 
