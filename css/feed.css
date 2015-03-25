@@ -37,6 +37,7 @@
   cursor: pointer;
   -webkit-box-shadow: inset 0 -2px #3D76DA;
   box-shadow: inset 0 -2px #3D76DA;
+  margin-top: 10px;
 }
 
 /*NEW SQUAD POST*/
