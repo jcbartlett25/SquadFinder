@@ -49,8 +49,8 @@ header {
   background: #FFFFFF;
   border: 1px solid #CCC;
   margin: 0px auto 40px auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .wrapper {
   width: 50%;
