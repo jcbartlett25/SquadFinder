@@ -17,6 +17,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     
     <script type="text/javascript" src="js/client.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
   </head>
 
   <body >
@@ -55,13 +56,14 @@
     <!-- the visual header and menu -->
     <header>
       <a href="index.html"><h1 class = "title">squad finder</h1></a>
-      <a class = "menu_text" href="about.html">About</a><a id="logout" class = "logout" onclick="logout()"> Logout</a></span>
+      <a class = "menu_text" href="index.html">Home</a><a class = "menu_text" href="about.html">About</a><a id="logout" class = "logout" onclick="logout()"> Logout</a></span>
     </div></span>
 
     </header>
 
     <!-- The main section of the page -->
     <div class = "content">
+
       <!-- The user's info and photo -->
         <h1 class = "profile_title_text" id="profile_name">My Profile</h1>
         <div class="profile_section">
@@ -69,20 +71,33 @@
           <p id="edit_profile" onclick="toggEditMenu()">
             Edit
           </p>
+
           
           <!-- edit your profile -->
           <div id="edit_profile_menu">
+            <hr>
+            <!-- change profile picture -->
+            <div>
 
             <!-- upload a profile picture -->
-            <form action="demo_form.asp" STYLE = "size: 15px">
               Change Profile Picture (insert link)
                 <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
                 <input type="url" id="profile_pic_url">
-            </form>
-            <button onclick="upload_pic()">
-              Change
-            </button>
+            <button class="small_button">Change</button>
+
+            <!--<button onclick="upload_pic()">Change</button>-->
+
           </div>
+
+          <!-- change username -->
+          <div>
+              Change Username
+             <input type="url" id="new_username">
+             <button onclick="changeUsername()" class="small_button">Change</button>
+          </div>  
+
+        </div>
+
         </div>
 
       <!-- The user's current squads -->
@@ -95,9 +110,6 @@
       <div class="profile_section">
       </div>
     </div>
-
-
-    <script type="text/javascript" src="js/profile.js"></script>
 
     <!-- The visual footer -->
     <footer class = "site-footer">
