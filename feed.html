@@ -77,40 +77,40 @@
 
 
     <!--The visual header of the page. The title, menu bar, etc.-->
-    <div class = "header">
+    <header>
       <a href="index.html"><h1 class = "title">squad finder</h1></a>
       <span><a class = "menu_text" href="Profile.html"> Profile<a><a class = "menu_text" href="about.html"> About<a><a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
-    </div></span>
-
-    </div>
+      </div></span>
+    </header>
 
     <!--The visual body of the page. Holds all of the main content-->
-    <div class = "content">
-
-      <center><div id="new_post_area">
-      <form id="new_post_form">
-        <input type="text" id="new_post_title" value="title" onclick="clearText()">
-        <input type="text" id="new_post_descript" size="40" value="i need a squad for..." onclick="clearText()">
-      </form>
-      <button id="post_button" class="small_button" onclick="postSquad()">New Post</button>
-      </div></center>
-
-
-      <h1 class = "feed_title">My Squad Feed <span></span></h1>
-
-      <!-- The Squad Feed -->
-      <center><div class="feed_div">
-        <!--The Div That Holds Squad Posting Information-->
-        <div class = "squad_post" id="template" style="display:none">
-          <h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
-          <p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
-          <p onclick="joinSquad()">Join &nbsp <span> | </span> &nbsp Decline</p>
+    <div class="content">
+      <div class="wrapper">
+        <div id="new_post_area">
+          <form id="new_post_form">
+            <input type="text" id="new_post_title" value="title" onclick="clearText()">
+            <input type="text" id="new_post_descript" size="40" value="i need a squad for..." onclick="clearText()">
+          </form>
+          <button id="post_button" class="small_button" onclick="postSquad()">New Post</button>
         </div>
-      </div></center>
+
+
+        <h1 class = "feed_title">My Squad Feed</h1>
+
+        <!-- The Squad Feed -->
+        <div class="feed_div">
+          <!--The Div That Holds Squad Posting Information-->
+          <div class = "squad_post" id="template" style="display:none">
+            <h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
+            <p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
+            <p>Join &nbsp <span> | </span> &nbsp Decline</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--The visual footer at the bottom of the page-->
-    <footer class = "site-footer">
+    <footer class="site-footer">
       <div>
           <a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005 Hacks</p></a>
       </div>
