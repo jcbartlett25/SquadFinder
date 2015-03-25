@@ -72,24 +72,23 @@
 
 
     <!--The visual header of the page. The title, menu bar, etc.-->
-    <div class = "header">
+    <header>
       <a href="index.html"><h1 class="title">squad finder</h1></a>
       <span><a class = "menu_text" href="about.html">About</a>
       <!-- <a class = "menu_text" href="tester.html">Beta</a> -->
-      <a id="logout" class = "logout" onclick="logout()"> Logout<a></span>
-    </div>
+      <a id="logout" class="logout" onclick="logout()">Logout<a></span>
+    </header>
 
     <!--The visual body of the page. Holds all of the main content-->
     <div class = "content">
-      <center class="cycle-slideshow"
-      data-cycle-center-horz=true>
-        <img class = "squad_img" src="img/kanye-brits.jpg">
-        <img class = "squad_img" src="img/butchsundancereal.jpg">
-        <img class = "squad_img" src="img/CW-Arrow-Suicide-Squad.jpg">
-        <img class = "squad_img" src="img/gangster-squad.jpg">
-        <img class = "squad_img" src="img/maxresdefault.jpg">
-        <img class = "squad_img" src="img/detroit-pistons-2004.jpeg">
-        <img class = "squad_img" src="img/1280px-US_Cabinet_official_group_photo_July_26,_2012.jpg">
+      <center class="cycle-slideshow" data-cycle-center-horz=true>
+        <img class="squad_img" src="img/kanye-brits.jpg">
+        <img class="squad_img" src="img/butchsundancereal.jpg">
+        <img class="squad_img" src="img/CW-Arrow-Suicide-Squad.jpg">
+        <img class="squad_img" src="img/gangster-squad.jpg">
+        <img class="squad_img" src="img/maxresdefault.jpg">
+        <img class="squad_img" src="img/detroit-pistons-2004.jpeg">
+        <img class="squad_img" src="img/1280px-US_Cabinet_official_group_photo_July_26,_2012.jpg">
       </center>
       <!--The area of the page for logging in w/o Facebook-->
       <script type="text/javascript">function showLogin(){$("#login_form").toggle(); $("#signup_form").css("display", "none"); $(".error_login").hide();};</script>
@@ -98,38 +97,41 @@
       <center><div id="login_area">
         <button class="enter_button" onclick="showLogin();"> Sign In</button>
         <button class="enter_button" onclick="showSignup();"> Create Account</button>
-        <div class="error_login"> Testing. Testing please. Testing. YAY. </div>
+        <div class="error_login">Testing. Testing please. Testing. YAY.</div>
         <!-- login form -->
         <div id="login_form">
-        <form >
-          Username:<br>
-          <input type="text" id="username">
-          <br>
-          Password:<br>
-          <input type="password" id="password">
-          <br>
-        </form>
-        <span ><button class = "small_button" onclick = "login()">Sign In</button></span>
-        <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
+          <form >
+            Username:<br>
+            <input type="text" id="username">
+            <br>
+            Password:<br>
+            <input type="password" id="password">
+            <br>
+          </form>
+          <span ><button class="small_button" onclick="login()">Sign In</button></span>
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
         </div>
 
         <!-- Signup Form -->
         <div id="signup_form">
-        <form >
-          Username:<br>
-          <input type="text" id="new_username">
-          <br>
-          Password:<br>
-          <input type="password" id="new_password" minlength="6" maxlength="12">
-          <br>
-          Email:<br>
-          <input type="text" id="new_email">
-          <br STYLE="margin-bottom:30px">
-        </form>
-        <span ><button class="small_button" onclick = "newUser()">Join</button></span>
-        <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
+          <form >
+            Username:<br>
+            <input type="text" id="new_username">
+            <br>
+            Password:<br>
+            <input type="password" id="new_password" minlength="6" maxlength="12">
+            <br>
+            Email:<br>
+            <input type="text" id="new_email">
+            <br STYLE="margin-bottom:30px">
+          </form>
+          <span>
+            <button class="small_button" onclick="newUser()">
+              Join
+            </button>
+          </span>
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
         </div>
-        
       </div></center>
 
     </div>
