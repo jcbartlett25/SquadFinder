@@ -3,8 +3,8 @@
   <head>
     <title id="title_user" >My Profile</title>
 
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <!--FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
@@ -55,8 +55,8 @@
     
     <!-- the visual header and menu -->
     <div class = "header">
-      <a href="index.html"><h1 class = "title">squad finder</h1></a>
-      <a class = "menu_text" href="index.html">Home</a><a class = "menu_text" href="about.html">About</a><a id="logout" class = "logout" onclick="logout()"> Logout</a></span>
+      <a href="feed.html"><h1 class = "title">squad finder</h1></a>
+      <a class = "menu_text" href="feed.html">Home</a><a class = "menu_text" href="squadrons.html">Squadrons</a><a class = "menu_text" href="about.html">About</a><a id="logout" class = "logout" onclick="logout()"> Logout</a></span>
     </div></span>
 
     </div>
@@ -74,15 +74,15 @@
 
           
           <!-- edit your profile -->
-          <div id="edit_profile_menu">
+          <div id="edit_profile_menu" class="">
             <hr>
             <!-- change profile picture -->
-            <div>
+            <div class="edit_text">
 
             <!-- upload a profile picture -->
               Change Profile Picture (insert link)
                 <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
-                <input type="url" id="profile_pic_url">
+                <input type="url" id="profile_pic_url" class="edit_input">
             <button class="small_button">Change</button>
 
             <!--<button onclick="upload_pic()">Change</button>-->
@@ -90,9 +90,9 @@
           </div>
 
           <!-- change username -->
-          <div>
+          <div class="edit_text">
               Change Username
-             <input type="url" id="new_username">
+             <input type="url" id="new_username" class="edit_input">
              <button onclick="changeUsername()" class="small_button">Change</button>
           </div>  
 
