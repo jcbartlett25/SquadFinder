@@ -39,7 +39,7 @@
        // Run code after the Facebook SDK is loaded.
       var currentUser = Parse.User.current();
         if (currentUser) {
-            $("#menu_name").html = currentUser.getUsername();
+            $("#menu_name").html(currentUser.getUsername());
         } else {
             }
 
@@ -74,7 +74,7 @@
     
     <!--Page header. Title, menu bar, etc.-->
     <header>
-      <a href="index.html"><h1 class="title">squad finder</h1></a>
+      <a href="feed.html"><h1 class="title">squad finder</h1></a>
       <a class = "menu_text" href="feed.html">Home</a>
       <a class = "menu_text" href="profile.html">Profile</a>
       <a class = "menu_text" href="squadrons.html">Squadrons</a>
