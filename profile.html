@@ -41,6 +41,13 @@
         // Run code after the Facebook SDK is loaded.
         document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
 
+        var currentUser = Parse.User.current();
+        if (currentUser) {
+            
+        } else {
+          window.open('index.html', "_self");
+            }
+
       };
      
       (function(d, s, id){
