@@ -56,6 +56,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+
     </script>
 
     <!--This script holds the logMeIn function to pop up the FB login box-->
@@ -81,7 +82,7 @@
 
     <!--The visual body of the page. Holds all of the main content-->
     <div class="content">
-      <center class="cycle-slideshow" data-cycle-center-horz=true>
+      <center class="cycle-slideshow" id="slideshow" style="min-height: 360px;" data-cycle-center-horz=true>
         <img class="squad_img" src="img/kanye-brits.jpg">
         <img class="squad_img" src="img/butchsundancereal.jpg">
         <img class="squad_img" src="img/meangirls.jpg">
