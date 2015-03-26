@@ -11,8 +11,17 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; 
 }
-h1 {
-  margin-top: 0;
+.title {
+  display: inline-block;
+  float: left;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 4rem;
+  margin: 0;
+}
+nav a {
+  color: white;
 }
 li {
   list-style-type: none;
@@ -20,15 +29,6 @@ li {
 a {
   color: #4387fd;
   text-decoration: none;
-}
-/*Site Title*/
-.title {
-  color: white;
-  text-align: center;
-  vertical-align: center;
-  font-size: 90px;
-  font-weight: normal;
-  margin-bottom: 0px;
 }
 /*Page Title Headings*/
 .title-text {
@@ -39,8 +39,20 @@ a {
 }
 /*Visual Header*/
 header {
-  height:130px;
   background: #4387fd;
+}
+nav {
+  height: 4rem;
+  margin: 0 auto;
+  width: 80%;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+.menu-right {
+  display: inline-block;
+  float: right;
 }
 /*The Main Chunk*/
 .content {
@@ -110,21 +122,6 @@ header {
   -webkit-box-shadow: inset 0 -2px #3D76DA;
   box-shadow: inset 0 -2px #3D76DA;
 
-}
-/*The text for menu links*/
-.menu_text {
-  font-size: 15px;
-  color: white;
-  text-decoration: none;
-  float: left;
-  margin-left: 15px;
-}
-.logout {
-  margin-right: 15px;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  float: right;
 }
 /*Facebook Button*/
 .fb-login-button {

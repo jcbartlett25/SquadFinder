@@ -5,13 +5,6 @@ li {
 a {
   text-decoration: none;
 }
-/*Page Title Text*/
-.title {
-  color: white;
-  text-align: center;
-  vertical-align: center;
-  font-size: 90px;
-}
 /*Title Heading*/
 .title-text {
   font-size: 20px;
