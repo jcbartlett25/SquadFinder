@@ -152,4 +152,5 @@ footer a {
 }
 .menu-text{
   cursor: pointer;
+  text-transform: lowercase;
 }
