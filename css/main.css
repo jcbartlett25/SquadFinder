@@ -158,3 +158,6 @@ footer a {
   margin-top: 10px;
   display: none;
 }
+.menu-text{
+  cursor: pointer;
+}
