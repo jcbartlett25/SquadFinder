@@ -41,7 +41,7 @@
         $("#menu_name").html(" - " + Parse.User.current().getUsername());
 
         var currentUser = Parse.User.current();
-        if (currentUser) {
+        if (currentUser ==== isCurrent()) {
             
         } else {
           window.open('index.html', "_self");
@@ -66,7 +66,7 @@
         <span class="title"><a href="feed.html">squadfinder</a></span>
         <ul class="menu-right">
           <li><a class="menu-text" href="feed.html">Feed</a></li>
-          <li><a class="menu-text" href="profile.html">Profile</a></li>
+          <li><a class="menu-text" href="profile.html">YOU ARE NOT LOGGED IN</a></li>
           <li><a class="menu-text" href="squadrons.html">Squadrons</a></li>
           <li><a class="menu-text" href="about.html">About</a></li>
           <li><a class="menu-text" onclick="logout()">Logout</a></li>
