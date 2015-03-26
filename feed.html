@@ -63,24 +63,6 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <!--This script holds the logMeIn function to pop up the FB login box-->
-    <script type="text/javascript"> function logMeIn(){
-        Parse.FacebookUtils.logIn(null, {
-        success: function(user) {
-          if (!user.existed()) {
-            //alert("User signed up and logged in through Facebook!");
-          } else {
-            //alert("User logged in through Facebook!");
-          }
-        },
-        error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");
-        }
-      });
-      }
-    </script>
-
-
     <!--Page header. Title, menu bar, etc.-->
     <header>
       <nav>
