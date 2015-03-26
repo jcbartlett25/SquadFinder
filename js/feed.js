@@ -85,7 +85,7 @@ function postSquad(){
     text: descript,
     state: 'Moderated',
     additional: {
-      username: username
+      username: username,
       joinSquad: joinSquad(this.title)
     }
   };
