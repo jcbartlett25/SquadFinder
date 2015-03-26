@@ -40,10 +40,10 @@
         //document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
 
         //Changes pages if user is not logged in.
-        $("#menu_name").html(" - " + Parse.User.current().getUsername());
+        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
 
         var currentUser = Parse.User.current();
-        if (currentUser === isCurrent()) {
+        if (currentUser) {
             
         } else {
           window.open('index.html', "_self");
