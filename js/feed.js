@@ -121,7 +121,7 @@ function joinSquad(squad){
 }
 
 $(document).ready(
-  function{
+  function() {
      //updates email verification string
         if (currentUser.attributes.emailVerified === false){
             $("please_verify").show();
