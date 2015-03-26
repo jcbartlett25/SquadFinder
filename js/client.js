@@ -85,7 +85,7 @@ $(document).ready(
 		}
 	})
 
-		$("#new_password").keyup(function(e){
+	$("#new_password").keyup(function(e){
 		if (e.which === 13){
 			newUser();
 		}
