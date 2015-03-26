@@ -9,8 +9,7 @@ This is some background for the site’s code and structure.
 * feed.html is the squad-feed page
 * index.html is the home page for the site
 * profile.html is the user profile page
-* template.html is the model for new pages
-* tester.html is for testing code
+* squadron.html displays a user's private squadrons
 
 ### CSS Files
 * feed.css is for styling the feed page
