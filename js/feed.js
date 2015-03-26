@@ -123,6 +123,7 @@ function joinSquad(squad){
 $(document).ready(
   function() {
      //updates email verification string
+        currentUser = Parse.User.current();
         if (currentUser.attributes.emailVerified === false){
             $("#please_verify").show();
         }
