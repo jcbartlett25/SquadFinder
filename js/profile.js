@@ -42,11 +42,35 @@ function upload_pic(){
   	pic_url = document.getElementById("profile_pic_url").value;
   	user.set('profile_pic_url', pic_url);
 
-
+    $("#profile_pic").attr("src", pic_url);
   	//var profilePhoto = user.get("profile_pic");
 	//$("#profile_pic")[0].src = profilePhoto.url();
 	
 }
+
+$(document).ready(
+  function(){
+        var currentUser = Parse.User.current();
+
+        $("#profile_name").html(currentUser.getUsername())
+
+        //Changes pages if user is not logged in.
+        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
+
+        
+        if (currentUser) {
+            
+        } else {
+          window.open('index.html', "_self");
+            }
+
+        //updates email verification string
+        if (currentUser.attributes.emailVerified === true){
+          $("#email_verify").html("Yes");
+        }
+  }
+
+  );
 
 
 

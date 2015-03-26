@@ -40,7 +40,11 @@
         });
       
        // Run code after the Facebook SDK is loaded.
-       $("#menu_name").html(" - " + Parse.User.current().getUsername());
+
+      };
+
+       //Changes pages if user is not logged in.
+        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
 
         var currentUser = Parse.User.current();
         if (currentUser) {
@@ -48,8 +52,6 @@
         } else {
           window.open('index.html', "_self");
             }
-
-      };
 
      //Loads Facebook API
       (function(d, s, id){
@@ -60,24 +62,6 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-
-    <!--This script holds the logMeIn function to pop up the FB login box-->
-    <script type="text/javascript"> function logMeIn(){
-        Parse.FacebookUtils.logIn(null, {
-        success: function(user) {
-          if (!user.existed()) {
-            //alert("User signed up and logged in through Facebook!");
-          } else {
-            //alert("User logged in through Facebook!");
-          }
-        },
-        error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");
-        }
-      });
-      }
-    </script>
-
 
     <!--Page header. Title, menu bar, etc.-->
     <header>
@@ -95,6 +79,7 @@
    <!--Body. Holds main content-->
     <div class="content">
       <div class="wrapper">
+        <p id = "please_verify">Hey! You should verify your email so that you can use all of our features.</p>
         <div id="new_post_area">
           <center><form id="new_post_form">
             <input type="text" id="new_post_title" value="title" onclick="clearText()">

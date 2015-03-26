@@ -119,3 +119,12 @@ function joinSquad(squad){
   user.addUnique("squads", squad);
   user.save();
 }
+
+$(document).ready(
+  function() {
+     //updates email verification string
+        if (currentUser.attributes.emailVerified === false){
+            $("#please_verify").show();
+        }
+  }
+  );

@@ -56,6 +56,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+
     </script>
 
     <!--This script holds the logMeIn function to pop up the FB login box-->
@@ -71,24 +72,25 @@
       <nav>
         <span class="title"><a href="index.html">squadfinder</a></span>
         <ul class="menu-right">
-          <li><a class="menu-text" href="feed.html">Feed</a></li>
+          <!--<li><a class="menu-text" href="feed.html">Feed</a></li>
           <li><a class="menu-text" href="profile.html">Profile</a></li>
-          <li><a class="menu-text" href="squadrons.html">Squadrons</a></li>
+          <li><a class="menu-text" href="squadrons.html">Squadrons</a></li>-->
           <li><a class="menu-text" href="about.html">About</a></li>
-          <li><a class="menu-text" onclick="login()">Login</a></li>
+          <li><a class="menu-text" onclick="showLogin()">Login</a></li>
         </ul>
     </header>
 
     <!--The visual body of the page. Holds all of the main content-->
     <div class="content">
-      <center class="cycle-slideshow" data-cycle-center-horz=true>
+      <center class="cycle-slideshow" id= "slideshow" data-cycle-center-horz=true>
         <img class="squad_img" src="img/kanye-brits.jpg">
         <img class="squad_img" src="img/butchsundancereal.jpg">
-        <img class="squad_img" src="img/meangirls.jpg">
+        <img class="squad_img" src="img/xmen.jpg">
         <img class="squad_img" src="img/gangster-squad.jpg">
         <img class="squad_img" src="img/maxresdefault.jpg">
-        <img class="squad_img" src="img/xmen.jpg">
+        <img class="squad_img" src="img/parks.jpg">
         <img class="squad_img" src="img/detroit-pistons-2004.jpeg">
+        <img class="squad_img" src="img/meangirls.jpg">
         <img class="squad_img" src="img/1280px-US_Cabinet_official_group_photo_July_26,_2012.jpg">
       </center>
       <!--The area of the page for logging in w/o Facebook-->
@@ -109,7 +111,7 @@
             <input type="password" id="password">
             <br>
           </form>
-          <span ><button class="small_button" onclick="login()">Sign In</button></span>
+          <span ><button class="small_button" onclick="login()">Login</button></span>
           <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
         </div>
 

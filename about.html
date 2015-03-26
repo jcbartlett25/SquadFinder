@@ -32,14 +32,12 @@
         });
      
        // Run code after the Facebook SDK is loaded.
-      $("#menu_name").html(" - " + Parse.User.current().getUsername());
-      var currentUser = Parse.User.current();
-        if (currentUser) {
-          
-        } else {
-            }
+   
 
       };
+
+       //Changes pages if user is not logged in.
+        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
 
      //Loads Facebook API
       (function(d, s, id){
@@ -50,23 +48,6 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-
-    <!--This script holds the logMeIn function to pop up the FB login box-->
-    <script type="text/javascript"> function logMeIn(){
-        Parse.FacebookUtils.logIn(null, {
-        success: function(user) {
-          if (!user.existed()) {
-            alert("User signed up and logged in through Facebook!");
-          } else {
-            alert("User logged in through Facebook!");
-          }
-        },
-        error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");
-        }
-      });
-      }</script>
-
     
     <!--Page header. Title, menu bar, etc.-->
     <header>
@@ -110,7 +91,7 @@
           <p>
             Developed by David Smart, Josh Bartlett, Sophie Stadler, and Larry Grief of <a href="http://www.3005hacks.com">3005 Hacks</a>.
           </p>
-          <p>Version 0.55 Pre-Alpha</p>
+          <p>Version 0.6 Pre-Alpha</p>
         </div>
       </div>
     </div>

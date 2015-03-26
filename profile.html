@@ -34,19 +34,6 @@
 
         FB.getLoginStatus()
      
-        document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
-
-
-        // Run code after the Facebook SDK is loaded.
-        $("#menu_name").html(" - " + Parse.User.current().getUsername());
-
-        var currentUser = Parse.User.current();
-        if (currentUser) {
-            
-        } else {
-          window.open('index.html', "_self");
-            }
-
 
       };
      
@@ -66,7 +53,7 @@
         <span class="title"><a href="feed.html">squadfinder</a></span>
         <ul class="menu-right">
           <li><a class="menu-text" href="feed.html">Feed</a></li>
-          <li><a class="menu-text" href="profile.html">Profile</a></li>
+          <li><a class="menu-text" href="profile.html">My Profile</a></li>
           <li><a class="menu-text" href="squadrons.html">Squadrons</a></li>
           <li><a class="menu-text" href="about.html">About</a></li>
           <li><a class="menu-text" onclick="logout()">Logout</a></li>
@@ -76,7 +63,7 @@
     <!--Body. Holds main content-->
     <div class="content">
       <!-- The user's info and photo -->
-        <h1 class = "profile_title_text" id="profile_name">My Profile</h1>
+        <h1 class = "profile_title_text" id="profile_name">YOU ARE NOT LOGGED IN</h1>
         <div class="profile_section">
           <div class="profile_pic_holder"><img id="profile_pic"></div>
           <p id="edit_profile" onclick="toggEditMenu()">
@@ -85,11 +72,15 @@
 
           
           <!-- edit your profile -->
+<<<<<<< HEAD
           <div id="edit_profile_menu">
 
+=======
+          <ul id="edit_profile_menu">
+            <hr>
+>>>>>>> upstream/gh-pages
             <!-- change profile picture -->
-            <div>
-
+            <li>
             <!-- upload a profile picture -->
               Change Profile Picture (insert link)
                 <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
@@ -97,17 +88,20 @@
             <button class="small_button">Change</button>
 
             <!--<button onclick="upload_pic()">Change</button>-->
-
-          </div>
+            </li>
 
           <!-- change username -->
-          <div>
+          <li>
               Change Username
              <input type="url" id="new_username">
              <button onclick="changeUsername()" class="small_button">Change</button>
-          </div>  
+          </li>  
 
-        </div>
+          <!-- Email Verified -->
+          <li>
+            <p>Email Verified: <span id="email_verify">No</span></p>
+          </li>
+        </ul>
 
         </div>
 

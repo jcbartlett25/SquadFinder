@@ -33,15 +33,18 @@
         });
      
        // Run code after the Facebook SDK is loaded.
-        $("#menu_name").html(" - " + Parse.User.current().getUsername());
+
+      };
+
+       //Changes pages if user is not logged in.
+        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
+
         var currentUser = Parse.User.current();
         if (currentUser) {
             
         } else {
           window.open('index.html', "_self");
             }
-
-      };
 
      //Loads Facebook API
       (function(d, s, id){
@@ -51,23 +54,6 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!--This script holds the logMeIn function to pop up the FB login box-->
-    <script type="text/javascript"> function logMeIn(){
-        Parse.FacebookUtils.logIn(null, {
-        success: function(user) {
-          if (!user.existed()) {
-            alert("User signed up and logged in through Facebook!");
-          } else {
-            alert("User logged in through Facebook!");
-          }
-        },
-        error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");
-        }
-      });
-      }
     </script>
 
     
