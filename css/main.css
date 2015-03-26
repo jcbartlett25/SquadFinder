@@ -53,6 +53,7 @@ nav ul {
 nav li {
   float: left;
   font-size: 90%;
+  font-weight: 400;
   line-height: 4rem;
   padding-left: 1rem;
   position: relative;

@@ -2,20 +2,17 @@
 /*Title Font 25px*/
 /*Footnote Font Size 20px*/
 
-a {
-  text-decoration: none;
-  color: black;
-}
+
 /*Heading Title Text*/
-.profile_title_text {
-  font-size: 25px;
+.profile-title-text {
+  font-size: 1.5rem;
   text-align: center;
   font-weight: normal;
-  color: black;
+
   margin-bottom: 5px;
 }
 /*About Descriptions*/
-.about_descript {
+.about-descript {
   border: solid;
   border-width: 0.5px;
   border-color: #7B7B7B;
@@ -24,17 +21,12 @@ a {
   background-color: #E6E6E6;
   box-shadow: 2px 2px 5px #888888;
 }
-.about_descript li {
+.about-descript li {
   clear: left;
   text-align: center;
 }
-/*Centered HR*/
-.center_hr {
-  width: 50%;
-  clear: right;
-}
-.developer_text {
-  padding-top: 10px;
-  font-size: 14px;
 
+.developer-text {
+  padding: 1rem 0;
+  font-size: .875rem;
 }
