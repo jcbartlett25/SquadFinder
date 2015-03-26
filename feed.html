@@ -4,7 +4,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="css/feed.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+
     <!--FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700,700italic,400italic,300,300italic' rel='stylesheet' type='text/css'>
     
@@ -81,12 +81,15 @@
 
     <!--Page header. Title, menu bar, etc.-->
     <header>
-      <a href="feed.html"><h1 class="title">squad finder</h1></a>
-      <a class="menu_text" href="profile.html">Profile</a>
-      <a class="menu_text" href="squadrons.html">Squadrons</a>
-      <a class="menu_text" href="about.html">About</a>
-      <a id="menu_name" class="menu_name"></a>
-      <a id="logout" class = "logout" onclick="logout()">Logout</a>
+      <nav>
+        <span class="title"><a href="index.html">squadfinder</a></span>
+        <ul class="menu-right">
+          <li><a class="menu-text" href="feed.html">Feed</a></li>
+          <li><a class="menu-text" href="profile.html">Profile</a></li>
+          <li><a class="menu-text" href="squadrons.html">Squadrons</a></li>
+          <li><a class="menu-text" href="about.html">About</a></li>
+          <li><a class="menu-text" onclick="logout()">Logout</a></li>
+        </ul>
     </header>
 
    <!--Body. Holds main content-->
@@ -109,16 +112,16 @@
           <div class = "squad_post" id="template" style="display:none">
             <h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
             <p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
-            <p>Join &nbsp <span> | </span> &nbsp Decline</p>
+            <p><span class="join-button">Join</span> &nbsp| &nbsp<span class="goon-quantity">0 Goons</span></p>
           </div>
         </div>
       </div>
     </div>
 
     <!--Footer-->
-    <footer class="site-footer">
-      <div>
-          <a href="http://www.3005hacks.com"><p class="copyright">&#169; 3005hacks</p></a>
+    <footer>
+      <div class="footer-wrapper">
+        <p class="copyright"><a href="http://www.3005hacks.com">&#169; 3005hacks</a></p>
       </div>
     </footer>
   </body>
