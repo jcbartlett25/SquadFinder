@@ -38,7 +38,7 @@
       };
         var currentUser = Parse.User.current();
 
-        $("#profile_name").html = currentUser.getUsername();
+        $("#profile_name").html(currentUser.getUsername());
         alert(currentUser.getUsername());
 
         //Changes pages if user is not logged in.
@@ -53,7 +53,7 @@
 
         //updates email verification string
         if (currentUser.attributes.emailVerified === true){
-          $("#email_verify").html = "Yes";
+          $("#email_verify").html("Yes");
         }
      
       (function(d, s, id){
