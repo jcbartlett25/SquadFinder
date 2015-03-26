@@ -37,7 +37,7 @@
 
       };
 
-        //document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
+        document.getElementById("profile_name").innerHTML = Parse.User.current().getUsername();
 
         //Changes pages if user is not logged in.
         //$("#menu_name").html(" - " + Parse.User.current().getUsername());
@@ -50,7 +50,7 @@
             }
 
         //updates email verification string
-        if (Parse.User.current().get("emailVerified")){
+        if (user.get("emailVerified") === true){
           $("#email_verify").html = "Yes";
         }
      
