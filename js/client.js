@@ -78,6 +78,17 @@
 		window.open('feed.html', "_self");
 	}
 
+$(document).ready(
+	$("#password").keyup(function(e){
+		if (e.which == 13){
+			login();
+		}
+	}
+		$("#new_password").keyup(function(e){
+		if (e.which == 13){
+			newUser();
+		}
+	}
 
-
+	);
 
