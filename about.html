@@ -32,15 +32,20 @@
         });
      
        // Run code after the Facebook SDK is loaded.
-      $("#menu_name").html(" - " + Parse.User.current().getUsername());
-      var currentUser = Parse.User.current();
-        if (currentUser) {
-          
-        } else {
-            }
+   
 
       };
 
+       //Changes pages if user is not logged in.
+        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
+
+        var currentUser = Parse.User.current();
+        if (currentUser) {
+            
+        } else {
+          window.open('index.html', "_self");
+            }
+            
      //Loads Facebook API
       (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
