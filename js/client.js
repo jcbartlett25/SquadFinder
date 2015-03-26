@@ -78,7 +78,7 @@
 		window.open('feed.html', "_self");
 	}
 
-$(document).ready(
+$(document).ready(function(){
 	$("#password").keyup(function(e){
 		if (e.which === 13){
 			login();
@@ -91,5 +91,5 @@ $(document).ready(
 		}
 	})
 
-	);
+	});
 
