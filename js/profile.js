@@ -42,7 +42,7 @@ function upload_pic(){
   	pic_url = document.getElementById("profile_pic_url").value;
   	user.set('profile_pic_url', pic_url);
 
-
+    $("#profile_pic").attr("src", pic_url);
   	//var profilePhoto = user.get("profile_pic");
 	//$("#profile_pic")[0].src = profilePhoto.url();
 	

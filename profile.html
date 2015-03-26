@@ -48,6 +48,11 @@
         } else {
           window.open('index.html', "_self");
             }
+
+        //updates email verification string
+        if (Parse.User.current().get("emailVerified")){
+          $("#email_verify").html = "Yes";
+        }
      
       (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -84,11 +89,10 @@
 
           
           <!-- edit your profile -->
-          <div id="edit_profile_menu">
+          <ul id="edit_profile_menu">
             <hr>
             <!-- change profile picture -->
-            <div>
-
+            <li>
             <!-- upload a profile picture -->
               Change Profile Picture (insert link)
                 <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
@@ -96,17 +100,20 @@
             <button class="small_button">Change</button>
 
             <!--<button onclick="upload_pic()">Change</button>-->
-
-          </div>
+            </li>
 
           <!-- change username -->
-          <div>
+          <li>
               Change Username
              <input type="url" id="new_username">
              <button onclick="changeUsername()" class="small_button">Change</button>
-          </div>  
+          </li>  
 
-        </div>
+          <!-- Email Verified -->
+          <li>
+            <p>Email Verified: <span id="email_verify">No</span></p>
+          </li>
+        </ul>
 
         </div>
 
