@@ -1,3 +1,13 @@
+$(document).ready(
+  function() {
+     //updates email verification string
+        currentUser = Parse.User.current();
+        if (currentUser.attributes.emailVerified === false){
+            $("#please_verify").show();
+        }
+  }
+  );
+
 //POPULATES Feed with Posts
 var syncano = SyncanoConnector.getInstance(); 
 var authData = {
@@ -119,13 +129,3 @@ function joinSquad(squad){
   user.addUnique("squads", squad);
   user.save();
 }
-
-$(document).ready(
-  function() {
-     //updates email verification string
-        currentUser = Parse.User.current();
-        if (currentUser.attributes.emailVerified === false){
-            $("#please_verify").show();
-        }
-  }
-  );
