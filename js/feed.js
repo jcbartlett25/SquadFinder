@@ -41,10 +41,7 @@ syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
 		$("#squad_title").html(obj.title);
 		$("#post_username").html(obj.additional.username);
 		$post = $("#template").clone();
-    $("#template").click([data[i]],function (e) {
-      console.log(e.target.title);
-});
-		$post.removeAttr('id');
+    $post.attr("id", obj.id);
 		$(".feed_div").prepend($post);
 		$post.fadeIn();
   };
