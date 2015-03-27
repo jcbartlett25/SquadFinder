@@ -1,11 +1,4 @@
-$(document).ready(function load_pic(){
-  var user = Parse.User.current();
-  var profilePhoto = user.get("profile_pic_url");
-  //var profileURL = profilePhoto.URL();
-  $("#profile_pic").attr('src', profilePhoto);
-  $("#profile_pic").fadeIn();
-}
-);
+
 
 function toggEditMenu(){
   $("#edit_profile_menu").toggle();
@@ -67,7 +60,12 @@ $(document).ready(
         if (currentUser.attributes.emailVerified === true){
           $("#email_verify").html("Yes");
         }
-  }
+
+        var profilePhoto = user.attributes.profile_pic_url;
+        //var profileURL = profilePhoto.URL();
+        $("#profile_pic").attr('src', profilePhoto);
+        //$("#profile_pic").fadeIn();
+
 
   );
 
