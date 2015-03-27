@@ -9,6 +9,7 @@ $(document).ready(
   );
 
 //POPULATES Feed with Posts
+//Connects to Syncano
 var syncano = SyncanoConnector.getInstance(); 
 var authData = {
   api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
@@ -30,7 +31,7 @@ var params = {
   folders: 'Default'
 }
 
-// Populates the feed on login
+// Pulls post objects from Syncano and fills in each template
 syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
   console.log('Received', data.length, 'objects');
   for (i in data) {
@@ -38,13 +39,13 @@ syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
   	$("#squad_descript").html(obj.text);
 		$("#squad_title").html(obj.title);
 		$("#post_username").html(obj.additional.username);
-    $("#join-button").click("alert(name);");
 		$post = $("#template").clone();
 		$post.removeAttr('id');
 		$(".feed_div").prepend($post);
 		$post.fadeIn();
   };
-   			
+  
+  //Logging each object to the console			
   data.forEach(function (d) {
    	console.log(d);
   });
@@ -89,7 +90,7 @@ function postSquad(){
   
   //syncano.connect(authData, function (auth) {
     //console.log("Connected");
-    //Stores post in an object
+  //Stores post in an object
   var params = {
     title: title,
     text: descript,
