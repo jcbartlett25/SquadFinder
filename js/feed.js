@@ -34,6 +34,7 @@ var params = {
 // Pulls post objects from Syncano and fills in each template
 syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
   console.log('Received', data.length, 'objects');
+  //looping through each object received from Syncano and filling the template
   for (i in data) {
    	var obj = data[i];
   	$("#squad_descript").html(obj.text);
