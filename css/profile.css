@@ -72,6 +72,13 @@ a {
   font-size: 12px;
   cursor: pointer;
 }
+.edit_profile{
+  text-align: left;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
 #edit_profile_div {
   margin-left: 10px;
   padding-bottom: 5px;
