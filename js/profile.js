@@ -1,7 +1,7 @@
 
 
 function toggEditMenu(){
-  $("#edit_profile_menu").toggle();
+  $("#edit_profile_div").toggle();
 }
 
 function changeUsername(){
