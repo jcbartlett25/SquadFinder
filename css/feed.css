@@ -48,8 +48,3 @@
   display: none;
 }
 
-@media (min-width: 500px) {
-      .content{
-        width: 100%;
-      }
-      }
