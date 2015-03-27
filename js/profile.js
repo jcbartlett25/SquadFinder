@@ -65,8 +65,7 @@ $(document).ready(
         //var profileURL = profilePhoto.URL();
         $("#profile_pic").attr('src', profilePhoto);
         //$("#profile_pic").fadeIn();
-
-
+}
   );
 
 
