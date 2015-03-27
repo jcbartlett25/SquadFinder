@@ -30,7 +30,6 @@ var params = {
   folders: 'Default'
 }
 
-
 // Populates the feed on login
 syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
   console.log('Received', data.length, 'objects');
@@ -39,6 +38,7 @@ syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
   	$("#squad_descript").html(obj.text);
 		$("#squad_title").html(obj.title);
 		$("#post_username").html(obj.additional.username);
+    $("#join-button").click("alert(name);");
 		$post = $("#template").clone();
 		$post.removeAttr('id');
 		$(".feed_div").prepend($post);
@@ -129,3 +129,6 @@ function joinSquad(squad){
   user.addUnique("squads", squad);
   user.save();
 }
+
+
+
