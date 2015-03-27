@@ -61,7 +61,7 @@ $(document).ready(
           $("#email_verify").html("Yes");
         }
 
-        var profilePhoto = user.attributes.profile_pic_url;
+        var profilePhoto = currentUser.attributes.profile_pic_url;
         //var profileURL = profilePhoto.URL();
         $("#profile_pic").attr('src', profilePhoto);
         //$("#profile_pic").fadeIn();
