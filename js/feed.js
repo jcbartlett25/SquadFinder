@@ -101,7 +101,7 @@ function postSquad(){
   $post = $("#template").clone();
   //Gives each div a unique name
   //$post.attr("id", obj.id);
-  $(".feed_div").prepend(post);
+  $(".feed_div").prepend($post);
   $post.fadeIn();
 
 
