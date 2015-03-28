@@ -7,6 +7,17 @@ function toggEditMenu(){
 function changeUsername(){
   username = document.getElementById("new_username").value;
   user = Parse.user.current();
+  user.save({
+    username: username;
+  }, {
+    success: function(user) {
+      // The object was saved successfully.
+    },
+    error: function(user, error) {
+      // The save failed.
+      // error is a Parse.Error with an error code and message.
+    }
+  });
   user.setUsername(username);
 }
 
