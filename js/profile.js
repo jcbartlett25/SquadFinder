@@ -4,7 +4,7 @@ function toggEditMenu(){
 
 function changeUsername(){
   username = document.getElementById("new_username").value;
-  user = Parse.user.current();
+  user = Parse.User.current();
   user.save({
     username: username
   }, {
