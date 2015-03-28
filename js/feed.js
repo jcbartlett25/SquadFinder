@@ -77,6 +77,7 @@ function squadPost(descript, title, username, id){
 populatePage();
 //POST A SQUAD
 function postSquad(){
+  var syncano = SyncanoConnector.getInstance();
   var descript = document.getElementById("new_post_descript").value;
   var title = document.getElementById("new_post_title").value;
 
