@@ -3,10 +3,10 @@ function toggEditMenu(){
 }
 
 function changeUsername(){
-  username = document.getElementById("new_username").value;
+  my_username = document.getElementById("new_username").value;
   user = Parse.User.current();
   user.save({
-    username: username
+    username: my_username
   }, {
     success: function(user) {
       // The object was saved successfully.
@@ -17,7 +17,6 @@ function changeUsername(){
     }
   });
 
-  user.set('username', username);
 }
 
 function upload_pic(){
