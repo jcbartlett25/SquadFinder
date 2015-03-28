@@ -96,9 +96,10 @@ function postSquad(){
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
+  $("#squad_post").attr('id', obj.id)
   $post = $("#template").clone();
   //Gives each div a unique name
-  $post.attr("id", obj.id);
+  //$post.attr("id", obj.id);
   $(".feed_div").prepend($post);
   $post.fadeIn();
 
