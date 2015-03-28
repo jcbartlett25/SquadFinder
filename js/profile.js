@@ -1,5 +1,3 @@
-
-
 function toggEditMenu(){
   $("#edit_profile_div").toggle();
 }
@@ -8,7 +6,7 @@ function changeUsername(){
   username = document.getElementById("new_username").value;
   user = Parse.user.current();
   user.save({
-    username: username;
+    username: username
   }, {
     success: function(user) {
       // The object was saved successfully.
@@ -18,6 +16,7 @@ function changeUsername(){
       // error is a Parse.Error with an error code and message.
     }
   });
+
   user.setUsername(username);
 }
 
