@@ -93,23 +93,15 @@ function postSquad(){
 
   var username = Parse.User.current().getUsername();
 
-          $squad = $("<div class = "squad_post" id="'+obj.id+'" style="display:none">
-            <h2><span id="squad_title">'+title+'</span>  <span id="post_username">'+username+'</span></h2>
-            <p id="squad_descript">'+descript+'</p></span>
-            <p><span class="join-button">Join</span> &nbsp| &nbsp<span class="goon-quantity">0 Goons</span></p>
-          </div>")
-
-  //$("#squad_descript").html(descript);
-  //$("#squad_title").html(title);
-  //$("#post_username").html(username);
-  //$("#squad_post").attr('id', obj.id)
-  //$post = $("#template").clone();
+  $("#squad_descript").html(descript);
+  $("#squad_title").html(title);
+  $("#post_username").html(username);
+  $("#squad_post").attr('id', obj.id)
+  $post = $("#template").clone();
   //Gives each div a unique name
   //$post.attr("id", obj.id);
-  //$(".feed_div").prepend($post);
-   $(".feed_div").prepend($squad);
-  //$post.fadeIn();
-  $squad.fadeIn();
+  $(".feed_div").prepend($post);
+  $post.fadeIn();
 
 
   document.getElementById("new_post_descript").value = "";
