@@ -17,7 +17,7 @@ function changeUsername(){
     }
   });
 
-  user.setUsername(username);
+  user.set('username', username);
 }
 
 function upload_pic(){
