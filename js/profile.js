@@ -5,18 +5,18 @@ function toggEditMenu(){
 function changeUsername(){
   my_username = document.getElementById("new_username").value;
   user = Parse.User.current();
-  user.save({
-    username: my_username
-  }, {
-    success: function(user) {
-      // The object was saved successfully.
-    },
-    error: function(user, error) {
-      // The save failed.
-      // error is a Parse.Error with an error code and message.
-    }
-  });
-
+  // user.save({
+  //   username: my_username
+  // }, {
+  //   success: function(user) {
+  //     // The object was saved successfully.
+  //   },
+  //   error: function(user, error) {
+  //     // The save failed.
+  //     // error is a Parse.Error with an error code and message.
+  //   }
+  // });
+user.setUsername("yeet");
 }
 
 function upload_pic(){
