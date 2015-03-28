@@ -65,6 +65,14 @@ function postSquad(){
     return;
   };
 
+  if (title === ""){
+    title = "Untitled";
+  }
+
+  if (descript === ""){
+    return;
+  }
+
   var username = Parse.User.current().getUsername();
 
   $("#squad_descript").html(descript);
