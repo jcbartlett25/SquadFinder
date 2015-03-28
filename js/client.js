@@ -11,6 +11,7 @@
 		var user = new Parse.User();
 		var username = document.getElementById("new_username").value;
 		var password = document.getElementById('new_password').value;
+		var confirm_password = document.getElementById("confirm_password").value;
 		var email = document.getElementById('new_email').value;
 		user.set("username", username);
 		user.set("password", password);
@@ -18,7 +19,11 @@
 		user.set("squads", []);
 		user.set("squadrons", []);
 		//user.set("phone", document.getElementById('phone').text);
-		  
+		
+		if(password != confirm_password){
+			$(".error_login").html("Your passwords don't match.");
+		}
+
 		user.signUp(null, {
 		  success: function(user) {
 		    // Hooray! Let them use the app now.
