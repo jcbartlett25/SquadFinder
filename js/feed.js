@@ -7,12 +7,11 @@ $(document).ready(
         }
   }
   );
-
+var syncano = SyncanoConnector.getInstance(); 
 //POPULATES Feed with Posts
 
 function populatePage(){
   //Connects to Syncano
-  var syncano = SyncanoConnector.getInstance(); 
   var authData = {
     api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
     instance: "sparkling-meadow-922472"
@@ -77,7 +76,6 @@ function squadPost(descript, title, username, id){
 populatePage();
 //POST A SQUAD
 function postSquad(){
-  var syncano = SyncanoConnector.getInstance();
   var descript = document.getElementById("new_post_descript").value;
   var title = document.getElementById("new_post_title").value;
 
