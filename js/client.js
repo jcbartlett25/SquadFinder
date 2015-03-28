@@ -22,6 +22,7 @@
 		
 		if(password != confirm_password){
 			$(".error_login").html("Your passwords don't match.");
+			return;
 		}
 
 		user.signUp(null, {
