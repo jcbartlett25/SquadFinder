@@ -38,7 +38,9 @@ function populatePage(){
     //looping through each object received from Syncano and filling the template
     for (i in data) {
      	var obj = data[i];
+      //var yeetChill = '<div class = "squad_post" id="'+obj.id+'" style="display:none"><h2><span id="squad_title">'+obj.title+'</span><span id="post_username"></span></h2><p id="squad_descript">'+obj.text+'</p><p><span class="join-button">Join</span> &nbsp| &nbsp<span class="goon-quantity">0 Goons</span></p></div>'
     	new squadPost(obj.text, obj.title, obj.additional.username, obj.id);
+      //$('.feed_div').prepend(yeetChill);
     };
     //Logging each object to the console			
     data.forEach(function (d) {
