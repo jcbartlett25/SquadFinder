@@ -66,7 +66,7 @@ function postSquad(){
   };
 
   if (title === ""){
-    title = "Untitled";
+    return;
   }
 
   if (descript === ""){
