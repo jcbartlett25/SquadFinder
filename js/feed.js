@@ -64,7 +64,7 @@ function squadPost(descript, title, username, id){
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.attr("id", id);
-  $(".feed_div").prependTo($post);
+  $(".feed_div").prepend($post);
   $post.fadeIn();
 
   $post.click(function()
