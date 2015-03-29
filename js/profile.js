@@ -41,7 +41,8 @@ function upload_pic(){
   	//$("#profile_pic").attr('src', parseFile)
 */
   	//set user's profile pic to uploaded file
-  	pic_url = document.getElementById("profile_pic_url").value;
+  pic_url = document.getElementById("profile_pic_url").value;
+  
   user.save({
     profile_pic_url: pic_url
   }, {
