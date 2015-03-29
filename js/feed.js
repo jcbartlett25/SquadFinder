@@ -34,19 +34,15 @@ function populatePage(){
 
   // Pulls post objects from Syncano and fills in each template
   syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
-    console.log('Received', data.length, 'objects');
+    //console.log('Received', data.length, 'objects');
     //looping through each object received from Syncano and filling the template
     for (i in data) {
      	var obj = data[i];
-      //var yeetChill = '<div class = "squad_post" id="'+obj.id+'" style="display:none"><h2><span id="squad_title">'+obj.title+'</span><span id="post_username"></span></h2><p id="squad_descript">'+obj.text+'</p><p><span class="join-button">Join</span> &nbsp| &nbsp<span class="goon-quantity">0 Goons</span></p></div>'
     	new squadPost(obj.text, obj.title, obj.additional.username, obj.id);
-      //$(yeetChill).prependTo('#feed_div');
-      //$post = $("#feed_div");
-      //$post.fadeIn();
     };
     //Logging each object to the console			
     data.forEach(function (d) {
-     	console.log(d);
+     	//console.log(d);
     });
   });
 
@@ -54,7 +50,8 @@ function populatePage(){
 };
 
 
-function squadPost(descript, title, username, id){
+function squadPost(descript, title, username, id)
+{
 
   this.descript = descript,
   this.title = title,
@@ -66,18 +63,19 @@ function squadPost(descript, title, username, id){
   $("#post_username").html(username);
   $post = $("#template").clone();
   //Gives each div a unique name
-  $post.attr("id", id);
+  $post.removeAttr("id")
+  $post.find("span").removeAttr("id")
+  $post.find("p").removeAttr("id")
   $(".feed_div").prepend($post);
-  $post.fadeIn();
+  $post.css("display", "block")
 
   $post.click(function()
   {
     alert(username);
   })
 
-};
+}
 
-populatePage();
 //POST A SQUAD
 function postSquad(){
   var descript = document.getElementById("new_post_descript").value;
@@ -137,7 +135,7 @@ function postSquad(){
           
   //Actually pushes object to database
   syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
-    console.log('Created new data object with ID = ', data.id);
+    //console.log('Created new data object with ID = ', data.id);
   });
   //});
   //var $div = $("#squad_post").html();
@@ -165,5 +163,5 @@ function joinSquad(squad){
   user.save();
 }
 
-
+populatePage();
 
