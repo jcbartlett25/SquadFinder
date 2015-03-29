@@ -81,13 +81,16 @@
     </header>
 
     <!--The visual body of the page. Holds all of the main content-->
+
     <div class="content">
+      <div class="alert-text">ALERT: Most Accounts Have Been Deleted. If you can't log in, create a New Account to Use Our Site. Thanks!</div>
       <center class="cycle-slideshow" id= "slideshow" data-cycle-center-horz=true>
         <img class="squad_img" src="img/kanye-brits.jpg">
         <img class="squad_img" src="img/butchsundancereal.jpg">
         <img class="squad_img" src="img/xmen.jpg">
-        <img class="squad_img" src="img/gangster-squad.jpg">
+        <img class="squad_img" src="img/gangster-squad.jpg"> 
         <img class="squad_img" src="img/maxresdefault.jpg">
+        <img class="squad_img" src="img/band.jpg">
         <img class="squad_img" src="img/parks.jpg">
         <img class="squad_img" src="img/detroit-pistons-2004.jpeg">
         <img class="squad_img" src="img/meangirls.jpg">
@@ -98,8 +101,8 @@
       <script type="text/javascript">function showSignup(){$("#signup_form").toggle(); $("#login_form").css("display", "none"); $(".error_login").hide();}; </script>
 
       <center><div id="login_area">
-        <button class="enter_button" onclick="showLogin();"> Sign In</button>
-        <button class="enter_button" onclick="showSignup();"> Create Account</button>
+        <button class="enter_button" onclick="showLogin();">Login</button>
+        <button class="enter_button" onclick="showSignup();">New User</button>
         <div class="error_login">Testing. Testing please. Testing. YAY.</div>
         <!-- login form -->
         <div id="login_form">
@@ -123,6 +126,9 @@
             <br>
             Password:<br>
             <input type="password" id="new_password" minlength="6" maxlength="12">
+            <br>
+            Confirm Password:<br>
+            <input type="password" id="confirm-password">
             <br>
             Email:<br>
             <input type="text" id="new_email">

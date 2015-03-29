@@ -11,14 +11,22 @@
 		var user = new Parse.User();
 		var username = document.getElementById("new_username").value;
 		var password = document.getElementById('new_password').value;
+		var confirm_password = document.getElementById("confirm-password").value;
 		var email = document.getElementById('new_email').value;
+
+		if(password != confirm_password){
+			$(".error_login").html("Your passwords don't match.");
+			$(".error_login").show();
+			return;
+		}
+
 		user.set("username", username);
 		user.set("password", password);
 		user.set("email", email);
 		user.set("squads", []);
 		user.set("squadrons", []);
 		//user.set("phone", document.getElementById('phone').text);
-		  
+
 		user.signUp(null, {
 		  success: function(user) {
 		    // Hooray! Let them use the app now.

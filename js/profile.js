@@ -1,20 +1,22 @@
-$(document).ready(function load_pic(){
-  var user = Parse.User.current();
-  var profilePhoto = user.get("profile_pic_url");
-  //var profileURL = profilePhoto.URL();
-  $("#profile_pic").attr('src', profilePhoto);
-  $("#profile_pic").fadeIn();
-}
-);
-
 function toggEditMenu(){
-  $("#edit_profile_menu").toggle();
+  $("#edit_profile_div").toggle();
 }
 
 function changeUsername(){
-  username = document.getElementById("new_username").value;
-  user = Parse.user.current();
-  user.set("username", username);
+  my_username = document.getElementById("new_username").value;
+  user = Parse.User.current();
+  user.save({
+    username: my_username
+  }, {
+    success: function(user) {
+      // The object was saved successfully.
+    },
+    error: function(user, error) {
+      // The save failed.
+      // error is a Parse.Error with an error code and message.
+    }
+  });
+  //user.setUsername("yeet");
 }
 
 function upload_pic(){
@@ -39,10 +41,20 @@ function upload_pic(){
   	//$("#profile_pic").attr('src', parseFile)
 */
   	//set user's profile pic to uploaded file
-  	pic_url = document.getElementById("profile_pic_url").value;
-  	user.set('profile_pic_url', pic_url);
+  pic_url = document.getElementById("profile_pic_url").value;
 
-    $("#profile_pic").attr("src", pic_url);
+  user.save({
+    profile_pic_url: pic_url
+  }, {
+    success: function(user) {
+      // The object was saved successfully.
+    },
+    error: function(user, error) {
+      // The save failed.
+      // error is a Parse.Error with an error code and message.
+    }
+  });
+
   	//var profilePhoto = user.get("profile_pic");
 	//$("#profile_pic")[0].src = profilePhoto.url();
 	
@@ -68,8 +80,12 @@ $(document).ready(
         if (currentUser.attributes.emailVerified === true){
           $("#email_verify").html("Yes");
         }
-  }
 
+        var profilePhoto = currentUser.get("profilePicUrl");
+        //var profileURL = profilePhoto.URL();
+        $("#profile_pic").attr('src', profilePhoto);
+        //$("#profile_pic").fadeIn();
+}
   );
 
 

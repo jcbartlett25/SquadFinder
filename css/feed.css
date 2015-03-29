@@ -17,6 +17,8 @@
   padding: 1rem;
   background-color: #E6E6E6;
   box-shadow: 2px 2px 5px #888888;
+  border-radius: 2px;
+  word-wrap: break-word;
 }
 .squad_post h2 {
   font-size: 1rem;
@@ -45,3 +47,4 @@
   color: red;
   display: none;
 }
+

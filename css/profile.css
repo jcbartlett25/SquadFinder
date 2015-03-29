@@ -1,5 +1,6 @@
 li {
   list-style-type: none;
+  padding-top: 0;
 }
 a {
   text-decoration: none;
@@ -28,12 +29,13 @@ a {
 .profile_pic_holder {
   height: 168px;
   width: 168px;
-  margin-left: 20px;
+  padding-left: 10px;
   border: none;
   border-width: 1px;
   overflow: hidden;
-  clear: left;
   margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 5px;
 }
 .profile_pic_holder img {
   float: left;
@@ -42,7 +44,7 @@ a {
   margin-bottom: 0;
   border: none;
 }
-.profile_title_text {
+.profile_title_text{
   font-size: 20px;
   text-align: left;
   font-weight: normal;
@@ -55,7 +57,7 @@ a {
   min-height: 188px;
   padding-top: 5px;
   padding-right: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   border: solid;
   border-width: 0.5px;
   border-color: #7B7B7B;
@@ -63,16 +65,26 @@ a {
   background-color: #E6E6E6;
   box-shadow: 2px 2px 5px #888888;
 }
-#edit_profile {
+#edit_profile{
   text-align: left;
-  margin-left: 20px;
-  margin-top: 5px;
+  margin-top: 0px;
   padding-bottom: 10px;
   font-size: 12px;
   cursor: pointer;
 }
-#edit_profile_menu {
-  display: none;
-  margin-left: 20px;
+.edit_profile{
+  text-align: left;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+#edit_profile_div {
+  margin-left: 10px;
   padding-bottom: 5px;
+  display: none;
+}
+#edit_profile_menu{
+  padding-left: 0;
+  margin-left: 0;
 }

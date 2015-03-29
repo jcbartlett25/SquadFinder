@@ -18,7 +18,6 @@
     <script src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
     <script src="http://cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/feed.js"></script>
 
   </head>
 
@@ -63,12 +62,14 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
+    <script type="text/javascript" src="js/feed.js"></script>
+
     <!--Page header. Title, menu bar, etc.-->
     <header>
       <nav>
         <span class="title"><a href="feed.html">squadfinder</a></span>
         <ul class="menu-right">
-          <li><a class="menu-text" href="feed.html">Feed</a></li>
+          <li><a class="menu-text" href="feed.html" style="text-decoration: underline">Feed</a></li>
           <li><a class="menu-text" href="profile.html">Profile</a></li>
           <li><a class="menu-text" href="squadrons.html">Squadrons</a></li>
           <li><a class="menu-text" href="about.html">About</a></li>
@@ -92,13 +93,21 @@
         <h1 class = "feed_title">My Squad Feed</h1>
 
         <!-- The Squad Feed -->
-        <div class="feed_div">
+        <div class="feed_div" id="feed_div">
           <!--The Div That Holds Squad Posting Information-->
           <div class = "squad_post" id="template" style="display:none">
-            <h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
-            <p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
-            <p><span class="join-button">Join</span> &nbsp| &nbsp<span class="goon-quantity">0 Goons</span></p>
+            <h2>
+              <span id="squad_title"></span>
+              <span id="post_username"></span>
+            </h2>
+            <p id="squad_descript"></p>
+            <p>
+              <span class="join-button">Join</span> 
+                &nbsp| &nbsp
+              <span class="goon-quantity">0 Goons</span>
+            </p>
           </div>
+          <div STYLE = "display: none"></div>
         </div>
       </div>
     </div>
