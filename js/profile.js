@@ -42,7 +42,17 @@ function upload_pic(){
 */
   	//set user's profile pic to uploaded file
   	pic_url = document.getElementById("profile_pic_url").value;
-  	user.set('profile_pic_url', pic_url);
+  user.save({
+    profile_pic_url: pic_url
+  }, {
+    success: function(user) {
+      // The object was saved successfully.
+    },
+    error: function(user, error) {
+      // The save failed.
+      // error is a Parse.Error with an error code and message.
+    }
+  });
 
   	//var profilePhoto = user.get("profile_pic");
 	//$("#profile_pic")[0].src = profilePhoto.url();
@@ -70,7 +80,7 @@ $(document).ready(
           $("#email_verify").html("Yes");
         }
 
-        var profilePhoto = currentUser.attributes.profile_pic_url;
+        var profilePhoto = currentUser.get("profile_pic_url");
         //var profileURL = profilePhoto.URL();
         $("#profile_pic").attr('src', profilePhoto);
         //$("#profile_pic").fadeIn();
