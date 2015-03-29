@@ -42,7 +42,7 @@ function upload_pic(){
 */
   	//set user's profile pic to uploaded file
   pic_url = document.getElementById("profile_pic_url").value;
-  
+
   user.save({
     profile_pic_url: pic_url
   }, {
@@ -81,7 +81,7 @@ $(document).ready(
           $("#email_verify").html("Yes");
         }
 
-        var profilePhoto = currentUser.get("profile_pic_url");
+        var profilePhoto = currentUser.get("profilePicUrl");
         //var profileURL = profilePhoto.URL();
         $("#profile_pic").attr('src', profilePhoto);
         //$("#profile_pic").fadeIn();
