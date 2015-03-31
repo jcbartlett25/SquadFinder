@@ -64,6 +64,7 @@ $(document).ready(
   function(){
         var currentUser = Parse.User.current();
 
+
         $("#profile_name").html(currentUser.getUsername())
 
         //Changes pages if user is not logged in.
@@ -80,6 +81,7 @@ $(document).ready(
         if (currentUser.attributes.emailVerified === true){
           $("#email_verify").html("Yes");
         }
+
 
         var profilePhoto = currentUser.get("profilePicUrl");
         //var profileURL = profilePhoto.URL();
