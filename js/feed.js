@@ -179,7 +179,9 @@ var joinSquad = function(squadId, goons){
   */
 
   var PROJECT_ID = 6289;
+  alert(PROJECT_ID)
   var COLLECTION_ID = 18888;
+  alert(COLLECTION_ID)
 
   /*
   syncano.connect(authData, function (auth) {
@@ -192,20 +194,22 @@ var joinSquad = function(squadId, goons){
   */
 
   var DATA_ID = squadId;
+  alert(DATA_ID)
   
   //syncano.Data.getOne(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
     //alert(data);
 
-    var params = {
-      additional: {
-        username: username,
-        goons: goons + " " + username
-      }
-    };
+  var params = {
+    additional: {
+      username: username,
+      goons: goons + " " + username
+    }
+  };
+  alert(params)
 
-    syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
-      alert("updated");
-    });
+  syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
+    alert("updated");
+  });
 
   //});
 }
