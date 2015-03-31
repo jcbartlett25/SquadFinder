@@ -6,7 +6,8 @@ function changeUsername(){
   my_username = document.getElementById("new_username").value;
 
   if(my_username.split(" ").length > 1){
-      alert("Please don't put spaces in your username.")
+      alert("Please don't put spaces in your username.");
+      return;
   }
 
   user = Parse.User.current();
