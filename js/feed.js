@@ -74,7 +74,7 @@ function squadPost(descript, title, username, id, goons)
 
   $post.click(function()
   {
-    joinSquad(id, goons)
+    joinSquad(id, goons, username)
 
   })
 
@@ -133,7 +133,7 @@ function postSquad(){
     state: 'Moderated',
     additional: {
       username: username,
-      goons: []
+      goons: [username]
     }
   };
           
