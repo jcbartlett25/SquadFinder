@@ -7,6 +7,7 @@ $(document).ready(
         }
   }
   );
+
 var syncano = SyncanoConnector.getInstance(); 
 //POPULATES Feed with Posts
 
@@ -38,7 +39,7 @@ function populatePage(){
     //looping through each object received from Syncano and filling the template
     for (i in data) {
      	var obj = data[i];
-    	new squadPost(obj.text, obj.title, obj.additional.username, obj.id);
+    	new squadPost(obj.text, obj.title, obj.additional.username, obj.id, goons);
     };
     //Logging each object to the console			
     data.forEach(function (d) {
@@ -50,17 +51,19 @@ function populatePage(){
 };
 
 
-function squadPost(descript, title, username, id)
+function squadPost(descript, title, username, id, goons)
 {
 
   this.descript = descript,
   this.title = title,
   this.username = username,
-  this.id = id
+  this.id = id,
+  this.goons = goons
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
+  $("#num-goons").html(goons.length())
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
@@ -71,7 +74,8 @@ function squadPost(descript, title, username, id)
 
   $post.click(function()
   {
-    joinSquad(title)
+    joinSquad(id, goons)
+
   })
 
 }
@@ -128,7 +132,8 @@ function postSquad(){
     text: descript,
     state: 'Moderated',
     additional: {
-      username: username
+      username: username,
+      goons: []
     }
   };
           
@@ -156,10 +161,47 @@ function clearText(){
   };
 }
 
-var joinSquad = function(squad){
-    var user = Parse.User.current();
-    user.addUnique("squads", squad);
-    user.save();
+var joinSquad = function(squadId, goonList, username){
+
+  var user = Parse.User.current();
+  var username = user.getUsername();
+
+  user.addUnique("squads", squadId);
+  user.save();
+ 
+  var authData = {
+    api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
+    instance: "sparkling-meadow-922472"
+  };
+  
+  var PROJECT_ID = 6289;
+  var COLLECTION_ID = 18888;
+  
+  syncano.connect(authData, function (auth) {
+    console.log("Connected");
+  });
+  
+  syncano.on('syncano:authorized', function(auth){
+    console.log("authorized");
+  });
+  
+  var DATA_ID = squadId;
+
+  syncano.Data.get(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
+    console.log(data);
+
+    var params = {
+      additional: {
+        username: username,
+        goons: data.additional.goons.push(username)
+      }
+    };
+
+    syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
+      console.log("updated");
+    });
+  });
 }
+
 populatePage();
 
