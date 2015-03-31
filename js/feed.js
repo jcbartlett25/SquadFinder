@@ -39,7 +39,7 @@ function populatePage(){
     //looping through each object received from Syncano and filling the template
     for (i in data) {
      	var obj = data[i];
-    	new squadPost(obj.text, obj.title, obj.additional.username, obj.id, goons);
+    	new squadPost(obj.text, obj.title, obj.additional.username, obj.id, obj.additional.goons);
     };
     //Logging each object to the console			
     data.forEach(function (d) {
