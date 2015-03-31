@@ -188,7 +188,7 @@ var joinSquad = function(squadId, goons, username){
   
   var DATA_ID = squadId;
   
-  syncano.Data.get(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
+  syncano.Data.getOne(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
     console.log(data);
 
     var params = {
