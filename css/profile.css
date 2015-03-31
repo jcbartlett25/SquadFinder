@@ -1,9 +1,13 @@
 li {
   list-style-type: none;
-  padding-top: 0;
+  padding-top: 10px;
+  font-size: 15px;
 }
 a {
   text-decoration: none;
+}
+p {
+  margin-top: 0px;
 }
 /*Visual Header of the Page*/
 .header {
@@ -65,6 +69,20 @@ a {
   background-color: #E6E6E6;
   box-shadow: 2px 2px 5px #888888;
 }
+.edit_profile_section{
+  margin-left: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  border: solid;
+  border-width: 0.5px;
+  border-color: #7B7B7B;
+  width: 70%;
+  background-color: #E6E6E6;
+  box-shadow: 2px 2px 5px #888888;
+  display: none;
+}
 #edit_profile{
   text-align: left;
   margin-top: 0px;
@@ -82,7 +100,6 @@ a {
 #edit_profile_div {
   margin-left: 10px;
   padding-bottom: 5px;
-  display: none;
 }
 #edit_profile_menu{
   padding-left: 0;

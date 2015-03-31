@@ -54,7 +54,6 @@
         <ul class="menu-right">
           <li><a class="menu-text" href="feed.html">Feed</a></li>
           <li><a class="menu-text" href="profile.html" style="text-decoration: underline">Profile</a></li>
-          <li><a class="menu-text" href="squadrons.html">Squadrons</a></li>
           <li><a class="menu-text" href="about.html">About</a></li>
           <li><a class="menu-text" onclick="logout()">Logout</a></li>
         </ul>
@@ -66,8 +65,10 @@
         <h1 class = "profile_title_text" ><span id="profile_name">squadfinder</span> <span class="edit_profile" onclick="toggEditMenu()">Edit</span> </h1>
         <div class="profile_section">
           <div class="profile_pic_holder"><img id="profile_pic"></div>
-          
-          
+      
+        </div>
+
+          <div class="edit_profile_section" id="edit_profile_section">
           <!-- edit your profile -->
           <div id="edit_profile_div">
 
@@ -78,7 +79,7 @@
                 Change Profile Picture (insert link)
                   <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
                   <input type="text" id="profile_pic_url">
-              <button class="small_button" onclick="upload_pic">Change</button>
+              <button onclick="upload_pic">Change</button>
 
               <!--<button onclick="upload_pic()">Change</button>-->
               </li>
@@ -88,7 +89,7 @@
                 Change Profile Picture (upload file)
                   <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
                   <input type="file" id="profile_pic_file">
-              <button class="small_button">Change</button>
+              <button>Change</button>
 
               <!--<button onclick="upload_pic()">Change</button>-->
               </li>
@@ -98,7 +99,7 @@
               <li>
                   Change Username
                  <input type="url" id="new_username">
-                 <button onclick="changeUsername()" class="small_button">Change</button>
+                 <button onclick="changeUsername()">Change</button>
               </li>  
 
               <!-- Email Verified -->
@@ -108,7 +109,7 @@
             </ul>
 
           </div>
-          </div>
+        </div>
 
       <!-- The user's current squads -->
       <h1 class = "profile_title_text">Current Squads</h1>
