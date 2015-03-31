@@ -169,15 +169,18 @@ var joinSquad = function(squadId, goons, username){
 
   user.addUnique("squads", squadId);
   user.save();
- 
+  
+  /*
   var authData = {
     api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
     instance: "sparkling-meadow-922472"
   };
+  */
   
   var PROJECT_ID = 6289;
   var COLLECTION_ID = 18888;
-  
+
+  /*
   syncano.connect(authData, function (auth) {
     console.log("Connected");
   });
@@ -185,7 +188,8 @@ var joinSquad = function(squadId, goons, username){
   syncano.on('syncano:authorized', function(auth){
     console.log("authorized");
   });
-  
+  */
+
   var DATA_ID = squadId;
   
   syncano.Data.getOne(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
@@ -194,7 +198,7 @@ var joinSquad = function(squadId, goons, username){
     var params = {
       additional: {
         username: username,
-        goons: goons + " " + username
+        goons: data.additional.goons + " " + username
       }
     };
 
