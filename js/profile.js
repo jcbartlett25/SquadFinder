@@ -17,6 +17,7 @@ function changeUsername(){
     }
   });
   //user.setUsername("yeet");
+  location.reload()
 }
 
 function upload_pic(){
