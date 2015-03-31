@@ -76,7 +76,7 @@ function squadPost(descript, title, username, id)
 
   $post.click(function()
   {
-    this.joinSquad(this.title)
+    joinSquad(this.title)
   })
 
 }
