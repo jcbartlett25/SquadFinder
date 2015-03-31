@@ -161,7 +161,7 @@ function clearText(){
   };
 }
 
-var joinSquad = function(squadId, goonList, username){
+var joinSquad = function(squadId, goons, username){
 
   var user = Parse.User.current();
   var username = user.getUsername();
