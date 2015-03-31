@@ -14,6 +14,12 @@
 		var confirm_password = document.getElementById("confirm-password").value;
 		var email = document.getElementById('new_email').value;
 
+		if(username.split(" ").length > 1){
+			$(".error_login").html("No spaces are allowed in your username.");
+			$(".error_login").show();
+			return;
+		}
+
 		if(password != confirm_password){
 			$(".error_login").html("Your passwords don't match.");
 			$(".error_login").show();
