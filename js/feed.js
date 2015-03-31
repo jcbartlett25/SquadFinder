@@ -176,7 +176,7 @@ var joinSquad = function(squadId, goons, username){
     instance: "sparkling-meadow-922472"
   };
   */
-  
+
   var PROJECT_ID = 6289;
   var COLLECTION_ID = 18888;
 
@@ -194,7 +194,7 @@ var joinSquad = function(squadId, goons, username){
   
   syncano.Data.getOne(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
     console.log(data);
-
+/*
     var params = {
       additional: {
         username: username,
@@ -205,6 +205,7 @@ var joinSquad = function(squadId, goons, username){
     syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
       console.log(data);
     });
+*/
   });
 }
 
