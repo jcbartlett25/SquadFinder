@@ -71,18 +71,19 @@ $(document).ready(
   function(){
         var currentUser = Parse.User.current();
 
+        if (currentUser) {
+            
+        } else {
+          window.open('index.html', "_self");
+          return;
+            }
+
 
         $("#profile_name").html(currentUser.getUsername())
 
         //Changes pages if user is not logged in.
         //$("#menu_name").html(" - " + Parse.User.current().getUsername());
 
-        
-        if (currentUser) {
-            
-        } else {
-          window.open('index.html', "_self");
-            }
 
         //updates email verification string
         if (currentUser.attributes.emailVerified === true){
