@@ -57,7 +57,7 @@ function squadPost(descript, title, username, id)
   this.title = title,
   this.username = username,
   this.id = id,
-  this.joinSquad = function joinSquad(squad){
+  this.joinSquad = function (squad){
     var user = Parse.User.current();
     user.addUnique("squads", squad);
     user.save();
