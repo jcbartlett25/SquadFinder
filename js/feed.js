@@ -193,7 +193,7 @@ var joinSquad = function(squadId, goonList, username){
     var params = {
       additional: {
         username: username,
-        goons: goons + " ";
+        goons: goons + " "
       }
     };
 
