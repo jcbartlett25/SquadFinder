@@ -56,7 +56,12 @@ function squadPost(descript, title, username, id)
   this.descript = descript,
   this.title = title,
   this.username = username,
-  this.id = id
+  this.id = id,
+  this.joinSquad = function joinSquad(squad){
+    var user = Parse.User.current();
+    user.addUnique("squads", squad);
+    user.save();
+  }
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
@@ -71,7 +76,7 @@ function squadPost(descript, title, username, id)
 
   $post.click(function()
   {
-    alert(username);
+    joinSquad(this.title)
   })
 
 }
@@ -128,8 +133,7 @@ function postSquad(){
     text: descript,
     state: 'Moderated',
     additional: {
-      username: username,
-      joinSquad: joinSquad(this.title)
+      username: username
     }
   };
           
@@ -157,11 +161,6 @@ function clearText(){
   };
 }
 
-function joinSquad(squad){
-  var user = Parse.User.current();
-  user.addUnique("squads", squad);
-  user.save();
-}
 
 populatePage();
 
