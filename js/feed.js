@@ -187,19 +187,19 @@ var joinSquad = function(squadId, goons, username){
   });
   
   var DATA_ID = squadId;
-
+  
   syncano.Data.get(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
     console.log(data);
 
     var params = {
       additional: {
         username: username,
-        goons: goons + " "
+        goons: goons + " " + username
       }
     };
 
     syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
-      console.log("updated");
+      console.log(data);
     });
   });
 }
