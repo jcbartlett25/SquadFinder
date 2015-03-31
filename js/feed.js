@@ -199,7 +199,7 @@ var joinSquad = function(squadId, goons){
     var params = {
       additional: {
         username: username,
-        goons: data.additional.goons + " " + username
+        goons: goons + " " + username
       }
     };
 
