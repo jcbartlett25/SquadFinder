@@ -58,7 +58,7 @@ function squadPost(descript, title, username, id, goons)
   this.title = title,
   this.username = username,
   this.id = id,
-  this.goons = goons
+  this.goons = goons.split(" ")
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
@@ -133,7 +133,7 @@ function postSquad(){
     state: 'Moderated',
     additional: {
       username: username,
-      goons: [username]
+      goons: username
     }
   };
           
@@ -193,7 +193,7 @@ var joinSquad = function(squadId, goonList, username){
     var params = {
       additional: {
         username: username,
-        goons: data.additional.goons.push(username)
+        goons: goons + " ";
       }
     };
 
