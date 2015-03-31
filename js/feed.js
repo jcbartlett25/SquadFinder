@@ -205,7 +205,8 @@ var joinSquad = function(squadId, goons){
       goons: goons + " " + username
     }
   };
-  alert(params)
+  alert(params.additional.username)
+  alert(params.additional.goons)
 
   syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
     alert("updated");
