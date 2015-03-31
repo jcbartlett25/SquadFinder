@@ -59,7 +59,7 @@ function squadPost(descript, title, username, id, goons)
   this.username = username,
   this.id = id,
   this.goons = goons.split(" ");
-  console.log(goons.split(" ").length)
+  //console.log(goons.split(" ").length)
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
@@ -75,7 +75,8 @@ function squadPost(descript, title, username, id, goons)
 
   $post.click(function()
   {
-    joinSquad(id, goons, username)
+
+    joinSquad(id, goons)
 
   })
 
@@ -162,7 +163,7 @@ function clearText(){
   };
 }
 
-var joinSquad = function(squadId, goons, username){
+var joinSquad = function(squadId, goons){
 
   var user = Parse.User.current();
   var username = user.getUsername();
@@ -192,9 +193,9 @@ var joinSquad = function(squadId, goons, username){
 
   var DATA_ID = squadId;
   
-  syncano.Data.getOne(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
-    console.log(data);
-/*
+  //syncano.Data.getOne(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
+    //alert(data);
+
     var params = {
       additional: {
         username: username,
@@ -203,10 +204,10 @@ var joinSquad = function(squadId, goons, username){
     };
 
     syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
-      console.log(data);
+      alert("updated");
     });
-*/
-  });
+
+  //});
 }
 
 populatePage();
