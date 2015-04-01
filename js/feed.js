@@ -19,11 +19,12 @@ function populatePage(){
   };
   var PROJECT_ID = 6289;
   var COLLECTION_ID = 18888;
-    
+  
+   
   syncano.connect(authData, function (auth) {
     console.log("Connected");
   });
-    
+  
   syncano.on('syncano:authorized', function(auth){
     console.log("authorized");
   });
@@ -185,11 +186,12 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   var COLLECTION_ID = 18888;
   alert(COLLECTION_ID)
 
-  /*
+  
   syncano.connect(authData, function (auth) {
     alert("Connected");
   });
   
+  /*
   syncano.on('syncano:authorized', function(auth){
     alert("authorized");
   });
