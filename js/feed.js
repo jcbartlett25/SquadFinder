@@ -163,7 +163,7 @@ function clearText(){
   };
 }
 
-var joinSquad = function(squadId, goons, squadOwner){
+var joinSquad = function(squadId, goons, title, descript, squadOwner){
   
   var user = Parse.User.current();
   var username = user.getUsername();
@@ -202,11 +202,15 @@ var joinSquad = function(squadId, goons, squadOwner){
     //alert(data);
 
   var params = {
+    title: title,
+    text: descript,
+    state: 'Moderated',
     additional: {
       username: squadOwner,
       goons: goons + " " + username
     }
   };
+
   alert(params.additional.username)
   alert(params.additional.goons)
 
