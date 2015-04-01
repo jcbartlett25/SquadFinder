@@ -172,6 +172,7 @@ var joinSquad = function(squadId, goons, squadOwner){
   user.save();
   
   var syncano = SyncanoConnector.getInstance();
+  alert(syncano)
   
   var authData = {
     api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
@@ -186,11 +187,11 @@ var joinSquad = function(squadId, goons, squadOwner){
 
   
   syncano.connect(authData, function (auth) {
-    console.log("Connected");
+    alert("Connected");
   });
   
   syncano.on('syncano:authorized', function(auth){
-    console.log("authorized");
+    alert("authorized");
   });
   
 
