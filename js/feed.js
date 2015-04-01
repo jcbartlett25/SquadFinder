@@ -169,8 +169,10 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   var user = Parse.User.current();
   var username = user.getUsername();
 
+  /*
   user.addUnique("squads", squadId);
   user.save();
+  */
   
   var syncano = SyncanoConnector.getInstance();
   alert(syncano)
