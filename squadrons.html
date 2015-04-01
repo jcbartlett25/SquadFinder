@@ -1,4 +1,5 @@
-<!DOCTYPE html/>
+<!DOCTYPE html>
+
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/squadrons.css">
@@ -67,6 +68,7 @@
           <li><a class="menu-text" href="about.html">About</a></li>
           <li><a class="menu-text" onclick="logout()">Logout</a></li>
         </ul>
+      </nav>
     </header>
 
     <!--Body. Holds main content-->
@@ -74,8 +76,8 @@
       <div class="wrapper">
         <div id="new_post_area">
           <center><form id="new_post_form">
-            <input type="text" id="new_post_title" value="title" onclick="clearText()">
-            <input type="text" id="new_post_descript" size="40" value="i need a squad for..." onclick="clearText()">
+            <input type="text" id="new_post_title" value="Title" onclick="clearText()">
+            <input type="text" id="new_post_descript" size="40" value="I need a squad for..." onclick="clearText()">
           </form></center>
           <center><button class="post_button small_button" onclick="postSquad()">New Post</button></center>
         </div>
@@ -92,7 +94,7 @@
           <!--The Div That Holds Squad Posting Information-->
           <div class="squad_post" id="template">
             <h2><span id="squad_title">The BRIT Awards</span>  <span id="post_username"></span></h2>
-            <p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p></span>
+            <p id="squad_descript">Hey, guys. I need 30 Goons, ASAP</p>
             <p>Join &nbsp <span> | </span> &nbsp Decline</p>
           </div>
         </div>
