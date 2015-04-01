@@ -76,7 +76,7 @@ function squadPost(descript, title, username, id, goons)
   $post.click(function()
   {
 
-    joinSquad(id, goons)
+    joinSquad(id, goons, username)
 
   })
 
@@ -163,14 +163,15 @@ function clearText(){
   };
 }
 
-var joinSquad = function(squadId, goons){
-
+var joinSquad = function(squadId, goons, squadOwner){
+  
   var user = Parse.User.current();
   var username = user.getUsername();
 
   user.addUnique("squads", squadId);
   user.save();
   
+  var syncano = SyncanoConnector.getInstance();
   
   var authData = {
     api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
@@ -201,7 +202,7 @@ var joinSquad = function(squadId, goons){
 
   var params = {
     additional: {
-      username: username,
+      username: squadOwner,
       goons: goons + " " + username
     }
   };
