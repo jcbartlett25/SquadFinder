@@ -99,23 +99,30 @@ footer a {
   color: white;
 }
 /*The Blueprint for Large Buttons*/
-.enter_button {
+.large_button {
   background-color: #4387fd;
   border: 0;
-  border-bottom: 2px solid #3D76DA;
-  box-shadow: inset 0 -2px #3D76DA;
-  -webkit-box-shadow: inset 0 -2px #3D76DA;
+  -webkit-box-shadow: 0 4px 0 #3D76DA;
+  -moz-box-shadow: 0 4px 0 #3D76DA;
+  box-shadow: 0 4px 0 #3D76DA;
   color: white;
   cursor: pointer;
   font-family: inherit;
   font-size: 1.25rem;
   margin: 1rem;
   padding: 1rem 0;
+  position: relative;
   text-align: center;
   width: 12rem;
 }
+.large_button:active {
+  top: 2px;
+  -webkit-box-shadow: 0 2px 0 #3D76DA;
+  -moz-box-shadow: 0 2px 0 #3D76DA;
+  box-shadow: 0 2px 0 #3D76DA;
+}
 /*The Blueprint for Small Buttons*/
-.small_button  {
+.small_button {
   background-color: #4387fd;
   color: white;
   font-family: inherit;
@@ -158,11 +165,11 @@ footer a {
   margin-top: 10px;
   display: none;
 }
-.menu-text{
+.menu-text {
   cursor: pointer;
   text-transform: lowercase;
 }
-.alert-text{
+.alert-text {
   width: 100%;
   color: red;
   text-align: center;

@@ -2,6 +2,8 @@
 
 <html>
   <head>
+    <title>Squad Feed</title>
+
     <link rel="stylesheet" type="text/css" href="css/feed.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -12,8 +14,6 @@
     <script src="//www.parsecdn.com/js/parse-1.3.5.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/client.js"></script>
-
-    <title>Squad Feed</title>
 
     <script src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
     <script src="http://cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
@@ -74,39 +74,40 @@
           <li><a class="menu-text" href="about.html">About</a></li>
           <li><a class="menu-text" onclick="logout()">Logout</a></li>
         </ul>
+      </nav>
     </header>
 
    <!--Body. Holds main content-->
     <div class="content">
       <div class="wrapper">
-        <p id = "please_verify">Hey! You should verify your email so that you can use all of our features.</p>
+        <p id="please_verify">Hey! You should verify your email so that you can use all of our features.</p>
         <div id="new_post_area">
           <center><form id="new_post_form">
-            <input type="text" id="new_post_title" value="title" onclick="clearText()">
-            <input type="text" id="new_post_descript" size="40" value="i need a squad for..." onclick="clearText()">
+            <input type="text" id="new_post_title" value="Title" onclick="clearText()">
+            <input type="text" id="new_post_descript" size="40" value="I need a squad for..." onclick="clearText()">
           </form></center>
           <center><button class="post_button small_button" onclick="postSquad()">New Post</button></center>
         </div>
 
 
-        <h1 class = "feed_title">My Squad Feed</h1>
+        <h1 class="feed_title">My Squad Feed</h1>
 
         <!-- The Squad Feed -->
         <div class="feed_div" id="feed_div">
           <!--The Div That Holds Squad Posting Information-->
-          <div class = "squad_post" id="template" style="display:none">
+          <div class="squad_post" id="template" style="display:none">
             <h2>
               <span id="squad_title"></span>
-              <span id="post_username" class="post_username"></span>
+              <span id="post_username"></span>
             </h2>
             <p id="squad_descript"></p>
             <p>
               <span class="join-button">Join</span> 
                 &nbsp| &nbsp
-              <span class="goon-quantity" id="num-goons">0 Goons</span>
+              <span id="num-goons">0 Goons</span>
             </p>
           </div>
-          <div STYLE = "display: none"></div>
+          <div style="display:none"></div>
         </div>
       </div>
     </div>

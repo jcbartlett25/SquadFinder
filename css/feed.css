@@ -1,5 +1,5 @@
 /*Title Heading*/
-.feed_title{
+.feed_title {
   font-size: 1.5rem;
   text-align: center;
 }
@@ -27,7 +27,7 @@
   font-size: 0.75rem;
 }
 /*NEW SQUAD POST*/
-#new_post_area{
+#new_post_area {
   padding: 1rem;
   margin-bottom: 1rem;
   border: solid;
@@ -36,23 +36,21 @@
   background-color: #E6E6E6;
   box-shadow: 2px 2px 5px #888888;
 }
-#post_username{
+#new_post_title,
+#new_post_descript {
+  font-family: inherit;
+}
+#post_username {
   text-align: right;
   float: right;
   font-size: 0.75rem;
   text-transform: uppercase;
 }
-.post_username{
-  text-align: right;
-  float: right;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-}
-#please_verify{
+#please_verify {
   text-align: center;
   color: red;
   display: none;
 }
-.join-button{
+.join-button {
   cursor: pointer;
 }
