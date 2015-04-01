@@ -46,6 +46,12 @@
   font-size: 0.75rem;
   text-transform: uppercase;
 }
+.post_username{
+  text-align: right;
+  float: right;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
 #please_verify {
   text-align: center;
   color: red;
