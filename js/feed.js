@@ -155,11 +155,11 @@ function clearText(){
   var descript = document.getElementById("new_post_descript").value;
   var title = document.getElementById("new_post_title").value;
   
-  if (descript === "i need a squad for...") {
+  if (descript === "I need a squad for...") {
     document.getElementById("new_post_descript").value = "";
   };
   
-  if (title === "title") {
+  if (title === "Title") {
     document.getElementById("new_post_title").value = "";
   };
 }
