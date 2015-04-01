@@ -76,7 +76,7 @@ function squadPost(descript, title, username, id, goons)
   $post.click(function()
   {
 
-    joinSquad(id, goons, username)
+    joinSquad(id, goons, title, descript, username)
 
   })
 
@@ -185,7 +185,7 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   var COLLECTION_ID = 18888;
   alert(COLLECTION_ID)
 
-  
+  /*
   syncano.connect(authData, function (auth) {
     alert("Connected");
   });
@@ -193,7 +193,7 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   syncano.on('syncano:authorized', function(auth){
     alert("authorized");
   });
-  
+  */
 
   var DATA_ID = squadId;
   alert(DATA_ID)
