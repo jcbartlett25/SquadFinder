@@ -169,19 +169,20 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   var user = Parse.User.current();
   var username = user.getUsername();
 
-  /*
+  
   user.addUnique("squads", squadId);
   user.save();
-  */
   
+
   var syncano = SyncanoConnector.getInstance();
-  alert(syncano)
+  console.log(syncano)
   
   var authData = {
     api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
     instance: "sparkling-meadow-922472"
   };
   
+  alert(authData.api_key + " " + authData.instance)
 
   var PROJECT_ID = 6289;
   alert(PROJECT_ID)
