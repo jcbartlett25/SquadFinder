@@ -13,26 +13,13 @@ $(document).ready(
 function populatePage(){
 
   //Loads all objects in the Post class
-  var query = new Parse.Query("Post")
-
-  //Actually pulls the objects down from Parse
-  query.find({
-    success: function(results) {
-
-      console.log("Data retrieved")
-      console.log(results)
-      //Loops through objects and creates new squadPosts from the data
-      for (var i = 0; i < results.length; i++) { 
-        var obj = results[i];
-        new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
-      }
-    },
-
-    //Alerts user of what error occurred 
-    error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
-    }
-  });
+  var results = retrieveAllPosts()
+  
+  //Loops through objects and creates new squadPosts from the data
+  for (var i = 0; i < results.length; i++) { 
+    var obj = results[i];
+    new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
+  }
   
 };
 
@@ -145,7 +132,7 @@ function clearText(){
   };
 }
 
-//
+//Joins squads (self explanatory....)
 var joinSquad = function(squadId){
   
   //adding the squadId to the user's squad
@@ -155,8 +142,55 @@ var joinSquad = function(squadId){
   user.addUnique("squads", squadId);
   user.save();
   
-  
+  var squad = retrieveObject("Post", squadId);
+  squad.addUnique("goons", username);
+  squad.save();
+  alert("You joined the squad!")
 }
+
+
+// Retrieves all posts from the database
+var retrieveAllPosts = function(){
+
+  //Loads all objects in the Post class
+  var query = new Parse.Query("Post")
+
+  //Actually pulls the objects down from Parse
+  query.find({
+    success: function(results) {
+
+      console.log("Data retrieved");
+      return results;
+
+    //Alerts user of what error occurred 
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+
+}
+
+
+//Retrieves a specific postSquad object
+var retrieveObject = function(class, id){
+
+  //Loads all objects in the Post class
+  var query = new Parse.Query(class)
+
+  //Actually pulls the objects down from Parse
+  query.get(id, {
+    success: function(obj) {
+
+      console.log("Data retrieved");
+      return obj;
+
+    //Alerts user of what error occurred 
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+}
+
 
 populatePage();
 
