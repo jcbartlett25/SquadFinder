@@ -82,7 +82,7 @@ function squadPost(descript, title, username, id, goons)
   this.title = title,
   this.username = username,
   this.id = id,
-  this.goons = goons.split(" ");
+  this.goons = goons;
   //console.log(goons.split(" ").length)
 
   $("#squad_descript").html(descript);
