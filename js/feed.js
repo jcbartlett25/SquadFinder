@@ -172,10 +172,10 @@ var retrieveAllPosts = function(){
 
 
 //Retrieves a specific postSquad object
-var retrieveObject = function(class, id){
+var retrieveObject = function(parseClass, id){
 
   //Loads all objects in the Post class
-  var query = new Parse.Query(class)
+  var query = new Parse.Query(parseClass)
 
   //Actually pulls the objects down from Parse
   query.get(id, {
