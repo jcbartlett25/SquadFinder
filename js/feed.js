@@ -20,7 +20,7 @@ function populatePage(){
     success: function(results) {
 
       console.log("Data retrieved")
-
+      console.log(results)
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) { 
         var obj = results[i];
@@ -32,9 +32,10 @@ function populatePage(){
     error: function(error) {
       alert("Error: " + error.code + " " + error.message);
     }
-});
+  });
   
 };
+
 
 //Constructor for the squadPost object
 function squadPost(descript, title, username, id, goons)
@@ -75,6 +76,7 @@ function squadPost(descript, title, username, id, goons)
   })
 
 }
+
 
 //POST A SQUAD
 function postSquad(){
@@ -143,7 +145,7 @@ function clearText(){
   };
 }
 
-
+//
 var joinSquad = function(squadId){
   
   //adding the squadId to the user's squad
@@ -152,8 +154,6 @@ var joinSquad = function(squadId){
   
   user.addUnique("squads", squadId);
   user.save();
-
-
   
   
 }
