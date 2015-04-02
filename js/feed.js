@@ -57,15 +57,10 @@ function populatePage(){
   var query = new Parse.Query("Post")
   query.find({
   success: function(results) {
-    alert("Successfully retrieved " + results.length + " scores.");
     // Do something with the returned Parse.Object values
+    console.log("Data retrieved")
     for (var i = 0; i < results.length; i++) { 
       var obj = results[i];
-      alert(obj.id);
-      alert(obj.get('title'));
-      alert(obj.get('username'));
-      alert(obj.get('descript'));
-      alert(typeof obj.get('goons'));
       new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
     }
   },
@@ -81,7 +76,7 @@ function populatePage(){
 
 function squadPost(descript, title, username, id, goons)
 {
-  alert(goons)
+
   this.descript = descript,
   this.title = title,
   this.username = username,
@@ -92,8 +87,7 @@ function squadPost(descript, title, username, id, goons)
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
-  //$("#num-goons").html(goons.length)
-  $("#num-goons").html(1)
+  $("#num-goons").html(goons.length)
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
