@@ -154,7 +154,7 @@ var joinSquad = function(squadId){
   user.save();
   
   //Loads all objects in the Post class
-  var query = new Parse.Query(parseClass)
+  var query = new Parse.Query("Post")
 
   //Actually pulls the objects down from Parse
   query.get(id, {
