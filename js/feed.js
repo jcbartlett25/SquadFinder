@@ -161,7 +161,7 @@ var retrieveAllPosts = function(){
 
       console.log("Data retrieved");
       return results;
-
+    }
     //Alerts user of what error occurred 
     error: function(error) {
       alert("Error: " + error.code + " " + error.message);
@@ -183,7 +183,7 @@ var retrieveObject = function(class, id){
 
       console.log("Data retrieved");
       return obj;
-
+    }
     //Alerts user of what error occurred 
     error: function(error) {
       alert("Error: " + error.code + " " + error.message);
