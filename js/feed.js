@@ -25,6 +25,7 @@ function populatePage(){
         new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
       }
     },
+
     //Alerts user of what error occurred 
     error: function(error) {
       alert("Error: " + error.code + " " + error.message);
@@ -157,7 +158,7 @@ var joinSquad = function(squadId){
   var query = new Parse.Query("Post")
 
   //Actually pulls the objects down from Parse
-  query.get(id, {
+  query.get(squadId, {
     success: function(obj) {
 
       console.log("Object retrieved");
