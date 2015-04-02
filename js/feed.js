@@ -61,7 +61,11 @@ function populatePage(){
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) { 
       var obj = results[i];
-      alert(obj.id + ' - ' + obj.get('playerName'));
+      alert(obj.id);
+      alert(obj.title);
+      alert(obj.creator);
+      alert(obj.text);
+      alert(obj.goons);
       new squadPost(obj.text, obj.title, obj.creator, obj.id, obj.goons);
     }
   },
@@ -77,7 +81,7 @@ function populatePage(){
 
 function squadPost(descript, title, username, id, goons)
 {
-
+  alert(goons)
   this.descript = descript,
   this.title = title,
   this.username = username,
