@@ -8,11 +8,13 @@ $(document).ready(
   }
   );
 
-var syncano = SyncanoConnector.getInstance(); 
+//var syncano = SyncanoConnector.getInstance(); 
 //POPULATES Feed with Posts
 
 function populatePage(){
+
   //Connects to Syncano
+  /*
   var authData = {
     api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
     instance: "sparkling-meadow-922472"
@@ -33,6 +35,7 @@ function populatePage(){
     include_children: false,
     folders: 'Default'
   }
+  
 
   // Pulls post objects from Syncano and fills in each template
   syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
@@ -49,6 +52,26 @@ function populatePage(){
   });
 
   syncano.off();
+  */
+
+  var query = new Parse.Query("Post")
+  query.find({
+  success: function(results) {
+    alert("Successfully retrieved " + results.length + " scores.");
+    // Do something with the returned Parse.Object values
+    for (var i = 0; i < results.length; i++) { 
+      var obj = results[i];
+      alert(obj.id + ' - ' + obj.get('playerName'));
+      new squadPost(obj.text, obj.title, obj.creator, obj.id, obj.goons);
+    }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+  
+
+
 };
 
 
@@ -116,6 +139,7 @@ function postSquad(){
   document.getElementById("new_post_descript").value = "";
   document.getElementById("new_post_title").value = "";
 
+  /*
   //var syncano = SyncanoConnector.getInstance(); 
   //Project = Squad Finder && Collection = posts
   var PROJECT_ID = 6289;
@@ -144,9 +168,26 @@ function postSquad(){
   syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
     //console.log('Created new data object with ID = ', data.id);
   });
+  */
+
   //});
   //var $div = $("#squad_post").html();
   //$(".content").append($div);
+
+  var post = Parse.Object.extend("Post");
+  var squadpost = new post()
+  squadpost.save({
+    title: title,
+    descript: descript,
+    username: username,
+    goons: [username]
+  }, {
+    success: function() {
+      console.log('success')
+    },
+    error: function(error) {
+      console.log(error)
+    });
 };
 
 
@@ -172,9 +213,10 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   
   user.addUnique("squads", squadId);
   user.save();
-  
 
-  var syncano = SyncanoConnector.getInstance();
+  
+  
+  /*
   console.log(syncano)
   
   var authData = {
@@ -182,6 +224,7 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
     instance: "sparkling-meadow-922472"
   };
   
+
   alert(authData.api_key + " " + authData.instance)
 
   var PROJECT_ID = 6289;
@@ -189,11 +232,11 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   var COLLECTION_ID = 18888;
   alert(COLLECTION_ID)
 
-  /*
+  
   syncano.connect(authData, function (auth) {
     alert("Connected");
   });
-  */
+  
 
   
   syncano.on('syncano:authorized', function(auth){
@@ -225,6 +268,7 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   });
 
   //});
+  */
 }
 
 populatePage();
