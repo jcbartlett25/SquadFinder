@@ -50,7 +50,7 @@ function squadPost(descript, title, username, id, goons)
   $("#post_username").html(username);
 
   if (goons.length == 1) {
-    $("#num-goons").html("No goons")
+    $("#num-goons").html("0 goons")
   }
   else {
     $("#num-goons").html(goons.length + " goons")
@@ -102,7 +102,7 @@ function postSquad(){
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
-  $("#num-goons").html("No goons");
+  $("#num-goons").html("0 goons");
   $post = $("#template").clone();
   $(".feed_div").prepend($post);
   $post.fadeIn();
@@ -164,7 +164,7 @@ var joinSquad = function(squadId){
       console.log("Object retrieved");
       obj.addUnique("goons", username)
       obj.save()
-      alert("You joined the squad!")
+      //alert("You joined the squad!")
     },
     //Alerts user of what error occurred 
     error: function(error) {
