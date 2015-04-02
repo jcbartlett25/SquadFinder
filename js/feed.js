@@ -187,7 +187,8 @@ function postSquad(){
     },
     error: function(error) {
       console.log(error)
-    });
+    }
+  })
 };
 
 
@@ -214,7 +215,7 @@ var joinSquad = function(squadId, goons, title, descript, squadOwner){
   user.addUnique("squads", squadId);
   user.save();
 
-  
+
   
   /*
   console.log(syncano)
