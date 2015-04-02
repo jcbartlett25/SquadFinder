@@ -142,6 +142,7 @@ function clearText(){
   };
 }
 
+
 //Joins squads (self explanatory....)
 var joinSquad = function(squadId){
   
@@ -152,38 +153,6 @@ var joinSquad = function(squadId){
   user.addUnique("squads", squadId);
   user.save();
   
-  var squad = retrieveObject("Post", squadId);
-  squad.addUnique("goons", username);
-  squad.save();
-  alert("You joined the squad!")
-}
-
-
-// Retrieves all posts from the database
-var retrieveAllPosts = function(){
-
-  //Loads all objects in the Post class
-  var query = new Parse.Query("Post")
-
-  //Actually pulls the objects down from Parse
-  query.find({
-    success: function(results) {
-
-      console.log("Data retrieved");
-      return results;
-    },
-    //Alerts user of what error occurred 
-    error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
-    }
-  });
-
-}
-
-
-//Retrieves a specific postSquad object
-var retrieveObject = function(parseClass, id){
-
   //Loads all objects in the Post class
   var query = new Parse.Query(parseClass)
 
@@ -191,14 +160,17 @@ var retrieveObject = function(parseClass, id){
   query.get(id, {
     success: function(obj) {
 
-      console.log("Data retrieved");
-      return obj;
+      console.log("Object retrieved");
+      obj.addUnique("goons", username)
+      obj.save()
+      alert("You joined the squad!")
     },
     //Alerts user of what error occurred 
     error: function(error) {
       alert("Error: " + error.code + " " + error.message);
     }
   });
+
 }
 
 
