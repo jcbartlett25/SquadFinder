@@ -1,0 +1,144 @@
+  
+  //var syncano = SyncanoConnector.getInstance(); 
+  //Project = Squad Finder && Collection = posts
+  var PROJECT_ID = 6289;
+  var COLLECTION_ID = 18888;
+
+  //Keys
+  var authData = {
+    api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
+    instance: "sparkling-meadow-922472"
+  };
+  
+  //syncano.connect(authData, function (auth) {
+    //console.log("Connected");
+  //Stores post in an object
+  var params = {
+    title: title,
+    text: descript,
+    state: 'Moderated',
+    additional: {
+      username: username,
+      goons: username
+    }
+  };
+          
+  //Actually pushes object to database
+  syncano.Data.new(PROJECT_ID, COLLECTION_ID, params, function(data){
+    //console.log('Created new data object with ID = ', data.id);
+  });
+  
+
+  });
+  var $div = $("#squad_post").html();
+  $(".content").append($div);
+
+  
+
+
+
+
+
+
+  console.log(syncano)
+  
+  var authData = {
+    api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
+    instance: "sparkling-meadow-922472"
+  };
+  
+
+  alert(authData.api_key + " " + authData.instance)
+
+  var PROJECT_ID = 6289;
+  alert(PROJECT_ID)
+  var COLLECTION_ID = 18888;
+  alert(COLLECTION_ID)
+
+  
+  syncano.connect(authData, function (auth) {
+    alert("Connected");
+  });
+  
+
+  
+  syncano.on('syncano:authorized', function(auth){
+    alert("authorized");
+  });
+  
+
+  var DATA_ID = squadId;
+  alert(DATA_ID)
+  
+  //syncano.Data.getOne(PROJECT_ID, COLLECTION_ID, DATA_ID, function (data) {
+    //alert(data);
+
+  var params = {
+    title: title,
+    text: descript,
+    state: 'Moderated',
+    additional: {
+      username: squadOwner,
+      goons: goons + " " + username
+    }
+  };
+
+  alert(params.additional.username)
+  alert(params.additional.goons)
+
+  syncano.Data.update(PROJECT_ID, COLLECTION_ID, DATA_ID, params, function(data){
+    alert("updated");
+  });
+
+  //});
+
+
+
+
+
+
+
+
+
+
+    //Connects to Syncano
+  
+  var authData = {
+    api_key: "b50a00e33bb198286b779a53666249b90eb3f6dc",
+    instance: "sparkling-meadow-922472"
+  };
+  var PROJECT_ID = 6289;
+  var COLLECTION_ID = 18888;
+  
+   
+  syncano.connect(authData, function (auth) {
+    console.log("Connected");
+  });
+  
+  syncano.on('syncano:authorized', function(auth){
+    console.log("authorized");
+  });
+    
+  var params = {
+    include_children: false,
+    folders: 'Default'
+  }
+  
+
+  // Pulls post objects from Syncano and fills in each template
+  syncano.Data.get(PROJECT_ID, COLLECTION_ID, params, function (data) {
+    //console.log('Received', data.length, 'objects');
+    //looping through each object received from Syncano and filling the template
+    for (i in data) {
+      var obj = data[i];
+      new squadPost(obj.text, obj.title, obj.additional.username, obj.id, obj.additional.goons);
+    };
+    //Logging each object to the console      
+    data.forEach(function (d) {
+      //console.log(d);
+    });
+  });
+
+  syncano.off();
+  
+  
