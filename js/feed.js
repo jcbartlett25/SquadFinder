@@ -88,7 +88,7 @@ function squadPost(descript, title, username, id, goons)
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
-  $("#num-goons").html(goons.split(" ").length + " goons")
+  $("#num-goons").html(goons.length)
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
