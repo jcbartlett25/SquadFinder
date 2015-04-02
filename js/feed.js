@@ -43,7 +43,8 @@ function squadPost(descript, title, username, id, goons)
   this.title = title,
   this.username = username,
   this.id = id,
-  this.goons = goons;
+  this.goons = goons,
+  this.numGoons = goons.length;
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
@@ -53,7 +54,7 @@ function squadPost(descript, title, username, id, goons)
     $("#num-goons").html("0 goons")
   }
   else {
-    $("#num-goons").html(goons.length + " goons")
+    $("#num-goons").html(numGoons + " goons")
   };
 
   $post = $("#template").clone();
@@ -70,6 +71,7 @@ function squadPost(descript, title, username, id, goons)
   {
 
     joinSquad(id)
+    $("#num-goons").html(numGoons + 1)
 
   })
 
