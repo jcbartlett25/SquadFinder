@@ -53,7 +53,7 @@ function squadPost(descript, title, username, id, goons)
     $("#num-goons").html("0 goons")
   }
   else {
-    $("#num-goons").html(numGoons + " goons")
+    $("#num-goons").html(goons.length + " goons")
   };
 
   $post = $("#template").clone();
