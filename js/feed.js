@@ -62,10 +62,10 @@ function populatePage(){
     for (var i = 0; i < results.length; i++) { 
       var obj = results[i];
       alert(obj.id);
-      alert(obj.title);
-      alert(obj.creator);
-      alert(obj.text);
-      alert(obj.goons);
+      alert(obj.get('title'));
+      alert(obj.get('creator'));
+      alert(obj.get('text'));
+      alert(obj.get('goons'));
       new squadPost(obj.text, obj.title, obj.creator, obj.id, obj.goons);
     }
   },
