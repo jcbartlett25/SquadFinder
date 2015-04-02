@@ -63,10 +63,10 @@ function populatePage(){
       var obj = results[i];
       alert(obj.id);
       alert(obj.get('title'));
-      alert(obj.get('creator'));
+      alert(obj.get('username'));
       alert(obj.get('text'));
-      alert(obj.get('goons'));
-      new squadPost(obj.text, obj.title, obj.creator, obj.id, obj.goons);
+      alert(typeof obj.get('goons'));
+      new squadPost(obj.get('text'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons');
     }
   },
   error: function(error) {
