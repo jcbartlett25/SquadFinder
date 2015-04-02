@@ -11,15 +11,25 @@ $(document).ready(
 
 //POPULATES Feed with Posts
 function populatePage(){
-
-  //Loads all objects in the Post class
-  var results = retrieveAllPosts()
   
-  //Loops through objects and creates new squadPosts from the data
-  for (var i = 0; i < results.length; i++) { 
-    var obj = results[i];
-    new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
-  }
+  var query = new Parse.Query("Post")
+
+  //Actually pulls the objects down from Parse
+  query.find({
+    success: function(results) {
+
+      console.log("Data retrieved");
+      //Loops through objects and creates new squadPosts from the data
+      for (var i = 0; i < results.length; i++) { 
+        var obj = results[i];
+        new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
+      }
+    },
+    //Alerts user of what error occurred 
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
   
 };
 
