@@ -64,9 +64,9 @@ function populatePage(){
       alert(obj.id);
       alert(obj.get('title'));
       alert(obj.get('username'));
-      alert(obj.get('text'));
+      alert(obj.get('descript'));
       alert(typeof obj.get('goons'));
-      new squadPost(obj.get('text'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
+      new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
     }
   },
   error: function(error) {
