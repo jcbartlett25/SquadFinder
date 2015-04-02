@@ -43,8 +43,7 @@ function squadPost(descript, title, username, id, goons)
   this.title = title,
   this.username = username,
   this.id = id,
-  this.goons = goons,
-  this.numGoons = goons.length;
+  this.goons = goons;
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
@@ -71,7 +70,7 @@ function squadPost(descript, title, username, id, goons)
   {
 
     joinSquad(id)
-    $("#num-goons").html(numGoons + 1)
+    $("#num-goons").html(goons.length + 1)
 
   })
 
