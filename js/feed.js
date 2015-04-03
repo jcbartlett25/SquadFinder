@@ -62,7 +62,6 @@ function squadPost(descript, title, username, id, goons)
   $post.removeAttr("id")
   $post.find("span").removeAttr("id")
   $post.find("p").removeAttr("id")
-  $('.num-goons').removeClass('num-goons').addClass(id);
   $(".feed_div").prepend($post);
   $post.css("display", "block")
 
@@ -72,7 +71,6 @@ function squadPost(descript, title, username, id, goons)
 
     joinSquad(id)
     //document.getElementById(id).value = goons.length + 1 + ' goons';
-    $(.id 'span:contains'(goons.length + " goons")).html(goons.length + 1 + " goons");
 
   })
 
