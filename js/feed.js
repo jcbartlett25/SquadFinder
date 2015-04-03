@@ -57,7 +57,7 @@ function squadPost(descript, title, username, id, goons)
   };
 
   $post = $("#template").clone();
-  document.getElementById('#num-goons').setAttribute('id',id);
+  //document.getElementById('#num-goons').setAttribute('id',id);
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id")
@@ -70,7 +70,7 @@ function squadPost(descript, title, username, id, goons)
   {
 
     joinSquad(id)
-    document.getElementById(id).value = goons.length + 1 + ' goons';
+    //document.getElementById(id).value = goons.length + 1 + ' goons';
 
   })
 
