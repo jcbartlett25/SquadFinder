@@ -70,7 +70,7 @@ function squadPost(descript, title, username, id, goons)
   {
 
     joinSquad(id)
-    squadPost.fetch()
+    this.$("#num-goons").html(goons.length + 1 + " goons")
 
   })
 
