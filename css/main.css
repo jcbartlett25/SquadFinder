@@ -5,13 +5,13 @@
 }
 html,
 body {
-  margin: 0;
-  padding: 0;
   background:#E6E6E6;
+  color: #323131;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  vertical-align: center;
-  color: #323131;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 .title {
   display: inline-block;
@@ -21,9 +21,6 @@ body {
   font-weight: 900;
   line-height: 4rem;
   margin: 0;
-}
-nav a {
-  color: white;
 }
 li {
   list-style-type: none;
@@ -48,6 +45,9 @@ nav {
   margin: 0 auto;
   width: 80%;
 }
+nav a {
+  color: white;
+}
 nav ul {
   margin: 0;
   padding: 0;
@@ -65,30 +65,27 @@ nav li {
   display: inline-block;
   float: right;
 }
-/*The Main Chunk*/
+/* The Main Chunk */
 .content {
-  width: 80%;
+  background: white;
   height: auto;
   min-height: 550px;
-  background: #FFFFFF;
-  /*border-left: 1px solid #CCC;
-  border-right: 1px solid #CCC;*/
   margin: 0 auto;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding: 1.25rem 0;
+  width: 80%;
 }
 .wrapper {
   width: 50%;
   margin: 0 auto;
 }
-/*Squad Image of the Month*/
+/* Squad Image of the Month */
 .squad_img {
   height: 350px;
   width: 600px;
   padding-top: 10px;
   margin-bottom: 20px;
 }
-/*Visual Footer*/
+/* Footer */
 footer {
   width: 100%;
   background-color: #4387fd;
@@ -101,7 +98,7 @@ footer {
 footer a {
   color: white;
 }
-/*The Blueprint for Large Buttons*/
+/* The Blueprint for Large Buttons */
 .large_button {
   background-color: #4387fd;
   border: 0;
@@ -152,7 +149,7 @@ footer a {
   width: 100%;
   margin-bottom: 20px;
 }
-/*login and signup forms*/
+/* Login and signup forms */
 #login_form { 
   display: none;
   margin-top: 10px;
@@ -185,4 +182,11 @@ footer a {
   margin-top: 0px;
   color: #4387fd;
   font-size: 27px;
+}
+/* Styling for items that should turn blue on hover */
+.link {
+  transition: color 0.3s ease;
+}
+.link:hover {
+  color: #4387fd;
 }
