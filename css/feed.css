@@ -10,14 +10,11 @@
   margin: 0 auto;
 }
 .squad_post {
-  border: solid;
-  border-width: 0.5px;
-  border-color: #7B7B7B;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #888888;
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #E6E6E6;
-  box-shadow: 2px 2px 5px #888888;
-  border-radius: 2px;
   word-wrap: break-word;
 }
 .squad_post h2 {
@@ -28,13 +25,11 @@
 }
 /*NEW SQUAD POST*/
 #new_post_area {
-  padding: 1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #888888;
   margin-bottom: 1rem;
-  border: solid;
-  border-width: 0.5px;
-  border-color: #7B7B7B;
-  background-color: #E6E6E6;
-  box-shadow: 2px 2px 5px #888888;
+  padding: 1rem;
 }
 #new_post_title,
 #new_post_descript {
