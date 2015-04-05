@@ -63,14 +63,14 @@
 .three-of-five { width: 57%; }
 .four-of-five { width: 77%; }
 
+/* Mobile queries */
 @media screen and (max-width: 650px) {
-	.grid {
-		margin-left: 0;
-		max-width: none;
+	.content {
+		width: 100%;
 	}
 
 	.unit {
-		width: auto;
+		width: 85%;
 		margin-left: 0;
 		display: block;
 	}
