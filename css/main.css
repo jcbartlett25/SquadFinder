@@ -69,8 +69,9 @@ nav li {
   height: auto;
   min-height: 550px;
   background: #FFFFFF;
-  border: 1px solid #CCC;
-  margin: 0px auto 40px auto;
+  /*border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;*/
+  margin: 0 auto;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
