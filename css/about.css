@@ -5,27 +5,16 @@
 
 /*Heading Title Text*/
 .profile-title-text {
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: normal;
-
-  margin-bottom: 5px;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 0.5rem;
 }
 /*About Descriptions*/
-.about-descript {
-  border: solid;
-  border-width: 0.5px;
-  border-color: #7B7B7B;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: #E6E6E6;
-  box-shadow: 2px 2px 5px #888888;
-}
 .about-descript li {
   clear: left;
   text-align: center;
 }
-.developer-text {
-  padding: 1rem 0;
-  font-size: .875rem;
+
+/* unique wrapper width */
+.wrapper {
+  width: 80%;
 }

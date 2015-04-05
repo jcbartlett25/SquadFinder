@@ -6,7 +6,7 @@
 html,
 body {
   background:#E6E6E6;
-  color: #323131;
+  color: #444;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   margin: 0;
@@ -14,6 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .title {
+  color: #222;
   display: inline-block;
   float: left;
   font-size: 1.5rem;
@@ -28,6 +29,9 @@ li {
 a {
   color: #4387fd;
   text-decoration: none;
+}
+p {
+  line-height: 1.5;
 }
 /*Page Title Headings*/
 .title-text {
@@ -55,7 +59,7 @@ nav ul {
 nav li {
   float: left;
   font-size: 80%;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 4rem;
   padding-left: 1rem;
   position: relative;
@@ -189,4 +193,10 @@ footer a {
 }
 .link:hover {
   color: #4387fd;
+}
+
+input[type=text],
+input[type=file],
+button {
+  font-family: inherit;
 }
