@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
@@ -7,9 +12,6 @@ body {
   font-size: 16px;
   vertical-align: center;
   color: #323131;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; 
 }
 .title {
   display: inline-block;
@@ -126,12 +128,11 @@ footer a {
 .small_button {
   background-color: #4387fd;
   color: white;
+  display: inline-block;
   font-family: inherit;
   font-size: 12px;
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   text-align: center;
-  top: 0;
   border: 0;
   cursor: pointer;
   -webkit-box-shadow: 0 4px 0 #3D76DA;

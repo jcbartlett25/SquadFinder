@@ -85,7 +85,7 @@ function postSquad(){
   var title = document.getElementById("new_post_title").value;
 
   //Making sure user input is actual input
-  if (title === "title" || descript === "i need a squad for...") {
+  if (title === "Title" || descript === "I need a squad for...") {
     return;
   };
 
