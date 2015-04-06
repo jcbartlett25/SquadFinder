@@ -62,16 +62,3 @@
 .two-of-five { width: 37%; }
 .three-of-five { width: 57%; }
 .four-of-five { width: 77%; }
-
-/* Mobile queries */
-@media screen and (max-width: 650px) {
-	.content {
-		width: 100%;
-	}
-
-	.unit {
-		width: 85%;
-		margin-left: 0;
-		display: block;
-	}
-}

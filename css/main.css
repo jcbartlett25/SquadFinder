@@ -188,7 +188,7 @@ footer a {
 }
 /* Styling for items that should turn blue on hover */
 .link {
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 .link:hover {
   color: #4387fd;
@@ -211,4 +211,68 @@ button {
 }
 .cycle-slideshow img {
   max-width: 100%;
+}
+.hamburger-icon {
+  cursor: pointer;
+  display: inline-block;
+  fill: white;
+  float: right;
+  padding: 1rem 0;
+}
+.mobile-nav {
+  display: none;
+}
+.active {
+  background: #4387fd;
+  display: block;
+  float: left;
+  width: 60%;
+  position: absolute;
+  z-index: 999;
+}
+
+/* Mobile queries */
+@media screen and (max-width: 650px) {
+  html,
+  body {
+    font-size: 1.25rem;
+  }
+  .content {
+    margin: 0;
+    width: 100%;
+  }
+  .unit {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+  }
+  .wrapper {
+    width: 85%;
+  }
+  .new-post-textbox {
+    float: left;
+    margin-right: 0;
+  }
+  #new_post_form {
+    display: inline-block;
+    width: 100%;
+  }
+  #new_post_title {
+    width: 100%;
+  }
+  #new_post_descript {
+    width: 100%;
+  }
+  .post_button {
+    float: none;
+  }
+  .menu-right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .mobile {
+    display: none;
+  }
 }
