@@ -212,6 +212,20 @@ button {
 .cycle-slideshow img {
   max-width: 100%;
 }
+.hamburger-icon {
+  cursor: pointer;
+  display: inline-block;
+  fill: white;
+  float: right;
+  padding: 1rem 0;
+}
+.mobile-nav {
+  display: none;
+}
+.active {
+  background: #4387fd;
+  display: block;
+}
 
 /* Mobile queries */
 @media screen and (max-width: 650px) {
@@ -243,5 +257,14 @@ button {
   }
   .post_button {
     float: none;
+  }
+  .menu-right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .mobile {
+    display: none;
   }
 }
