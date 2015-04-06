@@ -225,6 +225,8 @@ button {
 .active {
   background: #4387fd;
   display: block;
+  float: left;
+  width: 60%;
   position: absolute;
   z-index: 999;
 }
