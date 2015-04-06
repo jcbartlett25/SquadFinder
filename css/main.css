@@ -225,6 +225,8 @@ button {
 .active {
   background: #4387fd;
   display: block;
+  position: absolute;
+  z-index: 999;
 }
 
 /* Mobile queries */
