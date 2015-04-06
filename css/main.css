@@ -188,7 +188,7 @@ footer a {
 }
 /* Styling for items that should turn blue on hover */
 .link {
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 .link:hover {
   color: #4387fd;

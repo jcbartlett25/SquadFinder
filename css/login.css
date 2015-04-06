@@ -32,9 +32,11 @@
 .popupBody input {
   width: 60%;
 }
+/* div that allows login button to be centered */
 .login-button {
   text-align: center;
 }
+/* login/register button */
 .login-register-button {
   background: #4387fd;
   border-radius: 3px;
