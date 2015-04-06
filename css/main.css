@@ -5,7 +5,7 @@
 }
 html,
 body {
-  background:#E6E6E6;
+  background: #E6E6E6;
   color: #444;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -111,13 +111,14 @@ footer a {
   box-shadow: 0 4px 0 #3D76DA;
   color: white;
   cursor: pointer;
+  display: inline-block;
+  float: left;
   font-family: inherit;
   font-size: 1.25rem;
-  margin: 1rem;
   padding: 1rem 0;
   position: relative;
   text-align: center;
-  width: 12rem;
+  width: 45%;
 }
 .large_button:active {
   top: 2px;
@@ -156,11 +157,9 @@ footer a {
 /* Login and signup forms */
 #login_form { 
   display: none;
-  margin-top: 10px;
 }
 #signup_form {
   display:none;
-  margin-top:  10px;
 }
 .error_login {
   width: 70%;
@@ -199,4 +198,17 @@ input[type=text],
 input[type=file],
 button {
   font-family: inherit;
+}
+.input {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+.input:focus {
+  border: 1px solid #a1a1a1;
+  outline: none;
+}
+.cycle-slideshow img {
+  max-width: 100%;
 }
