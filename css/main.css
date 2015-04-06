@@ -235,7 +235,7 @@ button {
 @media screen and (max-width: 650px) {
   html,
   body {
-    font-size: 125%;
+    font-size: 1.25rem;
   }
   .content {
     margin: 0;
