@@ -24,16 +24,8 @@
 }
 /*NEW SQUAD POST*/
 .new-post-textbox {
-  border: 1px solid #cfcfcf;
-  border-radius: 2px;
   float: left;
   margin-right: 5%;
-  padding: 0.5rem;
-  transition: all 0.2s ease;
-}
-.new-post-textbox:focus {
-  border: 1px solid #a1a1a1;
-  outline: none;
 }
 #new_post_area {
   border: 1px solid #cfcfcf;

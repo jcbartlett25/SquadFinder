@@ -1,0 +1,48 @@
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+.popupContainer{
+  position:absolute;
+  width: 20rem;
+  height: auto;
+  left:45%;
+  top:80px;
+  background: #FFF;
+}
+#modal {
+  padding: 2rem;
+}
+.login {
+  margin-right: 5%;
+}
+.signup {
+  margin-left: 5%;
+}
+.popupBody label {
+  display: block;
+}
+.popupBody input {
+  width: 60%;
+}
+.login-button {
+  text-align: center;
+}
+.login-register-button {
+  background: #4387fd;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 80%;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 1rem;
+  text-transform: uppercase;
+}
