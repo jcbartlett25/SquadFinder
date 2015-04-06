@@ -229,6 +229,10 @@ button {
 
 /* Mobile queries */
 @media screen and (max-width: 650px) {
+  html,
+  body {
+    font-size: 24px;
+  }
   .content {
     margin: 0;
     width: 100%;
