@@ -190,7 +190,7 @@ var joinSquad = function(squadId){
 }
 
 function showGoons() {
-  $("#goons-in-squad").toggle();
+  $(".goons-in-squad").toggle();
 }
 
 populatePage();
