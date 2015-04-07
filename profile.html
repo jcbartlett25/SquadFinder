@@ -105,13 +105,6 @@
                   <button id="upload-pic" onclick="uploadPic()">Upload</button>
 
                 </li>
-
-                  <!-- Email Verified -->
-                <li>
-
-                  Email Verified: <span id="email_verify">No</span>
-
-                </li>
               </ul>
 
             </div>
@@ -126,8 +119,25 @@
         <h3 class="profile_title_text">My Squadrons</h3>
         <div class="profile_section">
         </div>
+
+        <!-- Account Settings -->
+        <h3 class="profile_title_text">Account Settings</h3>
+        <div class="profile_section">
+              <ul id="account-settings">
+
+                  <!-- Email Verified -->
+                <li>
+                  Email Verified: <span id="email_verify">No</span>
+                </li>
+
+                <li>
+                  <button class="small_button" id="delete-account" onclick="deleteUser();">DELETE ACCOUNT</button>
+                </li>
+              </ul>          
+        </div>
+
       </div>
-    </div>
+    </div>    
 
     <!--Footer-->
     <footer>

@@ -54,13 +54,20 @@ function squadPost(descript, title, username, id, goons, time)
   $("#post_username").html(username);
 
   if (goons.length == 1) {
-    $("#num-goons").html("0 goons")
+    $("#num-goons").html("1 lonely goon")
   }
   else {
     $("#num-goons").html(goons.length + " goons")
   };
 
   $("#timestamp").html(moment(time).startOf('minute').fromNow());
+
+  for (var goon = 0; goon < goons.length; goon++) {
+    console.log(goons[goon]);
+    $squad_names = $("#goon-name").html(goons[goon]);
+    $(".goon-name").prepend($squad_names)
+  };
+
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
@@ -68,6 +75,7 @@ function squadPost(descript, title, username, id, goons, time)
   $post.find("p").removeAttr("id")
   $post.find("span").removeAttr("id")
   $post.find("span").removeAttr("id")
+  $post.find("p").removeAttr("id")
   $(".feed_div").prepend($post);
   $post.css("display", "block")
 
@@ -181,6 +189,10 @@ var joinSquad = function(squadId){
 
 }
 
+function showGoons() {
+  $(".goons-in-squad").toggle();
+}
 
 populatePage();
+
 

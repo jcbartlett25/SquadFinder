@@ -71,3 +71,12 @@
 .join-button {
   cursor: pointer;
 }
+.goons-in-squad{
+  min-height: 20px;
+}
+.goons-in-squad p{
+  font-size: 14px;
+}
+.num-goons{
+  cursor: pointer;
+}

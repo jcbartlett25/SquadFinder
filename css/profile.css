@@ -41,7 +41,7 @@
   margin-bottom: 1rem;
 }
 .edit_profile_section {
-  border: 1px solid #cfcfcf;
+  /*border: 1px solid #cfcfcf;*/
   border-radius: 2px;
   display: none;
   font-family: inherit;
@@ -70,6 +70,15 @@
 #edit_profile_menu {
   padding-left: 0;
   margin-left: 0;
+}
+
+/*Account Settings*/
+#account-settings{
+
+}
+
+#delete-account{
+  margin-top: 0.75rem;
 }
 
 /* override default wrapper width */
