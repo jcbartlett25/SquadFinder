@@ -26,7 +26,7 @@ function changeUsername(){
   location.reload()
 }
 
-function upload_pic(){
+function uploadPic(){
 	var user = Parse.User.current(); //current user
 	var fileUploadControl = $("#profile_pic_file")[0]; //current user
 
