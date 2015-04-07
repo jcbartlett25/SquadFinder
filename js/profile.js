@@ -45,6 +45,18 @@ function uploadPic(){
 
   //associates profile pic with a User
   user.set("profilePic", profPic)
+
+  user.save({
+    profilePic: profPic
+  }, {
+    success: function(user) {
+      // The object was saved successfully.
+    },
+    error: function(user, error) {
+      // The save failed.
+      // error is a Parse.Error with an error code and message.
+    }
+  });
 }
 
 function loadPic(){
