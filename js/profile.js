@@ -57,6 +57,8 @@ function uploadPic(){
       // error is a Parse.Error with an error code and message.
     }
   });
+
+  location.reload();
 }
 
 function loadPic(){
@@ -64,6 +66,25 @@ function loadPic(){
   var profilePhoto = currentUser.get("profilePic");
 
   $(".profile_pic").css('background-image', 'url('+ profilePhoto.url() + ')');
+
+}
+
+function deleteUser(){
+  var user = Parse.User.current();
+
+  alert("This action can't be undone!");
+
+  user.destroy({
+  success: function(user) {
+    // The object was deleted from the Parse Cloud.
+  },
+  error: function(user, error) {
+    // The delete failed.
+    // error is a Parse.Error with an error code and message.
+  }
+  });
+
+  window.open('index.html', "_self");
 
 }
 
