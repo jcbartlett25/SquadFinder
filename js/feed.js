@@ -14,6 +14,7 @@ function populatePage(){
   
   var query = new Parse.Query("Post")
 
+  //Sort by date
   query.ascending('createdAt')
 
   //Actually pulls the objects down from Parse
@@ -23,7 +24,6 @@ function populatePage(){
       console.log("Data retrieved");
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) {
-        console.log(obj) 
         var obj = results[i];
         new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
       }
@@ -48,7 +48,6 @@ function squadPost(descript, title, username, id, goons, time)
   this.id = id,
   this.goons = goons,
   this.time = time
-  console.log(time)
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
@@ -60,7 +59,8 @@ function squadPost(descript, title, username, id, goons, time)
   else {
     $("#num-goons").html(goons.length + " goons")
   };
-  $("#timestamp").html(time);
+
+  $("#timestamp").html(moment(time).startOf('day').fromNow());
   $post = $("#template").clone();
   //document.getElementById('#num-goons').setAttribute('id',id);
   //Gives each div a unique name
