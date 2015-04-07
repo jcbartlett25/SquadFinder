@@ -241,11 +241,6 @@ button {
     margin: 0;
     width: 100%;
   }
-  .unit {
-    width: 100%;
-    margin-left: 0;
-    display: block;
-  }
   .wrapper {
     width: 85%;
   }
