@@ -24,9 +24,12 @@
   border: none;
   overflow: hidden;
 }
-#profile_pic {
+.profile_pic {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   height: 100%;
   width: 100%;
 }
