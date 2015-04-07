@@ -10,34 +10,34 @@
 .profile_title_text {
   display: inline-block;
 }
-.profile_pic_holder {
-  margin-bottom: 0;
-  overflow: hidden;
-  height: 168px;
-  width: 168px;
-}
-.profile_pic_holder img {
-  float: left;
-  height: 100%;
-  width: auto;
-  margin-bottom: 0;
-  border: none;
-  overflow: hidden;
-}
 .profile_pic {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+}
+.edit-profile-pic {
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  color: white;
+  font-weight: 500;
   height: 100%;
+  opacity: 0;
+  padding-top: 45%;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
   width: 100%;
 }
+.edit-profile-pic:hover {
+  opacity: 1;
+}
 .profile_section {
-  border: 1px solid #cfcfcf;
-  border-radius: 2px;
   margin-bottom: 1rem;
-  padding: 1rem;
 }
 .edit_profile_section {
   border: 1px solid #cfcfcf;
