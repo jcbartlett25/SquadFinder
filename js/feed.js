@@ -60,7 +60,7 @@ function squadPost(descript, title, username, id, goons, time)
     $("#num-goons").html(goons.length + " goons")
   };
 
-  $("#timestamp").html(moment(time).startOf('hour').fromNow());
+  $("#timestamp").html(moment(time).startOf('minute').fromNow());
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
