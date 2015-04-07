@@ -64,7 +64,7 @@ function loadPic(){
   var profilePhoto = currentUser.get("profilePic");
 
   // $("#profile_pic")[0].src = profilePhoto.url();
-  $("#profile_pic")[0].css('background-image', 'url('+ profilePhoto + ')');
+  $("#profile_pic").css('background-image', 'url('+ profilePhoto + ')');
 
 }
 
