@@ -92,30 +92,23 @@
             <div id="edit_profile_div">
 
               <ul id="edit_profile_menu">
+
                 <!-- change profile picture -->
                 <li>
-                <!-- upload a profile picture -->
-                  Change Profile Picture (insert link)
-                    <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
-                    <input type="text" id="profile_pic_url">
-                <button onclick="upload_pic">Change</button>
 
-                <!--<button onclick="upload_pic()">Change</button>-->
-                </li>
-
-                <li>
-                <!-- upload a profile picture -->
+                  <!-- upload a profile picture -->
                   Change Profile Picture (upload file)
-                    <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
-                    <input type="file" id="profile_pic_file">
-                <button>Change</button>
+                  <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
+                  <input type="file" id="profile_pic_file">
+                  <button id="upload-pic" onclick="uploadPic()">Change</button>
 
-                <!--<button onclick="upload_pic()">Change</button>-->
                 </li>
 
-                <!-- Email Verified -->
+                  <!-- Email Verified -->
                 <li>
+
                   Email Verified: <span id="email_verify">No</span>
+
                 </li>
               </ul>
 

@@ -27,50 +27,39 @@ function changeUsername(){
 }
 
 function upload_pic(){
-	// gets user
-	var user = Parse.User.current();
+	var user = Parse.User.current(); //current user
+	var fileUploadControl = $("#profile_pic_file")[0]; //current user
 
-/*
-	//reference uploaded file
-	var fileUploadControl = $("#pic_upload")[0];
-	if (fileUploadControl.files.length > 0) {
-  	var file = fileUploadControl.files[0];
-  	var name = "photo.jpg";
-  	var parseFile = new Parse.File(name, file);
+  if (fileUploadControl.files.length > 0) {
+    var file = fileUploadControl.files[0]; //file from form
+    var name = "photo.jpg"; //photo file name
+    var profPic = new Parse.File(name, file); //creates a Parse file
+  }
 
-  	//Save uploaded file
-  	parseFile.save().then(function() {
-  // The file has been saved to Parse.
-	}, function(error) {
-  // The file either could not be read, or could not be saved to Parse.
-	});
-
-  	//$("#profile_pic").attr('src', parseFile)
-*/
-  	//set user's profile pic to uploaded file
-  pic_url = document.getElementById("profile_pic_url").value;
-
-  user.save({
-    profile_pic_url: pic_url
-  }, {
-    success: function(user) {
-      // The object was saved successfully.
-    },
-    error: function(user, error) {
-      // The save failed.
-      // error is a Parse.Error with an error code and message.
-    }
+  //saves file to Parse
+  profPic.save().then(function() {
+    // The file has been saved to Parse.
+  }, function(error) {
+    // The file either could not be read, or could not be saved to Parse.
   });
 
-  	//var profilePhoto = user.get("profile_pic");
-	//$("#profile_pic")[0].src = profilePhoto.url();
-	
+  //associates profile pic with a User
+  user.set("profilePic", profPic)
+}
+
+function loadPic(){
+  var currentUser = Parse.User.current();
+  var profilePhoto = currentUser.get("profilePic");
+
+  $("#profile_pic")[0].src = profilePhoto.url();
+
 }
 
 $(document).ready(
   function(){
         var currentUser = Parse.User.current();
 
+        //makes sure the user is logged in
         if (currentUser) {
             
         } else {
@@ -78,23 +67,18 @@ $(document).ready(
           return;
             }
 
-
+        //display profile name
         $("#profile_name").html(currentUser.getUsername())
-
-        //Changes pages if user is not logged in.
-        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
 
 
         //updates email verification string
         if (currentUser.attributes.emailVerified === true){
           $("#email_verify").html("Yes");
+
         }
+        loadPic();
 
 
-        var profilePhoto = currentUser.get("profilePicUrl");
-        //var profileURL = profilePhoto.URL();
-        $("#profile_pic").attr('src', profilePhoto);
-        //$("#profile_pic").fadeIn();
 }
   );
 
