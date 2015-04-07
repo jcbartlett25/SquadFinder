@@ -75,5 +75,8 @@
   min-height: 20px;
 }
 .goons-in-squad p{
-  font-size: 18px;
+  font-size: 14px;
+}
+.num-goons{
+  cursor: pointer;
 }
