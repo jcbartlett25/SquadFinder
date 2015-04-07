@@ -60,6 +60,9 @@
   font-size: 0.75rem;
   text-transform: uppercase;
 }
+.timestamp {
+  float: right;
+}
 #please_verify {
   text-align: center;
   color: red;
