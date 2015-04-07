@@ -45,7 +45,7 @@ function squadPost(descript, title, username, id, goons, time)
   this.id = id,
   this.goons = goons,
   this.time = time
-  alert(time)
+  console.log(time)
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
