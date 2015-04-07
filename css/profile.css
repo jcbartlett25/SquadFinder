@@ -24,6 +24,10 @@
   border: none;
   overflow: hidden;
 }
+#profile_pic {
+  height: 100%;
+  width: 100%;
+}
 .profile_section {
   border: 1px solid #cfcfcf;
   border-radius: 2px;
