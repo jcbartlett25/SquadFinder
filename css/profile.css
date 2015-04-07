@@ -13,11 +13,13 @@
 .profile_pic_holder {
   margin-bottom: 0;
   overflow: hidden;
+  height: 168px;
+  width: 168px;
 }
 .profile_pic_holder img {
   float: left;
-  height: 168px;
-  width: 168px;
+  height: 100%;
+  width: auto;
   margin-bottom: 0;
   border: none;
   overflow: hidden;
