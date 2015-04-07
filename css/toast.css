@@ -1,53 +1,53 @@
 /*-----------------------------------*\
 
-	Toast
-	A Simple CSS Framework
-	=================================
+  Toast
+  A Simple CSS Framework
+  =================================
 
-	Values you may want to change:
-	- .container { max-width:; }
-	- p { margin-bottom:; }
-	- html { font:; }
+  Values you may want to change:
+  - .container { max-width:; }
+  - p { margin-bottom:; }
+  - html { font:; }
 
-	Remember: no framework will be as
-	good as a custom built, per-
-	project	one. Toast and other
-	frameworks are best used for
-	rapid prototyping.
+  Remember: no framework will be as
+  good as a custom built, per-
+  project one. Toast and other
+  frameworks are best used for
+  rapid prototyping.
 
 \*-----------------------------------*/
 
 /*-----------------------------------*\
-	$GRID
+  $GRID
 \*-----------------------------------*/
 
 .grid {
-	margin-left: -3%;
-	max-width: 105%;
+  margin-left: -3%;
+  max-width: 105%;
 }
 
 .unit {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-	vertical-align: top;
-	margin-left: 3%;
-	margin-right: -.25em;
-	/* Clearfix */
-	overflow: hidden;
-	*overflow: visible;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  margin-left: 3%;
+  margin-right: -.25em;
+  /* Clearfix */
+  overflow: hidden;
+  *overflow: visible;
 }
 
-	.unit.demo {
-		background-color: #fff8eb;
-		height: 48px;
-		height: 3rem;
-		margin-bottom: 24px;
-		margin-bottom: 1.5rem;
-	}
+  .unit.demo {
+    background-color: #fff8eb;
+    height: 48px;
+    height: 3rem;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+  }
 
 .span-grid {
-	width: 97%;
+  width: 97%;
 }
 
 .one-of-two { width: 47%; }
@@ -62,3 +62,11 @@
 .two-of-five { width: 37%; }
 .three-of-five { width: 57%; }
 .four-of-five { width: 77%; }
+
+@media screen and (max-width: 650px) {
+  .unit {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+  }
+}
