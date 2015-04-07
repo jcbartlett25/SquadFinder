@@ -76,7 +76,7 @@ $(document).ready(
           $("#email_verify").html("Yes");
 
         }
-        //loadPic();
+        loadPic();
 
 
 }
