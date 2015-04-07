@@ -22,7 +22,7 @@ function populatePage(){
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) { 
         var obj = results[i];
-        new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'));
+        new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.get(createdAt));
       }
     },
 
@@ -36,14 +36,16 @@ function populatePage(){
 
 
 //Constructor for the squadPost object
-function squadPost(descript, title, username, id, goons)
+function squadPost(descript, title, username, id, goons, time)
 {
 
   this.descript = descript,
   this.title = title,
   this.username = username,
   this.id = id,
-  this.goons = goons;
+  this.goons = goons,
+  this.time = time
+  alert(time)
 
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
