@@ -63,7 +63,6 @@ function loadPic(){
   var currentUser = Parse.User.current();
   var profilePhoto = currentUser.get("profilePic");
 
-  // $("#profile_pic")[0].src = profilePhoto.url();
   $(".profile_pic").css('background-image', 'url('+ profilePhoto.url() + ')');
 
 }
