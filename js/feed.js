@@ -57,7 +57,7 @@ function squadPost(descript, title, username, id, goons, time)
   else {
     $("#num-goons").html(goons.length + " goons")
   };
-
+  $("#timestamp").html(time);
   $post = $("#template").clone();
   //document.getElementById('#num-goons').setAttribute('id',id);
   //Gives each div a unique name
@@ -107,6 +107,7 @@ function postSquad(){
   $("#squad_title").html(title);
   $("#post_username").html(username);
   $("#num-goons").html("0 goons");
+  $("#timestamp").html("Just now");
   $post = $("#template").clone();
   $(".feed_div").prepend($post);
   $post.fadeIn();
