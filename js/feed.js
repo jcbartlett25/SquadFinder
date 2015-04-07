@@ -14,6 +14,8 @@ function populatePage(){
   
   var query = new Parse.Query("Post")
 
+  query.ascending('createdAt')
+
   //Actually pulls the objects down from Parse
   query.find({
     success: function(results) {
