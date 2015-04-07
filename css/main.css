@@ -102,51 +102,18 @@ footer {
 footer a {
   color: white;
 }
-/* The Blueprint for Large Buttons */
-.large_button {
-  background-color: #4387fd;
-  border: 0;
-  -webkit-box-shadow: 0 4px 0 #3D76DA;
-  -moz-box-shadow: 0 4px 0 #3D76DA;
-  box-shadow: 0 4px 0 #3D76DA;
+.button {
+  background: #4387fd;
+  border-radius: 3px;
   color: white;
   cursor: pointer;
   display: inline-block;
-  float: left;
-  font-family: inherit;
-  font-size: 1.25rem;
-  padding: 1rem 0;
-  position: relative;
-  text-align: center;
-  width: 45%;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  transition: background 0.15s ease;
 }
-.large_button:active {
-  top: 2px;
-  -webkit-box-shadow: 0 2px 0 #3D76DA;
-  -moz-box-shadow: 0 2px 0 #3D76DA;
-  box-shadow: 0 2px 0 #3D76DA;
-}
-/*The Blueprint for Small Buttons*/
-.small_button {
-  background-color: #4387fd;
-  color: white;
-  display: inline-block;
-  font-family: inherit;
-  font-size: 12px;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  border: 0;
-  cursor: pointer;
-  -webkit-box-shadow: 0 4px 0 #3D76DA;
-  -moz-box-shadow: 0 4px 0 #3D76DA;
-  box-shadow: 0 4px 0 #3D76DA;
-  position: relative;
-}
-.small_button:active {
-  top: 2px;
-  -webkit-box-shadow: 0 2px 0 #3D76DA;
-  -moz-box-shadow: 0 2px 0 #3D76DA;
-  box-shadow: 0 2px 0 #3D76DA;
+.button:hover {
+  background: #3D76DA;
 }
 /*Facebook Button*/
 .fb-login-button {
@@ -155,11 +122,10 @@ footer a {
   margin-bottom: 20px;
 }
 /* Login and signup forms */
-#login_form { 
+#login_form,
+#signup_form { 
   display: none;
-}
-#signup_form {
-  display:none;
+  margin-top: 1rem;
 }
 .error_login {
   width: 70%;

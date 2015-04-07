@@ -128,14 +128,14 @@
         $(".error_login").hide();};
       </script>
 
-      <div class="login-button">
-        <a id="modal_trigger" href="#modal"><div class="login-register-button">Login/Register</div></a>
+      <div class="login-button-container">
+        <a id="modal_trigger" href="#modal"><div class="login-register-button button">Login/Register</div></a>
       </div>
 
       <div id="modal" class="popupContainer" style="display:none;">
         <section class="popupBody">
-          <button class="large_button login" onclick="showLogin();">Login</button>
-          <button class="large_button signup" onclick="showSignup();">New User</button>
+          <div class="button login" onclick="showLogin();">Login</div>
+          <div class="button signup" onclick="showSignup();">New User</div>
           <div id="login_form">
             <form class="login">
               <label for="username">Username</label>
@@ -144,7 +144,6 @@
               <input type="password" name="password" id="password" class="input">
             </form>
             <button class="small_button" onclick="login()">Login</button>
-            <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="fb_login"></div>
           </div>
 
           <div id="signup_form">

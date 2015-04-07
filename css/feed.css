@@ -47,6 +47,9 @@
 }
 .post_button {
   float: right;
+  font-size: 80%;
+  padding: 0.75rem 1rem !important;
+
 }
 #post_username {
   text-align: right;

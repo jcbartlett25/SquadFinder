@@ -8,23 +8,18 @@
     background: #000;
     display: none;
 }
-
 .popupContainer{
   position:absolute;
   width: 20rem;
-  height: auto;
-  left:45%;
-  top:80px;
-  background: #FFF;
+  left: 45%;
+  top: 20%;
+  background: #fff;
 }
 #modal {
   padding: 2rem;
 }
-.login {
-  margin-right: 5%;
-}
 .signup {
-  margin-left: 5%;
+  float: right;
 }
 .popupBody label {
   display: block;
@@ -33,17 +28,12 @@
   width: 60%;
 }
 /* div that allows login button to be centered */
-.login-button {
+.login-button-container {
   text-align: center;
 }
 /* login/register button */
 .login-register-button {
-  background: #4387fd;
-  border-radius: 3px;
-  color: white;
-  display: inline-block;
   font-size: 80%;
-  font-weight: 500;
   margin: 0 auto;
   padding: 1rem;
   text-transform: uppercase;
