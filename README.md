@@ -1,6 +1,12 @@
 # Squadfinder
 Squadfinder is the quickest way to find your squad and have fun.
 
+## Future Plans
+Here's what's in the pipeline for Squadfinder:
+* Public profile pages with photos, bios, and other information
+* Squad pages, where you can see who's joined a squad and post updates
+* Squadrons, which make it easy to form private squads
+
 ## File Directory
 This is some background for the site’s code and structure.
 
