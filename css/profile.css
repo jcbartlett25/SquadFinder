@@ -39,6 +39,7 @@
 }
 .profile_section {
   margin-bottom: 1rem;
+  margin-left: 0;
 }
 .edit_profile_section {
   /*border: 1px solid #cfcfcf;*/
@@ -75,6 +76,11 @@
 /*Account Settings*/
 #account-settings{
 
+}
+
+#account-settings ul{
+  margin-left: 0;
+  list-style-type: none;
 }
 
 #delete-account{
