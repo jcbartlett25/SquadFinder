@@ -64,7 +64,8 @@ function squadPost(descript, title, username, id, goons, time)
 
   for (var goon = 0; goon < goons.length; goon++) {
     console.log(goons[goon]);
-    $("#goon-name").html(goons[goon]);
+    $squad_names = $("#goon-name").html(goons[goon]);
+    $(".goon-name").prepend($squad_names)
   };
 
   $post = $("#template").clone();
