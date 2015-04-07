@@ -60,9 +60,8 @@ function squadPost(descript, title, username, id, goons, time)
     $("#num-goons").html(goons.length + " goons")
   };
 
-  $("#timestamp").html(moment(time).startOf('hour').fromNow());
+  $("#timestamp").html(moment(time).startOf('minute').fromNow());
   $post = $("#template").clone();
-  //document.getElementById('#num-goons').setAttribute('id',id);
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id")
@@ -77,7 +76,6 @@ function squadPost(descript, title, username, id, goons, time)
   {
 
     joinSquad(id)
-    //document.getElementById(id).value = goons.length + 1 + ' goons';
 
   })
 
@@ -166,7 +164,7 @@ var joinSquad = function(squadId){
   //Loads all objects in the Post class
   var query = new Parse.Query("Post")
 
-  //Actually pulls the objects down from Parse
+  //Actually pulls the specified object down from Parse
   query.get(squadId, {
     success: function(obj) {
 
