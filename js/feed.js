@@ -63,9 +63,10 @@ function squadPost(descript, title, username, id, goons, time)
   $("#timestamp").html(moment(time).startOf('minute').fromNow());
 
   for (var goon = 0; goon < goons.length; goon++) {
-    $(".goon-name").prepend(goons[goon])
+    console.log(goons[goon]);
+    $(".goon-name").prepend(goons[goon]);
     //$("#goon-name").html(goons[goon])
-  }
+  };
 
   $post = $("#template").clone();
   //Gives each div a unique name
