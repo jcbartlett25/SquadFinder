@@ -20,7 +20,8 @@ function populatePage(){
 
       console.log("Data retrieved");
       //Loops through objects and creates new squadPosts from the data
-      for (var i = 0; i < results.length; i++) { 
+      for (var i = 0; i < results.length; i++) {
+        console.log('obj') 
         var obj = results[i];
         new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
       }
