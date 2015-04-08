@@ -94,8 +94,8 @@ function squadPost(descript, title, username, id, goons, time)
 function postSquad(){
 
   //Storing user given elements
-  var descript = document.getElementById("new_post_descript").value;
-  var title = document.getElementById("new_post_title").value;
+  var descript = encodeHTML(document.getElementById("new_post_descript").value);
+  var title = encodeHTML(document.getElementById("new_post_title").value);
 
   //Making sure user input is actual input
   if (title === "Title" || descript === "I need a squad for...") {
@@ -193,6 +193,11 @@ function showGoons() {
   $(".goons-in-squad").toggle();
 }
 
+function encodeHTML(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+}
+
 populatePage();
+
 
 
