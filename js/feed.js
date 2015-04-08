@@ -86,8 +86,11 @@ function squadPost(descript, title, username, id, goons, time)
   $goons = $("#goons-in-squad");
   $goons.removeAttr("id");
 
-  //clicking shows
-  $("#num-goons").click($goons.toggle());
+  //clicking shows number of goons
+  $("#num-goons").click(function(){
+    $goons.toggle();
+    alert(goon_list);
+  });
 
   
 
