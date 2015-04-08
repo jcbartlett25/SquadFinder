@@ -60,7 +60,7 @@ function squadPost(descript, title, username, id, goons, time)
     $("#num-goons").html(goons.length + " goons")
   };
 
-  $("#timestamp").html(moment(time).startOf('minute').fromNow());
+  $("#timestamp").html(timeSince(time));
 
   for (var goon = 0; goon < goons.length; goon++) {
     console.log(goons[goon]);
@@ -69,6 +69,7 @@ function squadPost(descript, title, username, id, goons, time)
   };
 
   $post = $("#template").clone();
+  $join = 
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id")
@@ -94,8 +95,8 @@ function squadPost(descript, title, username, id, goons, time)
 function postSquad(){
 
   //Storing user given elements
-  var descript = document.getElementById("new_post_descript").value;
-  var title = document.getElementById("new_post_title").value;
+  var descript = encodeHTML(document.getElementById("new_post_descript").value);
+  var title = encodeHTML(document.getElementById("new_post_title").value);
 
   //Making sure user input is actual input
   if (title === "Title" || descript === "I need a squad for...") {
@@ -193,6 +194,37 @@ function showGoons() {
   $(".goons-in-squad").toggle();
 }
 
+function encodeHTML(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+}
+
 populatePage();
 
+function timeSince(date) {
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) {
+        return interval + " years ago";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+        return interval + " months ago";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+        return interval + " days ago";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+        return interval + " hours ago";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+        return interval + " minutes ago";
+    }
+    return Math.floor(seconds) + " seconds ago";
+}
 

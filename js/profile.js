@@ -69,6 +69,12 @@ function loadPic(){
 
 }
 
+//logs out the Parse user
+function logout(){
+  Parse.User.logOut();
+  window.open('index.html', "_self");
+}
+
 function deleteUser(){
   var user = Parse.User.current();
 
@@ -85,6 +91,8 @@ function deleteUser(){
   });
 
   window.open('index.html', "_self");
+
+  logout();
 
 }
 
