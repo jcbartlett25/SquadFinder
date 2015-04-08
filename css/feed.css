@@ -74,6 +74,10 @@
 .join-button {
   cursor: pointer;
 }
+.joined {
+  color: #4387fd;
+  cursor: default;
+}
 .goons-in-squad{
   min-height: 20px;
 }
