@@ -87,10 +87,10 @@ function squadPost(descript, title, username, id, goons, time)
   $goons.removeAttr("id");
 
   //clicking shows number of goons
-  $("#num-goons").click(function(){
-    $goons.toggle();
-    //alert(goon_list);
-  });
+  // $("#num-goons").click(function(){
+  //   $goons.toggle();
+  //   alert(goon_list);
+  // });
 
   
 
