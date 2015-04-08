@@ -78,7 +78,7 @@ function squadPost(descript, title, username, id, goons, time)
   var goon_list = [];
 
   //clicking
-  $("#num-goons").click($goons.toggle());
+  //$("#num-goons").click($goons.toggle());
 
   
 
