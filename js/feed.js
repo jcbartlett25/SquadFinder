@@ -80,10 +80,11 @@ function squadPost(descript, title, username, id, goons, time)
   $post.css("display", "block")
 
   //Adds on click functionality
-  $post.click(function()
+  $post.find(".join-button link").click(function())
   {
 
     joinSquad(id)
+    console.log("Yayyyyyy")
 
   })
 
