@@ -232,7 +232,11 @@ var timeSince = function(date) {
         intervalType += 's';
     }
 
-    return interval + ' hot ' + intervalType + ' ago';
+    if (interval === 'minute') {
+      return interval + ' hot ' + intervalType + ' ago';
+    }
+    
+    return interval + ' ' + intervalType + ' ago';
 };
 
 populatePage();
