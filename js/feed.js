@@ -80,6 +80,8 @@ function squadPost(descript, title, username, id, goons, time)
     goon_list = goon_list + goons[goon] + " ";
   }
 
+  $("#num-goons").click($("#goons-in-squad").toggle());
+
   $("#goon-name").html(goon_list);
 
   $post = $("#template").clone();
