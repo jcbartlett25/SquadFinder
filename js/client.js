@@ -13,6 +13,14 @@
 		var password = encodeHTML(document.getElementById('new_password').value);
 		var confirm_password = encodeHTML(document.getElementById("confirm-password").value);
 		var email = encodeHTML(document.getElementById('new_email').value);
+		var access = encodeHTML(document.getElementById('access-code').value);
+		var secret = "42BELOW";
+
+		if(access != secret){
+			$(".error_login").html("That access code is incorrect.");
+			$(".error_login").show();
+			return;
+		}
 
 		if(username.split(" ").length > 1){
 			$(".error_login").html("No spaces are allowed in your username.");
