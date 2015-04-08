@@ -77,16 +77,6 @@ function squadPost(descript, title, username, id, goons, time)
   //puts goons into another formated array
   var goon_list = [];
 
-  for (var goon = 0; goon < goons.length; goon++) {
-    alert(goons[goon])
-    goon_list = goon_list + goons[goon] + " | ";
-  }
-
-  //goons list div
-  $("#goon-name").html(goon_list);
-  $goons = $("#goons-in-squad");
-  $goons.removeAttr("id");
-
   //clicking
   $("#num-goons").click($goons.toggle());
 
@@ -101,6 +91,14 @@ function squadPost(descript, title, username, id, goons, time)
   $post.find("span").removeAttr("id")
   $post.find("p").removeAttr("id")
   $(".feed_div").prepend($post);
+  //goons list div
+  $("#goon-name").html(goon_list);
+  $goons = $("#goons-in-squad");
+  $goons.removeAttr("id");
+  for (var goon = 0; goon < goons.length; goon++) {
+    //alert(goons[goon])
+    goon_list = goon_list + goons[goon] + " | ";
+  }
   $post.css("display", "block")
 
   //Adds on click functionality
