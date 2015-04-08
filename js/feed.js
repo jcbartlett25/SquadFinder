@@ -75,17 +75,22 @@ function squadPost(descript, title, username, id, goons, time)
   };*/
 
   //puts goons into another formated array
-  var goon_list = [];
+  var goon_list = []; //text array of goons
 
   for (var goon = 0; goon < goons.length; goon++) {
-    goon_list = goon_list + goons[goon] + " ";
+    goon_list = goon_list + goons[goon] + " | ";
   }
 
   //goons list div
   $("#goon-name").html(goon_list);
-  $goons = $("#goons-in-squad");
+  $goons = $("#goons-in-squad"); //div containing list of goons
   $goons.removeAttr("id");
-  $("#num-goons").click($goons.toggle());
+
+  //clicking shows number of goons
+  $("#num-goons").click(function(){
+    $goons.toggle();
+    alert(goon_list)
+  });
 
   
 
