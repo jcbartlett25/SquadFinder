@@ -74,8 +74,10 @@ function squadPost(descript, title, username, id, goons, time)
 
   };*/
 
+  var goon_list = [];
+
   for (var goon = 0; goon < goons.length; goon++) {
-    goon_list = goons[goon] + " ";
+    goon_list = goon_list + goons[goon] + " ";
   }
 
   $("#goon-name").html(goon_list);
