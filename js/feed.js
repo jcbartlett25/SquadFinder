@@ -62,52 +62,23 @@ function squadPost(descript, title, username, id, goons, time)
 
   $("#timestamp").html(timeSince(time));
 
-  /*for (var goon = 0; goon < goons.length; goon++) {
-    console.log(goons[goon]);
-
-    $("#goon-name").html(goons[goon]);
-    $goon_name = $("#goon-name").clone();
-    $goon_name.removeAttr("id");
-
-    $("#goons-in-squad").removeAttr("id");
-    $("#goons-in-squad").append($goon_name);
-
-  };*/
-
-  //puts goons into another formated array
-  var goon_list = [];
-
-  //clicking
-  //$("#num-goons").click($goons.toggle());
-
-  
-
   $post = $("#template").clone();
   //Gives each div a unique name
-  //$post.removeAttr("id")
-  //$post.find("span").removeAttr("id")
-  //$post.find("p").removeAttr("id")
-  //$post.find("span").removeAttr("id")
-  //$post.find("span").removeAttr("id")
-  //$post.find("p").removeAttr("id")
+  $post.removeAttr("id")
+  $post.find("span").removeAttr("id")
+  $post.find("p").removeAttr("id")
+  $post.find("span").removeAttr("id")
+  $post.find("span").removeAttr("id")
+  $post.find("p").removeAttr("id")
   $(".feed_div").prepend($post);
   $post.css("display", "block")
-  //goons list div
-  
-  $goons = $("#goons-in-squad");
-  $goons.removeAttr("id");
-  for (var goon = 0; goon < goons.length; goon++) {
-    alert(goons[goon])
-    goon_list = goon_list + goons[goon] + " | ";
-  }
-  $("#goon-name").html(goon_list);
-  
 
   //Adds on click functionality
   $post.click(function()
   {
 
     joinSquad(id)
+    console.log(time)
 
   })
 
