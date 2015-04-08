@@ -60,7 +60,7 @@ function squadPost(descript, title, username, id, goons, time)
     $("#num-goons").html(goons.length + " goons")
   };
 
-  $("#timestamp").html(moment(time).startOf('minute').fromNow());
+  $("#timestamp").html(timeSince(time));
 
   for (var goon = 0; goon < goons.length; goon++) {
     console.log(goons[goon]);
@@ -69,6 +69,7 @@ function squadPost(descript, title, username, id, goons, time)
   };
 
   $post = $("#template").clone();
+  $join = 
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id")
@@ -80,11 +81,10 @@ function squadPost(descript, title, username, id, goons, time)
   $post.css("display", "block")
 
   //Adds on click functionality
-  $post.find(".join-button link").click(function())
+  $post.click(function()
   {
 
     joinSquad(id)
-    console.log("Yayyyyyy")
 
   })
 
@@ -200,5 +200,31 @@ function encodeHTML(s) {
 
 populatePage();
 
+function timeSince(date) {
 
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) {
+        return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+        return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+        return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+        return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+        return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+}
 
