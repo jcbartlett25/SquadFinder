@@ -232,7 +232,7 @@ var timeSince = function(date) {
         intervalType += 's';
     }
 
-    return interval + ' ' + intervalType;
+    return interval + ' ' + intervalType + ' ago';
 };
 
 populatePage();
