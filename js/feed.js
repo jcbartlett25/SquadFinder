@@ -93,13 +93,14 @@ function squadPost(descript, title, username, id, goons, time)
   $(".feed_div").prepend($post);
   $post.css("display", "block")
   //goons list div
-  $("#goon-name").html(goon_list);
+  
   $goons = $("#goons-in-squad");
   $goons.removeAttr("id");
   for (var goon = 0; goon < goons.length; goon++) {
     //alert(goons[goon])
     goon_list = goon_list + goons[goon] + " | ";
   }
+  $("#goon-name").html(goon_list);
   
 
   //Adds on click functionality
