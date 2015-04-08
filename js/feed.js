@@ -72,6 +72,7 @@ function squadPost(descript, title, username, id, goons, time)
     //$goon_list = .clone();
     //$goon_list.removeAttr("id");
     $("#goons-in-squad").append($goon_name);
+    $goon_list.removeAttr("id");
   };
 
   $post = $("#template").clone();
