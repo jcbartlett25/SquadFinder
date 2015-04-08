@@ -74,9 +74,13 @@ function squadPost(descript, title, username, id, goons, time)
 
   };*/
 
-  $("#goon-name").html(goons);
+  for (var goon = 0; goon < goons.length; goon++) {
+    goon_list = goon + " ";
+  }
+  $("#goon-name").html(goon_list);
+  $("#goon-name").removeAttr("id");
 
-  $post = $("#template").clone();
+  $post = $("#template").clone();t
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id")
