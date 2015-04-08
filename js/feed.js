@@ -198,8 +198,6 @@ function encodeHTML(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 }
 
-populatePage();
-
 function timeSince(date) {
 
     var seconds = Math.floor((new Date() - date) / 1000);
@@ -228,3 +226,4 @@ function timeSince(date) {
     return Math.floor(seconds) + " seconds ago";
 }
 
+populatePage();
