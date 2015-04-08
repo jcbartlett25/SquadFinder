@@ -84,13 +84,14 @@ function squadPost(descript, title, username, id, goons, time)
 
   $post = $("#template").clone();
   //Gives each div a unique name
-  $post.removeAttr("id")
-  $post.find("span").removeAttr("id")
-  $post.find("p").removeAttr("id")
-  $post.find("span").removeAttr("id")
-  $post.find("span").removeAttr("id")
-  $post.find("p").removeAttr("id")
+  //$post.removeAttr("id")
+  //$post.find("span").removeAttr("id")
+  //$post.find("p").removeAttr("id")
+  //$post.find("span").removeAttr("id")
+  //$post.find("span").removeAttr("id")
+  //$post.find("p").removeAttr("id")
   $(".feed_div").prepend($post);
+  $post.css("display", "block")
   //goons list div
   $("#goon-name").html(goon_list);
   $goons = $("#goons-in-squad");
@@ -99,7 +100,7 @@ function squadPost(descript, title, username, id, goons, time)
     //alert(goons[goon])
     goon_list = goon_list + goons[goon] + " | ";
   }
-  $post.css("display", "block")
+  
 
   //Adds on click functionality
   $post.click(function()
