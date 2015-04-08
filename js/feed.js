@@ -232,10 +232,10 @@ var timeSince = function(date) {
         intervalType += 's';
     }
 
-    if (interval === 'minute') {
+    if (intervalType === 'minute') {
       return interval + ' hot ' + intervalType + ' ago';
     }
-    
+
     return interval + ' ' + intervalType + ' ago';
 };
 
