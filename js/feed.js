@@ -62,14 +62,7 @@ function squadPost(descript, title, username, id, goons, time)
 
   $("#timestamp").html(timeSince(time));
 
-  for (var goon = 0; goon < goons.length; goon++) {
-    console.log(goons[goon]);
-    $squad_names = $("#goon-name").html(goons[goon]);
-    $(".goon-name").prepend($squad_names)
-  };
-
   $post = $("#template").clone();
-  $join = 
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id")
@@ -85,6 +78,7 @@ function squadPost(descript, title, username, id, goons, time)
   {
 
     joinSquad(id)
+    console.log(time)
 
   })
 
@@ -198,33 +192,51 @@ function encodeHTML(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 }
 
-populatePage();
+var timeSince = function(date) {
+    if (typeof date !== 'object') {
+        date = new Date(date);
+    }
 
-function timeSince(date) {
-
-    var seconds = Math.floor((new Date() - date) / 1000);
+    var seconds = Math.floor((new Date().getTime() - date) / 1000);
+    var intervalType;
 
     var interval = Math.floor(seconds / 31536000);
+    if (interval >= 1) {
+        intervalType = 'year';
+    } else {
+        interval = Math.floor(seconds / 2592000);
+        if (interval >= 1) {
+            intervalType = 'month';
+        } else {
+            interval = Math.floor(seconds / 86400);
+            if (interval >= 1) {
+                intervalType = 'day';
+            } else {
+                interval = Math.floor(seconds / 3600);
+                if (interval >= 1) {
+                    intervalType = "hour";
+                } else {
+                    interval = Math.floor(seconds / 60);
+                    if (interval >= 1) {
+                        intervalType = "minute";
+                    } else {
+                        interval = seconds;
+                        intervalType = "second";
+                    }
+                }
+            }
+        }
+    }
 
-    if (interval > 1) {
-        return interval + " years ago";
+    if (interval > 1 || interval === 0) {
+        intervalType += 's';
     }
-    interval = Math.floor(seconds / 2592000);
-    if (interval > 1) {
-        return interval + " months ago";
-    }
-    interval = Math.floor(seconds / 86400);
-    if (interval > 1) {
-        return interval + " days ago";
-    }
-    interval = Math.floor(seconds / 3600);
-    if (interval > 1) {
-        return interval + " hours ago";
-    }
-    interval = Math.floor(seconds / 60);
-    if (interval > 1) {
-        return interval + " minutes ago";
-    }
-    return Math.floor(seconds) + " seconds ago";
-}
 
+    if (intervalType === 'minute') {
+      return 'A hot ' + intervalType + ' ago';
+    }
+
+    return interval + ' ' + intervalType + ' ago';
+};
+
+populatePage();
