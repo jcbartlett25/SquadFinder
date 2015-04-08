@@ -206,7 +206,7 @@ function timeSince(date) {
         return interval + " months ago";
     }
     interval = Math.floor(seconds / 86400);
-    if (interval > 1) {
+    if (interval >= 1) {
         return interval + " days ago";
     }
     interval = Math.floor(seconds / 3600);
