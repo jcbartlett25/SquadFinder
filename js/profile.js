@@ -78,7 +78,10 @@ function logout(){
 function deleteUser(){
   var user = Parse.User.current();
 
-  alert("This action can't be undone!");
+  var r = confirm("This action can't be undone!");
+    if (r != true) {
+        return;
+    } 
 
   user.destroy({
   success: function(user) {
