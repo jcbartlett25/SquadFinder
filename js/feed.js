@@ -62,17 +62,17 @@ function squadPost(descript, title, username, id, goons, time)
 
   $("#timestamp").html(timeSince(time));
 
-  for (var goon = 0; goon < goons.length; goon++) {
+  /*for (var goon = 0; goon < goons.length; goon++) {
     console.log(goons[goon]);
 
     $("#goon-name").html(goons[goon]);
     $goon_name = $("#goon-name").clone();
     $goon_name.removeAttr("id");
 
-    //$goon_list = .clone();
-    //$goon_list.removeAttr("id");
     $("#goons-in-squad").removeAttr("id");
-    $("#goons-in-squad").append($goon_name);
+    $("#goons-in-squad").append($goon_name);*/
+
+    $("#goon-name").html(goons);
 
   };
 
