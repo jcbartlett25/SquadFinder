@@ -89,7 +89,7 @@ function squadPost(descript, title, username, id, goons, time)
   //clicking shows number of goons
   $("#num-goons").click(function(){
     $goons.toggle();
-    alert(goon_list);
+    //alert(goon_list);
   });
 
   
