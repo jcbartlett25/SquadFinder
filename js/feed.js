@@ -64,11 +64,13 @@ function squadPost(descript, title, username, id, goons, time)
 
   for (var goon = 0; goon < goons.length; goon++) {
     console.log(goons[goon]);
+
     $("#goon-name").html(goons[goon]);
     $goon_name = $("#goon-name").clone();
     $goon_name.removeAttr("id");
+
     $goon_list = $("#goons-in-squad").clone();
-    $goon_list.removeAttr("id");
+    //$goon_list.removeAttr("id");
     $goon_list.append($goon_name);
   };
 
