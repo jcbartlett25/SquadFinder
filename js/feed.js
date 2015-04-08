@@ -70,11 +70,11 @@ function squadPost(descript, title, username, id, goons, time)
     $goon_name.removeAttr("id");
 
     $("#goons-in-squad").removeAttr("id");
-    $("#goons-in-squad").append($goon_name);*/
+    $("#goons-in-squad").append($goon_name);
 
-    $("#goon-name").html(goons);
+  };*/
 
-  };
+  $("#goon-name").html(goons);
 
   $post = $("#template").clone();
   //Gives each div a unique name
