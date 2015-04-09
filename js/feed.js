@@ -27,9 +27,11 @@ function populatePage(){
         var obj = results[i];
         if (user in obj.get('goons')){
           document.getElementById('joined').style.display = 'inline-block';
+          console.log("joined")
         }
         else{
           document.getElementById('join-button link').style.display = 'inline-block';
+          console.log("join-button link")
         }
         new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
       }
