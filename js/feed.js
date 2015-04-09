@@ -91,6 +91,8 @@ function squadPost(descript, title, username, id, goons, time)
   {
 
     joinSquad(id)
+    document.getElementById('joined').style.display = 'inline-block';
+    document.getElementById('join-button').style.display = 'none';
 
   })
 
