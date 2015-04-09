@@ -9,6 +9,7 @@ $(document).ready(
   );
 
 user = Parse.User.current();
+alert(user.getUsername())
 
 //POPULATES Feed with Posts
 function populatePage(){
@@ -69,6 +70,9 @@ function squadPost(descript, title, username, id, goons, time)
     document.getElementById('join-button link').style.display = 'inline-block';
     console.log("join-button link")
   }
+
+  document.getElementById("joined").removeAttribute("id");
+  document.getElementById("join-button link").removeAttribute("id");
 
   $("#timestamp").html(timeSince(time));
 
