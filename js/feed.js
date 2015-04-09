@@ -84,6 +84,7 @@ function squadPost(descript, title, username, id, goons, time)
   $post.find("span").removeAttr("id");
   $post.find("p").removeAttr("id");
   $(".feed_div").prepend($post);
+  $post.slideDown();
   $post.css("display", "block");
 
   //Adds on click functionality
