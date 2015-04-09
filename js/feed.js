@@ -8,8 +8,7 @@ $(document).ready(
   }
   );
 
-user = Parse.User.current();
-alert(user.getUsername())
+var user = Parse.User.current();
 
 //POPULATES Feed with Posts
 function populatePage(){
