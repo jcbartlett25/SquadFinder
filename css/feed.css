@@ -80,9 +80,11 @@
 }
 .goons-in-squad{
   min-height: 20px;
+  display: none;
 }
 .goon-name{
   font-size: 14px;
+  display: none;
 }
 .num-goons{
   cursor: pointer;
