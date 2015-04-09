@@ -38,3 +38,20 @@
   padding: 1rem;
   text-transform: uppercase;
 }
+
+/* Login and signup forms */
+#login_form,
+#signup_form { 
+  margin-top: 1rem;
+}
+#signup_form {
+  display: none;
+}
+
+/* Error message displayed if login fails */
+.error_login {
+  width: 70%;
+  color: red;
+  margin-top: 10px;
+  display: none;
+}

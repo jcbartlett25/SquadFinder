@@ -81,7 +81,7 @@
           <!-- <li><a class="menu-text" href="feed.html">Feed</a></li>
           <li><a class="menu-text" href="profile.html">Profile</a></li> -->
           <li><a class="menu-text" href="about.html">About</a></li>
-          <li><a class="menu-text" onclick="showLogin()">Log In</a></li>
+          <li><a class="menu-text modal_trigger" href="#modal">Log In</a></li>
         </ul>
 
         <div class="mobile">
@@ -92,7 +92,7 @@
             <!-- <li><a class="menu-text" href="feed.html">Feed</a></li>
             <li><a class="menu-text" href="profile.html">Profile</a></li> -->
             <li><a class="menu-text" href="about.html">About</a></li>
-            <li><a class="menu-text" onclick="showLogin()">Log In</a></li>
+            <li><a class="menu-text modal_trigger" href="#modal">Log In</a></li>
           </ul>
         </div>
       </nav>
@@ -129,12 +129,12 @@
       </script>
 
       <div class="login-button-container">
-        <a id="modal_trigger" href="#modal"><div class="login-register-button button">Login/Register</div></a>
+        <a class="modal_trigger" href="#modal"><div class="login-register-button button">Log In/Register</div></a>
       </div>
 
       <div id="modal" class="popupContainer" style="display:none;">
         <section class="popupBody">
-          <div class="button login" onclick="showLogin();">Login</div>
+          <div class="button login" onclick="showLogin();">Log In</div>
           <div class="button signup" onclick="showSignup();">New User</div>
           <div class="error_login"></div>
           <div id="login_form">
@@ -144,7 +144,7 @@
               <label for="password">Password</label>
               <input type="password" name="password" id="password" class="input">
             </form>
-            <button class="small_button" onclick="login()">Login</button>
+            <button class="small_button" onclick="login()">Log In</button>
           </div>
 
           <div id="signup_form">
@@ -179,7 +179,7 @@
     </footer>
 
     <script type="text/javascript">
-      $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+      $(".modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
     </script>
   </body>
 </html>
