@@ -62,9 +62,7 @@ function squadPost(descript, title, username, id, goons, time)
     $("#num-goons").html(goons.length + " goons")
   };
 
-  alert($.inArray(user.getUsername(), goons));
-
-  if ($.inArray(user.getUsername(), goons)){
+  if (contains(goons, user.getUsername()))){
       document.getElementById('joined').style.display = 'inline-block';
       console.log("joined")
   }
@@ -251,5 +249,15 @@ var timeSince = function(date) {
 
     return interval + ' ' + intervalType + ' ago';
 };
+
+function contains(a, obj) {
+    var i = a.length;
+    while (i--) {
+       if (a[i] === obj) {
+           return true;
+       }
+    }
+    return false;
+}
 
 populatePage();
