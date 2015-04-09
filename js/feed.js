@@ -87,7 +87,7 @@ function squadPost(descript, title, username, id, goons, time)
   $post.css("display", "block");
 
   //Adds on click functionality
-  $post.click(function()
+  $(".join-button").click(function()
   {
 
     joinSquad(id)
