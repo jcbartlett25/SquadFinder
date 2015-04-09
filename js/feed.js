@@ -83,6 +83,7 @@ function squadPost(descript, title, username, id, goons, time)
   $post.find("span").removeAttr("id");
   $post.find("span").removeAttr("id");
   $post.find("p").removeAttr("id");
+  jQuery(this).prev("span").attr("id",id);
   $(".feed_div").prepend($post);
   $post.css("display", "block");
 
@@ -91,8 +92,8 @@ function squadPost(descript, title, username, id, goons, time)
   {
 
     joinSquad(id)
-    document.getElementById('joined').style.display = 'inline-block';
-    document.getElementById('join-button').style.display = 'none';
+    document.getElementById(id).style.display = 'inline-block';
+    document.getElementById(id).style.display = 'none';
 
   })
 
