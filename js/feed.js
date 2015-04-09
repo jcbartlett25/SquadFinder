@@ -81,6 +81,8 @@ function squadPost(descript, title, username, id, goons, time)
   $post.find("span").removeAttr("id")
   $post.find("span").removeAttr("id")
   $post.find("p").removeAttr("id")
+  $post.find("span").removeAttr("id")
+  $post.find("span").removeAttr("id")
   $(".feed_div").prepend($post);
   $post.css("display", "block")
 
