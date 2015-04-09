@@ -69,7 +69,6 @@ function squadPost(descript, title, username, id, goons, time)
   }
   else {
     document.getElementById('join-button link').style.display = 'inline-block';
-    document.getElementById('joined').style.display = 'none';
     console.log("join-button link")
   }
 
