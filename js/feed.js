@@ -65,7 +65,7 @@ function squadPost(descript, title, username, id, goons, time)
   if (contains(goons, user.getUsername())) {
     document.getElementById('joined').style.display = 'inline-block';
     document.getElementById('join-button').style.display = 'none';
-    document.getElementById('leave-button').style.display = 'none';
+    document.getElementById('leave-button').style.display = 'inline-block';
     console.log("joined")
   }
   else {
@@ -206,7 +206,7 @@ var joinSquad = function(squadId){
 }
 
 var leaveSquad = function(squadId){
-  
+
 }
 
 function showGoons() {
