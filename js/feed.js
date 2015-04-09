@@ -62,6 +62,8 @@ function squadPost(descript, title, username, id, goons, time)
     $("#num-goons").html(goons.length + " goons")
   };
 
+  alert($.inArray(user.getUsername(), goons));
+
   if ($.inArray(user.getUsername(), goons)){
       document.getElementById('joined').style.display = 'inline-block';
       console.log("joined")
@@ -70,9 +72,6 @@ function squadPost(descript, title, username, id, goons, time)
     document.getElementById('join-button link').style.display = 'inline-block';
     console.log("join-button link")
   }
-
-  document.getElementById("joined").id = title;
-  document.getElementById("join-button link").id = time;
 
   $("#timestamp").html(timeSince(time));
 
