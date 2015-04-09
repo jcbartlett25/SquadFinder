@@ -71,8 +71,8 @@ function squadPost(descript, title, username, id, goons, time)
     console.log("join-button link")
   }
 
-  document.getElementById("joined").removeAttribute("id");
-  document.getElementById("join-button link").removeAttribute("id");
+  document.getElementById("joined").id = title;
+  document.getElementById("join-button link").id = time;
 
   $("#timestamp").html(timeSince(time));
 
