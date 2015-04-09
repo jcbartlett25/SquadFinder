@@ -83,6 +83,7 @@
 }
 .goon-name{
   font-size: 14px;
+  display: none;
 }
 .num-goons{
   cursor: pointer;
