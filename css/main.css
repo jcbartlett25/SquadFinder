@@ -29,12 +29,20 @@ body {
   line-height: 4rem;
   margin: 0;
 }
+/* no hover state on title */
+.title a:hover {
+  text-decoration: none;
+}
 li {
   list-style-type: none;
 }
 a {
   color: #4387fd;
   text-decoration: none;
+  transition: all 0.1s ease;
+}
+a:hover {
+  text-decoration: underline;
 }
 p {
   line-height: 1.5;
@@ -53,7 +61,7 @@ header {
   background: #4387fd;
   position: absolute;
   width: 100%;
-  z-index: 1000;
+  z-index: 9;
 }
 nav {
   height: 4rem;
@@ -97,15 +105,13 @@ nav li {
   float: left;
   width: 60%;
   position: absolute;
-  z-index: 999;
 }
 
 /* The Main Chunk */
 .content {
   background: white;
-  height: auto;
-  min-height: 550px;
   margin: 0 auto;
+  min-height: 42rem;
   padding: 6rem 0 2rem 0;
   width: 80%;
 }
@@ -124,7 +130,7 @@ nav li {
 /* FOOTER */
 footer {
   background-color: #4387fd;
-  clear: both;
+  color: white;
   position: relative;
   width: 100%;
 }
