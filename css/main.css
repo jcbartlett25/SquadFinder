@@ -13,6 +13,12 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
 .title {
   color: #222;
   display: inline-block;
@@ -33,16 +39,21 @@ a {
 p {
   line-height: 1.5;
 }
-/*Page Title Headings*/
+
+/* Page Title Headings */
 .title-text {
   font-size: 20px;
   text-align: center;
   font-weight: normal;
   color: black;
 }
-/*Visual Header*/
+
+/* SITE HEADER/NAVBAR */
 header {
   background: #4387fd;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
 }
 nav {
   height: 4rem;
@@ -69,13 +80,33 @@ nav li {
   display: inline-block;
   float: right;
 }
+/* Mobile-specific navigation */
+.hamburger-icon {
+  cursor: pointer;
+  display: inline-block;
+  fill: white;
+  float: right;
+  padding: 1rem 0;
+}
+.mobile-nav {
+  display: none;
+}
+.active { /* CHANGE THIS CLASS */
+  background: #4387fd;
+  display: block;
+  float: left;
+  width: 60%;
+  position: absolute;
+  z-index: 999;
+}
+
 /* The Main Chunk */
 .content {
   background: white;
   height: auto;
   min-height: 550px;
   margin: 0 auto;
-  padding: 1.25rem 0;
+  padding: 6rem 0 2rem 0;
   width: 80%;
 }
 .wrapper {
@@ -89,10 +120,13 @@ nav li {
   padding-top: 10px;
   margin-bottom: 20px;
 }
-/* Footer */
+
+/* FOOTER */
 footer {
-  width: 100%;
   background-color: #4387fd;
+  clear: both;
+  position: relative;
+  width: 100%;
 }
 .footer-wrapper {
   margin: 0 auto;
@@ -102,6 +136,8 @@ footer {
 footer a {
   color: white;
 }
+
+/* Universal button styling. Instead of using <button>, use a div with the .button class */
 .button {
   background: #4387fd;
   border-radius: 3px;
@@ -115,24 +151,7 @@ footer a {
 .button:hover {
   background: #3D76DA;
 }
-/*Facebook Button*/
-.fb-login-button {
-  margin-top: 20px;
-  width: 100%;
-  margin-bottom: 20px;
-}
-/* Login and signup forms */
-#login_form,
-#signup_form { 
-  display: none;
-  margin-top: 1rem;
-}
-.error_login {
-  width: 70%;
-  color: red;
-  margin-top: 10px;
-  display: none;
-}
+
 .menu-text {
   cursor: pointer;
   text-transform: lowercase;
@@ -160,6 +179,7 @@ footer a {
   color: #4387fd;
 }
 
+/* Styling for forms on login/squad posts */
 input[type=text],
 input[type=file],
 button {
@@ -177,27 +197,11 @@ button {
 }
 .cycle-slideshow img {
   max-width: 100%;
-}
-.hamburger-icon {
-  cursor: pointer;
-  display: inline-block;
-  fill: white;
-  float: right;
-  padding: 1rem 0;
-}
-.mobile-nav {
-  display: none;
-}
-.active {
-  background: #4387fd;
-  display: block;
-  float: left;
-  width: 60%;
-  position: absolute;
-  z-index: 999;
+  max-height: 100%;
 }
 
-/* Mobile queries */
+/* MOBILE QUERIES */
+/* Phone only */
 @media screen and (max-width: 650px) {
   html,
   body {
@@ -231,7 +235,7 @@ button {
     display: none;
   }
 }
-
+/* Desktop only */
 @media screen and (min-width: 48em) {
   .mobile {
     display: none;
