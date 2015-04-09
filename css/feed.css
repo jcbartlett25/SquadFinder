@@ -74,6 +74,10 @@
 .join-button {
   cursor: pointer;
 }
+.leave-button {
+  cursor: pointer;
+  display: none;
+}
 .joined {
   color: #4387fd;
   cursor: default;
