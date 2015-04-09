@@ -63,9 +63,14 @@ function squadPost(descript, title, username, id, goons, time)
   };
   //alert(contains(goons, user.getUsername()));
   if (contains(goons, user.getUsername())) {
-      document.getElementById('joined').style.display = 'inline-block';
-      document.getElementById('join-button').style.display = 'none';
-      console.log("joined")
+    document.getElementById('joined').style.display = 'inline-block';
+    document.getElementById('join-button').style.display = 'none';
+    console.log("joined")
+  }
+  else {
+    document.getElementById('joined').style.display = 'none';
+    document.getElementById('join-button').style.display = 'inline-block';
+    console.log("not joined")
   }
 
   $("#timestamp").html(timeSince(time));
@@ -86,7 +91,6 @@ function squadPost(descript, title, username, id, goons, time)
   {
 
     joinSquad(id)
-    console.log(time)
 
   })
 
