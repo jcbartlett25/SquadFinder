@@ -8,8 +8,7 @@ $(document).ready(
   }
   );
 
-user = Parse.User.current();
-alert(user.getUsername())
+var user = Parse.User.current();
 
 //POPULATES Feed with Posts
 function populatePage(){
@@ -243,7 +242,7 @@ var timeSince = function(date) {
     }
 
     if (intervalType === 'minute') {
-      return 'A hot ' + intervalType + ' ago';
+      return 'a hot ' + intervalType + ' ago';
     }
 
     return interval + ' ' + intervalType + ' ago';
