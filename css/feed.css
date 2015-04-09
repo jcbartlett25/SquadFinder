@@ -80,6 +80,7 @@
 }
 .goons-in-squad{
   min-height: 20px;
+  display: hidden;
 }
 .goon-name{
   font-size: 14px;
