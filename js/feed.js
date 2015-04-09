@@ -13,7 +13,7 @@ $(document).ready(
 function populatePage(){
   
   var query = new Parse.Query("Post")
-
+  var user = Parse.User.current().getUsername();
   //Sort by date
   query.ascending('createdAt')
 
@@ -25,6 +25,12 @@ function populatePage(){
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
+        if (user in obj.get('goons')){
+          document.getElementById('joined').style.display = 'inline-block';
+        }
+        else{
+          document.getElementById('join-button link').style.display = 'inline-block';
+        }
         new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
       }
     },
