@@ -59,7 +59,7 @@ p {
 /* SITE HEADER/NAVBAR */
 header {
   background: #4387fd;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 9;
 }
