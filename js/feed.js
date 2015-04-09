@@ -62,12 +62,14 @@ function squadPost(descript, title, username, id, goons, time)
     $("#num-goons").html(goons.length + " goons")
   };
   //alert(contains(goons, user.getUsername()));
-  if (contains(goons, user.getUsername())){
+  if (contains(goons, user.getUsername())) {
       document.getElementById('joined').style.display = 'inline-block';
+      document.getElementById('join-button').style.display = 'none'
       console.log("joined")
   }
-  else{
+  else {
     document.getElementById('join-button link').style.display = 'inline-block';
+    document.getElementById('joined').style.display = 'none';
     console.log("join-button link")
   }
 
