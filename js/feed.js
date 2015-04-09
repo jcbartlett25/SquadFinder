@@ -8,6 +8,7 @@ $(document).ready(
   }
   );
 
+user = Parse.User.current();
 
 //POPULATES Feed with Posts
 function populatePage(){
@@ -25,14 +26,6 @@ function populatePage(){
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
-        if (user in obj.get('goons')){
-          document.getElementById('joined').style.display = 'inline-block';
-          console.log("joined")
-        }
-        else{
-          document.getElementById('join-button link').style.display = 'inline-block';
-          console.log("join-button link")
-        }
         new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
       }
     },
@@ -67,6 +60,15 @@ function squadPost(descript, title, username, id, goons, time)
   else {
     $("#num-goons").html(goons.length + " goons")
   };
+
+  if ($.inArray(user.getUsername(), goons)){
+      document.getElementById('joined').style.display = 'inline-block';
+      console.log("joined")
+  }
+  else{
+    document.getElementById('join-button link').style.display = 'inline-block';
+    console.log("join-button link")
+  }
 
   $("#timestamp").html(timeSince(time));
 
