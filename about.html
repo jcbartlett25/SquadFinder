@@ -42,8 +42,16 @@
 
       };
 
-       //Changes pages if user is not logged in.
-        //$("#menu_name").html(" - " + Parse.User.current().getUsername());
+        var user = Parse.User.current();
+
+        if(user){
+
+        }
+        else{
+          $("#profile-link").hide();
+          $("#feed-link").hide();
+          $("#logout-link").hide();
+        }
 
      //Loads Facebook API
       (function(d, s, id){
@@ -54,16 +62,18 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
+
+    <script type="text/javascript" src="js/about,js"></script>
     
     <!--Page header. Title, menu bar, etc.-->
     <header>
       <nav>
         <span class="title"><a href="feed.html">squadfinder</a></span>
         <ul class="menu-right">
-          <li><a class="menu-text" href="feed.html">Feed</a></li>
-          <li><a class="menu-text" href="profile.html">Profile</a></li>
+          <li><a class="menu-text" id="feed-link" href="feed.html">Feed</a></li>
+          <li><a class="menu-text" id="profile-link" href="profile.html">Profile</a></li>
           <li><a class="menu-text" href="about.html" style="text-decoration: underline">About</a></li>
-          <li><a class="menu-text" onclick="logout()">Logout</a></li>
+          <li><a class="menu-text" id="logout-link" onclick="logout()">Logout</a></li>
         </ul>
 
         <div class="mobile">

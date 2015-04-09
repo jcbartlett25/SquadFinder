@@ -8,12 +8,14 @@ $(document).ready(
   }
   );
 
+user = Parse.User.current();
+alert(user.getUsername())
 
 //POPULATES Feed with Posts
 function populatePage(){
   
   var query = new Parse.Query("Post")
-
+  var user = Parse.User.current().getUsername();
   //Sort by date
   query.ascending('createdAt')
 
@@ -59,17 +61,30 @@ function squadPost(descript, title, username, id, goons, time)
   else {
     $("#num-goons").html(goons.length + " goons")
   };
+  //alert(contains(goons, user.getUsername()));
+  if (contains(goons, user.getUsername())) {
+      document.getElementById('joined').style.display = 'inline-block';
+      document.getElementById('join-button').style.display = 'none'
+      console.log("joined")
+  }
+  else {
+    document.getElementById('join-button link').style.display = 'inline-block';
+    document.getElementById('joined').style.display = 'none';
+    console.log("join-button link")
+  }
 
   $("#timestamp").html(timeSince(time));
 
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
-  $post.find("span").removeAttr("id")
-  $post.find("p").removeAttr("id")
-  $post.find("span").removeAttr("id")
-  $post.find("span").removeAttr("id")
-  $post.find("p").removeAttr("id")
+  //$post.find("span").removeAttr("id")
+  //$post.find("p").removeAttr("id")
+  //$post.find("span").removeAttr("id")
+  //$post.find("span").removeAttr("id")
+  //$post.find("p").removeAttr("id")
+  //$post.find("span").removeAttr("id")
+  //$post.find("span").removeAttr("id")
   $(".feed_div").prepend($post);
   $post.css("display", "block")
 
@@ -238,5 +253,15 @@ var timeSince = function(date) {
 
     return interval + ' ' + intervalType + ' ago';
 };
+
+function contains(a, obj) {
+    var i = a.length;
+    while (i--) {
+       if (a[i] === obj) {
+           return true;
+       }
+    }
+    return false;
+}
 
 populatePage();
