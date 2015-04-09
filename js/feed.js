@@ -1,3 +1,6 @@
+var user = Parse.User.current();
+var username = user.getUsername();
+
 $(document).ready(
   function() {
      //updates email verification string
@@ -8,13 +11,11 @@ $(document).ready(
   }
   );
 
-var user = Parse.User.current();
-
 //POPULATES Feed with Posts
 function populatePage(){
   
-  var query = new Parse.Query("Post")
-  var user = Parse.User.current().getUsername();
+  var query = new Parse.Query("Post");
+
   //Sort by date
   query.ascending('createdAt')
 
@@ -72,15 +73,13 @@ function squadPost(descript, title, username, id, goons, time)
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
-  //$post.find("span").removeAttr("id")
-  //$post.find("p").removeAttr("id")
-  //$post.find("span").removeAttr("id")
-  //$post.find("span").removeAttr("id")
-  //$post.find("p").removeAttr("id")
-  //$post.find("span").removeAttr("id")
-  //$post.find("span").removeAttr("id")
+  $post.find("span").removeAttr("id");
+  $post.find("p").removeAttr("id");
+  $post.find("span").removeAttr("id");
+  $post.find("span").removeAttr("id");
+  $post.find("p").removeAttr("id");
   $(".feed_div").prepend($post);
-  $post.css("display", "block")
+  $post.css("display", "block");
 
   //Adds on click functionality
   $post.click(function()
