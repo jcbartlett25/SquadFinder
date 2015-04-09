@@ -243,7 +243,7 @@ var timeSince = function(date) {
     }
 
     if (intervalType === 'minute') {
-      return 'A hot ' + intervalType + ' ago';
+      return 'a hot ' + intervalType + ' ago';
     }
 
     return interval + ' ' + intervalType + ' ago';
