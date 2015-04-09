@@ -74,99 +74,129 @@
 
 
     <!--Page header. Title, menu bar, etc.-->
-    <header>
-      <nav>
-        <span class="title"><a href="feed.html">squadfinder</a></span>
-        <ul class="menu-right">
+    <nav>
+      <span class="title"><a href="feed.html">squadfinder</a></span>
+      <ul class="menu-right">
+        <!-- <li><a class="menu-text" href="feed.html">Feed</a></li>
+        <li><a class="menu-text" href="profile.html">Profile</a></li> -->
+        <li><a class="menu-text" href="about.html">About</a></li>
+        <li><a class="menu-text modal_trigger" href="#modal">Log In</a></li>
+      </ul>
+
+      <div class="mobile">
+        <div class="hamburger-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path d="M4 27h28v-3H4v3zm0-8h28v-3H4v3zM4 8v3h28V8H4z"/></svg>
+        </div>
+        <ul class="mobile-nav">
           <!-- <li><a class="menu-text" href="feed.html">Feed</a></li>
           <li><a class="menu-text" href="profile.html">Profile</a></li> -->
           <li><a class="menu-text" href="about.html">About</a></li>
           <li><a class="menu-text modal_trigger" href="#modal">Log In</a></li>
         </ul>
+      </div>
+    </nav>
 
-        <div class="mobile">
-          <div class="hamburger-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path d="M4 27h28v-3H4v3zm0-8h28v-3H4v3zM4 8v3h28V8H4z"/></svg>
-          </div>
-          <ul class="mobile-nav">
-            <!-- <li><a class="menu-text" href="feed.html">Feed</a></li>
-            <li><a class="menu-text" href="profile.html">Profile</a></li> -->
-            <li><a class="menu-text" href="about.html">About</a></li>
-            <li><a class="menu-text modal_trigger" href="#modal">Log In</a></li>
-          </ul>
-        </div>
-      </nav>
+    <header>
+      <h1>Squad Up</h1>
     </header>
 
     <!--The visual body of the page. Holds all of the main content-->
 
     <div class="content">
-      <div class="alert-text">ALERT: Most Accounts Have Been Deleted. If you can't log in, create a new account to squad up. Thanks!</div>
-      <h1 class="header-message">Welcome to Squadfinder Alpha!</h1>
-      <center class="cycle-slideshow" id="slideshow" data-cycle-center-horz=true>
-        <img class="squad_img" src="img/kanye-brits.jpg">
-        <img class="squad_img" src="img/butchsundancereal.jpg">
-        <img class="squad_img" src="img/xmen.jpg">
-        <img class="squad_img" src="img/gangster-squad.jpg"> 
-        <img class="squad_img" src="img/maxresdefault.jpg">
-        <img class="squad_img" src="img/band.jpg">
-        <img class="squad_img" src="img/parks.jpg">
-        <img class="squad_img" src="img/detroit-pistons-2004.jpeg">
-        <img class="squad_img" src="img/meangirls.jpg">
-        <img class="squad_img" src="img/1280px-US_Cabinet_official_group_photo_July_26,_2012.jpg">
-      </center>
-      <!--The area of the page for logging in w/o Facebook-->
-      <script type="text/javascript">
-        function showLogin(){$("#login_form").toggle();
-          $("#signup_form").css("display", "none");
+      <div class="wrapper">
+        <div class="grid">
+          <div class="unit one-of-three">
+            <h2>Goon, meet Squad.</h2>
+            <p>
+              Gone are the days of struggling to track down your mates. With Squadfinder, it's simple. Simply post a squad listing that says whatever you need to say (and nothing extra). Wait for others to join and squad up whenever you're ready. No plugging in times, no awkward group messages, no hastle—no time wasted before the fun begins.
+            </p>
+          </div>
+          <div class="unit two-of-three">
+            <img src="http://upload.wikimedia.org/wikipedia/commons/f/fa/US_Cabinet_official_group_photo_July_26,_2012.jpg" class="cabinet">
+          </div>
+
+          <div class="unit span-grid">
+            <div class="quote">
+              &#8220;You should only believe about 90 percent of what I say. As a matter of fact, don’t even believe anything that I’m saying at all. I could be completely fucking with you, and the world, the entire time.&#8221; – Kanye West
+            </div>
+          </div>
+
+          <div class="unit one-of-two">
+            <h2>Keep it low key.</h2>
+            <p>
+              Create a squadron for those clandestine outings. Only members of the squadron can see squadron posts, and it's easy to make sure that your post stays private.
+            </p>
+          </div>
+          <div class="unit one-of-two">
+            <h2>Keep it personal.</h2>
+            <p>
+              Your user profile is entirely customizable and lets you easily keep track of squads on deck. Make sure you'll never miss an outing with seamless notifications.
+            </p>
+          </div>
+
+          <div class="unit span-grid">
+            <img src="http://www.trbimg.com/img-52fd1dce/turbine/la-et-ms-drake-disgusted-by-rolling-stone-inte-001/2048/2048x1366">
+          </div>
+
+          <div class="unit span-grid">
+            <div class="quote">
+              Ready? Good. Squad up.
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          function showLogin(){$("#login_form").toggle();
+            $("#signup_form").css("display", "none");
+            $(".error_login").hide();};
+        </script>
+
+        <script type="text/javascript">
+          function showSignup(){$("#signup_form").toggle();
+          $("#login_form").css("display", "none");
           $(".error_login").hide();};
-      </script>
+        </script>
 
-      <script type="text/javascript">
-        function showSignup(){$("#signup_form").toggle();
-        $("#login_form").css("display", "none");
-        $(".error_login").hide();};
-      </script>
+        <div class="login-button-container">
+          <a class="modal_trigger" href="#modal"><div class="login-register-button button">Log In/Register</div></a>
+        </div>
 
-      <div class="login-button-container">
-        <a class="modal_trigger" href="#modal"><div class="login-register-button button">Log In/Register</div></a>
-      </div>
+        <div id="modal" class="popupContainer" style="display:none;">
+          <section class="popupBody">
+            <div class="button login" onclick="showLogin();">Log In</div>
+            <div class="button signup" onclick="showSignup();">New User</div>
+            <div class="error_login"></div>
+            <div id="login_form">
+              <form class="login">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" class="input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="input">
+              </form>
+              <button class="small_button" onclick="login()">Log In</button>
+            </div>
 
-      <div id="modal" class="popupContainer" style="display:none;">
-        <section class="popupBody">
-          <div class="button login" onclick="showLogin();">Log In</div>
-          <div class="button signup" onclick="showSignup();">New User</div>
-          <div class="error_login"></div>
-          <div id="login_form">
-            <form class="login">
-              <label for="username">Username</label>
-              <input type="text" name="username" id="username" class="input">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" class="input">
-            </form>
-            <button class="small_button" onclick="login()">Log In</button>
-          </div>
-
-          <div id="signup_form">
-            <form class="signup-form">
-              <label for="username">Username</label>
-              <input type="text" name="username" id="new_username" class="input">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="new_password" class="input" minlength="6" maxlength="12">
-              <label for="passconf">Confirm Password</label>
-              <input type="password" name="passconf" id="confirm-password" class="input">
-              <label for="email">Email</label>
-              <input type="text" name="email" id="new_email" class="input">
-              <label for="email">Access Code</label>
-              <input type="text" name="access" id="access-code" class="input">
-            </form>
-            <span>
-              <button class="small_button" onclick="newUser()">
-                Join
-              </button>
-            </span>
-          </div>
-        </section>
+            <div id="signup_form">
+              <form class="signup-form">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="new_username" class="input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="new_password" class="input" minlength="6" maxlength="12">
+                <label for="passconf">Confirm Password</label>
+                <input type="password" name="passconf" id="confirm-password" class="input">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="new_email" class="input">
+                <label for="email">Access Code</label>
+                <input type="text" name="access" id="access-code" class="input">
+              </form>
+              <span>
+                <button class="small_button" onclick="newUser()">
+                  Join
+                </button>
+              </span>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
 

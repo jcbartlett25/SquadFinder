@@ -47,6 +47,18 @@ a:hover {
 p {
   line-height: 1.5;
 }
+h1 {
+  color: white;
+  font-size: 6rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2 {
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
 /* Page Title Headings */
 .title-text {
@@ -58,15 +70,25 @@ p {
 
 /* SITE HEADER/NAVBAR */
 header {
-  background: #4387fd;
-  position: absolute;
+  background: url('http://static.stereogum.com/uploads/2015/03/Kanye-West-Brits.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  padding: 16rem 0;
   width: 100%;
   z-index: 9;
 }
 nav {
+  background-color: rgba(0, 0, 0, 0.6);
   height: 4rem;
-  margin: 0 auto;
-  width: 80%;
+  padding: 0 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 nav a {
   color: white;
@@ -116,8 +138,8 @@ nav li {
   width: 80%;
 }
 .wrapper {
-  width: 50%;
   margin: 0 auto;
+  width: 80%;
 }
 /* Squad Image of the Month */
 .squad_img {
@@ -205,6 +227,26 @@ button {
   max-width: 100%;
   max-height: 100%;
 }
+
+.cabinet {
+  width: 100%;
+  height: 100%;
+}
+.quote {
+  color: black;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+}
+.unit {
+  padding: 3rem 0;
+}
+.span-grid img {
+  height: auto;
+  max-width: 100%;
+}
+
 
 /* MOBILE QUERIES */
 /* Phone only */
