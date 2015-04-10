@@ -207,6 +207,27 @@ var joinSquad = function(squadId){
 
 var leaveSquad = function(squadId){
 
+  var user = Parse.User.current();
+  var username = user.getUsername();
+  
+  //Loads all objects in the Post class
+  var query = new Parse.Query("Post")
+
+  //Actually pulls the specified object down from Parse
+  query.get(squadId, {
+    success: function(obj) {
+
+      console.log("Object retrieved");
+      obj.remove("goons", username);
+      obj.save();
+      //alert("You joined the squad!")
+    },
+    //Alerts user of what error occurred 
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+
 }
 
 function showGoons() {
