@@ -71,6 +71,7 @@ function squadPost(descript, title, username, id, goons, time)
   else {
     document.getElementById('joined').style.display = 'none';
     document.getElementById('join-button').style.display = 'inline-block';
+    document.getElementById('leave-button').style.display = 'none';
     console.log("not joined")
   }
 
