@@ -50,8 +50,11 @@ h1 {
   color: white;
   font-size: 6rem;
   font-weight: 900;
+  padding: 16rem 0;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
+  z-index: 2;
 }
 h2 {
   color: black;
@@ -70,16 +73,21 @@ h2 {
 
 /* SITE HEADER/NAVBAR */
 header {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.header-image {
   background: url('http://static.stereogum.com/uploads/2015/03/Kanye-West-Brits.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-  padding: 16rem 0;
+  height: 100%;
+  position: absolute;
   width: 100%;
-  z-index: 9;
 }
 nav {
   background-color: rgba(0, 0, 0, 0.6);
