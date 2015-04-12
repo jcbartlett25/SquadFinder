@@ -133,7 +133,7 @@ function postSquad(){
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
-  $("#num-goons").html("0 goons");
+  $("#num-goons").html("1 lonely goon");
   $("#timestamp").html("Just now");
   $post = $("#template").clone();
   $(".feed_div").prepend($post);
