@@ -8,9 +8,9 @@
   background: #000;
   display: none;
 }
-.popupContainer{
+.popupContainer {
   position:absolute;
-  width: 20rem;
+  width: 25%;
   left: 45%;
   top: 20%;
   background: #fff;
@@ -54,4 +54,15 @@
   color: red;
   margin-top: 10px;
   display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .popupContainer {
+    top: 5% !important;
+    width: 85%;
+  }
+  .signup {
+    float: none;
+    margin-top: 1rem;
+  }
 }
