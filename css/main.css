@@ -208,7 +208,7 @@ button {
 }
 
 /* MOBILE QUERIES */
-/* Phone only */
+/* Phone only rules */
 @media screen and (max-width: 650px) {
   html,
   body {
@@ -242,8 +242,9 @@ button {
     display: none;
   }
 }
-/* Desktop only */
+/* Desktop only rules */
 @media screen and (min-width: 48em) {
+  /* hide mobile navbar on desktop */
   .mobile {
     display: none;
   }
