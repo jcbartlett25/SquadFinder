@@ -61,4 +61,8 @@
     top: 5% !important;
     width: 85%;
   }
+  .signup {
+    float: none;
+    margin-top: 1rem;
+  }
 }
