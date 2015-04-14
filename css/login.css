@@ -58,7 +58,7 @@
 
 @media screen and (max-width: 650px) {
   .popupContainer {
-    top: 20%;
+    top: 5%;
     width: 85%;
   }
 }
