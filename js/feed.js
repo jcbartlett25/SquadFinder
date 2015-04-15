@@ -93,14 +93,14 @@ function squadPost(descript, title, username, id, goons, time)
   $(".join-button").click(function()
   {
 
-    joinSquad(squadId)
+    joinSquad(id)
 
   })
 
   $(".leave-button").click(function()
   {
 
-    leaveSquad(squadId)
+    leaveSquad(id)
 
   })
 
