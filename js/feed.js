@@ -55,6 +55,7 @@ function squadPost(descript, title, username, id, goons, time)
   $("#squad_title").html(title);
   $("#post_username").html(username);
 
+  // Display quantity of goons in squad
   if (goons.length == 1) {
     $("#num-goons").html("1 lonely goon")
   }
@@ -89,19 +90,13 @@ function squadPost(descript, title, username, id, goons, time)
   $post.slideDown();
   $post.css("display", "block");
 
-  //Adds on click functionality
-  $(".join-button").click(function()
-  {
-
-    joinSquad(id)
-
+  //Add user to squad on click
+  $(".join-button").click(function() {
+    joinSquad(id);
   })
 
-  $(".leave-button").click(function()
-  {
-
-    leaveSquad(id)
-
+  $(".leave-button").click(function() {
+    leaveSquad(id);
   })
 
 }
@@ -176,7 +171,7 @@ function clearText(){
 }
 
 
-//Joins squads (self explanatory....)
+//Join squads (self explanatory....)
 var joinSquad = function(squadId){
   
   //adding the squadId to the user's squad
