@@ -77,7 +77,7 @@ function squadPost(descript, title, username, id, goons, time)
   }
 
   $("#timestamp").html(timeSince(time));
-
+  $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id");
@@ -88,7 +88,6 @@ function squadPost(descript, title, username, id, goons, time)
   $(".feed_div").prepend($post);
   $post.slideDown();
   $post.css("display", "block");
-  $post = $("#template").clone();
 
   //Add user to squad on click
   $(".join-button").click(function() {
