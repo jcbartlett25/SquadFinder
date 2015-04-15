@@ -78,7 +78,6 @@ function squadPost(descript, title, username, id, goons, time)
 
   $("#timestamp").html(timeSince(time));
 
-  $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
   $post.find("span").removeAttr("id");
