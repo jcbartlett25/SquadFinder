@@ -89,6 +89,7 @@ function squadPost(descript, title, username, id, goons, time)
   $(".feed_div").prepend($post);
   $post.slideDown();
   $post.css("display", "block");
+  $post = $("#template").clone();
 
   //Add user to squad on click
   $(".join-button").click(function() {
