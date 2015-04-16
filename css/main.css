@@ -145,7 +145,7 @@ footer a {
 
 /* Universal button styling. Instead of using <button>, use a div with the .button class */
 .button {
-  background: black;
+  background: #999;
   border-radius: 3px;
   color: white;
   cursor: pointer;
