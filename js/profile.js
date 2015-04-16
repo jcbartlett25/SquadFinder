@@ -57,8 +57,6 @@ function uploadPic(){
       // error is a Parse.Error with an error code and message.
     }
   });
-
-  location.reload();
 }
 
 function loadPic(){
