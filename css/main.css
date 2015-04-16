@@ -182,7 +182,7 @@ footer a {
   transition: color 0.2s ease;
 }
 .link:hover {
-  color: black;
+  color: #b99a54;
 }
 
 /* Styling for forms on login/squad posts */
