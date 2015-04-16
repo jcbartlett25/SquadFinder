@@ -5,7 +5,7 @@
 }
 html,
 body {
-  background: #E6E6E6;
+  background: white;
   color: #444;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -37,7 +37,7 @@ li {
   list-style-type: none;
 }
 a {
-  color: #4387fd;
+  color: black;
   text-decoration: none;
   transition: all 0.1s ease;
 }
@@ -58,7 +58,7 @@ p {
 
 /* SITE HEADER/NAVBAR */
 header {
-  background: #4387fd;
+  background: black;
   position: fixed;
   width: 100%;
   z-index: 9;
@@ -100,7 +100,7 @@ nav li {
   display: none;
 }
 .active { /* CHANGE THIS CLASS */
-  background: #4387fd;
+  background: black;
   display: block;
   float: left;
   width: 60%;
@@ -129,7 +129,7 @@ nav li {
 
 /* FOOTER */
 footer {
-  background-color: #4387fd;
+  background-color: black;
   color: white;
   position: relative;
   width: 100%;
@@ -145,7 +145,7 @@ footer a {
 
 /* Universal button styling. Instead of using <button>, use a div with the .button class */
 .button {
-  background: #4387fd;
+  background: black;
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -155,7 +155,7 @@ footer a {
   transition: background 0.15s ease;
 }
 .button:hover {
-  background: #3D76DA;
+  background: black;
 }
 
 .menu-text {
