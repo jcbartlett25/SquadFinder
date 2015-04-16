@@ -73,14 +73,14 @@ h2 {
 
 /* SITE HEADER/NAVBAR */
 header {
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
+/*  filter: grayscale(1);
+  -webkit-filter: grayscale(1);*/
   overflow: hidden;
   position: relative;
   width: 100%;
 }
 .header-image {
-  background: url('http://static.stereogum.com/uploads/2015/03/Kanye-West-Brits.jpg') no-repeat center center;
+  background: url('img/kanye-bw.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
