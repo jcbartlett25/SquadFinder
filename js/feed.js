@@ -91,11 +91,11 @@ function squadPost(descript, title, username, id, goons, time)
 
   //Add user to squad on click
   $(".join-button").click(function() {
-    joinSquad(this.id)
+    joinSquad(id)
   })
 
   $(".leave-button").click(function() {
-    leaveSquad(this.id)
+    leaveSquad(id)
   })
 
 }
