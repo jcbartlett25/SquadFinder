@@ -145,7 +145,7 @@ footer a {
 
 /* Universal button styling. Instead of using <button>, use a div with the .button class */
 .button {
-  background: black;
+  background: #999;
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -179,7 +179,7 @@ footer a {
 }
 /* Styling for items that should turn blue on hover */
 .link {
-  transition: color 0.2s ease;
+  transition: color 0.1s linear;
 }
 .link:hover {
   color: #b99a54;

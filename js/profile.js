@@ -2,7 +2,7 @@ function toggEditMenu(){
   $("#edit_profile_section").toggle();
 }
 
-function changeUsername(){
+function changeUsername() {
   my_username = document.getElementById("new_username").value;
 
   if(my_username.split(" ").length > 1){
@@ -26,9 +26,9 @@ function changeUsername(){
   location.reload()
 }
 
-function uploadPic(){
-	var user = Parse.User.current(); //current user
-	var fileUploadControl = $("#profile_pic_file")[0]; //current user
+function uploadPic() {
+  var user = Parse.User.current(); //current user
+  var fileUploadControl = $("#profile_pic_file")[0]; //current user
 
   if (fileUploadControl.files.length > 0) {
     var file = fileUploadControl.files[0]; //file from form
@@ -99,31 +99,23 @@ function deleteUser(){
 
 $(document).ready(
   function(){
-        var currentUser = Parse.User.current();
+    var currentUser = Parse.User.current();
 
-        //makes sure the user is logged in
-        if (currentUser) {
-            
-        } else {
-          window.open('index.html', "_self");
-          return;
-            }
+    //makes sure the user is logged in
+    if (currentUser) {
+        
+    } else {
+      window.open('index.html', "_self");
+      return;
+    }
 
-        //display profile name
-        $("#profile_name").html(currentUser.getUsername())
-
-
-        //updates email verification string
-        if (currentUser.attributes.emailVerified === true){
-          $("#email_verify").html("Yes");
-
-        }
-        loadPic();
+    //display profile name
+    $("#profile_name").html(currentUser.getUsername())
 
 
-}
-  );
-
-
-
-
+    //updates email verification string
+    if (currentUser.attributes.emailVerified === true) {
+      $("#email_verify").html("Yes");
+    }
+    loadPic();
+});
