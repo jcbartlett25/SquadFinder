@@ -18,8 +18,23 @@
 #modal {
   padding: 2rem;
 }
-.signup {
-  float: right;
+.tab-bar {
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 0.25rem;
+}
+.login-tab,
+.signup-tab {
+  border: 1px solid #cfcfcf;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: pointer;
+  display: inline;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+.active-tab {
+  border-bottom: 1px solid white;
 }
 .popupBody label {
   display: block;
@@ -42,7 +57,11 @@
 /* Login and signup forms */
 #login_form,
 #signup_form { 
-  margin-top: 1rem;
+  border: 1px solid #cfcfcf;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top: none;
+  padding: 1rem;
 }
 #signup_form {
   display: none;
@@ -61,7 +80,7 @@
     top: 5% !important;
     width: 85%;
   }
-  .signup {
+  .signup-tab {
     float: none;
     margin-top: 1rem;
   }
