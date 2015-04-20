@@ -4,6 +4,12 @@ h1 {
   padding: 16rem 0;
   text-transform: uppercase;
 }
+h2 {
+  color: black;
+  font-weight: 900;
+  margin-top: 0;
+  text-transform: uppercase;
+}
 .wrapper {
   width: 80%;
 }
