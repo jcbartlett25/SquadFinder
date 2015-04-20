@@ -48,13 +48,8 @@ p {
   line-height: 1.5;
 }
 h1 {
-  color: white;
-  font-size: 6rem;
-  font-weight: 900;
-  padding: 16rem 0;
   position: relative;
   text-align: center;
-  text-transform: uppercase;
   z-index: 2;
 }
 h2 {
@@ -74,8 +69,6 @@ h2 {
 
 /* SITE HEADER/NAVBAR */
 header {
-/*  filter: grayscale(1);
-  -webkit-filter: grayscale(1);*/
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -91,7 +84,7 @@ header {
   width: 100%;
 }
 nav {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: black;
   height: 4rem;
   padding: 0 10%;
   position: fixed;
@@ -148,7 +141,7 @@ nav li {
 }
 .wrapper {
   margin: 0 auto;
-  width: 80%;
+  width: 50%;
 }
 /* Squad Image of the Month */
 .squad_img {

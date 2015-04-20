@@ -1,0 +1,12 @@
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  padding: 16rem 0;
+  text-transform: uppercase;
+}
+.wrapper {
+  width: 80%;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+}
