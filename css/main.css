@@ -152,10 +152,8 @@ nav li {
 }
 /* Squad Image of the Month */
 .squad_img {
-  height: 350px;
-  width: 600px;
-  padding-top: 10px;
-  margin-bottom: 20px;
+  height: auto;
+  width: 100%;
 }
 
 /* FOOTER */
