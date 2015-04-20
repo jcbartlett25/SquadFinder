@@ -12,7 +12,7 @@ h2 {
   text-transform: uppercase;
 }
 .wrapper {
-  width: 80%;
+  width: 80% !important;
 }
 nav {
   background-color: rgba(0, 0, 0, 0.6);
