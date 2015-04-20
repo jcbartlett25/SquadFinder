@@ -158,15 +158,21 @@
         </div>
 
         <script type="text/javascript">
-          function showLogin(){$("#login_form").toggle();
-            $("#signup_form").css("display", "none");
+          function showLogin(){
+            $("#signup_form").hide();
+            $('#login_form').show()
+            $('.login-tab').addClass('active-tab');
+            $('.signup-tab').removeClass('active-tab');
             $(".error_login").hide();};
         </script>
 
         <script type="text/javascript">
-          function showSignup(){$("#signup_form").toggle();
-          $("#login_form").css("display", "none");
-          $(".error_login").hide();};
+          function showSignup(){
+            $("#login_form").hide();
+            $('#signup_form').show();
+            $('.signup-tab').addClass('active-tab');
+            $('.login-tab').removeClass('active-tab');
+            $(".error_login").hide();};
         </script>
 
         <div class="login-button-container unit span-grid">
@@ -175,11 +181,13 @@
 
         <div id="modal" class="popupContainer" style="display:none;">
           <section class="popupBody">
-            <div class="button login" onclick="showLogin();">Log In</div>
-            <div class="button signup" onclick="showSignup();">New User</div>
+            <div class="tab-bar">
+              <div class="login-tab active-tab" onclick="showLogin();">Log In</div>
+              <div class="signup-tab" onclick="showSignup();">New User</div>
+            </div>
             <div class="error_login"></div>
             <div id="login_form">
-              <form class="login">
+              <form class="login-form">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="input">
                 <label for="password">Password</label>
