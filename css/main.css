@@ -47,6 +47,22 @@ a:hover {
 p {
   line-height: 1.5;
 }
+h1 {
+  color: white;
+  font-size: 6rem;
+  font-weight: 900;
+  padding: 16rem 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 2;
+}
+h2 {
+  color: black;
+  font-weight: 900;
+  margin-top: 0;
+  text-transform: uppercase;
+}
 
 /* Page Title Headings */
 .title-text {
@@ -58,15 +74,30 @@ p {
 
 /* SITE HEADER/NAVBAR */
 header {
-  background: black;
-  position: fixed;
+/*  filter: grayscale(1);
+  -webkit-filter: grayscale(1);*/
+  overflow: hidden;
+  position: relative;
   width: 100%;
-  z-index: 9;
+}
+.header-image {
+  background: url('../img/kanye-bw.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 nav {
+  background-color: rgba(0, 0, 0, 0.6);
   height: 4rem;
-  margin: 0 auto;
-  width: 80%;
+  padding: 0 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 nav a {
   color: white;
@@ -116,15 +147,13 @@ nav li {
   width: 80%;
 }
 .wrapper {
-  width: 50%;
   margin: 0 auto;
+  width: 80%;
 }
 /* Squad Image of the Month */
 .squad_img {
-  height: 350px;
-  width: 600px;
-  padding-top: 10px;
-  margin-bottom: 20px;
+  height: auto;
+  width: 100%;
 }
 
 /* FOOTER */
@@ -206,6 +235,26 @@ button {
   max-height: 100%;
   z-index: 2 !important;
 }
+
+.cabinet {
+  width: 100%;
+  height: 100%;
+}
+.quote {
+  color: black;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+}
+.unit {
+  padding: 3rem 0;
+}
+.span-grid img {
+  height: auto;
+  max-width: 100%;
+}
+
 
 /* MOBILE QUERIES */
 /* Phone only rules */
