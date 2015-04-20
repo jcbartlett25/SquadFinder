@@ -23,7 +23,7 @@
   font-size: 1rem;
 }
 .squad_post p {
-  font-size: 0.75rem;
+  font-size: .875rem;
 }
 /*NEW SQUAD POST*/
 .new-post-textbox {
@@ -77,9 +77,16 @@
 .join-button {
   cursor: pointer;
 }
+#leave-button {
+  display: none;
+}
+.leave-button {
+  cursor: pointer;
+}
 .joined {
-  color: #4387fd;
+  color: #b99a54;
   cursor: default;
+  display: none;
 }
 .goons-in-squad{
   min-height: 20px;

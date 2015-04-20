@@ -5,6 +5,7 @@
 }
 html,
 body {
+  background: white;
   color: #444;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -36,7 +37,7 @@ li {
   list-style-type: none;
 }
 a {
-  color: #4387fd;
+  color: black;
   text-decoration: none;
   transition: all 0.1s ease;
 }
@@ -130,7 +131,7 @@ nav li {
   display: none;
 }
 .active { /* CHANGE THIS CLASS */
-  background: #4387fd;
+  background: black;
   display: block;
   float: left;
   width: 60%;
@@ -159,7 +160,7 @@ nav li {
 
 /* FOOTER */
 footer {
-  background-color: #4387fd;
+  background-color: black;
   color: white;
   position: relative;
   width: 100%;
@@ -175,7 +176,7 @@ footer a {
 
 /* Universal button styling. Instead of using <button>, use a div with the .button class */
 .button {
-  background: #4387fd;
+  background: #999;
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -185,7 +186,7 @@ footer a {
   transition: background 0.15s ease;
 }
 .button:hover {
-  background: #3D76DA;
+  background: black;
 }
 
 .menu-text {
@@ -204,15 +205,15 @@ footer a {
   text-align: center;
   margin-bottom: 15px;
   margin-top: 0px;
-  color: #4387fd;
+  color: black;
   font-size: 27px;
 }
 /* Styling for items that should turn blue on hover */
 .link {
-  transition: color 0.2s ease;
+  transition: color 0.1s linear;
 }
 .link:hover {
-  color: #4387fd;
+  color: #b99a54;
 }
 
 /* Styling for forms on login/squad posts */
@@ -234,6 +235,7 @@ button {
 .cycle-slideshow img {
   max-width: 100%;
   max-height: 100%;
+  z-index: 2 !important;
 }
 
 .cabinet {
@@ -257,7 +259,7 @@ button {
 
 
 /* MOBILE QUERIES */
-/* Phone only */
+/* Phone only rules */
 @media screen and (max-width: 650px) {
   html,
   body {
@@ -291,8 +293,9 @@ button {
     display: none;
   }
 }
-/* Desktop only */
+/* Desktop only rules */
 @media screen and (min-width: 48em) {
+  /* hide mobile navbar on desktop */
   .mobile {
     display: none;
   }

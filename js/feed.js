@@ -55,6 +55,7 @@ function squadPost(descript, title, username, id, goons, time)
   $("#squad_title").html(title);
   $("#post_username").html(username);
 
+  // Display quantity of goons in squad
   if (goons.length == 1) {
     $("#num-goons").html("1 lonely goon")
   }
@@ -65,16 +66,17 @@ function squadPost(descript, title, username, id, goons, time)
   if (contains(goons, user.getUsername())) {
     document.getElementById('joined').style.display = 'inline-block';
     document.getElementById('join-button').style.display = 'none';
+    document.getElementById('leave-button').style.display = 'inline-block';
     console.log("joined")
   }
   else {
     document.getElementById('joined').style.display = 'none';
     document.getElementById('join-button').style.display = 'inline-block';
+    document.getElementById('leave-button').style.display = 'none';
     console.log("not joined")
   }
 
   $("#timestamp").html(timeSince(time));
-
   $post = $("#template").clone();
   //Gives each div a unique name
   $post.removeAttr("id")
@@ -84,14 +86,16 @@ function squadPost(descript, title, username, id, goons, time)
   $post.find("span").removeAttr("id");
   $post.find("p").removeAttr("id");
   $(".feed_div").prepend($post);
+  $post.slideDown();
   $post.css("display", "block");
 
-  //Adds on click functionality
-  $post.click(function()
-  {
-
+  //Add user to squad on click
+  $(".join-button").click(function() {
     joinSquad(id)
+  })
 
+  $(".leave-button").click(function() {
+    leaveSquad(id)
   })
 
 }
@@ -123,7 +127,7 @@ function postSquad(){
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
-  $("#num-goons").html("0 goons");
+  $("#num-goons").html("1 lonely goon");
   $("#timestamp").html("Just now");
   $post = $("#template").clone();
   $(".feed_div").prepend($post);
@@ -166,7 +170,7 @@ function clearText(){
 }
 
 
-//Joins squads (self explanatory....)
+//Join squads (self explanatory....)
 var joinSquad = function(squadId){
   
   //adding the squadId to the user's squad
@@ -186,6 +190,31 @@ var joinSquad = function(squadId){
       console.log("Object retrieved");
       obj.addUnique("goons", username)
       obj.save()
+      //alert("You joined the squad!")
+    },
+    //Alerts user of what error occurred 
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+
+}
+
+var leaveSquad = function(squadId){
+
+  var user = Parse.User.current();
+  var username = user.getUsername();
+  
+  //Loads all objects in the Post class
+  var query = new Parse.Query("Post")
+
+  //Actually pulls the specified object down from Parse
+  query.get(squadId, {
+    success: function(obj) {
+
+      console.log("Object retrieved");
+      obj.remove("goons", username);
+      obj.save();
       //alert("You joined the squad!")
     },
     //Alerts user of what error occurred 
