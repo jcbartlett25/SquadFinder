@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+    <div class="content">
+      <div class="wrapper profile-wrapper">
+        <!-- The user's info and photo -->
+          <h3 class="profile_title_text" ><span id="profile_name">squadfinder</span></h3><span class="edit_profile link" onclick="toggEditMenu()">Edit</span>
+          <div class="profile_section">
+            <div class="profile_pic">
+              <div class="edit-profile-pic" onclick="toggEditMenu()">Edit Photo</div>
+            </div>
+          </div>
+
+            <div class="edit_profile_section" id="edit_profile_section">
+            <!-- edit your profile -->
+            <div id="edit_profile_div">
+
+              <ul id="edit_profile_menu">
+
+                <!-- change profile picture -->
+                <li>
+
+                  <!-- upload a profile picture -->
+                  Change Profile Picture (upload file)
+                  <!--<input type="file" name="pic" id="pic_upload" accept="image/*">-->
+                  <input type="file" id="profile_pic_file">
+                  <button id="upload-pic" onclick="uploadPic()">Upload</button>
+
+                </li>
+              </ul>
+
+            </div>
+        </div>
+
+        <!-- The user's current squads -->
+        <h3 class="profile_title_text">Current Squads</h3>
+        <div class="profile_section">
+        </div>
+
+        <!-- THe user's squadrons -->
+        <h3 class="profile_title_text">My Squadrons</h3>
+        <div class="profile_section">
+        </div>
+
+        <!-- Account Settings -->
+        <h3 class="profile_title_text">Account Settings</h3>
+        <div class="profile_section">
+          <ul id="account-settings">
+            <!-- Email Verified -->
+            <li>
+              Email Verified: <span id="email_verify">No</span>
+            </li>
+
+            <li>
+              <button class="small_button" id="delete-account" onclick="deleteUser();">DELETE ACCOUNT</button>
+            </li>
+          </ul>          
+        </div>
+
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block title %}Squadfinder{% endblock %}
+
+{% block body %}
+    <header>
+      <div class="header-image"></div>
+      <h1>Squad Up</h1>
+    </header>
+
+    <div class="content">
+      <div class="wrapper landing-wrapper">
+        <div class="grid">
+          <div class="unit one-of-three">
+            <h2>Goon, meet Squad.</h2>
+            <p>
+              Gone are the days of struggling to track down your mates. With Squadfinder, it's simple. Easily post a squad listing that says whatever you need to say. Wait for others to join and squad up whenever you're ready. No plugging in times, no awkward group messages, no hastle—no time wasted before the fun begins.
+            </p>
+          </div>
+          <div class="unit two-of-three">
+            <div class="cycle-slideshow" id="slideshow">
+              <img class="squad_img" src="{{ url_for('static', filename='img/kanye-brits.jpg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/butchsundancereal.jpg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/xmen.jpg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/gangster-squad.jpg') }}"> 
+              <img class="squad_img" src="{{ url_for('static', filename='img/maxresdefault.jpg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/band.jpg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/parks.jpg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/detroit-pistons-2004.jpeg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/meangirls.jpg') }}">
+              <img class="squad_img" src="{{ url_for('static', filename='img/1280px-US_Cabinet_official_group_photo_July_26,_2012.jpg') }}">
+            </div>
+          </div>
+
+          <div class="unit span-grid">
+            <div class="quote">
+              &#8220;You should only believe about 90 percent of what I say. As a matter of fact, don’t even believe anything that I’m saying at all. I could be completely fucking with you, and the world, the entire time.&#8221; – Kanye West
+            </div>
+          </div>
+
+          <div class="unit one-of-two">
+            <h2>Keep it low key.</h2>
+            <p>
+              Create a Squadron for those clandestine outings. Only select members can see squadron posts, and it's easy to make sure that your plans stay private.
+            </p>
+          </div>
+          <div class="unit one-of-two">
+            <h2>Keep it personal.</h2>
+            <p>
+              Your customizable profile lets you easily keep track of squads on deck. And soon, you can make sure you never miss an outing with seamless notifications.
+            </p>
+          </div>
+
+          <div class="unit span-grid">
+            <img src="http://www.trbimg.com/img-52fd1dce/turbine/la-et-ms-drake-disgusted-by-rolling-stone-inte-001/2048/2048x1366">
+          </div>
+
+          <div class="unit span-grid">
+            <div class="quote">
+              Ready? Good. Squad up.
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          function showLogin(){
+            $("#signup_form").hide();
+            $('#login_form').show()
+            $('.login-tab').addClass('active-tab');
+            $('.signup-tab').removeClass('active-tab');
+            $(".error_login").hide();};
+        </script>
+
+        <script type="text/javascript">
+          function showSignup(){
+            $("#login_form").hide();
+            $('#signup_form').show();
+            $('.signup-tab').addClass('active-tab');
+            $('.login-tab').removeClass('active-tab');
+            $(".error_login").hide();};
+        </script>
+
+        <div class="login-button-container unit span-grid">
+          <a class="modal_trigger" href="#modal"><div class="login-register-button button">Log In/Register</div></a>
+        </div>
+
+        <div id="modal" class="popupContainer" style="display:none;">
+          <section class="popupBody">
+            <div class="tab-bar">
+              <div class="login-tab active-tab" onclick="showLogin();">Log In</div>
+              <div class="signup-tab" onclick="showSignup();">New User</div>
+            </div>
+            <div class="error_login"></div>
+            <div id="login_form">
+              <form class="login-form">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" class="input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="input">
+              </form>
+              <button class="small_button" onclick="login()">Log In</button>
+            </div>
+
+            <div id="signup_form">
+              <form class="signup-form">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="new_username" class="input">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="new_password" class="input" minlength="6" maxlength="12">
+                <label for="passconf">Confirm Password</label>
+                <input type="password" name="passconf" id="confirm-password" class="input">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="new_email" class="input">
+                <label for="email">Access Code</label>
+                <input type="text" name="access" id="access-code" class="input">
+              </form>
+              <span>
+                <button class="small_button" onclick="newUser()">
+                  Join
+                </button>
+              </span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+{% endblock %}

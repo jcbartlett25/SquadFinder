@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}Squad Feed{% endblock %}
+
+{% block body %}
+    <div class="content">
+      <div class="wrapper feed-wrapper">
+        <p id="please_verify">Hey! You should verify your email so that you can use all of our features.</p>
+
+        <!-- New post form -->
+        <div id="new_post_area">
+          <form id="new_post_form">
+            <input type="text" id="new_post_title" class="new-post-textbox input" value="Title" onclick="clearText()">
+            <input type="text" id="new_post_descript" class="new-post-textbox input" value="I need a squad for..." onclick="clearText()">
+          </form>
+          <div class="post_button button" onclick="postSquad()">New Post</div>
+        </div>
+
+        <h1 class="feed_title">My Squad Feed</h1>
+
+        <!-- The Squad Feed -->
+        <div class="feed_div" id="feed_div">
+          <!--The Div That Holds Squad Posting Information-->
+          <div class="squad_post" style="display:none" id="template" >
+            <h2>
+              <span id="squad_title"></span>
+              <span id="post_username" class="post_username"></span>
+            </h2>
+            <p id="squad_descript"></p>
+            <p>
+              <span class="join-button link" id="join-button">Join</span>
+              <span class="joined" id="joined"><i class="fa fa-check"></i> Joined</span>
+                &nbsp| &nbsp
+              <span id="num-goons" class="num-goons">0 Goons</span>
+              <span id="leave-button">&nbsp| &nbsp<span class="leave-button link">Leave</span></span>
+              <span id="timestamp" class="timestamp">Posted at 4:20</span>
+            </p>
+
+            <div id="goons-in-squad" class="goons-in-squad">
+                <div id="goon-name"></div>
+            </div>
+
+          </div>
+
+          <!-- Sample Div -->
+    <!--           <div class="squad_post" style="display: block;">
+            <h2>
+              <span>hi i don't even go here</span>
+              <span class="post_username">jtraum</span>
+            </h2>
+            <p>CU friends!!!!</p>
+            <p>
+              <span class="join-button joined link"><i class="fa fa-check"></i> Joined</span> 
+                &nbsp;| &nbsp;
+              <span class="num-goons" onclick="showGoons();">3 goons</span>
+              <span class="timestamp">21 minutes ago</span>
+            </p>
+
+            <div id="goons-in-squad" class="goons-in-squad" style="display:none">
+              <p>jcballin</p>
+            </div>
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
+{% endblock %}
