@@ -154,7 +154,7 @@ function postSquad(){
   })
 };
 
-
+/*
 //Clears Text from Input Boxes
 function clearText(){
   var descript = document.getElementById("new_post_descript").value;
@@ -168,7 +168,7 @@ function clearText(){
     document.getElementById("new_post_title").value = "";
   };
 }
-
+*/
 
 //Join squads (self explanatory....)
 var joinSquad = function(squadId){
