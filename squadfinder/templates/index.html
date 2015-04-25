@@ -2,6 +2,15 @@
 
 {% block title %}Squadfinder{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block scripts %}
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/client.js') }}"></script>
+{% endblock %}
+
 {% block body %}
     <header>
       <div class="header-image"></div>

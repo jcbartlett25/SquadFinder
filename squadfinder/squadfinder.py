@@ -1,6 +1,19 @@
 from flask import Flask, render_template
+from flask.ext.navigation import Navigation
+from flask.ext.login import LoginManager
+from forms import LoginForm
 
 app = Flask(__name__)
+nav = Navigation(app)
+login_manager = LoginManager()
+
+
+nav.Bar('top', [
+    nav.Item('Feed', 'feed'),
+    nav.Item('Profile', 'profile'),
+    nav.Item('About', 'about'),
+    # nav.Item('Log In', 'login'),
+])
 
 @app.route('/')
 def home():
