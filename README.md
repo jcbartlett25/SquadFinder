@@ -6,6 +6,7 @@ Here's what's in the pipeline for Squadfinder:
 * Public profile pages with photos, bios, and other information
 * Squad pages, where you can see who's joined a squad and post updates
 * Squadrons, which make it easy to form private squads
+* Migrate our backend to MongoDB (or something similar)
 
 ## File Directory
 This is some background for the site’s code and structure.
