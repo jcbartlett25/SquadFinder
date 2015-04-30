@@ -43,7 +43,7 @@ function populatePage(){
 */
 
 //POPULATES Feed with Posts
-function populatePage(){
+//function populatePage(){
   
   var query = new Parse.Query("Post");
   var posts = [];
@@ -68,8 +68,8 @@ function populatePage(){
       alert("Error: " + error.code + " " + error.message);
     }
   });
-  return posts
-};
+  //return posts
+//};
 
 //Constructor for the squadPost object
 function squadPost(descript, title, username, id, goons, time)
