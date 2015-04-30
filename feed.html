@@ -112,7 +112,7 @@
         <!-- The Squad Feed -->
         <div class="feed_div" id="feed_div" ng-controller="FeedController as feed">
           <!--The Div That Holds Squad Posting Information-->
-          <div class="squad_post" style="display:none" id="template" ng-repeat="post in feed.squadPosts">
+          <div class="squad_post" ng-repeat="post in feed.squadPosts">
             <h2>
               <span id="squad_title">{{post.title}}</span>
               <span id="post_username" class="post_username">{{post.username}}</span>
