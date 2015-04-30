@@ -77,7 +77,6 @@ function populatePage(){
     }
   });
 
-  function yeah(){
   x = x._result[0]
   for (var i = 0; i < x.length; i++) {
         var obj = x[i];
@@ -88,8 +87,6 @@ function populatePage(){
         }
         
   }
-};
-  return yeah()
 };
 
 //Constructor for the squadPost object
