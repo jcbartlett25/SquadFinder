@@ -77,6 +77,8 @@ function populatePage(){
     }
   });
 
+  console.log(x);
+
   x = x._result[0]
   for (var i = 0; i < x.length; i++) {
         var obj = x[i];
