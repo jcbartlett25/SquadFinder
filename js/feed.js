@@ -77,14 +77,14 @@ function populatePage(){
     }
   });
 
-  console.log(x);
+  console.log(x._result[0]);
 
-  x = x._result[0]
-  for (var i = 0; i < x.length; i++) {
-        var obj = x[i];
+  y = x._result[0]
+  for (var i = 0; i < y.length; i++) {
+        var obj = y[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
         posts.push(obj.toJSON())
-        if (i === x.length - 2){
+        if (i === y.length - 2){
           return x
         }
         
