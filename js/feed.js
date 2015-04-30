@@ -46,7 +46,7 @@ function populatePage(){
 function populatePage(){
   
   var query = new Parse.Query("Post");
-  posts = [];
+  var posts = [];
   //Sort by date
   query.ascending('createdAt')
 
@@ -312,6 +312,6 @@ function contains(a, obj) {
 var posts = populatePage();
 var yes = posts;
 app.controller('FeedController', function(){
-  this.squadPosts = yes;
+  this.squadPosts = true;
   this.bool = true;
 });
