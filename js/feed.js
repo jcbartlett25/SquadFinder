@@ -79,7 +79,7 @@ function populatePage(){
 
   console.log(x);
 
-  y = x._result[0]
+  /*y = x._result[0]
   for (var i = 0; i < y.length; i++) {
         var obj = y[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
@@ -88,7 +88,7 @@ function populatePage(){
           return x
         }
         
-  }
+  }*/
 };
 
 //Constructor for the squadPost object
