@@ -50,13 +50,14 @@ function populatePage(){
 function populatePage(){
   
   var query = new Parse.Query("Post");
-  var posts = new Array();
-  //Sort by date
+    //Sort by date
   query.ascending('createdAt')
 
   //Actually pulls the objects down from Parse
   query.find({
     success: function(results) {
+
+      var posts = new Array();
 
       console.log("Data retrieved");
       //Loops through objects and creates new squadPosts from the data
