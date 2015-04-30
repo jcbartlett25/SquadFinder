@@ -1,6 +1,10 @@
 var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
+app.controller('FeedController', function(){
+  this.feedPosts = populatePage();
+  this.bool = true;
+});
 
 $(document).ready(
   function() {
@@ -9,7 +13,7 @@ $(document).ready(
         if (currentUser.attributes.emailVerified === false){
             $("#please_verify").show();
         }
-  }
+    }
   );
 
 /*
@@ -43,10 +47,10 @@ function populatePage(){
 */
 
 //POPULATES Feed with Posts
-//function populatePage(){
+function populatePage(){
   
   var query = new Parse.Query("Post");
-  var posts = [];
+  var posts = new Array();
   //Sort by date
   query.ascending('createdAt')
 
@@ -59,7 +63,10 @@ function populatePage(){
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
-        posts[posts.length] = obj.toJSON()
+        posts.push(obj.toJSON());
+        if i === (results.length - 1) {
+          return list
+        }
       }
     },
 
@@ -69,7 +76,7 @@ function populatePage(){
     }
   });
   //return posts
-//};
+};
 
 //Constructor for the squadPost object
 function squadPost(descript, title, username, id, goons, time)
@@ -310,11 +317,3 @@ function contains(a, obj) {
     }
     return false;
 }
-
-//var posts = populatePage();
-var posts1 = [1,2,3,4,5,5,6];
-
-app.controller('FeedController', function(){
-  this.feedPosts = posts;
-  this.bool = true;
-});
