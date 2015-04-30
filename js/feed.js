@@ -1,9 +1,6 @@
 var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
-app.controller('FeedController', function(){
-  this.squadPosts = posts;
-});
 
 $(document).ready(
   function() {
@@ -316,3 +313,6 @@ function contains(a, obj) {
 }
 
 var posts = populatePage();
+app.controller('FeedController', function(){
+  this.squadPosts = posts;
+});
