@@ -7,7 +7,7 @@ app.controller('FeedController', function(){
 });
 
 var rawPosts = populatePage();
-console.log(rawPosts);
+console.log(rawPosts._result[0]);
 var postList = transformData(rawPosts);
 
 $(document).ready(
