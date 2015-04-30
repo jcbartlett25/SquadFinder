@@ -78,7 +78,7 @@ function populatePage(){
   });
 
   function yeah(){
-  var x = x._result[0]
+  x = x._result[0]
   for (var i = 0; i < x.length; i++) {
         var obj = x[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
