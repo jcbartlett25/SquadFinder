@@ -2,7 +2,7 @@ var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
 app.controller('FeedController', function(){
-  this.feedPosts = 11;
+  this.feedPosts = populatePage();
   this.bool = true;
 });
 
@@ -52,11 +52,13 @@ function populatePage(){
   var query = new Parse.Query("Post");
     //Sort by date
   query.ascending('createdAt')
+  var posts = new Array();
 
   //Actually pulls the objects down from Parse
   var x = query.find({
     success: function(results) {
 
+      /*
       var posts = new Array();
 
       //console.log("Data fetched");
@@ -66,7 +68,7 @@ function populatePage(){
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
         posts.push(obj.toJSON())
       }
-    },
+    }*/,
 
     //Alerts user of what error occurred 
     error: function(error) {
@@ -74,7 +76,19 @@ function populatePage(){
     }
   });
 
-  return x
+  function yeah(){
+  var x = x._result[0]
+  for (var i = 0; i < x.length; i++) {
+        var obj = x[i];
+        //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
+        posts.push(obj.toJSON())
+        if (i === x.length - 2){
+          return x
+        }
+        
+  }
+};
+  return yeah()
 };
 
 //Constructor for the squadPost object
