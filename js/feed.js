@@ -68,8 +68,6 @@ function populatePage(){
       alert("Error: " + error.code + " " + error.message);
     }
   });
-  
-  return posts
 };
 
 //Constructor for the squadPost object
