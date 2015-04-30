@@ -312,8 +312,9 @@ function contains(a, obj) {
 }
 
 var posts = populatePage();
+var posts1 = [1,2,3,4,5,5,6];
 
 app.controller('FeedController', function(){
-  this.squadPosts = posts;
+  this.feedPosts = posts1;
   this.bool = true;
 });
