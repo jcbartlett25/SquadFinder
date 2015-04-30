@@ -1,5 +1,3 @@
-$.getScript("angular.min.js")
-
 var user = Parse.User.current();
 var username = user.getUsername();
 var posts = [];
@@ -15,6 +13,7 @@ $(document).ready(
         if (currentUser.attributes.emailVerified === false){
             $("#please_verify").show();
         }
+        $.getScript("angular.min.js");
   }
   );
 
