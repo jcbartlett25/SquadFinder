@@ -74,9 +74,9 @@ function transformData(rawData) {
   length = data.length;
   newData = new Array();
 
-  for (obj in data){
-    console.log(obj)
-    newData.push("transformedObj");
+  for (i = 0; i < length; i++){
+    console.log(data[i].toJSON());
+    newData.push(transformedObj);
   }
 
   return newData
