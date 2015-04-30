@@ -68,6 +68,7 @@ function populatePage(){
       alert("Error: " + error.code + " " + error.message);
     }
   });
+  return posts
 };
 
 //Constructor for the squadPost object
@@ -310,8 +311,8 @@ function contains(a, obj) {
 }
 
 var posts = populatePage();
-var yes = posts;
+
 app.controller('FeedController', function(){
-  this.squadPosts = true;
+  this.squadPosts = false;
   this.bool = true;
 });
