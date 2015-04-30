@@ -59,7 +59,7 @@ function populatePage(){
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
-        posts.push(new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt));
+        posts[posts.length] = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
       }
     },
 
@@ -132,7 +132,7 @@ function squadPost(descript, title, username, id, goons, time)
   */
 }
 
-
+/*
 //POST A SQUAD
 function postSquad(){
 
@@ -185,6 +185,7 @@ function postSquad(){
     }
   })
 };
+*/
 
 //Join squads (self explanatory....)
 var joinSquad = function(squadId){
