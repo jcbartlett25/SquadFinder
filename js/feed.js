@@ -311,7 +311,7 @@ function contains(a, obj) {
     return false;
 }
 
-var posts = populatePage();
+//var posts = populatePage();
 var posts1 = [1,2,3,4,5,5,6];
 
 app.controller('FeedController', function(){
