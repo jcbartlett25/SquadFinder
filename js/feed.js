@@ -68,7 +68,8 @@ function populatePage(){
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
         posts.push(obj.toJSON())
       }
-    }*/,
+      */
+    },
 
     //Alerts user of what error occurred 
     error: function(error) {
