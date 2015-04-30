@@ -1,8 +1,9 @@
 var user = Parse.User.current();
 var username = user.getUsername();
-var posts = [];
 var app = angular.module('feed', []);
-
+app.controller('FeedController', function(){
+  this.squadPosts = posts;
+});
 
 $(document).ready(
   function() {
@@ -48,7 +49,7 @@ function populatePage(){
 function populatePage(){
   
   var query = new Parse.Query("Post");
-
+  var posts = [];
   //Sort by date
   query.ascending('createdAt')
 
@@ -64,7 +65,6 @@ function populatePage(){
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
         posts.push(new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt));
       }
-      console.log(posts)
     },
 
     //Alerts user of what error occurred 
@@ -73,11 +73,8 @@ function populatePage(){
     }
   });
   
+  return posts
 };
-
-app.controller('FeedController', function(){
-  this.squadPosts = posts;
-});
 
 //Constructor for the squadPost object
 function squadPost(descript, title, username, id, goons, time)
@@ -318,4 +315,4 @@ function contains(a, obj) {
     return false;
 }
 
-populatePage();
+var posts = populatePage();
