@@ -52,23 +52,11 @@ function populatePage(){
   var query = new Parse.Query("Post");
     //Sort by date
   query.ascending('createdAt')
-  var posts = new Array();
 
   //Actually pulls the objects down from Parse
-  var x = query.find({
+  var rawData = query.find({
     success: function(results) {
-
-      /*
-      var posts = new Array();
-
-      //console.log("Data fetched");
-      //Loops through objects and creates new squadPosts from the data
-      for (var i = 0; i < results.length; i++) {
-        var obj = results[i];
-        //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
-        posts.push(obj.toJSON())
-      }
-      */
+      console.log("Data retrieved")
     },
 
     //Alerts user of what error occurred 
@@ -77,19 +65,22 @@ function populatePage(){
     }
   });
 
-  return x
-
-  /*y = x._result[0]
-  for (var i = 0; i < y.length; i++) {
-        var obj = y[i];
-        //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
-        posts.push(obj.toJSON())
-        if (i === y.length - 2){
-          return x
-        }
-        
-  }*/
+  return rawData
 };
+
+
+function transformData(rawData) {
+  data = rawData._result[0];
+  length = data.length;
+  newData = new Array();
+
+  for (obj in data){
+    transformedObj = obj.toJSON();
+    newData.push(transformedObj);
+  }
+
+  return newData
+}
 
 //Constructor for the squadPost object
 function squadPost(descript, title, username, id, goons, time)
