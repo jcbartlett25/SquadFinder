@@ -66,7 +66,8 @@ function populatePage(){
         posts.push(obj.toJSON());
         console.log(obj.toJSON());
         console.log(posts);
-        if (i === results.length - 1) {
+        console.log(i);
+        if (i === 10) {
           return posts
         }
       }
