@@ -8,6 +8,7 @@ app.controller('FeedController', function(){
 
 var rawPosts = populatePage();
 console.log(rawPosts);
+var postList = transformData(rawPosts);
 
 $(document).ready(
   function() {
@@ -50,7 +51,7 @@ function populatePage(){
 */
 
 //POPULATES Feed with Posts
-function populatePage(){
+var populatePage = function(){
   
   var query = new Parse.Query("Post");
     //Sort by date
@@ -72,7 +73,7 @@ function populatePage(){
 };
 
 
-function transformData(rawData) {
+var transformData = function(rawData) {
   data = rawData._result[0];
   length = data.length;
   newData = new Array();
