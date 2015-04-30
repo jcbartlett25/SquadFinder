@@ -1,3 +1,5 @@
+$.getScript("angular.min.js")
+
 var user = Parse.User.current();
 var username = user.getUsername();
 var posts = [];
