@@ -2,9 +2,7 @@ var user = Parse.User.current();
 var username = user.getUsername();
 var posts = [];
 var app = angular.module('feed', []);
-app.controller('FeedController', function(){
-  this.squadPosts = posts;
-});
+
 
 $(document).ready(
   function() {
@@ -62,7 +60,7 @@ function populatePage(){
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
-        console.log("obj")
+        console.log(obj)
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
         posts.push(new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt));
       }
@@ -77,6 +75,9 @@ function populatePage(){
   
 };
 
+app.controller('FeedController', function(){
+  this.squadPosts = posts;
+});
 
 //Constructor for the squadPost object
 function squadPost(descript, title, username, id, goons, time)
