@@ -2,9 +2,12 @@ var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
 app.controller('FeedController', function(){
-  this.feedPosts = 12;
+  this.feedPosts = postList;
   this.bool = true;
 });
+
+var rawPosts = populatePage();
+var postList = transformData(rawPosts);
 
 $(document).ready(
   function() {
