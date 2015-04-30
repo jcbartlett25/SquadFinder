@@ -64,7 +64,7 @@ function populatePage(){
         var obj = results[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
         posts.push(obj.toJSON());
-        if i === (results.length - 1) {
+        if (i === results.length - 1) {
           return list
         }
       }
