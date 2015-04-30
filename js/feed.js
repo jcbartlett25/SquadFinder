@@ -54,12 +54,12 @@ function populatePage(){
   query.ascending('createdAt')
 
   //Actually pulls the objects down from Parse
-  query.find({
+  blah = query.find({
     success: function(results) {
 
       var posts = new Array();
 
-      console.log("Data retrieved");
+      //console.log("Data fetched");
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
@@ -79,7 +79,7 @@ function populatePage(){
       alert("Error: " + error.code + " " + error.message);
     }
   });
-  //return posts
+  return blah
 };
 
 //Constructor for the squadPost object
