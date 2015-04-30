@@ -2,7 +2,7 @@ var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
 app.controller('FeedController', function(){
-  this.feedPosts = populatePage();
+  this.feedPosts = 12;
   this.bool = true;
 });
 
@@ -77,7 +77,7 @@ function populatePage(){
     }
   });
 
-  console.log(x._result[0]);
+  console.log(x);
 
   y = x._result[0]
   for (var i = 0; i < y.length; i++) {
