@@ -107,10 +107,11 @@
           <div class="post_button button" onclick="postSquad()">New Post</div>
         </div>
 
-        <h1 class="feed_title">My Squad Feed{{5+5}}</h1>
+        <h1 class="feed_title">My Squad Feed</h1>
 
         <!-- The Squad Feed -->
         <div class="feed_div" id="feed_div" ng-controller="FeedController as feed">
+          {{5+5}}
           <!--The Div That Holds Squad Posting Information-->
           <div class="squad_post" ng-repeat="post in feed.squadPosts">
             <h2>
