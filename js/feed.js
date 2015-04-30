@@ -315,4 +315,5 @@ var posts = populatePage();
 var yes = posts;
 app.controller('FeedController', function(){
   this.squadPosts = yes;
+  this.bool = true;
 });
