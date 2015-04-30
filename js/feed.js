@@ -310,7 +310,7 @@ function contains(a, obj) {
     return false;
 }
 
-var posts = [{go: 4, josh: 6}, 55, 77];
+var posts = populatePage();
 
 app.controller('FeedController', function(){
   this.squadPosts = posts;
