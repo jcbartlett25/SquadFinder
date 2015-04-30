@@ -77,7 +77,7 @@ function populatePage(){
     }
   });
 
-  console.log(x._result[0]);
+  console.log(x._result);
 
   /*y = x._result[0]
   for (var i = 0; i < y.length; i++) {
