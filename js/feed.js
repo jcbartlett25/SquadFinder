@@ -1,5 +1,10 @@
 var user = Parse.User.current();
 var username = user.getUsername();
+var posts = [];
+var app = angular.module('feed', []);
+app.controller('FeedController', function(){
+  this.squadPosts = posts;
+});
 
 $(document).ready(
   function() {
@@ -11,6 +16,7 @@ $(document).ready(
   }
   );
 
+/*
 //POPULATES Feed with Posts
 function populatePage(){
   
@@ -38,6 +44,36 @@ function populatePage(){
   });
   
 };
+*/
+
+//POPULATES Feed with Posts
+function populatePage(){
+  
+  var query = new Parse.Query("Post");
+
+  //Sort by date
+  query.ascending('createdAt')
+
+  //Actually pulls the objects down from Parse
+  query.find({
+    success: function(results) {
+
+      console.log("Data retrieved");
+      //Loops through objects and creates new squadPosts from the data
+      for (var i = 0; i < results.length; i++) {
+        var obj = results[i];
+        //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
+        posts.push(new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt));
+      }
+    },
+
+    //Alerts user of what error occurred 
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+  
+};
 
 
 //Constructor for the squadPost object
@@ -51,6 +87,7 @@ function squadPost(descript, title, username, id, goons, time)
   this.goons = goons,
   this.time = time
 
+  /*
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
@@ -97,7 +134,7 @@ function squadPost(descript, title, username, id, goons, time)
   $(".leave-button").click(function() {
     leaveSquad(id)
   })
-
+  */
 }
 
 
@@ -154,22 +191,6 @@ function postSquad(){
   })
 };
 
-/*
-//Clears Text from Input Boxes
-function clearText(){
-  var descript = document.getElementById("new_post_descript").value;
-  var title = document.getElementById("new_post_title").value;
-  
-  if (descript === "I need a squad for...") {
-    document.getElementById("new_post_descript").value = "";
-  };
-  
-  if (title === "Title") {
-    document.getElementById("new_post_title").value = "";
-  };
-}
-*/
-
 //Join squads (self explanatory....)
 var joinSquad = function(squadId){
   
@@ -225,13 +246,16 @@ var leaveSquad = function(squadId){
 
 }
 
+
 function showGoons() {
   $(".goons-in-squad").toggle();
 }
 
+
 function encodeHTML(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 }
+
 
 var timeSince = function(date) {
     if (typeof date !== 'object') {
@@ -279,6 +303,7 @@ var timeSince = function(date) {
 
     return interval + ' ' + intervalType + ' ago';
 };
+
 
 function contains(a, obj) {
     var i = a.length;
