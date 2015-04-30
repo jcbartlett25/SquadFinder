@@ -1,6 +1,10 @@
 var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
+app.controller('FeedController', function(){
+  this.feedPosts = 11;
+  this.bool = true;
+});
 
 $(document).ready(
   function() {
@@ -50,7 +54,7 @@ function populatePage(){
   query.ascending('createdAt')
 
   //Actually pulls the objects down from Parse
-  blah = query.find({
+  var x = query.find({
     success: function(results) {
 
       var posts = new Array();
@@ -60,13 +64,7 @@ function populatePage(){
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
-        posts.push(obj.toJSON());
-        if (i === results.length - 1) {
-          app.controller('FeedController', function(){
-            this.feedPosts = populatePage();
-            this.bool = true;
-          });
-        }
+        posts.push(obj.toJSON())
       }
     },
 
@@ -75,7 +73,8 @@ function populatePage(){
       alert("Error: " + error.code + " " + error.message);
     }
   });
-  return blah
+
+  return x
 };
 
 //Constructor for the squadPost object
