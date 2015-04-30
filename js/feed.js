@@ -51,7 +51,7 @@ function populatePage(){
 */
 
 //POPULATES Feed with Posts
-var populatePage = function(){
+function populatePage(){
   
   var query = new Parse.Query("Post");
     //Sort by date
@@ -73,7 +73,7 @@ var populatePage = function(){
 };
 
 
-var transformData = function(rawData) {
+function transformData(rawData) {
   data = rawData._result[0];
   length = data.length;
   newData = new Array();
