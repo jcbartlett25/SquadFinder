@@ -313,6 +313,6 @@ function contains(a, obj) {
 var posts = populatePage();
 
 app.controller('FeedController', function(){
-  this.squadPosts = false;
+  this.squadPosts = posts;
   this.bool = true;
 });
