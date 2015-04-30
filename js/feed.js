@@ -1,10 +1,6 @@
 var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
-app.controller('FeedController', function(){
-  this.feedPosts = populatePage();
-  this.bool = true;
-});
 
 $(document).ready(
   function() {
@@ -65,11 +61,11 @@ function populatePage(){
         var obj = results[i];
         //var objName = new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
         posts.push(obj.toJSON());
-        console.log(obj.toJSON());
-        console.log(posts);
-        console.log(i);
-        if (i === 10) {
-          return posts
+        if (i === results.length - 1) {
+          app.controller('FeedController', function(){
+            this.feedPosts = populatePage();
+            this.bool = true;
+          });
         }
       }
     },
