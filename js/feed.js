@@ -65,10 +65,10 @@ function populatePage(){
         postList.push(results[i].toJSON());
     }
   }).then(function() {
-      app.controller('FeedController', function(){
-      this.feedPosts = postList;
-      this.bool = true;
-    });
+      return app.controller('FeedController', function(){
+                this.feedPosts = postList;
+                this.bool = true;
+              });
   })
 
   //return rawData
