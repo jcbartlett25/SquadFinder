@@ -66,7 +66,7 @@ function populatePage(){
     }
   }).then(function(results) {
     for (i = 0; i < results.length; i++){
-      feedPosts.push(results[i].toJSON());
+      postList.push(results[i].toJSON());
     }
   })
 
