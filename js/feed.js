@@ -1,7 +1,7 @@
 var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
-var feedPosts = [];
+var postList = new Array();
 app.controller('FeedController', function(){
   this.feedPosts = postList;
   this.bool = true;
