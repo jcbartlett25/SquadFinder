@@ -3,6 +3,7 @@ var username = user.getUsername();
 var app = angular.module('feed', []);
 var postList = new Array();
 
+
 $(document).ready(
   function() {
      //updates email verification string
@@ -64,11 +65,6 @@ function populatePage(){
       for (i = 0; i < results.length; i++){
         postList.push(results[i].toJSON());
     }
-  }).then(function() {
-      return app.controller('FeedController', function(){
-                this.feedPosts = postList;
-                this.bool = true;
-              });
   })
 
   //return rawData
@@ -329,3 +325,8 @@ function contains(a, obj) {
     }
     return false;
 }
+
+app.controller('FeedController', function(){
+  this.feedPosts = postList;
+  this.bool = true;
+});
