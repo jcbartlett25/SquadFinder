@@ -1,13 +1,15 @@
 var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
+var feedPosts = [];
 app.controller('FeedController', function(){
   this.feedPosts = postList;
   this.bool = true;
 });
 
 var rawPosts = populatePage();
-var postList = setTimeout(function(){transformData(rawPosts)}, 2000);
+
+var postList = transformData(rawPosts);
 
 $(document).ready(
   function() {
@@ -50,7 +52,7 @@ function populatePage(){
 */
 
 //POPULATES Feed with Posts
-function populatePage(){
+//function populatePage(){
   
   var query = new Parse.Query("Post");
     //Sort by date
@@ -66,10 +68,14 @@ function populatePage(){
     error: function(error) {
       alert("Error: " + error.code + " " + error.message);
     }
-  });
+  }).then(function(results) {
+    for (i = 0; i < results.length; i++){
+      feedPosts.push(results[i].toJSON());
+    }
+  })
 
-  return rawData
-};
+  //return rawData
+//};
 
 
 function transformData(rawData) {
