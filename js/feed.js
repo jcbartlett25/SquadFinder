@@ -7,10 +7,6 @@ app.controller('FeedController', function(){
   this.bool = true;
 });
 
-var rawPosts = populatePage();
-
-var postList = transformData(rawPosts);
-
 $(document).ready(
   function() {
      //updates email verification string
