@@ -7,8 +7,7 @@ app.controller('FeedController', function(){
 });
 
 var rawPosts = populatePage();
-console.log(rawPosts._result[0]);
-var postList = transformData(rawPosts);
+var postList = setTimeout(function(){transformData(rawPosts)}, 2000);
 
 $(document).ready(
   function() {
@@ -85,6 +84,7 @@ function transformData(rawData) {
 
   return newData
 }
+
 
 //Constructor for the squadPost object
 function squadPost(descript, title, username, id, goons, time)
@@ -232,6 +232,7 @@ var joinSquad = function(squadId){
 
 }
 
+
 var leaveSquad = function(squadId){
 
   var user = Parse.User.current();
@@ -325,5 +326,3 @@ function contains(a, obj) {
     }
     return false;
 }
-
-var postList = transformData(rawPosts);
