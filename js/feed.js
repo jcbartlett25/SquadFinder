@@ -1,7 +1,7 @@
-var user = Parse.User.current();
+/*var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
-var postList = new Array();
+var postList = new Array();*/
 
 
 $(document).ready(
@@ -45,7 +45,7 @@ function populatePage(){
 */
 
 //POPULATES Feed with Posts
-//function populatePage(){
+function populatePage(){
   
   var query = new Parse.Query("Post");
     //Sort by date
@@ -63,13 +63,13 @@ function populatePage(){
     }
   }).then(function(results) {
       for (i = 0; i < results.length; i++){
-        console.log(results[i]toJSON());
+        console.log(results[i].toJSON());
         postList.push(results[i].toJSON());
     }
   })
 
   //return rawData
-//};
+};
 
 
 function transformData(rawData) {
@@ -327,7 +327,10 @@ function contains(a, obj) {
     return false;
 }
 
+/*
 app.controller('FeedController', function(){
   this.feedPosts = postList;
   this.bool = true;
 });
+*/
+populatePage();
