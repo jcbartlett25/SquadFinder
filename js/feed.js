@@ -63,6 +63,7 @@ function populatePage(){
     }
   }).then(function(results) {
       for (i = 0; i < results.length; i++){
+        console.log(results.length.toJSON());
         postList.push(results[i].toJSON());
     }
   })
