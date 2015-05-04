@@ -69,11 +69,11 @@ function populatePage(){
       }
     }).then(function() {
       window.app = angular.module('feed', []);
-      });
-  })
+    });
+  }//)
 
   //return rawData
-};
+//};
 
 
 function transformData(rawData) {
