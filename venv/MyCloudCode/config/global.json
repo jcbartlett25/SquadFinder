@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "Squadfinder2.0": {
+      "applicationId": "5aiAePdkP4VFGPuJWE3P0wyoykzOq2CWFfoL6rcm",
+      "masterKey": "zPmhkB5FWPsfG57SlcEoa5QYB9EGmFFe3zTcx7jE"
+    },
+    "_default": {
+      "link": "Squadfinder2.0"
+    }
+  }
+}

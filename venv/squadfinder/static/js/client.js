@@ -7,6 +7,7 @@
 
 */
 	//signs up a new user
+
 	function newUser() {
 		var user = new Parse.User();
 		var username = encodeHTML(document.getElementById("new_username").value);
