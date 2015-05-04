@@ -65,6 +65,7 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
+    <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/feed.js"></script>
 
     <!--Page header. Title, menu bar, etc.-->
@@ -93,37 +94,37 @@
     </header>
 
    <!--Body. Holds main content-->
-    <div class="content">
+    <div class="content" ng-app="feed">
       <div class="wrapper">
         <p id="please_verify">Hey! You should verify your email so that you can use all of our features.</p>
 
         <!-- New post form -->
         <div id="new_post_area">
           <form id="new_post_form">
-            <input type="text" id="new_post_title" class="new-post-textbox input" value="Title" onclick="clearText()">
-            <input type="text" id="new_post_descript" class="new-post-textbox input" value="I need a squad for..." onclick="clearText()">
+            <input type="text" id="new_post_title" class="new-post-textbox input" placeholder="Title" onclick="clearText()">
+            <input type="text" id="new_post_descript" class="new-post-textbox input" placeholder="I need a squad for..." onclick="clearText()">
           </form>
           <div class="post_button button" onclick="postSquad()">New Post</div>
         </div>
 
         <h1 class="feed_title">My Squad Feed</h1>
-
         <!-- The Squad Feed -->
-        <div class="feed_div" id="feed_div">
+        <div class="feed_div" ng-controller="FeedController as feed">
+          {{feed.feedPosts}}
           <!--The Div That Holds Squad Posting Information-->
-          <div class="squad_post" style="display:none" id="template" >
+          <!-- <div class="squad_post" ng-repeat="post in feed.squadPosts">
             <h2>
-              <span id="squad_title"></span>
-              <span id="post_username" class="post_username"></span>
+              <span id="squad_title">{{post.title}}</span>
+              <span id="post_username" class="post_username">{{post.username}}</span>
             </h2>
-            <p id="squad_descript"></p>
+            <p id="squad_descript">{{post.descript}}</p>
             <p>
               <span class="join-button link" id="join-button">Join</span>
               <span class="joined" id="joined"><i class="fa fa-check"></i> Joined</span>
                 &nbsp| &nbsp
               <span id="num-goons" class="num-goons">0 Goons</span>
               <span id="leave-button">&nbsp| &nbsp<span class="leave-button link">Leave</span></span>
-              <span id="timestamp" class="timestamp">Posted at 4:20</span>
+              <span id="timestamp" class="timestamp">{{2+2}}</span>
             </p>
 
             <div id="goons-in-squad" class="goons-in-squad">
@@ -131,7 +132,7 @@
             </div>
 
           </div>
-
+ -->
           <!-- Sample Div -->
 <!--           <div class="squad_post" style="display: block;">
             <h2>
