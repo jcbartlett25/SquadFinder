@@ -66,13 +66,13 @@ function populatePage(){
       for (i = 0; i < results.length; i++){
         console.log(results[i].toJSON());
         postList.push(results[i].toJSON());
-    }.then(function() {
+      }
+    }).then(function() {
       window.app = angular.module('feed', []);
       app.controller('FeedController', function(){
         this.feedPosts = postList;
         this.bool = true;
       });
-    })
   })
 
   //return rawData
