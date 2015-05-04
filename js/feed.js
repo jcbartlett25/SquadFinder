@@ -1,7 +1,7 @@
 /*var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
-var postList = new Array();*/
+*/var postList = new Array();
 
 
 $(document).ready(
