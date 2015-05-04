@@ -69,9 +69,6 @@ function populatePage(){
       }
     }).then(function() {
       window.app = angular.module('feed', []);
-      window.app.controller('FeedController', function(){
-        this.feedPosts = postList;
-        this.bool = true;
       });
   })
 
@@ -335,3 +332,7 @@ function contains(a, obj) {
 }
 
 populatePage();
+
+app.controller('FeedController', function(){
+        this.feedPosts = postList;
+        this.bool = true;
