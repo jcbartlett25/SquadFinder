@@ -69,7 +69,7 @@ function populatePage(){
       }
     }).then(function() {
       window.app = angular.module('feed', []);
-      app.controller('FeedController', function(){
+      window.app.controller('FeedController', function(){
         this.feedPosts = postList;
         this.bool = true;
       });
