@@ -1,7 +1,7 @@
-/*var user = Parse.User.current();
+var user = Parse.User.current();
 var username = user.getUsername();
 var app = angular.module('feed', []);
-*/var postList = new Array();
+var postList = new Array();
 
 
 $(document).ready(
@@ -62,10 +62,17 @@ function populatePage(){
       alert("Error: " + error.code + " " + error.message);
     }
   }).then(function(results) {
+      window.postList = new Array();
       for (i = 0; i < results.length; i++){
         console.log(results[i].toJSON());
         postList.push(results[i].toJSON());
-    }
+    }.then(function() {
+      window.app = angular.module('feed', []);
+      app.controller('FeedController', function(){
+        this.feedPosts = postList;
+        this.bool = true;
+      });
+    })
   })
 
   //return rawData
@@ -327,10 +334,4 @@ function contains(a, obj) {
     return false;
 }
 
-/*
-app.controller('FeedController', function(){
-  this.feedPosts = postList;
-  this.bool = true;
-});
-*/
 populatePage();
