@@ -70,7 +70,7 @@ function populatePage(){
     }).then(function() {
       window.app = angular.module('feed', []);
     });
-  }//)
+  };//)
 
   //return rawData
 //};
@@ -87,7 +87,7 @@ function transformData(rawData) {
   }
 
   return newData
-}
+};
 
 
 //Constructor for the squadPost object
@@ -149,7 +149,7 @@ function squadPost(descript, title, username, id, goons, time)
     leaveSquad(id)
   })
   */
-}
+};
 
 /*
 //POST A SQUAD
@@ -234,7 +234,7 @@ var joinSquad = function(squadId){
     }
   });
 
-}
+};
 
 
 var leaveSquad = function(squadId){
@@ -260,17 +260,17 @@ var leaveSquad = function(squadId){
     }
   });
 
-}
+};
 
 
 function showGoons() {
   $(".goons-in-squad").toggle();
-}
+};
 
 
 function encodeHTML(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-}
+};
 
 
 var timeSince = function(date) {
@@ -329,10 +329,11 @@ function contains(a, obj) {
        }
     }
     return false;
-}
+};
 
 populatePage();
 
 app.controller('FeedController', function(){
-        this.feedPosts = postList;
-        this.bool = true;
+  this.feedPosts = postList;
+  this.bool = true;
+};
