@@ -336,4 +336,4 @@ populatePage();
 app.controller('FeedController', function(){
   this.feedPosts = postList;
   this.bool = true;
-}
+});
