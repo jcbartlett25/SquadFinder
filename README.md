@@ -27,7 +27,7 @@ This is some background for the site’s code and structure.
 * `toast.css` provides the responsive grid
 
 ### JavaScript Files
-* Client holds functions that aren’t in the HTML scripts
+* `client.js` holds functions that aren’t in the HTML scripts
 * `resources.js` holds functions for UI (like parallax scrolling)
 
 ## Best Practices
