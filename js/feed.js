@@ -151,7 +151,7 @@ function squadPost(descript, title, username, id, goons, time)
   
 };
 
-/*
+
 //POST A SQUAD
 function postSquad(){
 
@@ -204,7 +204,7 @@ function postSquad(){
     }
   })
 };
-*/
+
 
 //Join squads (self explanatory....)
 var joinSquad = function(squadId){
