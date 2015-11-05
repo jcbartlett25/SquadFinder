@@ -1,6 +1,6 @@
 var user = Parse.User.current();
 var username = user.getUsername();
-var app = angular.module('feed', []);
+//var app = angular.module('feed', []);
 var postList = new Array();
 
 
