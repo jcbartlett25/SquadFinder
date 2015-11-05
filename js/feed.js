@@ -14,7 +14,7 @@ $(document).ready(
     }
   );
 
-/*
+
 //POPULATES Feed with Posts
 function populatePage(){
   
@@ -42,8 +42,8 @@ function populatePage(){
   });
   
 };
-*/
 
+/*
 //POPULATES Feed with Posts
 function populatePage(){
   
@@ -74,7 +74,7 @@ function populatePage(){
 
   //return rawData
 //};
-
+*/
 
 function transformData(rawData) {
   data = rawData._result[0];
@@ -101,7 +101,7 @@ function squadPost(descript, title, username, id, goons, time)
   this.goons = goons,
   this.time = time
 
-  /*
+  
   $("#squad_descript").html(descript);
   $("#squad_title").html(title);
   $("#post_username").html(username);
@@ -148,7 +148,7 @@ function squadPost(descript, title, username, id, goons, time)
   $(".leave-button").click(function() {
     leaveSquad(id)
   })
-  */
+  
 };
 
 /*
@@ -332,8 +332,9 @@ function contains(a, obj) {
 };
 
 populatePage();
-
+/*
 app.controller('FeedController', function(){
   this.feedPosts = postList;
   this.bool = true;
 });
+*/

@@ -108,24 +108,24 @@
         </div>
 
         <h1 class="feed_title">My Squad Feed</h1>
-        <h2><a href="https://soundcloud.com/stonesthrow/dilla-workinonit" style="text-decoration:underline; text">Stay Tuned</a>.</h2>
+        <!-- <h2><a href="https://soundcloud.com/stonesthrow/dilla-workinonit" style="text-decoration:underline; text">Stay Tuned</a>.</h2> -->
         <!-- The Squad Feed -->
         <div class="feed_div" ng-controller="FeedController as feed">
 
           <!--The Div That Holds Squad Posting Information-->
           <div class="squad_post" ng-repeat="post in feed.squadPosts">
             <h2>
-              <span id="squad_title">{{post.title}}</span>
-              <span id="post_username" class="post_username">{{post.username}}</span>
+              <span id="squad_title"></span>
+              <span id="post_username" class="post_username"></span>
             </h2>
-            <p id="squad_descript">{{post.descript}}</p>
+            <p id="squad_descript"></p>
             <p>
               <span class="join-button link" id="join-button">Join</span>
               <span class="joined" id="joined"><i class="fa fa-check"></i> Joined</span>
                 &nbsp| &nbsp
               <span id="num-goons" class="num-goons">0 Goons</span>
               <span id="leave-button">&nbsp| &nbsp<span class="leave-button link">Leave</span></span>
-              <span id="timestamp" class="timestamp">{{2+2}}</span>
+              <span id="timestamp" class="timestamp"></span>
             </p>
 
             <div id="goons-in-squad" class="goons-in-squad">
