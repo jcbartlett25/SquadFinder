@@ -31,6 +31,7 @@ function populatePage(){
       //Loops through objects and creates new squadPosts from the data
       for (var i = 0; i < results.length; i++) {
         var obj = results[i];
+        console.log(obj);
         new squadPost(obj.get('descript'), obj.get('title'), obj.get('username'), obj.id, obj.get('goons'), obj.createdAt);
       }
     },
