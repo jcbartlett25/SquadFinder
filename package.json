@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunyang713/sabor-website.git"
+    "url": "git+https://github.com/3005hacks/squadfinder.git"
   },
-  "author": "Jonathan Sun",
+  "author": "3005hacks",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunyang713/sabor-website/issues"
+    "url": "https://github.com/3005hacks/squadfinder/issues"
   },
-  "homepage": "https://github.com/sunyang713/sabor-website#readme",
+  "homepage": "https://github.com/3005hacks/squadfinder#readme",
   "dependencies": {
     "alt": "^0.17.8",
     "babel-runtime": "^6.0.14",
