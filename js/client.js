@@ -13,8 +13,6 @@
 		var password = encodeHTML(document.getElementById('new_password').value);
 		var confirm_password = encodeHTML(document.getElementById("confirm-password").value);
 		var email = encodeHTML(document.getElementById('new_email').value);
-		var access = encodeHTML(document.getElementById('access-code').value);
-		var secret = "42BELOW";
 
 		// error - catches space in username
 		if(username.split(" ").length > 1){
@@ -26,13 +24,6 @@
 		// error - catches different passwords
 		if(password != confirm_password){
 			$(".error_login").html("Your passwords don't match.");
-			$(".error_login").show();
-			return;
-		}
-
-		// error - catches incorrect access code
-		if(access != secret){
-			$(".error_login").html("That access code is incorrect.");
 			$(".error_login").show();
 			return;
 		}
