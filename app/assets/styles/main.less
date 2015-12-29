@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  background: white;
+  color: #444;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+.title {
+  color: #222;
+  display: inline-block;
+  float: left;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 4rem;
+  margin: 0;
+}
+/* no hover state on title */
+.title a:hover {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  line-height: 1.5;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Page Title Headings */
+.title-text {
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+  color: black;
+}
+
+/* SITE HEADER/NAVBAR */
+header {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.header-image {
+  /*background: url('../img/kanye-bw.jpg') no-repeat center center;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+nav {
+  background-color: black;
+  height: 4rem;
+  padding: 0 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+nav a {
+  color: white;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  float: left;
+  font-size: 80%;
+  font-weight: 500;
+  line-height: 4rem;
+  padding-left: 1rem;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu-right {
+  display: inline-block;
+  float: right;
+}
+/* Mobile-specific navigation */
+.hamburger-icon {
+  cursor: pointer;
+  display: inline-block;
+  fill: white;
+  float: right;
+  padding: 1rem 0;
+}
+.mobile-nav {
+  display: none;
+}
+.active { /* CHANGE THIS CLASS */
+  // background: black;
+  display: block;
+  float: left;
+  width: 60%;
+  position: absolute;
+}
+
+/* The Main Chunk */
+.content {
+  background: white;
+  margin: 0 auto;
+  min-height: 50rem;
+  padding: 6rem 0 2rem 0;
+  width: 80%;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+}
+/* Squad Image of the Month */
+.squad_img {
+  height: auto;
+  width: 100%;
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  color: white;
+  position: relative;
+  width: 100%;
+}
+.footer-wrapper {
+  margin: 0 auto;
+  padding: 0.7rem 0;
+  width: 80%;
+}
+footer a {
+  color: white;
+}
+
+/* Universal button styling. Instead of using <button>, use a div with the .button class */
+.button {
+  background: #999;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  transition: background 0.15s ease;
+}
+.button:hover {
+  background: black;
+}
+
+.menu-text {
+  cursor: pointer;
+  text-transform: lowercase;
+}
+.alert-text {
+  width: 100%;
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
+  display: none;
+}
+.header-message{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  color: black;
+  font-size: 27px;
+}
+/* Styling for items that should turn blue on hover */
+.link {
+  transition: color 0.1s linear;
+}
+.link:hover {
+  color: #b99a54;
+}
+
+/* Styling for forms on login/squad posts */
+input[type=text],
+input[type=file],
+button {
+  font-family: inherit;
+}
+.input {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+.input:focus {
+  border: 1px solid #a1a1a1;
+  outline: none;
+}
+.cycle-slideshow img {
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 2 !important;
+}
+
+.cabinet {
+  width: 100%;
+  height: 100%;
+}
+.quote {
+  color: black;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+}
+.unit {
+  padding: 3rem 0;
+}
+.span-grid img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* MOBILE QUERIES */
+/* Phone only rules */
+@media screen and (max-width: 650px) {
+  html,
+  body {
+    font-size: 1.25rem;
+  }
+  .content {
+    margin: 0;
+    width: 100%;
+  }
+  .wrapper {
+    width: 85%;
+  }
+  .new-post-textbox {
+    float: left;
+    margin-right: 0;
+  }
+  #new_post_form {
+    display: inline-block;
+    width: 100%;
+  }
+  #new_post_title {
+    width: 100%;
+  }
+  #new_post_descript {
+    width: 100%;
+  }
+  .post_button {
+    float: none;
+  }
+  .menu-right {
+    display: none;
+  }
+}
+/* Desktop only rules */
+@media screen and (min-width: 48em) {
+  /* hide mobile navbar on desktop */
+  .mobile {
+    display: none;
+  }
+}

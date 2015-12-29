@@ -1,0 +1,87 @@
+#lean_overlay {
+  position: fixed;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
+}
+.popupContainer {
+  position:absolute;
+  width: 25%;
+  left: 45%;
+  top: 20%;
+  background: #fff;
+}
+#modal {
+  padding: 2rem;
+}
+.tab-bar {
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 0.25rem;
+}
+.login-tab,
+.signup-tab {
+  border: 1px solid #cfcfcf;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: pointer;
+  display: inline;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+.active-tab {
+  border-bottom: 1px solid white;
+}
+.popupBody label {
+  display: block;
+}
+.popupBody input {
+  width: 60%;
+}
+/* div that allows login button to be centered */
+.login-button-container {
+  text-align: center;
+}
+/* login/register button */
+.login-register-button {
+  font-size: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+/* Login and signup forms */
+#login_form,
+#signup_form { 
+  border: 1px solid #cfcfcf;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top: none;
+  padding: 1rem;
+}
+#signup_form {
+  display: none;
+}
+
+/* Error message displayed if login fails */
+.error_login {
+  width: 70%;
+  color: red;
+  margin-top: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .popupContainer {
+    top: 5% !important;
+    width: 85%;
+  }
+  .signup-tab {
+    float: none;
+    margin-top: 1rem;
+  }
+}
