@@ -10,6 +10,7 @@ Parse.initialize(PARSE_APP_ID, PARSE_JS_KEY);
 import App from "./components/App"
 import Login from "./components/Login"
 import Todos from "./components/routes/Todos"
+import Profile from "./components/routes/Profile"
 
 import Router, {Route, RouteHandler, DefaultRoute} from "react-router"
 
@@ -21,15 +22,18 @@ require("./../assets/styles/main.less")
 require("./../assets/styles/profile.less")
 require("./../assets/styles/toast.less")
 
-
+// Temporarily set default route as profile to work on profile
+// Restore to {Todos} later and figure out route
+// Should have <Route name="todos" handler={Todos} path="/">
 let routes = (
   <Route handler={App} path="/">
-    <DefaultRoute handler={Todos} />
-    <Route name="login" handler={Login}/>
-    <Route name="todos" handler={Todos} path="/asd">
-      <Route name="todo-new" path="/todos/new" handler={Todos}/>
-      <Route name="todo" path="/todo/:todoId" handler={Todos}/>
+    <DefaultRoute handler={Profile} />
+    <Route name="login" handler={Login} />
+    <Route name="todos" handler={Profile} path="/">
+      <Route name="todo-new" path="/todos/new" handler={Todos} />
+      <Route name="todo" path="/todo/:todoId" handler={Todos} />
     </Route>
+    <Route name="profile" handler={Profile} path="/profile" />
   </Route>
 );
 

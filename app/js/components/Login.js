@@ -29,11 +29,10 @@ class Login extends React.Component {
     return (
       <div id="login">
         <div className="login-container">
-        	<input type="text" ref="emailInput" placeholder="Username"/>
-        	<input type="password" ref="passwordInput" placeholder="Password"/>
-        	<button className="submit login" onClick={() => this.onLogin()}> Login </button>
-        	<button className="submit signup" onClick={() => this.onSignup()}> new user </button>
-          <p>Demo account: demo/demo</p>
+          <input type="text" ref="emailInput" placeholder="Username"/>
+          <input type="password" ref="passwordInput" placeholder="Password"/>
+          <button className="submit login" onClick={() => this.onLogin()}> Login </button>
+          <button className="submit signup" onClick={() => this.onSignup()}> new user </button>
       	</div>
       </div>
     );

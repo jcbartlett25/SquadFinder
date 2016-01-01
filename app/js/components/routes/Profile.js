@@ -6,20 +6,20 @@ var ParseComponent = ParseReact.Component(React);
 
 
 import _ from "lodash"
-import TodosList from "../Todo/TodosList"
-import TodoCreate from "../Todo/TodoCreate"
+import Bio from "../Profile/Bio"
+import JoinedSquads from "../Profile/JoinedSquads"
 
-class Todos extends ParseComponent {
+class Profile extends ParseComponent {
   constructor(props) {
     super(props);
   }
 
   observe() {
-    let query = new Parse.Query("Post");
+    let query = new Parse.Query("User");
     // query.equalTo("user", Parse.User.current());
-    query.descending("createdAt");
+    // query.descending("createdAt");
     return {
-      todos: query,
+      users: query,
     };
   }
 
@@ -31,21 +31,15 @@ class Todos extends ParseComponent {
     let params = this.context.router.getCurrentParams();
 
     return (
-      <div className="todos">
-        <h1>Squad Feed</h1>
-        {this.getTodoCreateNode()}
-      	 <TodosList todos={this.data.todos} />
+      <div>
+        <Bio />
       </div>
     );
   }
-
-  getTodoCreateNode() {
-    return <TodoCreate />
-  }
 }
 
-Todos.contextTypes = {
+Profile.contextTypes = {
   router: React.PropTypes.func.isRequired
 };
 
-export default Todos;
+export default Profile;

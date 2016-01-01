@@ -1,20 +1,9 @@
 import React from "react"
 import Parse from "parse"
 import ParseReact from "parse-react"
+import TimeAgo from "react-timeago"
 
 import { Link } from "react-router"
-
-var Joined = React.createClass({
-  render() {
-    return <span><span className="joined"><i className='fa fa-check'></i> Joined</span> | <span className="leave-button link" onClick={this.props.onClick}>Leave</span></span>
-  }
-});
-
-var NotJoined = React.createClass({
-  render() {
-    return <span className="join-button link" id="join-button" onClick={this.props.onClick}>Join</span>
-  }
-});
 
 class TodoItem extends React.Component {
 
@@ -34,22 +23,34 @@ class TodoItem extends React.Component {
     ParseReact.Mutation.AddUnique(this.props.todo, "goons", Parse.User.current().getUsername()).dispatch();
   }
 
+  // Remove user from squad
   leaveSquad(squadId) {
     ParseReact.Mutation.Remove(this.props.todo, "goons", Parse.User.current().getUsername()).dispatch();
-    console.log("yes");
   }
 
   render() {
     let todo = this.props.todo;
     let squadSize = todo.goons.length;
-    let user = Parse.User.current();
     var joined;
-    if (this.contains(todo.goons, user.getUsername())) {
-      // joined = <Joined />
-      joined = true
+    if (this.contains(todo.goons, Parse.User.current().getUsername())) {
+      joined = (
+        <span>
+          <span className="joined"><i className='fa fa-check'></i> Joined</span> |&nbsp;
+          <span
+            className="leave-button link"
+            onClick={(e) => this.leaveSquad(e)}>
+              Leave
+          </span>
+        </span>
+      );
     } else {
-      // joined = <NotJoined onClick={(e) => this.joinSquad(e)} />
-      joined = false;
+      joined = (
+        <span
+          className="join-button link"
+          onClick={(e) => this.joinSquad(e)}>
+            Join
+        </span>
+      );
     };
 
     return (
@@ -59,7 +60,10 @@ class TodoItem extends React.Component {
           <span id="post_username" class="post_username">{todo.username}</span>
         </h2>
         <p className="body">{todo.descript}</p>
-        <p>{joined ? <Joined onClick={(e) => this.leaveSquad(e)} /> : <NotJoined onClick={(e) => this.joinSquad(e)} /> } | {squadSize} {squadSize !== 1 ? "goons" : "goon"}</p>
+        <p>
+          <span>{joined} | {squadSize} {squadSize === 1 ? "goon" : "goons"}</span>
+          <span className="timestamp"><TimeAgo date={todo.createdAt} /></span>
+        </p>
       </div>
     );
   }
