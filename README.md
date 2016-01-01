@@ -1,4 +1,4 @@
-# Parse React Sample app #
+# Squadfinder
 
 Squadfinder is the quickest way to find your squad and have fun. Huge thanks to Rémi Santos's [Parse React Sample app](https://github.com/Kemcake/parse-react-sample).
 
