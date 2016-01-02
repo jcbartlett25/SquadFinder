@@ -16,7 +16,6 @@ class Todos extends ParseComponent {
 
   observe() {
     let query = new Parse.Query("Post");
-    // query.equalTo("user", Parse.User.current());
     query.descending("createdAt");
     return {
       todos: query,

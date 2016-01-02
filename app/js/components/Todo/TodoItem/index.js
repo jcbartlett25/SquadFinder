@@ -20,12 +20,14 @@ class TodoItem extends React.Component {
 
   // Add user to squad
   joinSquad(squadId) {
-    ParseReact.Mutation.AddUnique(this.props.todo, "goons", Parse.User.current().getUsername()).dispatch();
+    let user = Parse.User.current().getUsername();
+    ParseReact.Mutation.AddUnique(this.props.todo, "goons", user).dispatch();
   }
 
   // Remove user from squad
   leaveSquad(squadId) {
-    ParseReact.Mutation.Remove(this.props.todo, "goons", Parse.User.current().getUsername()).dispatch();
+    let user = Parse.User.current().getUsername();
+    ParseReact.Mutation.Remove(this.props.todo, "goons", user).dispatch();
   }
 
   render() {

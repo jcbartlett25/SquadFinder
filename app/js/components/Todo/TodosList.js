@@ -3,9 +3,11 @@ import TodoItem from "./TodoItem"
 
 class TodosList extends React.Component {
   render() {
-    return <div className="feed_div">
-    	{this.getTodoNodes()}
-    </div>;
+    return (
+      <div className="feed_div">
+        {this.getTodoNodes()}
+      </div>
+    );
   }
 
   getTodoNodes() {

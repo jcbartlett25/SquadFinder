@@ -5,30 +5,32 @@ import TimeAgo from "react-timeago"
 
 import { Link } from "react-router"
 
-class SquadItem extends React.Component {
-
+class JoinedSquadItem extends React.Component {
   render() {
     let squad = this.props.squad;
-    let squadSize = todo.goons.length;
+
+    // get post date
+    let monthNames = [
+      "January", "February", "March",
+      "April", "May", "June", "July",
+      "August", "September", "October",
+      "November", "December"
+    ]
+    let date = squad.createdAt
+    let day = date.getDate();
+    let monthIndex = date.getMonth()
 
     return (
-      <div className="squad_post">
-        <h2>
-          <span id="squad_title">{todo.title}</span>
-          <span id="post_username" class="post_username">{todo.username}</span>
-        </h2>
-        <p className="body">{todo.descript}</p>
-        <p>
-          <span>{joined} | {squadSize} {squadSize === 1 ? "goon" : "goons"}</span>
-          <span className="timestamp"><TimeAgo date={todo.createdAt} /></span>
-        </p>
+      <div>
+        <h4>{squad.title}</h4>
+        <p>{monthNames[monthIndex]} {day}</p>
       </div>
     );
   }
 }
 
-TodoItem.defaultProps = {
+JoinedSquadItem.defaultProps = {
   squad: {}
 }
 
-export default TodoItem;
+export default JoinedSquadItem;

@@ -7,7 +7,7 @@ var ParseComponent = ParseReact.Component(React);
 
 import _ from "lodash"
 import Bio from "../Profile/Bio"
-import JoinedSquads from "../Profile/JoinedSquads"
+import JoinedSquadsList from "../Profile/JoinedSquads/JoinedSquadsList"
 
 class Profile extends ParseComponent {
   constructor(props) {
@@ -15,12 +15,13 @@ class Profile extends ParseComponent {
   }
 
   observe() {
-    let query = new Parse.Query("User");
-    // query.equalTo("user", Parse.User.current());
-    // query.descending("createdAt");
+    let username = Parse.User.current().getUsername();
+    var query = new Parse.Query("Post");
+    query.equalTo("goons", username);
+    query.descending("createdAt");
     return {
-      users: query,
-    };
+      squads: query,
+    }
   }
 
   render() {
@@ -33,6 +34,7 @@ class Profile extends ParseComponent {
     return (
       <div>
         <Bio />
+        <JoinedSquadsList squads={this.data.squads} />
       </div>
     );
   }

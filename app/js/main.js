@@ -22,12 +22,12 @@ require("./../assets/styles/main.less")
 require("./../assets/styles/profile.less")
 require("./../assets/styles/toast.less")
 
-// Temporarily set default route as profile to work on profile
+// Temporarily set / route as profile to work on profile
 // Restore to {Todos} later and figure out route
 // Should have <Route name="todos" handler={Todos} path="/">
 let routes = (
   <Route handler={App} path="/">
-    <DefaultRoute handler={Profile} />
+    <DefaultRoute handler={Todos} />
     <Route name="login" handler={Login} />
     <Route name="todos" handler={Profile} path="/">
       <Route name="todo-new" path="/todos/new" handler={Todos} />

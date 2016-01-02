@@ -44,8 +44,20 @@ class TodoCreate extends React.Component {
     return (
       <div className="todo-create">
         <form id="new_post_form">
-          <input type="text" ref="title" className="new-post-textbox input" placeholder="Title" onClick="clearText()" />
-          <input type="text" ref="descript" className="new-post-textbox input" placeholder="I need a squad for..." onClick="clearText()" onKeyUp={(e) => this.onKeyUp(e)}/>
+          <input 
+            type="text"
+            ref="title"
+            className="new-post-textbox input"
+            placeholder="Title"
+            onClick="clearText()"
+          />
+          <input
+            type="text"
+            ref="descript"
+            className="new-post-textbox input"
+            placeholder="I need a squad for..."
+            onClick="clearText()" onKeyUp={(e) => this.onKeyUp(e)}
+          />
         </form>
         <div className="post_button button" onKeyUp={(e) => this.onKeyUp(e)}>New Post</div>
       </div>

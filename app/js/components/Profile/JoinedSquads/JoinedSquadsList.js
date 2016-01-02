@@ -1,14 +1,18 @@
 import React from "react"
-import TodoItem from "./TodoItem"
+import Parse from "parse"
+import JoinedSquadItem from "./JoinedSquadItem"
 
 class JoinedSquadsList extends React.Component {
   render() {
-    return <div className="feed_div">
-      {this.getTodoNodes()}
-    </div>;
+    return (
+      <div className="feed_div">
+        <h3>Joined Squads</h3>
+        {this.getSquadNodes()}
+      </div>
+    );
   }
 
-  getTodoNodes() {
+  getSquadNodes() {
     return this.props.squads.map((squad) => {
       return <JoinedSquadItem key={squad.id.objectId} squad={squad}/>;
     });
