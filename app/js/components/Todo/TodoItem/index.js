@@ -63,7 +63,7 @@ class TodoItem extends React.Component {
         </h2>
         <p className="body">{todo.descript}</p>
         <p>
-          <span>{joined} | {squadSize} {squadSize === 1 ? "goon" : "goons"}</span>
+          <span>{joined} | {squadSize} {squadSize === 1 ? "lonely goon" : "goons"}</span>
           <span className="timestamp"><TimeAgo date={todo.createdAt} /></span>
         </p>
       </div>
