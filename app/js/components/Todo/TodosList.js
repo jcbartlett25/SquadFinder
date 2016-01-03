@@ -1,5 +1,7 @@
 import React from "react"
+import Parse from "parse"
 import TodoItem from "./TodoItem"
+import CommentsList from "./Comments/CommentsList"
 
 class TodosList extends React.Component {
   render() {
@@ -11,8 +13,14 @@ class TodosList extends React.Component {
   }
 
   getTodoNodes() {
+    // console.log(this.props.todos)
     return this.props.todos.map((todo) => {
-      return <TodoItem key={todo.id.objectId} todo={todo}/>;
+      return (
+        <div>
+          <TodoItem key={todo.id.objectId} todo={todo} />
+          <CommentsList todo={todo} />
+        </div>
+      );
     });
   }
 }

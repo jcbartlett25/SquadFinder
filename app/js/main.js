@@ -29,7 +29,7 @@ let routes = (
   <Route handler={App} path="/">
     <DefaultRoute handler={Todos} />
     <Route name="login" handler={Login} />
-    <Route name="todos" handler={Profile} path="/">
+    <Route name="todos" handler={Todos} path="/">
       <Route name="todo-new" path="/todos/new" handler={Todos} />
       <Route name="todo" path="/todo/:todoId" handler={Todos} />
     </Route>

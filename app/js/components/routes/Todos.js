@@ -15,10 +15,11 @@ class Todos extends ParseComponent {
   }
 
   observe() {
-    let query = new Parse.Query("Post");
-    query.descending("createdAt");
+    let postQuery = new Parse.Query("Post");
+    postQuery.descending("createdAt");
+    // console.log(postQuery)
     return {
-      todos: query,
+      todos: postQuery,
     };
   }
 

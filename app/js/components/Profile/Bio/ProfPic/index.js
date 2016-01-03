@@ -4,7 +4,7 @@ import ParseReact from "parse-react"
 import { Link } from "react-router"
 import EditPhoto from "./EditPhoto"
 
-import './profpic.less'
+import "./profpic.less"
 
 class ProfPic extends React.Component {
   constructor(props) {
@@ -23,13 +23,21 @@ class ProfPic extends React.Component {
   }
 
   render() {
+    let size = this.props.size;
+
     var photoStyle = {
-      backgroundImage: 'url(' + Parse.User.current().get("profilePic").url() + ')'
+      backgroundImage: 'url(' + this.props.photoUrl + ')',
+      height: size,
+      width: size,
     };
 
+    var editable = (
+      <div className="edit-profile-pic" onClick={this.onClick.bind(this)}>Edit Photo</div>
+    );
+
     return (
-      <div style={photoStyle} className="profile_pic">
-        <div className="edit-profile-pic" onClick={this.onClick.bind(this)}>Edit Photo</div>
+      <div style={photoStyle} className="profile-pic">
+        {this.props.editable ? {editable} : null}
         {this.state.showEditPhoto ? <EditPhoto /> : null}
       </div>
     );

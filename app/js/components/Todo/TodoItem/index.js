@@ -9,7 +9,7 @@ class TodoItem extends React.Component {
 
   // Check to see if a user is in given squad
   contains(a, obj) {
-    var i = a.length;
+    let i = a.length;
     while (i--) {
       if (a[i] === obj) {
         return true;
@@ -20,21 +20,24 @@ class TodoItem extends React.Component {
 
   // Add user to squad
   joinSquad(squadId) {
-    let user = Parse.User.current().getUsername();
-    ParseReact.Mutation.AddUnique(this.props.todo, "goons", user).dispatch();
+    let username = Parse.User.current().getUsername();
+    ParseReact.Mutation.AddUnique(this.props.todo, "goons", username).dispatch();
   }
 
   // Remove user from squad
   leaveSquad(squadId) {
-    let user = Parse.User.current().getUsername();
-    ParseReact.Mutation.Remove(this.props.todo, "goons", user).dispatch();
+    let username = Parse.User.current().getUsername();
+    ParseReact.Mutation.Remove(this.props.todo, "goons", username).dispatch();
   }
 
   render() {
     let todo = this.props.todo;
     let squadSize = todo.goons.length;
+    let user = Parse.User.current()
+
+    // should var be let?
     var joined;
-    if (this.contains(todo.goons, Parse.User.current().getUsername())) {
+    if (this.contains(todo.goons, user.getUsername())) {
       joined = (
         <span>
           <span className="joined"><i className='fa fa-check'></i> Joined</span> |&nbsp;
@@ -64,7 +67,9 @@ class TodoItem extends React.Component {
         <p className="body">{todo.descript}</p>
         <p>
           <span>{joined} | {squadSize} {squadSize === 1 ? "lonely goon" : "goons"}</span>
-          <span className="timestamp"><TimeAgo date={todo.createdAt} /></span>
+          <span className="timestamp">
+            <TimeAgo date={todo.createdAt} />
+          </span>
         </p>
       </div>
     );

@@ -8,10 +8,12 @@ import ProfPic from "./ProfPic"
 class Bio extends React.Component {
 
   render() {
+    let user = Parse.User.current()
+
     return (
       <div>
         <h3>{Parse.User.current().getUsername()}</h3>
-        <ProfPic />
+        <ProfPic photoUrl={user.get("profilePic").url()} size={"10rem"} editable={true} />
       </div>
     );
   }
