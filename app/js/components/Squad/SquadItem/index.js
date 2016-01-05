@@ -5,7 +5,7 @@ import TimeAgo from "react-timeago"
 
 import { Link } from "react-router"
 
-class TodoItem extends React.Component {
+class SquadItem extends React.Component {
 
   // Check to see if a user is in given squad
   contains(a, obj) {
@@ -19,30 +19,38 @@ class TodoItem extends React.Component {
   }
 
   // Add user to squad
-  joinSquad(squadId) {
+  joinSquad() {
     let username = Parse.User.current().getUsername();
-    ParseReact.Mutation.AddUnique(this.props.todo, "goons", username).dispatch();
+    let squad = this.props.squad;
+    ParseReact.Mutation.AddUnique(squad, "goons", username).dispatch();
   }
 
   // Remove user from squad
-  leaveSquad(squadId) {
+  leaveSquad() {
     let username = Parse.User.current().getUsername();
-    ParseReact.Mutation.Remove(this.props.todo, "goons", username).dispatch();
+    let squad = this.props.squad;
+    ParseReact.Mutation.Remove(squad, "goons", username).dispatch();
+  }
+
+  // Creator can delete squad
+  deleteSquad() {
+    let squad = this.props.squad;
+    ParseReact.Mutation.Destroy(squad).dispatch();
   }
 
   render() {
-    let todo = this.props.todo;
-    let squadSize = todo.goons.length;
+    let squad = this.props.squad;
+    let squadSize = squad.goons.length;
     let user = Parse.User.current()
 
     // should var be let?
-    var joined;
-    if (this.contains(todo.goons, user.getUsername())) {
+    let joined;
+    if (this.contains(squad.goons, user.getUsername())) {
       joined = (
         <span>
           <span className="joined"><i className='fa fa-check'></i> Joined</span> |&nbsp;
           <span
-            className="leave-button link"
+            className="link"
             onClick={(e) => this.leaveSquad(e)}>
               Leave
           </span>
@@ -51,7 +59,7 @@ class TodoItem extends React.Component {
     } else {
       joined = (
         <span
-          className="join-button link"
+          className="link"
           onClick={(e) => this.joinSquad(e)}>
             Join
         </span>
@@ -61,14 +69,15 @@ class TodoItem extends React.Component {
     return (
       <div className="squad_post">
         <h2>
-          <span id="squad_title">{todo.title}</span>
-          <span id="post_username" class="post_username">{todo.username}</span>
+          <span id="squad_title">{squad.title}</span>
+          <span id="post_username" class="post_username">{squad.username}</span>
         </h2>
-        <p className="body">{todo.descript}</p>
+        <p className="body">{squad.descript}</p>
         <p>
           <span>{joined} | {squadSize} {squadSize === 1 ? "lonely goon" : "goons"}</span>
+          <span onClick={(e) => this.deleteSquad(e)}> Delete</span>
           <span className="timestamp">
-            <TimeAgo date={todo.createdAt} />
+            <TimeAgo date={squad.createdAt} />
           </span>
         </p>
       </div>
@@ -76,8 +85,8 @@ class TodoItem extends React.Component {
   }
 }
 
-TodoItem.defaultProps = {
-  todo: {}
+SquadItem.defaultProps = {
+  squad: {}
 }
 
-export default TodoItem;
+export default SquadItem;

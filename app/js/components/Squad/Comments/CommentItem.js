@@ -5,15 +5,15 @@ import TimeAgo from "react-timeago"
 
 import { Link } from "react-router"
 
-import ProfPic from "../../Profile/Bio/ProfPic"
+import ProfPic from "../../Profile/User/ProfPic"
 
-class TodoItem extends ParseReact.Component(React) {
+class CommentItem extends ParseReact.Component(React) {
   constructor(props) {
     super(props);
   }
 
   observe() {
-    let todo = this.props.todo;
+    let squad = this.props.squad;
     let query = new Parse.Query("User");
     query.equalTo("username", this.props.comment.username);
 
@@ -37,13 +37,13 @@ class TodoItem extends ParseReact.Component(React) {
 
   getPhotoNodes() {
     return this.data.commenters.map((commenter) => {
-      return <ProfPic photoUrl={commenter.profilePic.url()} size={"3rem"} editable={false} />;
+      return <ProfPic user={commenter} size={"3rem"} editable={false} />;
     });
   }
 }
 
-TodoItem.defaultProps = {
-  todo: {}
+CommentItem.defaultProps = {
+  squad: {}
 }
 
-export default TodoItem;
+export default CommentItem;

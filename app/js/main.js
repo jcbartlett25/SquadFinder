@@ -9,7 +9,7 @@ Parse.initialize(PARSE_APP_ID, PARSE_JS_KEY);
 
 import App from "./components/App"
 import Login from "./components/Login"
-import Todos from "./components/routes/Todos"
+import Squads from "./components/routes/Squads"
 import Profile from "./components/routes/Profile"
 
 import Router, {Route, RouteHandler, DefaultRoute} from "react-router"
@@ -27,12 +27,9 @@ require("./../assets/styles/toast.less")
 // Should have <Route name="todos" handler={Todos} path="/">
 let routes = (
   <Route handler={App} path="/">
-    <DefaultRoute handler={Todos} />
+    <DefaultRoute handler={Squads} />
     <Route name="login" handler={Login} />
-    <Route name="todos" handler={Todos} path="/">
-      <Route name="todo-new" path="/todos/new" handler={Todos} />
-      <Route name="todo" path="/todo/:todoId" handler={Todos} />
-    </Route>
+    <Route name="squads" handler={Profile} path="/" />
     <Route name="profile" handler={Profile} path="/profile" />
   </Route>
 );

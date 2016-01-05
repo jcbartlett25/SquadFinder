@@ -3,12 +3,14 @@ import Parse from "parse"
 import ParseReact from "parse-react"
 import { Link } from "react-router"
 
-class TodoCreate extends React.Component {
+class SquadCreate extends React.Component {
   onCreate() {
-
     let title = this.refs.title.getDOMNode();
     let descript = this.refs.descript.getDOMNode();
     let username = Parse.User.current().getUsername();
+    let allowComments = this.refs.allowcomments.getDOMNode();
+
+    console.log(allowComments.checked)
 
     //Making sure user input is actual input
     if (title.value === "Title" || descript === "I need a squad for...") {
@@ -27,11 +29,12 @@ class TodoCreate extends React.Component {
       title: title.value,
       descript: descript.value,
       username: username,
-      goons: [username]
+      goons: [username],
+      allowComments: allowComments.checked
     }).dispatch();
 
     title.value = "";
-    descript.value = "";    
+    descript.value = "";
   }
 
   onKeyUp(e) {
@@ -42,26 +45,30 @@ class TodoCreate extends React.Component {
 
   render() {
     return (
-      <div className="todo-create">
-        <form id="new_post_form">
+      <div className="create-post">
+        <form>
           <input 
             type="text"
             ref="title"
-            className="new-post-textbox input"
+            className="input"
             placeholder="Title"
           />
           <input
             type="text"
             ref="descript"
-            className="new-post-textbox input"
+            className="input"
             placeholder="I need a squad for..."
             onKeyUp={(e) => this.onKeyUp(e)}
           />
+          <input
+            type="checkbox"
+            ref="allowcomments"
+          /><label>Allow comments</label>
         </form>
-        <div className="post_button button" onKeyUp={(e) => this.onKeyUp(e)}>New Post</div>
+        <div className="button" onKeyUp={(e) => this.onKeyUp(e)}>New Post</div>
       </div>
     );
   }
 }
 
-export default TodoCreate;
+export default SquadCreate;

@@ -12,9 +12,9 @@ class CommentsList extends ParseReact.Component(React) {
   }
 
   observe() {
-    let todo = this.props.todo;
+    let squad = this.props.squad;
     let query = new Parse.Query("Comment");
-    query.equalTo("postId", todo.objectId);
+    query.equalTo("postId", squad.objectId);
     query.descending("createdAt");
 
     return {
@@ -25,8 +25,7 @@ class CommentsList extends ParseReact.Component(React) {
   render() {
     return (
       <div>
-        <h3>Comments Here</h3>
-        <CommentCreate todo={this.props.todo} />
+        <CommentCreate squad={this.props.squad} />
         {this.getCommentNodes()}
       </div>
     );
@@ -40,7 +39,7 @@ class CommentsList extends ParseReact.Component(React) {
 }
 
 CommentsList.defaultProps = {
-  todos: []
+  squads: []
 };
 
 export default CommentsList;

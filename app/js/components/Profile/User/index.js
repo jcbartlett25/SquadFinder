@@ -4,19 +4,21 @@ import ParseReact from "parse-react"
 import { Link } from "react-router"
 
 import ProfPic from "./ProfPic"
+import Bio from "./Bio"
 
-class Bio extends React.Component {
+class User extends React.Component {
 
   render() {
-    let user = Parse.User.current()
+    let user = Parse.User.current();
 
     return (
       <div>
         <h3>{Parse.User.current().getUsername()}</h3>
-        <ProfPic photoUrl={user.get("profilePic").url()} size={"10rem"} editable={true} />
+        <ProfPic user={user} size={"10rem"} editable={true} />
+        <Bio />
       </div>
     );
   }
 }
 
-export default Bio
+export default User

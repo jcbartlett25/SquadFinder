@@ -3,6 +3,8 @@ import Parse from "parse"
 import ParseReact from "parse-react"
 import { Link } from "react-router"
 
+import ProfPic from "../../Profile/User/ProfPic"
+
 class CommentCreate extends React.Component {
   onCreate() {
 
@@ -14,7 +16,7 @@ class CommentCreate extends React.Component {
     }
 
     ParseReact.Mutation.Create("Comment", {
-      postId: this.props.todo.objectId, // does this work ?
+      postId: this.props.squad.objectId,
       commentText: comment.value,
       username: username,
     }).dispatch();
@@ -29,17 +31,22 @@ class CommentCreate extends React.Component {
   }
 
   render() {
+    let user = Parse.User.current();
+
     return (
-      <div>
-        <form>
-          <input
-            type="text"
-            ref="comment"
-            className="new-comment-textbox input"
-            placeholder="Comment Here"
-            onKeyUp={(e) => this.onKeyUp(e)}
-          />
-        </form>
+      <div className="comment">
+        <ProfPic user={user} size={"3rem"} editable={false} />
+        <div className="bubble">
+          <form>
+            <input
+              type="text"
+              ref="comment"
+              className="input"
+              placeholder="Leave a comment"
+              onKeyUp={(e) => this.onKeyUp(e)}
+            />
+          </form>
+        </div>
       </div>
     );
   }

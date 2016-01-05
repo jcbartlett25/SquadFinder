@@ -6,8 +6,9 @@ var ParseComponent = ParseReact.Component(React);
 
 
 import _ from "lodash"
-import Bio from "../Profile/Bio"
+import User from "../Profile/User"
 import JoinedSquadsList from "../Profile/JoinedSquads/JoinedSquadsList"
+import SquadsList from "../Squad/SquadsList"
 
 class Profile extends ParseComponent {
   constructor(props) {
@@ -33,7 +34,7 @@ class Profile extends ParseComponent {
 
     return (
       <div>
-        <Bio />
+        <User />
         <JoinedSquadsList squads={this.data.squads} />
       </div>
     );

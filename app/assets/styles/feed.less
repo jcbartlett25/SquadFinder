@@ -15,7 +15,7 @@
 .squad_post {
   border: 1px solid #cfcfcf;
   border-radius: 2px;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   padding: 1rem;
   word-wrap: break-word;
 }
@@ -25,30 +25,17 @@
 .squad_post p {
   font-size: .875rem;
 }
+
 /*NEW SQUAD POST*/
-.new-post-textbox {
-  float: left;
-  margin-right: 5%;
-}
-#new_post_area {
-  border: 1px solid #cfcfcf;
-  border-radius: 2px;
-  margin-bottom: 1rem;
-  overflow: auto;
-  padding: 1rem;
-  width: 100%;
-}
-#new_post_form {
+.create-post form {
   display: inline-block;
   width: 80%;
 }
-#new_post_title {
-  width: 35%;
+.create-post input[type='text'] {
+  float: left;
+  margin-right: 5%;
 }
-#new_post_descript {
-  width: 55%;
-}
-.post_button {
+.create-post .button {
   float: right;
   font-size: 80%;
   padding: 0.75rem 1rem !important;
@@ -73,12 +60,6 @@
   text-align: center;
   color: red;
   display: none;
-}
-.join-button {
-  cursor: pointer;
-}
-.leave-button {
-  cursor: pointer;
 }
 .joined {
   color: #b99a54;
