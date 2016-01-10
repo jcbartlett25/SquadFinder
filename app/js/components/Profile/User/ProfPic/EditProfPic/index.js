@@ -25,7 +25,7 @@ class EditPhoto extends ParseReact.Component(React) {
 
     return imageFile.save().then(function () {
 
-        return ParseReact.Mutation.Set(that.data.user[0], {'profilePic':imageFile}).dispatch();
+        return ParseReact.Mutation.Set(that.data.user[0], {"profilePic":imageFile}).dispatch();
 
     }, function (error) {
         console.log("Error");
