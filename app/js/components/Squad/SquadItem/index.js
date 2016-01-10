@@ -1,7 +1,7 @@
 import React from "react"
 import Parse from "parse"
 import ParseReact from "parse-react"
-import TimeAgo from "react-timeago"
+import Time from "react-time"
 
 import { Link } from "react-router"
 
@@ -43,19 +43,33 @@ class SquadItem extends React.Component {
     let squadSize = squad.goons.length;
     let user = Parse.User.current()
 
-    // should var be let?
+    // Creator is true if current user posted a given squad
+    let creator = false;
+    if (squad.username === user.getUsername()) {
+      creator = true
+    }
+
     let joined;
     if (this.contains(squad.goons, user.getUsername())) {
-      joined = (
-        <span>
-          <span className="joined"><i className='fa fa-check'></i> Joined</span> |&nbsp;
-          <span
-            className="link"
-            onClick={(e) => this.leaveSquad(e)}>
-              Leave
+      if (creator) {
+        joined = (
+          <span>
+            <span className="joined"><i className='fa fa-check'></i> Joined</span> |&nbsp;
+            <span className="link" onClick={(e) => this.deleteSquad(e)}> Delete</span>
           </span>
-        </span>
-      );
+        );
+      } else {
+        joined = (
+          <span>
+            <span className="joined"><i className='fa fa-check'></i> Joined</span> |&nbsp;
+            <span
+              className="link"
+              onClick={(e) => this.leaveSquad(e)}>
+                Leave
+            </span>
+          </span>
+        );
+      }
     } else {
       joined = (
         <span
@@ -66,6 +80,8 @@ class SquadItem extends React.Component {
       );
     };
 
+    
+
     return (
       <div className="squad_post">
         <h2>
@@ -75,9 +91,8 @@ class SquadItem extends React.Component {
         <p className="body">{squad.descript}</p>
         <p>
           <span>{joined} | {squadSize} {squadSize === 1 ? "lonely goon" : "goons"}</span>
-          <span onClick={(e) => this.deleteSquad(e)}> Delete</span>
           <span className="timestamp">
-            <TimeAgo date={squad.createdAt} />
+            <Time value={squad.createdAt} relative />
           </span>
         </p>
       </div>

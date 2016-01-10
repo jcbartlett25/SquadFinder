@@ -29,8 +29,8 @@ let routes = (
   <Route handler={App} path="/">
     <DefaultRoute handler={Squads} />
     <Route name="login" handler={Login} />
-    <Route name="squads" handler={Profile} path="/" />
-    <Route name="profile" handler={Profile} path="/profile" />
+    <Route name="squads" handler={Squads} path="/" />
+    <Route name="profile" handler={Profile} path="profile" />
   </Route>
 );
 

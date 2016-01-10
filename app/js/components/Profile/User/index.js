@@ -12,7 +12,7 @@ class User extends React.Component {
     let user = Parse.User.current();
 
     return (
-      <div>
+      <div className="flex-container">
         <h3>{Parse.User.current().getUsername()}</h3>
         <ProfPic user={user} size={"10rem"} editable={true} />
         <Bio />

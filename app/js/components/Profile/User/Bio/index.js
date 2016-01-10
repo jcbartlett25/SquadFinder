@@ -21,7 +21,7 @@ class Bio extends React.Component {
     let user = Parse.User.current();
 
     return (
-      <div className="profile-pic">
+      <div className="bio">
         {user.get("bio")}
         <div className="link" onClick={this.onClick.bind(this)}>Edit Bio</div> 
         {this.state.showEditBio ? <EditBio /> : null}

@@ -30,7 +30,7 @@ class ProfPic extends React.Component {
     }
 
     var photoStyle = {
-      backgroundImage: 'url(' + photoUrl + ')',
+      backgroundImage: "url(" + photoUrl + ")",
       height: size,
       width: size,
     };

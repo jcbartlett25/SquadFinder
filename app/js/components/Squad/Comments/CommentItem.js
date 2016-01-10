@@ -1,7 +1,7 @@
 import React from "react"
 import Parse from "parse"
 import ParseReact from "parse-react"
-import TimeAgo from "react-timeago"
+import Time from "react-time"
 
 import { Link } from "react-router"
 
@@ -23,13 +23,15 @@ class CommentItem extends ParseReact.Component(React) {
   }
 
   render() {
-    let comment = this.props.comment;
+    let comment = this.props.comment
+    let postedAt = comment.createdAt
 
     return (
       <div className="comment">
         {this.getPhotoNodes()}
         <div className="bubble">
           <p className="m0">{comment.commentText} - {comment.username}</p>
+          <p><Time value={postedAt} format="YYYY/MM/DD h:mm a" /></p>
         </div>
       </div>
     );
