@@ -1,7 +1,6 @@
 import React from "react"
 import Parse from "parse"
 import ParseReact from "parse-react"
-import TimeAgo from "react-timeago"
 
 import { Link } from "react-router"
 
